@@ -1,0 +1,118 @@
+@use "sass:color";
+@use "./variables" as var;
+@import "mixin";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var.$black;
+  background-color: var.$white;
+  @include text-md-regular;
+  font-family: var.$body-font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.primaryText {
+  color: var.$primary-color;
+}
+
+.grayText {
+  color: var.$gray-600;
+}
+
+p {
+  @include text-md-regular;
+}
+
+.btn {
+  @include text-md-medium;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 18px;
+  box-shadow: none !important;
+  transition: all 0.3s ease-in-out;
+
+  &.allBtn {
+    height: 36px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 0;
+    font-weight: 400;
+
+    &.btn-primary {
+      background: var.$primary-color;
+      color: var.$white;
+      padding: 8px 20px;
+    }
+
+    &.btn-secondary {
+      background: transparent;
+      color: var.$primary-color;
+      border: 1px solid #0f3549;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: var.$primary-color;
+  color: var.$white;
+
+  &:hover,
+  &:focus {
+    background-color: var.$secondary-color;
+    color: var.$primary-color;
+    border-color: var.$secondary-color;
+  }
+}
+
+.title {
+  color: var.$primary-color;
+  @include text-xs-medium;
+}
+
+.subText {
+  @include text-sm-regular;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.smallTitle {
+  @include text-xs-regular;
+}
+
+.fa-pen {
+  color: var.$gray-500;
+  font-size: 13px;
+}
+
+.all-btn {
+  background: var.$cta-color;
+  color: var.$white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  @include text-sm-semibold;
+
+  &:hover {
+    color: var.$white;
+  }
+}

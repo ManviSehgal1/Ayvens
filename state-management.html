@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State Management - Cards | Ayvens</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <div class="mainSidebar">
+        <div class="sidebarLogo">
+          <img src="assets/images/logo-white.svg" alt="Logo" />
+        </div>
+        <ul id="accordionParent" class="sidebarMenu list-unstyled">
+          <li>
+            <button
+              class="sidebarMenuButton sideMenuLink"
+              data-bs-toggle="collapse"
+              data-bs-target="#cards-collapse"
+              aria-expanded="true"
+            >
+              <img src="assets/images/list-icon.svg" alt="List" />
+              Cards
+            </button>
+            <div
+              class="sideMenuWrapper collapse show"
+              id="cards-collapse"
+              data-bs-parent="#accordionParent"
+            >
+              <ul class="list-unstyled">
+                <li>
+                  <a href="research.html" title="Research" class="dropdown-item"
+                    >Research</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="individual-card.html"
+                    title="Individual Card"
+                    class="dropdown-item"
+                    >Individual Card</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="state-management.html"
+                    title="State Management"
+                    class="dropdown-item active"
+                    >State Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="import-kpi.html"
+                    title="Import KPI"
+                    class="dropdown-item"
+                    >Import KPI</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="participants.html"
+                    title="Participants"
+                    class="dropdown-item"
+                    >Participants</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button
+              class="sidebarMenuButton sideMenuLink collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#payments-collapse"
+              aria-expanded="false"
+            >
+              <img src="assets/images/list-icon.svg" alt="List" />
+              Payments
+            </button>
+            <div
+              class="sideMenuWrapper collapse"
+              id="payments-collapse"
+              data-bs-parent="#accordionParent"
+            >
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" title="Research" class="dropdown-item"
+                    >Payments 1</a
+                  >
+                </li>
+                <li>
+                  <a href="#" title="Individual Card" class="dropdown-item"
+                    >Payments 2</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="report.html" title="Report" class="sideMenuLink">
+              <img src="assets/images/list-icon.svg" alt="List" />
+              Report
+            </a>
+          </li>
+          <li>
+            <button
+              class="sidebarMenuButton sideMenuLink collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#policies-collapse"
+              aria-expanded="false"
+            >
+              <img src="assets/images/list-icon.svg" alt="List" />
+              Policies
+            </button>
+            <div
+              class="sideMenuWrapper collapse"
+              id="policies-collapse"
+              data-bs-parent="#accordionParent"
+            >
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" title="Research" class="dropdown-item"
+                    >Policies 1</a
+                  >
+                </li>
+                <li>
+                  <a href="#" title="Individual Card" class="dropdown-item"
+                    >Policies 2</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button
+              class="sidebarMenuButton sideMenuLink collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#organization-collapse"
+              aria-expanded="false"
+            >
+              <img src="assets/images/list-icon.svg" alt="List" />
+              Organization
+            </button>
+            <div
+              class="sideMenuWrapper collapse"
+              id="organization-collapse"
+              data-bs-parent="#accordionParent"
+            >
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" title="Research" class="dropdown-item"
+                    >Organization 1</a
+                  >
+                </li>
+                <li>
+                  <a href="#" title="Individual Card" class="dropdown-item"
+                    >Organization 2</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="security.html" title="Security" class="sideMenuLink">
+              <img src="assets/images/list-icon.svg" alt="List" />
+              Security
+            </a>
+          </li>
+          <li>
+            <button
+              class="sidebarMenuButton sideMenuLink collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#messaging-collapse"
+              aria-expanded="false"
+            >
+              <img src="assets/images/list-icon.svg" alt="List" />
+              Messaging
+            </button>
+            <div
+              class="sideMenuWrapper collapse"
+              id="messaging-collapse"
+              data-bs-parent="#accordionParent"
+            >
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" title="Research" class="dropdown-item"
+                    >Messaging 1</a
+                  >
+                </li>
+                <li>
+                  <a href="#" title="Individual Card" class="dropdown-item"
+                    >Messaging 2</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
+              <img src="assets/images/list-icon.svg" alt="List" />
+              Epicenter
+            </a>
+          </li>
+        </ul>
+        <div class="userMenu">
+          <a class="userMenuLink userLink" href="#">
+            <img src="assets/images/profile-circle.svg" alt="Profile" />
+            John Smith
+          </a>
+          <a class="userMenuLink" href="#">
+            <img src="assets/images/settings.svg" alt="Settings" />
+            Settings
+          </a>
+          <a class="userMenuLink" href="login.html">
+            <img src="assets/images/logout.svg" alt="Logout" />
+            Logout
+          </a>
+        </div>
+      </div>
+      <div class="contentBlock">
+        <div class="topMainTitle">
+          <div class="topTitle">States</div>
+          <div class="topMainRightSide">
+            <a href="#" class="btn all-btn">Change Status</a>
+            <p>to <span>207</span> cards</p>
+          </div>
+        </div>
+        <div class="filterBlock">
+          <div class="searchBarWrapper">
+            <div class="searchBarBlock">
+              <div class="dropdown searchBar-dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  People
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">People 1</a></li>
+                  <li><a class="dropdown-item" href="#">People 2</a></li>
+                  <li><a class="dropdown-item" href="#">People 3</a></li>
+                </ul>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search..."
+                aria-label="Search"
+              />
+              <img
+                src="assets/images/search.svg"
+                alt="Search"
+                class="search-icon"
+              />
+            </div>
+            <ul class="nav nav-tabs" id="searchBarTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="everyone-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#everyone-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="everyone-tab-pane"
+                  aria-selected="true"
+                >
+                  Everyone
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="atleastOne-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#atleastOne-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="atleastOne-tab-pane"
+                  aria-selected="false"
+                >
+                  Atleast one
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="dropDownWrapper">
+            <div class="dropdown custom-dropdown customDropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                2025 Quarter
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
+                <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
+                <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
+              </ul>
+            </div>
+            <div class="dropdown custom-dropdown customDropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Jan-Mar
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Apr-Jun</a></li>
+                <li><a class="dropdown-item" href="#">Jul-Sep</a></li>
+                <li><a class="dropdown-item" href="#">Oct-Dec</a></li>
+              </ul>
+            </div>
+            <div class="dropdown custom-dropdown customDropdown customDropdown1">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                31/07/2025 - Log 1
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">14/08/2025 - Log 1</a></li>
+                <li><a class="dropdown-item" href="#">12/08/2025 - Log 2</a></li>
+                <li><a class="dropdown-item" href="#">09/08/2025 - Log 3</a></li>
+              </ul>
+            </div>
+            <div class="dropdown custom-dropdown custom-dropdown1 customDropdown">
+            <button type="button" class="btn all-btn dropdown-toggle"  data-bs-toggle="dropdown"
+                aria-expanded="false">Export</button>              
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">14/08/2025 - Log 1</a></li>
+                <li><a class="dropdown-item" href="#">12/08/2025 - Log 2</a></li>
+                <li><a class="dropdown-item" href="#">09/08/2025 - Log 3</a></li>
+              </ul>
+            </div>
+          </div>         
+        </div>
+        <div class="tab-content tableContent" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="everyone-tab-pane"
+            role="tabpanel"
+            aria-labelledby="everyone-tab"
+            tabindex="0"
+          >
+            <table class="table state-management-table">
+              <thead>
+                <tr>
+                  <th>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </th>
+                  <th>Card Holder</th>
+                  <th>State</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>1702 Christian Court</td>
+                  <td>Targets Published</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>1983 Sorrowful Tiziana</td>
+                  <td>Having Read The Document</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>1983 Sorrowful Tiziana</td>
+                  <td>Having Read The Document</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>1702 Christian Court</td>
+                  <td>Having Read The Document</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>1576 Albawab Mottola Christian</td>
+                  <td>Draft</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>1702 Christian Court</td>
+                  <td>Having Read The Document</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="atleastOne-tab-pane"
+            role="tabpanel"
+            aria-labelledby="atleastOne-tab"
+            tabindex="0"
+          >
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Period</th>
+                  <th>Card Holder</th>
+                  <th>Card Type</th>
+                  <th>State</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="view">
+                  <td class="arrowBtn">
+                    <img
+                      src="assets/images/down-arrow-white.svg"
+                      alt="Down Arrow"
+                    />
+                  </td>
+                  <td>January - March</td>
+                  <td>Christian Court 1702</td>
+                  <td>S1 Card</td>
+                  <td>Targets Published</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="fold">
+                  <td></td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Category Role:</span>
+                      <p class="subText">
+                        Local Corporate - Institutional& PA, Institutional & PA
+                        Key Account
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Organizational Unit:</span>
+                      <p class="subText">Commerce</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Visible From:</span>
+                      <ul class="list-unstyled">
+                        <li>Giannatiempo Sara (Level 1)</li>
+                        <li>Pavan Andrea (Level 2)</li>
+                        <li>Stanisci Antonio (Lev. 3)</li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="view">
+                  <td class="arrowBtn">
+                    <img
+                      src="assets/images/down-arrow-white.svg"
+                      alt="Down Arrow"
+                    />
+                  </td>
+                  <td>July - September</td>
+                  <td>Sorrowful Tiziana 1983</td>
+                  <td>S1 Card</td>
+                  <td>Targets Published</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="fold">
+                  <td></td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Category Role:</span>
+                      <p class="subText">
+                        Local Corporate - Institutional& PA, Institutional & PA
+                        Key Account
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Organizational Unit:</span>
+                      <p class="subText">Commerce</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Visible From:</span>
+                      <ul class="list-unstyled">
+                        <li>Giannatiempo Sara (Level 1)</li>
+                        <li>Pavan Andrea (Level 2)</li>
+                        <li>Stanisci Antonio (Lev. 3)</li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="view">
+                  <td class="arrowBtn">
+                    <img
+                      src="assets/images/down-arrow-white.svg"
+                      alt="Down Arrow"
+                    />
+                  </td>
+                  <td>April - June</td>
+                  <td>Sorrowful Tiziana 1983</td>
+                  <td>S1 Card</td>
+                  <td>Targets Published</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="fold">
+                  <td></td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Category Role:</span>
+                      <p class="subText">
+                        Local Corporate - Institutional& PA, Institutional & PA
+                        Key Account
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Organizational Unit:</span>
+                      <p class="subText">Commerce</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Visible From:</span>
+                      <ul class="list-unstyled">
+                        <li>Giannatiempo Sara (Level 1)</li>
+                        <li>Pavan Andrea (Level 2)</li>
+                        <li>Stanisci Antonio (Lev. 3)</li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="view">
+                  <td class="arrowBtn">
+                    <img
+                      src="assets/images/down-arrow-white.svg"
+                      alt="Down Arrow"
+                    />
+                  </td>
+                  <td>October - December</td>
+                  <td>Christian Court 1702</td>
+                  <td>S1 Card</td>
+                  <td>Having Read The Document</td>
+                  <td class="actionBtn">
+                    <img src="assets/images/pdf.svg" alt="Pdf" />
+                    <img
+                      src="assets/images/dotsThreeVertical.svg"
+                      alt="Three Dots Vertical"
+                    />
+                  </td>
+                </tr>
+                <tr class="fold">
+                  <td></td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Category Role:</span>
+                      <p class="subText">
+                        Local Corporate - Institutional& PA, Institutional & PA
+                        Key Account
+                      </p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Organizational Unit:</span>
+                      <p class="subText">Commerce</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="infoBlock">
+                      <span class="title">Visible From:</span>
+                      <ul class="list-unstyled">
+                        <li>Giannatiempo Sara (Level 1)</li>
+                        <li>Pavan Andrea (Level 2)</li>
+                        <li>Stanisci Antonio (Lev. 3)</li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <nav class="pagination-container">
+          <ul class="pagination list-unstyled">
+            <li class="page-item disabled prevBtn">
+              <a class="page-link">
+                <img src="assets/images/caret-right.svg" alt="Left Arrow" />
+                Previous
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item dots">
+              <a class="page-link" href="#">...</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">13</a></li>
+            <li class="page-item"><a class="page-link" href="#">14</a></li>
+            <li class="page-item">
+              <a class="page-link">
+                <img src="assets/images/caret-right.svg" alt="Right Arrow" />
+                Next
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

@@ -111,8 +111,18 @@ p {
   padding: 8px 12px;
   border-radius: 4px;
   @include text-sm-semibold;
+  min-width: 74px;
+  margin: 0;
 
   &:hover {
     color: var.$white;
   }
 }
+
+.modal-title {
+  span {
+    @include text-md-regular;
+    color : #5FA8C1;
+  }
+}
+

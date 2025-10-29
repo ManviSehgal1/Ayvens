@@ -3,13 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>State Management - Cards | Ayvens</title>
+    <title>Import KPI - Cards | Ayvens</title>
     <link rel="stylesheet" href="assets/css/style.css" />
 
-      <!-- Font awesome link -->
-  <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+    <!-- Font awesome link -->
+    <script
+      src="https://kit.fontawesome.com/0901bfe3aa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/fe073c3ad3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c6fd3d7ec2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -52,7 +61,7 @@
                   <a
                     href="state-management.html"
                     title="State Management"
-                    class="dropdown-item active"
+                    class="dropdown-item"
                     >State Management</a
                   >
                 </li>
@@ -60,7 +69,7 @@
                   <a
                     href="import-kpi.html"
                     title="Import KPI"
-                    class="dropdown-item"
+                    class="dropdown-item active"
                     >Import KPI</a
                   >
                 </li>
@@ -225,13 +234,9 @@
           </a>
         </div>
       </div>
-      <div class="contentBlock">
+      <div class="contentBlock import-kpi-section">
         <div class="topMainTitle">
-          <div class="topTitle">States</div>
-          <div class="topMainRightSide">
-            <a href="#" class="btn all-btn" data-bs-toggle="modal" data-bs-target="#changeStatusModal">Change Status</a>
-            <p>to <span>207</span> cards</p>
-          </div>
+          <div class="topTitle">Import KPIs</div>
         </div>
         <div class="filterBlock">
           <div class="searchBarWrapper">
@@ -295,61 +300,13 @@
             </ul>
           </div>
           <div class="dropDownWrapper">
-            <div class="dropdown custom-dropdown customDropdown">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                2025 Quarter
+            <div class="custom-dropdown1 customDropdown fixBtnStyle">
+              <button type="button" class="btn all-btn">
+                <span><i class="fa-solid fa-up-from-bracket"></i></span>Export
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
-                <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
-                <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
-              </ul>
+              <button type="button" class="btn all-btn" data-bs-toggle="modal" data-bs-target="#importKpiModal"><span><i class="fa-solid fa-down-to-bracket"></i></span>Import</button>
             </div>
-            <div class="dropdown custom-dropdown customDropdown">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Jan-Mar
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Apr-Jun</a></li>
-                <li><a class="dropdown-item" href="#">Jul-Sep</a></li>
-                <li><a class="dropdown-item" href="#">Oct-Dec</a></li>
-              </ul>
-            </div>
-            <div class="dropdown custom-dropdown customDropdown customDropdown1">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                31/07/2025 - Log 1
-              </button>
-              <ul class="dropdown-menu">
-                <li><div class="dropdown-item"><div class="dropdownSubItem">14/08/2025 - Log 1</div><i class="fa-regular fa-check"></i></div></li>
-                <li><div class="dropdown-item"><div class="dropdownSubItem">12/08/2025 - Log 2</div><i class="fa-regular fa-check"></i></div></li>
-                <li><div class="dropdown-item"><div class="dropdownSubItem">09/08/2025 - Log 3</div><i class="fa-regular fa-check"></i></div></li>
-              </ul>
-            </div>
-            <div class="dropdown custom-dropdown custom-dropdown1 customDropdown">
-            <button type="button" class="btn all-btn dropdown-toggle"  data-bs-toggle="dropdown"
-                aria-expanded="false">Export</button>              
-              <ul class="dropdown-menu">
-                <li><div class="dropdown-item"><div class="dropdownSubItem"><i class="fa-light fa-table"></i>Excel</div><i class="fa-regular fa-check"></i></div></li>
-                <li><div class="dropdown-item"><div class="dropdownSubItem"><i class="fa-light fa-file-lines"></i>PDF</div><i class="fa-regular fa-check"></i></div></li>
-                <li><div class="dropdown-item"><div class="dropdownSubItem"><i class="fa-light fa-file-zipper"></i>Zip</div><i class="fa-regular fa-check"></i></div></li>
-              </ul>
-            </div>
-          </div>         
+          </div>
         </div>
         <div class="tab-content tableContent" id="myTabContent">
           <div
@@ -359,7 +316,7 @@
             aria-labelledby="everyone-tab"
             tabindex="0"
           >
-            <table class="table state-management-table">
+            <table class="table importKPI-table">
               <thead>
                 <tr>
                   <th>
@@ -368,9 +325,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </th>
-                  <th>Card Holder</th>
-                  <th>State</th>
-                  <th>Action</th>
+                  <th>KPI</th>
+                  <th>Financial Statement</th>
+                  <th>To Be Finalized</th>
+                  <th>Actual Financial Statements</th>
                 </tr>
               </thead>
               <tbody>
@@ -381,15 +339,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1702 Christian Court</td>
-                  <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Bidders</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0/1</td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -398,15 +351,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1983 Sorrowful Tiziana</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Buyers</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0/1</td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -415,15 +363,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1983 Sorrowful Tiziana</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Extensions</td>
+                  <td>140</td>
+                  <td>0</td>
+                  <td><span class="statementContent">140/140</span></td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -432,15 +375,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1702 Christian Court</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Flex</td>
+                  <td>122</td>
+                  <td>0</td>
+                  <td><span class="statementContent">122/122</span></td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -449,15 +387,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1576 Albawab Mottola Christian</td>
-                  <td>Draft</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Profitability Matrix - FFM</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -466,15 +399,58 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1702 Christian Court</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
                   </td>
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
                 </tr>
               </tbody>
             </table>
@@ -486,7 +462,7 @@
             aria-labelledby="atleastOne-tab"
             tabindex="0"
           >
-            <table class="table state-management-table">
+            <table class="table importKPI-table">
               <thead>
                 <tr>
                   <th>
@@ -495,9 +471,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </th>
-                  <th>Card Holder</th>
-                  <th>State</th>
-                  <th>Action</th>
+                  <th>KPI</th>
+                  <th>Financial Statement</th>
+                  <th>To Be Finalized</th>
+                  <th>Actual Financial Statements</th>
                 </tr>
               </thead>
               <tbody>
@@ -508,15 +485,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1702 Christian Court</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Buyers</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0/1</td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -525,15 +497,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1702 Christian Court</td>
-                  <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Bidders</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0/1</td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -542,15 +509,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1983 Sorrowful Tiziana</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Extensions</td>
+                  <td>140</td>
+                  <td>0</td>
+                  <td><span class="statementContent">140/140</span></td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -559,15 +521,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1983 Sorrowful Tiziana</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Flex</td>
+                  <td>122</td>
+                  <td>0</td>
+                  <td><span class="statementContent">122/122</span></td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -576,15 +533,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1702 Christian Court</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Profitability Matrix - FFM</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -593,15 +545,10 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1576 Albawab Mottola Christian</td>
-                  <td>Draft</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
-                  </td>
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
                 </tr>
                 <tr class="view">
                   <td>
@@ -610,15 +557,46 @@
                       <span class="check-tick"></span>
                     </span>
                   </td>
-                  <td>1702 Christian Court</td>
-                  <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
                   </td>
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
+                </tr>
+                <tr class="view">
+                  <td>
+                    <span class="form-check-wrapper">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-tick"></span>
+                    </span>
+                  </td>
+                  <td>Profitability Matrix - Large</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0/0</td>
                 </tr>
               </tbody>
             </table>
@@ -654,31 +632,34 @@
       </div>
     </div>
 
-    <div class="modal fade" id="changeStatusModal" tabindex="-1" aria-labelledby="changeStatusModalLabel" aria-hidden="true">
+    <div class="modal fade" id="importKpiModal" tabindex="-1" aria-labelledby="importKpiModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="changeStatusModalLabel">Change Status - <span><span>2</span> cards selected</span></h5>
+        <div class="modal-header-content">
+          <h5 class="modal-title" id="importKpiModalLabel">Import KPIs</h5>
+          <p class="modal-subtitle">To import the Target values for the selected KPIs:</p>
+        </div>
         <i class="fa-solid fa-xmark-large" data-bs-dismiss="modal" aria-label="Close"></i>
       </div>
       <div class="modal-body">
-        <div class="">
-          <label for="statusSelect" class="form-label">Select New Status</label>
-          <select class="form-select" id="statusSelect">
-            <option selected>Choose status...</option>
-            <option value="draft">Draft</option>
-            <option value="published">Published</option>
-            <option value="reviewed">Reviewed</option>
-          </select>
-        </div>
+        <ol class="import-steps">
+          <li>Select at least one KPI from the table and export the work template by clicking on "Export pre-filled" that will appear above;</li>
+          <li>Fill in the relevant columns;</li>
+          <li>Close the file;</li>
+          <li>Click on the "Import" button</li>
+          <li>Select the file to import in the selection window that will appear automatically</li>
+        </ol>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary allBtn" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn all-btn">Save</button>
+        <button type="button" class="btn all-btn">Import</button>
       </div>
     </div>
   </div>
 </div>
+
+
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

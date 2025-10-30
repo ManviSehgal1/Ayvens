@@ -19,14 +19,14 @@
             <div class="sidebarLogo">
                 <img src="assets/images/logo-white.svg" alt="Logo">
             </div>
-            <ul class="sidebarMenu list-unstyled">
+            <ul class="sidebarMenu list-unstyled" id="accordionParent">
                 <li>
                     <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse"
                         data-bs-target="#cards-collapse" aria-expanded="true">
                         <img src="assets/images/list-icon.svg" alt="List">
                         Cards
                     </button>
-                    <div class="sideMenuWrapper collapse show" id="cards-collapse">
+                    <div class="sideMenuWrapper collapse show" id="cards-collapse" data-bs-parent="#accordionParent">
                         <ul class="list-unstyled">
                             <li>
                                 <a href="research.html" title="Research" class="dropdown-item active">Research</a>
@@ -49,18 +49,18 @@
                     </div>
                 </li>
                 <li>
-                    <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse"
+                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
                         data-bs-target="#payments-collapse" aria-expanded="false">
                         <img src="assets/images/list-icon.svg" alt="List">
                         Payments
                     </button>
-                    <div class="sideMenuWrapper collapse" id="payments-collapse">
+                    <div class="sideMenuWrapper collapse" id="payments-collapse"  data-bs-parent="#accordionParent">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#" title="Research" class="dropdown-item">Payments 1</a>
+                                <a href="mass-liquidations.html" title="mass liquidations" class="dropdown-item">Mass Liquidations</a>
                             </li>
                             <li>
-                                <a href="#" title="Individual Card" class="dropdown-item">Payments 2</a>
+                                <a href="single-liquidation.html" title="single liquidation" class="dropdown-item">Single Liquidation</a>
                             </li>
                         </ul>
                     </div>
@@ -72,35 +72,44 @@
                     </a>
                 </li>
                 <li>
-                    <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse"
+                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
                         data-bs-target="#policies-collapse" aria-expanded="false">
                         <img src="assets/images/list-icon.svg" alt="List">
                         Policies
                     </button>
-                    <div class="sideMenuWrapper collapse" id="policies-collapse">
+                    <div class="sideMenuWrapper collapse" id="policies-collapse" data-bs-parent="#accordionParent">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#" title="Research" class="dropdown-item">Policies 1</a>
+                                <a href="#" title="role cards" class="dropdown-item">Role Cards</a>
                             </li>
                             <li>
-                                <a href="#" title="Individual Card" class="dropdown-item">Policies 2</a>
+                                <a href="#" title="kpi" class="dropdown-item">KPI</a>
+                            </li>
+                            <li>
+                                <a href="#" title="overtarget kpis" class="dropdown-item">Overtarget KPIs</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse"
+                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
                         data-bs-target="#organization-collapse" aria-expanded="false">
                         <img src="assets/images/list-icon.svg" alt="List">
                         Organization
                     </button>
-                    <div class="sideMenuWrapper collapse" id="organization-collapse">
+                    <div class="sideMenuWrapper collapse" id="organization-collapse"  data-bs-parent="#accordionParent">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#" title="Research" class="dropdown-item">Organization 1</a>
+                                <a href="#" title="people" class="dropdown-item">People</a>
                             </li>
                             <li>
-                                <a href="#" title="Individual Card" class="dropdown-item">Organization 2</a>
+                                <a href="#" title="roles" class="dropdown-item">Roles</a>
+                            </li>
+                            <li>
+                                <a href="#" title="organizational units" class="dropdown-item">Organizational Units</a>
+                            </li>
+                            <li>
+                                <a href="#" title="utilities" class="dropdown-item">Utilities</a>
                             </li>
                         </ul>
                     </div>
@@ -112,18 +121,21 @@
                     </a>
                 </li>
                 <li>
-                    <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse"
+                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
                         data-bs-target="#messaging-collapse" aria-expanded="false">
                         <img src="assets/images/list-icon.svg" alt="List">
                         Messaging
                     </button>
-                    <div class="sideMenuWrapper collapse" id="messaging-collapse">
+                    <div class="sideMenuWrapper collapse" id="messaging-collapse"  data-bs-parent="#accordionParent">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#" title="Research" class="dropdown-item">Messaging 1</a>
+                                <a href="#" title="log mail" class="dropdown-item">Log Mail</a>
                             </li>
                             <li>
-                                <a href="#" title="Individual Card" class="dropdown-item">Messaging 2</a>
+                                <a href="#" title="template management" class="dropdown-item">Template Management</a>
+                            </li>
+                            <li>
+                                <a href="#" title="shipment management" class="dropdown-item">Shipment Management</a>
                             </li>
                         </ul>
                     </div>
@@ -164,18 +176,42 @@
                     </ul>
                 </div>
                 <div class="searchBarWrapper">
-                    <ul class="nav nav-tabs" id="searchBarTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="everyone-tab" data-bs-toggle="tab"
-                                data-bs-target="#everyone-tab-pane" type="button" role="tab"
-                                aria-controls="everyone-tab-pane" aria-selected="true">Everyone</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="atleastOne-tab" data-bs-toggle="tab"
-                                data-bs-target="#atleastOne-tab-pane" type="button" role="tab"
-                                aria-controls="atleastOne-tab-pane" aria-selected="false">Atleast one</button>
-                        </li>
-                    </ul>
+                    <ul
+              class="nav nav-tabs custom-radio-tabs"
+              id="searchBarTab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="everyone-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#everyone-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="everyone-tab-pane"
+                  aria-selected="true"
+                >
+                  <span class="radio-circle"></span>
+                  Everyone
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="atleastOne-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#atleastOne-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="atleastOne-tab-pane"
+                  aria-selected="false"
+                >
+                  <span class="radio-circle"></span>
+                  Atleast one
+                </button>
+              </li>
+            </ul>
                     <div class="searchBarBlock">
                         <div class="dropdown searchBar-dropdown">
                             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -819,7 +855,7 @@
                 <ul class="pagination list-unstyled">
                     <li class="page-item disabled prevBtn">
                         <a class="page-link">
-                            <img src="assets/images/caret-right.svg" alt="Left Arrow">
+                            <i class="fa-light fa-chevron-left"></i>
                             Previous
                         </a>
                     </li>
@@ -831,9 +867,9 @@
                     <li class="page-item"><a class="page-link" href="#">13</a></li>
                     <li class="page-item"><a class="page-link" href="#">14</a></li>
                     <li class="page-item">
-                        <a class="page-link">
-                            <img src="assets/images/caret-right.svg" alt="Right Arrow">
+                        <a class="page-link">                            
                             Next
+                            <i class="fa-light fa-chevron-right"></i>
                         </a>
                     </li>
                 </ul>

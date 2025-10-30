@@ -260,13 +260,26 @@
         margin-bottom: 20px;
         padding: 0 30px;
         transition: all 0.2s ease-in-out;
+        @include text-sm-regular;
 
-        &:hover,
-        &.active {
-          color: var.$secondary-color;
-          background: transparent;
-        }
+         &:hover,
+      &.active {
+        color: var.$secondary-color;
+        background: transparent;
       }
+
+      }  
+    }
+
+       li {
+        a {
+      &:hover,
+      &.active {
+        color: var.$secondary-color;
+        background: transparent;
+      }
+    }
+    
     }
   }
 
@@ -341,21 +354,20 @@
 
       .nav-tabs {
         border: none;
+        gap: 10px;
 
         .nav-item {
           .nav-link {
-            font-size: 14px;
-            line-height: 18px;
-            font-weight: 400;
+            @include text-md-regular;
             color: var.$gray-300;
             border-radius: 0;
-            border: 1px solid var.$gray-200;
-            padding: 10px 12px;
+            // border: 1px solid var.$gray-200;
+            // padding: 10px 12px;
 
             &.active {
-              color: var.$white;
-              background-color: var.$primary-color;
-              border-color: var.$primary-color;
+              color: var.$cta-color;
+              // background-color: var.$primary-color;
+              // border-color: var.$primary-color;
             }
           }
 
@@ -486,26 +498,28 @@
             position: sticky;
             top: 0;
             background: var.$gray-50;
+            z-index: 1;
 
             &:nth-child(1) {
               width: 40px;
+              padding: 10px 11px;
             }
 
-            &:nth-child(2) {
-              width: 332px;
-            }
+            // &:nth-child(2) {
+            //   width: 332px;
+            // }
 
-            &:nth-child(3) {
-              width: 343px;
-            }
+            // &:nth-child(3) {
+            //   width: 343px;
+            // }
 
-            &:nth-child(4) {
-              width: 284px;
-            }
+            // &:nth-child(4) {
+            //   width: 284px;
+            // }
 
-            &:nth-child(5) {
-              width: 317px;
-            }
+            // &:nth-child(5) {
+            //   width: 317px;
+            // }
           }
         }
       }
@@ -528,6 +542,11 @@
                   margin-right: 10px;
                 }
               }
+            }
+
+            &:first-child {
+              width: 40px;
+              padding: 10px 11px;
             }
           }
 
@@ -747,6 +766,10 @@
     @include text-sm-regular;
     color: var.$primary-color;
     position: relative;
+
+    &.all-btn {
+      @include text-sm-semibold;
+    }
   }
 
   .dropdown-toggle:after {
@@ -979,7 +1002,7 @@
                           border-right: none;
                           background: rgba(95, 168, 193, 0.2);
                           border-radius: 4px 0px 0px 4px;
-                          padding: 14px 10px;   
+                          padding: 14px 10px;
                         }
 
                         .targetValue {
@@ -988,7 +1011,7 @@
                           border: 1px solid rgba(95, 168, 193, 0.2);
                           background: var.$white;
                           border-radius: 0px 4px 4px 0px;
-                          padding: 14px 10px;   
+                          padding: 14px 10px;
                         }
                       }
                     }
@@ -1111,12 +1134,12 @@
         }
 
         &:hover {
-        background: var.$gray-100;
-        color: var.$primary-color;
+          background: var.$gray-100;
+          color: var.$primary-color;
 
-         .fa-check {
-          opacity: 1;
-        }
+          .fa-check {
+            opacity: 1;
+          }
         }
       }
     }
@@ -1133,12 +1156,11 @@
 
 #changeStatusModal {
   .modal-dialog {
-    @media  screen and (min-width:768px) {
-      max-width: 460px;      
+    @media screen and (min-width: 768px) {
+      max-width: 460px;
     }
   }
 }
-
 
 // Import KPI CSS
 
@@ -1170,11 +1192,12 @@
 
 #importKpiModal {
   .modal-dialog {
-    @media screen and (min-width:768px) {
-      max-width: 660px;      
+    @media screen and (min-width: 768px) {
+      max-width: 660px;
     }
 
-    .modal-header, .modal-body {
+    .modal-header,
+    .modal-body {
       padding-bottom: 0;
     }
 
@@ -1188,14 +1211,15 @@
       }
 
       .modal-subtitle {
-         @include text-sm-regular;
-          color: var.$gray-950;
+        @include text-sm-regular;
+        color: var.$gray-950;
       }
     }
 
     .modal-body {
-      ol {
+      .import-steps {
         padding-left: 20px;
+        margin-bottom: 0;
 
         li {
           @include text-sm-regular;
@@ -1210,4 +1234,192 @@
       }
     }
   }
+}
+
+.custom-radio-tabs {
+  border: none;
+  gap: 10px;
+}
+
+.custom-radio-tabs .nav-link {
+  border: none;
+  // padding: 8px 16px;
+  position: relative;
+  padding: 0;
+  padding-left: 22px;
+  color: #666;
+  @include text-md-regular;
+}
+
+.radio-circle {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var.$gray-400;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-radio-tabs .nav-link.active {
+  background: none;
+  color: var.$cta-color;
+}
+
+.custom-radio-tabs .nav-link.active .radio-circle {
+  border-color: var.$cta-color;
+}
+
+.custom-radio-tabs .nav-link.active .radio-circle:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var.$cta-color;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// .table-responsive {
+//   overflow-x: auto;
+//   .table {
+//     tr {
+//       th {
+//         width: auto !important;
+//       }
+
+//       th,
+//       td {
+//         white-space: nowrap;
+//       }
+//     }
+//   }
+// }
+
+
+
+.contentBlock .middleWrapper .customCard.statCard.blueCard {
+  background: rgba(95, 168, 193, 1);
+  color: rgba(255, 255, 255, 1);
+
+  .subText {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.middleWrapper.middleWrapperGrid {
+  .customCard.statCard {
+    max-width: 100%;
+    flex: auto;
+  }
+}
+
+.contentBlock .tableContent {
+  padding-right: 33px;
+}
+
+
+.contentBlock .tableContent .table thead tr th:first-child,
+.contentBlock .tableContent .table tbody tr.view td:first-child {
+  padding: 10px !important;
+  width: 40px !important;
+}
+
+.contentBlock .tableContent .table.mass-liquidations-table thead {
+  tr {
+    th {
+      &:nth-child(2) {
+        width: 140px;
+      }
+
+      &:nth-child(3) {
+        width: 322px;
+      }
+
+      &:nth-child(4) {
+        width: 289px;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        width: 223px;
+      }
+    }
+  }
+}
+
+.all-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-select:focus,
+.form-control:focus {
+  box-shadow: none;
+  border-color: rgba(220, 220, 220, 1);
+}
+
+.modal-body-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contentBlock .tableContent .table.single-liquidations-table tbody tr.view td:first-child,
+.contentBlock .tableContent .table.single-liquidations-table thead tr th:first-child {
+  width: 200px !important;
+  padding: 10px 20px !important;
+}
+
+.contentBlock .tableContent .table.single-liquidations-table thead {
+  tr {
+    th {
+        // &:nth-child(2) {
+        //   width: 289px;
+        // }
+
+        // &:nth-child(3) {
+        //   width: 248px;
+        // }
+
+        // &:nth-child(4),
+        // &:nth-child(5) {
+        //   width: 221px;
+        // }
+
+        // &:nth-child(6) {
+        //   width: 230px;
+        // }
+
+      &:last-child {
+        width: 82px;
+      }
+
+    }
+  }
+}
+
+.deleteIcon {
+  font-size: 20px;
+  color: #f10909;
+  cursor: pointer;
+}
+
+.deletePaymentModal .modal-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.deletePaymentModal.modal .modal-dialog .modal-content .modal-body p  {
+  font-size: 14px;
+}
+
+.modal .modal-dialog .modal-content .modal-body,
+.modal .modal-dialog .modal-content .modal-header {
+  padding-bottom: 0;
 }

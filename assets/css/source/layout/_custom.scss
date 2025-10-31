@@ -1322,11 +1322,6 @@
 }
 
 
-.contentBlock .tableContent .table thead tr th:first-child,
-.contentBlock .tableContent .table tbody tr.view td:first-child {
-  padding: 10px !important;
-  width: 40px !important;
-}
 
 .contentBlock .tableContent .table.mass-liquidations-table thead {
   tr {
@@ -1422,4 +1417,100 @@
 .modal .modal-dialog .modal-content .modal-body,
 .modal .modal-dialog .modal-content .modal-header {
   padding-bottom: 0;
+}
+
+
+.contentBlock .tableContent .table.security-table thead tr th {
+  &:nth-child(1) {
+    width: 274px;
+  }
+
+  &:nth-child(2) {
+    width: 228px;
+  }
+
+  &:nth-child(4),
+  &:nth-child(5) {
+    width: 306px;
+  }
+}
+
+.w-286 {
+  width: 286px;
+}
+
+.w-265 {
+  width: 265px;
+}
+
+.w-360 {
+  width: 360px;
+}
+
+.shipBtn {
+  background-color: var.$base-green;
+  border-radius: 5px;
+  padding: 4px 8px;
+  display: inline-flex;
+  color: var.$white;
+  @include text-xs-medium;
+}
+
+.contentBlock .tableContent .table.log-mail-table thead tr th {
+  &:nth-child(1) {
+    width: 494px;
+  }
+
+  &:nth-child(2) {
+    width: 346px;
+  }
+
+  &:nth-child(4) {
+    width: 131px;
+  }
+}
+
+.form-control::placeholder {
+  color: var.$gray-300;
+}
+
+.resetPasswordModal.modal .modal-dialog,
+.blockModal.modal .modal-dialog,
+.unBlockModal.modal .modal-dialog {
+  .modal-content {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .modal-body p {
+    @include text-sm-regular;
+
+    span {
+      color: #5FA8C1;
+    }
+  }
+}
+
+.utilitiesActionBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  i {
+    font-size: 16px;
+    color: var.$gray-700;
+    cursor: pointer;
+  }
+}
+
+
+// People page CSS
+
+.people-table {
+ tbody {
+  tr.view {td.arrowBtn {
+    border-radius: 0 !important;
+  }
+  }
+ }
 }

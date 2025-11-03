@@ -61,6 +61,13 @@ p {
       background: var.$primary-color;
       color: var.$white;
       padding: 8px 20px;
+
+      &:hover,
+      &:focus {
+        background-color: var.$secondary-color;
+        color: var.$primary-color;
+        border-color: var.$secondary-color;
+      }
     }
 
     &.btn-secondary {
@@ -122,7 +129,7 @@ p {
 .modal-title {
   span {
     @include text-md-regular;
-    color : #5FA8C1;
+    color: #5fa8c1;
   }
 }
 

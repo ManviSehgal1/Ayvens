@@ -26,6 +26,10 @@ p {
   padding: 0;
 }
 
+*:focus-visible {
+outline: none;
+}
+
 .primaryText {
   color: var.$primary-color;
 }
@@ -113,7 +117,7 @@ p {
 }
 
 .all-btn {
-  background: var.$cta-color;
+  background: var.$primary-color;
   color: var.$white;
   padding: 8px 12px;
   border-radius: 4px;

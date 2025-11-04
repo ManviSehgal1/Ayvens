@@ -371,7 +371,7 @@
             // padding: 10px 12px;
 
             &.active {
-              color: var.$cta-color;
+              color: var.$primary-color;
               // background-color: var.$primary-color;
               // border-color: var.$primary-color;
             }
@@ -490,8 +490,6 @@
 
     .table {
       margin-bottom: 0;
-      border-collapse: separate;
-      border-spacing: 0 8px;
 
       thead {
         tr {
@@ -506,10 +504,10 @@
             background: var.$gray-50;
             z-index: 1;
 
-            &:nth-child(1) {
-              width: 40px;
-              padding: 10px 11px;
-            }
+            // &:nth-child(1) {
+            //   width: 40px;
+            //   padding: 10px 11px;
+            // }
 
             // &:nth-child(2) {
             //   width: 332px;
@@ -531,14 +529,17 @@
       }
 
       tbody {
+        border-top: none;
+
         tr {
           td {
             color: var.$black;
             @include text-sm-regular;
             box-shadow: none;
-            vertical-align: middle;
+            vertical-align: top;
             padding: 10px 20px;
             border: none;
+            background-color: var.$white;
 
             &.actionBtn {
               img {
@@ -549,17 +550,10 @@
                 }
               }
             }
-
-            &:first-child {
-              width: 40px;
-              padding: 10px 11px;
-            }
           }
 
           &.view {
             td {
-              background-color: var.$white;
-
               &.arrowBtn {
                 background-color: var.$primary-color;
                 border-radius: 5px 0 0 5px;
@@ -578,6 +572,7 @@
 
             td {
               border: none;
+              background: transparent;
 
               .infoBlock {
                 padding: 10px 0;
@@ -624,6 +619,25 @@
 
             &.fold {
               display: table-row;
+            }
+          }
+
+          &.spacing-tr {
+            td {
+              height: 8px;
+              background: transparent;
+              padding: 0 !important;
+            }
+          }
+        }
+      }
+
+      &.resize-td-table {
+        tr {
+          th {
+            &:first-child {
+              width: 40px;
+              padding: 10px 11px;
             }
           }
         }
@@ -865,8 +879,6 @@
   .tableContent {
     .table.individual-card-table {
       margin-bottom: 0;
-      border-collapse: separate;
-      border-spacing: 0 8px;
 
       thead {
         tr {
@@ -880,9 +892,9 @@
             top: 0;
             background: var.$gray-50;
 
-            &:nth-child(1) {
-              width: 40px;
-            }
+            // &:nth-child(1) {
+            //   width: 40px;
+            // }
 
             &:nth-child(2) {
               width: auto;
@@ -1092,8 +1104,8 @@
   }
 
   .form-check-input:checked + .check-tick {
-    background: var.$cta-color;
-    border-color: var.$cta-color;
+    background: var.$primary-color;
+    border-color: var.$primary-color;
   }
 
   .form-check-input:checked + .check-tick:after {
@@ -1132,6 +1144,10 @@
           display: flex;
           align-items: center;
           gap: 8px;
+
+          span {
+            color: var.$gray-300;
+          }
         }
 
         .fa-check {
@@ -1145,6 +1161,10 @@
 
           .fa-check {
             opacity: 1;
+          }
+
+          span {
+            color: var.$gray-950;
           }
         }
       }
@@ -1212,7 +1232,7 @@
 
       .modal-title {
         @include text-md-medium;
-        color: var.$cta-color;
+        color: var.$primary-color;
         margin-bottom: 4px;
       }
 
@@ -1270,18 +1290,18 @@
 
 .custom-radio-tabs .nav-link.active {
   background: none;
-  color: var.$cta-color;
+  color: var.$primary-color;
 }
 
 .custom-radio-tabs .nav-link.active .radio-circle {
-  border-color: var.$cta-color;
+  border-color: var.$primary-color;
 }
 
 .custom-radio-tabs .nav-link.active .radio-circle:after {
   content: "";
   width: 8px;
   height: 8px;
-  background: var.$cta-color;
+  background: var.$primary-color;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -1696,13 +1716,13 @@
           position: relative;
 
           &:checked {
-            background-color: var.$cta-color;
-            border-color: var.$cta-color;
+            background-color: var.$primary-color;
+            border-color: var.$primary-color;
           }
 
           &:checked + &::before {
-            background-color: var.$cta-color;
-            border-color: var.$cta-color;
+            background-color: var.$primary-color;
+            border-color: var.$primary-color;
             box-shadow: none;
           }
 
@@ -1829,12 +1849,120 @@
   }
 }
 
-// .session-item {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   padding: 15px;
-//   border: 1px solid #eee;
-//   border-radius: 6px;
-//   margin-bottom: 10px;
-// }
+// Role Cards Page CSS
+.contentBlock {
+  .tableContent {
+    .role-cards-table {
+      tr {
+        td {
+          color: var.$gray-950;
+
+          p {
+            @include text-sm-regular;
+            color: var.$black;
+
+            &.corp-p {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 71%;
+            }
+          }
+
+          &.disabled-gray {
+            color: var.$gray-700;
+          }
+        }
+
+        &.second-th {
+          th {
+            background: var.$gray-200;
+            color: var.$gray-950;
+            @include text-xs-medium;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Overtarget KPIs Page CSS
+
+.contentBlock {
+  &.overtarget-kpis-section {
+    .filterBlock {
+      .customDropdown {
+        .all-btn {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    table {
+      &.overtarget-kpis-table {
+        tr {
+
+          th {
+            width: 42%;
+
+            &:first-child {
+              width: 16%;
+            }
+          }
+
+          &.second-th {
+            th {
+              height: 40px;
+            }
+          }
+
+          td {
+
+            &.aside-td {
+              padding: 30px 10px;
+              color: var.$gray-200;
+              text-align: center;
+            }
+
+            &.actionBtn {
+              i {
+                font-size: 16px;
+                color: var.$gray-700;
+              }
+
+              .fa-trash {
+
+                color: #F10909;
+              }
+            }
+          }
+
+          &.sm-spacing-tr {
+            td {
+              height: 2px;
+            }
+          }
+        }
+      }
+
+       td {
+
+            &.actionBtn {
+              display: flex;
+              gap: 8px;
+              i {
+                font-size: 16px;
+                color: var.$gray-700;
+                cursor: pointer;
+              }
+
+              .fa-trash {
+                color: #F10909;
+              }
+            }
+          }
+    }
+  }
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>People - Organization | Ayvens</title>
+    <title>Research - Cards | Ayvens</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Font awesome link -->
     <script
@@ -44,7 +44,10 @@
             >
               <ul class="list-unstyled">
                 <li>
-                  <a href="research.html" title="Research" class="dropdown-item"
+                  <a
+                    href="research.html"
+                    title="Research"
+                    class="dropdown-item active"
                     >Research</a
                   >
                 </li>
@@ -126,7 +129,7 @@
           </li>
           <li>
             <button
-              class="sidebarMenuButton sideMenuLink collapsed"
+              class="sidebarMenuButton sideMenuLink"
               data-bs-toggle="collapse"
               data-bs-target="#policies-collapse"
               aria-expanded="false"
@@ -135,7 +138,7 @@
               Policies
             </button>
             <div
-              class="sideMenuWrapper collapse"
+              class="sideMenuWrapper collapse show"
               id="policies-collapse"
               data-bs-parent="#accordionParent"
             >
@@ -164,25 +167,22 @@
           </li>
           <li>
             <button
-              class="sidebarMenuButton sideMenuLink"
+              class="sidebarMenuButton sideMenuLink collapsed"
               data-bs-toggle="collapse"
               data-bs-target="#organization-collapse"
-              aria-expanded="true"
+              aria-expanded="false"
             >
               <img src="assets/images/list-icon.svg" alt="List" />
               Organization
             </button>
             <div
-              class="sideMenuWrapper collapse show"
+              class="sideMenuWrapper collapse"
               id="organization-collapse"
               data-bs-parent="#accordionParent"
             >
               <ul class="list-unstyled">
                 <li>
-                  <a
-                    href="people.html"
-                    title="people"
-                    class="dropdown-item active"
+                  <a href="people.html" title="people" class="dropdown-item"
                     >People</a
                   >
                 </li>
@@ -379,47 +379,35 @@
             aria-labelledby="everyone-tab"
             tabindex="0"
           >
-            <table class="table people-table">
+            <table class="table resize-td-table">
               <thead>
                 <tr>
-                  <th>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </th>
                   <th></th>
-                  <th>Freshman</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Username</th>
-                  <th>Category</th>
-                  <th>Role</th>
-                  <th>Organisational Unit</th>
+                  <th>KPI</th>
+                  <th>Payment Frequency</th>
+                  <th>Performance</th>
+                  <th>Unit</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Orders x Margin</td>
+                  <td>Half-yearly</td>
+                  <td>Orders x Margin - Performance</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -448,27 +436,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Orders</td>
+                  <td>Half-yearly</td>
+                  <td>Linear function</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -497,27 +485,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Extensions</td>
+                  <td>Half-yearly</td>
+                  <td>Linear function</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -546,27 +534,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Production</td>
+                  <td>Half-yearly</td>
+                  <td>Linear function</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -595,27 +583,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Orders x Margin x Service Level</td>
+                  <td>Half-yearly</td>
+                  <td>Orders x Margin x Services - Linear</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -644,272 +632,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
+                  <td>Number of orders from new customers</td>
+                  <td>Half-yearly</td>
+                  <td>Linear function</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -948,47 +691,35 @@
             aria-labelledby="atleastOne-tab"
             tabindex="0"
           >
-              <table class="table people-table">
+            <table class="table resize-td-table">
               <thead>
                 <tr>
-                  <th>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </th>
                   <th></th>
-                  <th>Freshman</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Username</th>
-                  <th>Category</th>
-                  <th>Role</th>
-                  <th>Organisational Unit</th>
+                  <th>KPI</th>
+                  <th>Payment Frequency</th>
+                  <th>Performance</th>
+                  <th>Unit</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Orders x Margin</td>
+                  <td>Half-yearly</td>
+                  <td>Orders x Margin - Performance</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -1017,27 +748,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Orders</td>
+                  <td>Half-yearly</td>
+                  <td>Linear function</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -1066,27 +797,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Extensions</td>
+                  <td>Half-yearly</td>
+                  <td>Linear function</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -1115,27 +846,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Production</td>
+                  <td>Half-yearly</td>
+                  <td>Linear function</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -1164,27 +895,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
+                  <td>Orders x Margin x Service Level</td>
+                  <td>Half-yearly</td>
+                  <td>Orders x Margin x Services - Linear</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
+                  </td>
                 </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -1213,272 +944,27 @@
                     </div>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
+                <tr class="spacing-tr">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr class="view">
                   <td class="arrowBtn">
                     <img
                       src="assets/images/down-arrow-white.svg"
                       alt="Down Arrow"
                     />
                   </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
+                  <td>Number of orders from new customers</td>
+                  <td>Half-yearly</td>
+                  <td>Linear function</td>
+                  <td>#</td>
+                  <td class="actionBtn">
+                    <i class="fa-light fa-pen action-icon"></i>
+                    <i class="fa-light fa-trash" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
                   </td>
                 </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
-                <tr class="fold">
-                  <td></td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Category Role:</span>
-                      <p class="subText">
-                        Local Corporate - Institutional& PA, Institutional & PA
-                        Key Account
-                      </p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Organizational Unit:</span>
-                      <p class="subText">Commerce</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="infoBlock">
-                      <span class="title">Visible From:</span>
-                      <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                 <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td class="arrowBtn">
-                    <img
-                      src="assets/images/down-arrow-white.svg"
-                      alt="Down Arrow"
-                    />
-                  </td>
-                  <td>1702</td>
-                  <td>Bergamini Fabrizio</td>
-                  <td>fabrizio.bergamini@aldautomotive.com</td>
-                  <td>bergamini.fabrizio</td>
-                  <td>Direct Incentive 2017</td>
-                  <td>Strategic account sales manager</td>
-                  <td>General management</td>
-                </tr>
+
                 <tr class="fold">
                   <td></td>
                   <td>
@@ -1539,6 +1025,25 @@
           </ul>
         </nav>
       </div>
+    </div>
+
+      <div class="modal fade deletePaymentModal" id="deletePaymentModal" tabindex="-1" aria-labelledby="deletePaymentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deletePaymentModalLabel">Delete KPI</h5>
+                    <i class="fa-solid fa-xmark-large" data-bs-dismiss="modal" aria-label="Close"></i>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">Confirm permanent deletion of the Orders KPI?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary allBtn" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn all-btn">Delete</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="assets/js/jquery.js"></script>

@@ -143,3 +143,11 @@ p {
   display: flex;
   gap: 5px;
 }
+
+
+.width-all-100 {
+  @media screen and (max-width:575px) {
+    width: 100%;
+    
+  }
+}

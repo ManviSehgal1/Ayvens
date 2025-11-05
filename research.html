@@ -23,275 +23,303 @@
   <body>
     <div class="dashboard">
       <div class="mainSidebar">
-        <div class="sidebarLogo">
-          <img src="assets/images/logo-white.svg" alt="Logo" />
+        <div class="sidebarLogo sideBarPadding">
+          <img
+            src="assets/images/logo-white.svg"
+            alt="Logo"
+            class="sidebarMainLogo"
+          />
+          <button
+            class="navbar-toggler border-0 d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileSidebarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="menu-toggle-btn"
+          >
+            <span class="navbar-toggler-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
         </div>
-        <ul class="sidebarMenu list-unstyled" id="accordionParent">
-          <li>
-            <button
-              class="sidebarMenuButton sideMenuLink"
-              data-bs-toggle="collapse"
-              data-bs-target="#cards-collapse"
-              aria-expanded="true"
-            >
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Cards
-            </button>
-            <div
-              class="sideMenuWrapper collapse show"
-              id="cards-collapse"
-              data-bs-parent="#accordionParent"
-            >
-              <ul class="list-unstyled">
-                <li>
-                  <a
-                    href="research.html"
-                    title="Research"
-                    class="dropdown-item active"
-                    >Research</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="individual-card.html"
-                    title="Individual Card"
-                    class="dropdown-item"
-                    >Individual Card</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="state-management.html"
-                    title="State Management"
-                    class="dropdown-item"
-                    >State Management</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="import-kpi.html"
-                    title="Import KPI"
-                    class="dropdown-item"
-                    >Import KPI</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="participants.html"
-                    title="Participants"
-                    class="dropdown-item"
-                    >Participants</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <button
-              class="sidebarMenuButton sideMenuLink collapsed"
-              data-bs-toggle="collapse"
-              data-bs-target="#payments-collapse"
-              aria-expanded="false"
-            >
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Payments
-            </button>
-            <div
-              class="sideMenuWrapper collapse"
-              id="payments-collapse"
-              data-bs-parent="#accordionParent"
-            >
-              <ul class="list-unstyled">
-                <li>
-                  <a
-                    href="mass-liquidations.html"
-                    title="mass liquidations"
-                    class="dropdown-item"
-                    >Mass Liquidations</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="single-liquidation.html"
-                    title="single liquidation"
-                    class="dropdown-item"
-                    >Single Liquidation</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="report.html" title="Report" class="sideMenuLink">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Report
-            </a>
-          </li>
-          <li>
-            <button
-              class="sidebarMenuButton sideMenuLink collapsed"
-              data-bs-toggle="collapse"
-              data-bs-target="#policies-collapse"
-              aria-expanded="false"
-            >
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Policies
-            </button>
-            <div
-              class="sideMenuWrapper collapse"
-              id="policies-collapse"
-              data-bs-parent="#accordionParent"
-            >
-              <ul class="list-unstyled">
-                <li>
-                  <a
-                    href="role-cards.html"
-                    title="role cards"
-                    class="dropdown-item"
-                    >Role Cards</a
-                  >
-                </li>
-                <li>
-                  <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
-                </li>
-                <li>
-                  <a
-                    href="overtarget-kpis.html"
-                    title="overtarget kpis"
-                    class="dropdown-item"
-                    >Overtarget KPIs</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <button
-              class="sidebarMenuButton sideMenuLink collapsed"
-              data-bs-toggle="collapse"
-              data-bs-target="#organization-collapse"
-              aria-expanded="false"
-            >
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Organization
-            </button>
-            <div
-              class="sideMenuWrapper collapse"
-              id="organization-collapse"
-              data-bs-parent="#accordionParent"
-            >
-              <ul class="list-unstyled">
-                <li>
-                  <a href="people.html" title="people" class="dropdown-item"
-                    >People</a
-                  >
-                </li>
-                <li>
-                  <a href="roles.html" title="roles" class="dropdown-item"
-                    >Roles</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="organizational-units.html"
-                    title="organizational units"
-                    class="dropdown-item"
-                    >Organizational Units</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="utilities.html"
-                    title="utilities"
-                    class="dropdown-item"
-                    >Utilities</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="security.html" title="Security" class="sideMenuLink">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Security
-            </a>
-          </li>
-          <li>
-            <button
-              class="sidebarMenuButton sideMenuLink collapsed"
-              data-bs-toggle="collapse"
-              data-bs-target="#messaging-collapse"
-              aria-expanded="false"
-            >
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Messaging
-            </button>
-            <div
-              class="sideMenuWrapper collapse"
-              id="messaging-collapse"
-              data-bs-parent="#accordionParent"
-            >
-              <ul class="list-unstyled">
-                <li>
-                  <a href="log-mail.html" title="log mail" class="dropdown-item"
-                    >Log Mail</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="template-management.html"
-                    title="template management"
-                    class="dropdown-item"
-                    >Template Management</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="shipment-management.html"
-                    title="shipment management"
-                    class="dropdown-item"
-                    >Shipment Management</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Epicenter
-            </a>
-          </li>
-        </ul>
-        <div class="userMenu">
-          <ul class="sidebarMenu list-unstyled" id="accordionParent">
+        <div class="collapse sidebarContent" id="mobileSidebarContent">
+          <ul
+            class="sidebarMenu list-unstyled main-sidebar sideBarPadding"
+            id="accordionParent"
+          >
             <li>
-              <a class="userMenuLink userLink" href="#">
-                <i class="fa-light fa-circle-user"></i>
-                John Smith
+              <button
+                class="sidebarMenuButton sideMenuLink"
+                data-bs-toggle="collapse"
+                data-bs-target="#cards-collapse"
+                aria-expanded="true"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Cards
+              </button>
+              <div
+                class="sideMenuWrapper collapse show"
+                id="cards-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="research.html"
+                      title="Research"
+                      class="dropdown-item active"
+                      >Research</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="individual-card.html"
+                      title="Individual Card"
+                      class="dropdown-item"
+                      >Individual Card</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="state-management.html"
+                      title="State Management"
+                      class="dropdown-item"
+                      >State Management</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="import-kpi.html"
+                      title="Import KPI"
+                      class="dropdown-item"
+                      >Import KPI</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="participants.html"
+                      title="Participants"
+                      class="dropdown-item"
+                      >Participants</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button
+                class="sidebarMenuButton sideMenuLink collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#payments-collapse"
+                aria-expanded="false"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Payments
+              </button>
+              <div
+                class="sideMenuWrapper collapse"
+                id="payments-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="mass-liquidations.html"
+                      title="mass liquidations"
+                      class="dropdown-item"
+                      >Mass Liquidations</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="single-liquidation.html"
+                      title="single liquidation"
+                      class="dropdown-item"
+                      >Single Liquidation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="report.html" title="Report" class="sideMenuLink">
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Report
               </a>
             </li>
             <li>
-              <a class="userMenuLink" href="setting.html">
-                <i class="fa-light fa-gear"></i>
-                Settings
+              <button
+                class="sidebarMenuButton sideMenuLink collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#policies-collapse"
+                aria-expanded="false"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Policies
+              </button>
+              <div
+                class="sideMenuWrapper collapse"
+                id="policies-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="role-cards.html"
+                      title="role cards"
+                      class="dropdown-item"
+                      >Role Cards</a
+                    >
+                  </li>
+                  <li>
+                    <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
+                  </li>
+                  <li>
+                    <a
+                      href="overtarget-kpis.html"
+                      title="overtarget kpis"
+                      class="dropdown-item"
+                      >Overtarget KPIs</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button
+                class="sidebarMenuButton sideMenuLink collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#organization-collapse"
+                aria-expanded="false"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Organization
+              </button>
+              <div
+                class="sideMenuWrapper collapse"
+                id="organization-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="people.html" title="people" class="dropdown-item"
+                      >People</a
+                    >
+                  </li>
+                  <li>
+                    <a href="roles.html" title="roles" class="dropdown-item"
+                      >Roles</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="organizational-units.html"
+                      title="organizational units"
+                      class="dropdown-item"
+                      >Organizational Units</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="utilities.html"
+                      title="utilities"
+                      class="dropdown-item"
+                      >Utilities</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="security.html" title="Security" class="sideMenuLink">
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Security
               </a>
             </li>
             <li>
-              <a class="userMenuLink" href="login.html">
-                <i class="fa-light fa-arrow-left-from-bracket"></i>
-                Logout
+              <button
+                class="sidebarMenuButton sideMenuLink collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#messaging-collapse"
+                aria-expanded="false"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Messaging
+              </button>
+              <div
+                class="sideMenuWrapper collapse"
+                id="messaging-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="log-mail.html"
+                      title="log mail"
+                      class="dropdown-item"
+                      >Log Mail</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="template-management.html"
+                      title="template management"
+                      class="dropdown-item"
+                      >Template Management</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="shipment-management.html"
+                      title="shipment management"
+                      class="dropdown-item"
+                      >Shipment Management</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Epicenter
               </a>
             </li>
           </ul>
+          <div class="userMenu sideBarPadding">
+            <ul class="sidebarMenu list-unstyled" id="accordionParent">
+              <li>
+                <a class="userMenuLink userLink" href="#">
+                  <i class="fa-light fa-circle-user"></i>
+                  John Smith
+                </a>
+              </li>
+              <li>
+                <a class="userMenuLink" href="setting.html">
+                  <i class="fa-light fa-gear"></i>
+                  Settings
+                </a>
+              </li>
+              <li>
+                <a class="userMenuLink" href="login.html">
+                  <i class="fa-light fa-arrow-left-from-bracket"></i>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="contentBlock">
         <div class="topTitle">Search Cards</div>
         <div class="filterBlock">
-          <div class="dropdown custom-dropdown">
+          <div class="dropdown custom-dropdown width-all-100">
             <button
-              class="btn dropdown-toggle"
+              class="btn dropdown-toggle width-all-100"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -304,7 +332,7 @@
               <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
             </ul>
           </div>
-          <div class="searchBarWrapper">
+          <div class="searchBarWrapper width-all-100">
             <ul
               class="nav nav-tabs custom-radio-tabs"
               id="searchBarTab"
@@ -341,7 +369,7 @@
                 </button>
               </li>
             </ul>
-            <div class="searchBarBlock">
+            <div class="searchBarBlock width-all-100">
               <div class="dropdown searchBar-dropdown">
                 <button
                   class="btn dropdown-toggle"
@@ -379,7 +407,7 @@
             aria-labelledby="everyone-tab"
             tabindex="0"
           >
-            <table class="table resize-td-table">
+            <table class="table resize-td-table research-table">
               <thead>
                 <tr>
                   <th></th>
@@ -402,12 +430,11 @@
                   <td>Christian Court 1702</td>
                   <td>S1 Card</td>
                   <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -431,16 +458,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -452,12 +479,11 @@
                   <td>Sorrowful Tiziana 1983</td>
                   <td>S1 Card</td>
                   <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -481,16 +507,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -502,12 +528,11 @@
                   <td>Sorrowful Tiziana 1983</td>
                   <td>S1 Card</td>
                   <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -531,16 +556,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -552,12 +577,11 @@
                   <td>Christian Court 1702</td>
                   <td>S1 Card</td>
                   <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -581,16 +605,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -602,12 +626,11 @@
                   <td>Albawab Mottola Christian 1576</td>
                   <td>S1 Card</td>
                   <td>Draft</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -631,16 +654,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -652,12 +675,11 @@
                   <td>Christian Court 1702</td>
                   <td>S1 Card</td>
                   <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -681,16 +703,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -702,12 +724,11 @@
                   <td>Albawab Mottola Christian 1576</td>
                   <td>S1 Card</td>
                   <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -731,16 +752,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -752,12 +773,11 @@
                   <td>Christian Court 1702</td>
                   <td>S1 Card</td>
                   <td>Draft</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -781,16 +801,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -802,12 +822,11 @@
                   <td>Albawab Mottola Christian 1576</td>
                   <td>S1 Card</td>
                   <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -831,16 +850,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -852,12 +871,11 @@
                   <td>Albawab Mottola Christian 1576</td>
                   <td>S1 Card</td>
                   <td>Draft</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -881,16 +899,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
                 <tr class="view">
                   <td class="arrowBtn">
                     <img
@@ -902,12 +920,11 @@
                   <td>Albawab Mottola Christian 1576</td>
                   <td>S1 Card</td>
                   <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -931,16 +948,16 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
-                  </tr>
+                  <td colspan="6"></td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -974,12 +991,11 @@
                   <td>Christian Court 1702</td>
                   <td>S1 Card</td>
                   <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -1003,15 +1019,15 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
+                  <td colspan="6"></td>
                 </tr>
                 <tr class="view">
                   <td class="arrowBtn">
@@ -1024,12 +1040,11 @@
                   <td>Sorrowful Tiziana 1983</td>
                   <td>S1 Card</td>
                   <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -1053,15 +1068,15 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
+                  <td colspan="6"></td>
                 </tr>
                 <tr class="view">
                   <td class="arrowBtn">
@@ -1074,12 +1089,11 @@
                   <td>Sorrowful Tiziana 1983</td>
                   <td>S1 Card</td>
                   <td>Targets Published</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -1103,15 +1117,15 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
+                  <td colspan="6"></td>
                 </tr>
                 <tr class="view">
                   <td class="arrowBtn">
@@ -1124,12 +1138,11 @@
                   <td>Christian Court 1702</td>
                   <td>S1 Card</td>
                   <td>Having Read The Document</td>
-                  <td class="actionBtn">
-                    <img src="assets/images/pdf.svg" alt="Pdf" />
-                    <img
-                      src="assets/images/dotsThreeVertical.svg"
-                      alt="Three Dots Vertical"
-                    />
+                  <td class="">
+                    <div class="actionBtn">
+                      <i class="fa-light fa-file-pdf"></i>
+                      <i class="fa-light fa-ellipsis"></i>
+                    </div>
                   </td>
                 </tr>
                 <tr class="fold">
@@ -1153,15 +1166,15 @@
                     <div class="infoBlock">
                       <span class="title">Visible From:</span>
                       <ul class="list-unstyled">
-                        <li>Giannatiempo Sara (Level 1)</li>
-                        <li>Pavan Andrea (Level 2)</li>
-                        <li>Stanisci Antonio (Lev. 3)</li>
+                        <li class="subText">Giannatiempo Sara (Level 1)</li>
+                        <li class="subText">Pavan Andrea (Level 2)</li>
+                        <li class="subText">Stanisci Antonio (Lev. 3)</li>
                       </ul>
                     </div>
                   </td>
                 </tr>
                 <tr class="spacing-tr">
-                    <td colspan="6"></td>
+                  <td colspan="6"></td>
                 </tr>
               </tbody>
             </table>
@@ -1169,26 +1182,26 @@
         </div>
         <nav class="pagination-container">
           <ul class="pagination list-unstyled">
-            <li class="page-item disabled prevBtn">
+            <li class="page-item disabled prevBtn pageBtns">
               <a class="page-link">
                 <i class="fa-light fa-chevron-left"></i>
-                Previous
+                <span class="d-md-flex d-none">Previous</span>
               </a>
             </li>
             <li class="page-item active">
               <a class="page-link" href="#">1</a>
             </li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link d-md-flex d-none" href="#">3</a></li>
+            <li class="page-item"><a class="page-link d-md-flex d-none" href="#">4</a></li>
             <li class="page-item dots">
               <a class="page-link" href="#">...</a>
             </li>
             <li class="page-item"><a class="page-link" href="#">13</a></li>
             <li class="page-item"><a class="page-link" href="#">14</a></li>
-            <li class="page-item">
+            <li class="page-item pageBtns">
               <a class="page-link">
-                Next
+                <span class="d-md-flex d-none">Next</span>
                 <i class="fa-light fa-chevron-right"></i>
               </a>
             </li>

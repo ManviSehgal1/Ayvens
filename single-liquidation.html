@@ -1,388 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Liquidations | Ayvens</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Font awesome link -->
-    <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/0901bfe3aa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/fe073c3ad3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c6fd3d7ec2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-
+  <body>
     <div class="dashboard">
-        <div class="mainSidebar">
-            <div class="sidebarLogo">
-                <img src="assets/images/logo-white.svg" alt="Logo">
-            </div>
-            <ul class="sidebarMenu list-unstyled" id="accordionParent">
-                <li>
-                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#cards-collapse" aria-expanded="false">
-                        <img src="assets/images/list-icon.svg" alt="List">
-                        Cards
-                    </button>
-                    <div class="sideMenuWrapper collapse" id="cards-collapse" data-bs-parent="#accordionParent">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="research.html" title="Research" class="dropdown-item">Research</a>
-                            </li>
-                            <li>
-                                <a href="individual-card.html" title="Individual Card" class="dropdown-item">Individual
-                                    Card</a>
-                            </li>
-                            <li>
-                                <a href="state-management.html" title="State Management" class="dropdown-item">State
-                                    Management</a>
-                            </li>
-                            <li>
-                                <a href="import-kpi.html" title="Import KPI" class="dropdown-item">Import KPI</a>
-                            </li>
-                            <li>
-                                <a href="participants.html" title="Participants" class="dropdown-item">Participants</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse"
-                        data-bs-target="#payments-collapse" aria-expanded="true">
-                        <img src="assets/images/list-icon.svg" alt="List">
-                        Payments
-                    </button>
-                    <div class="sideMenuWrapper collapse show" id="payments-collapse"  data-bs-parent="#accordionParent">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="mass-liquidations.html" title="mass liquidations" class="dropdown-item ">Mass Liquidations</a>
-                            </li>
-                            <li>
-                                <a href="single-liquidation.html" title="single liquidation" class="dropdown-item active">Single Liquidation</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="report.html" title="Report" class="sideMenuLink">
-                        <img src="assets/images/list-icon.svg" alt="List">
-                        Report
-                    </a>
-                </li>
-                <li>
-                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#policies-collapse" aria-expanded="false">
-                        <img src="assets/images/list-icon.svg" alt="List">
-                        Policies
-                    </button>
-                    <div class="sideMenuWrapper collapse" id="policies-collapse" data-bs-parent="#accordionParent">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="role-cards.html" title="role cards" class="dropdown-item">Role Cards</a>
-                            </li>
-                            <li>
-                                <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
-                            </li>
-                            <li>
-                                <a href="overtarget-kpis.html" title="overtarget kpis" class="dropdown-item">Overtarget KPIs</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#organization-collapse" aria-expanded="false">
-                        <img src="assets/images/list-icon.svg" alt="List">
-                        Organization
-                    </button>
-                    <div class="sideMenuWrapper collapse" id="organization-collapse"  data-bs-parent="#accordionParent">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="people.html" title="people" class="dropdown-item">People</a>
-                            </li>
-                            <li>
-                                <a href="roles.html" title="roles" class="dropdown-item">Roles</a>
-                            </li>
-                            <li>
-                                <a href="organizational-units.html" title="organizational units" class="dropdown-item">Organizational Units</a>
-                            </li>
-                            <li>
-                                <a href="utilities.html" title="utilities" class="dropdown-item">Utilities</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="security.html" title="Security" class="sideMenuLink">
-                        <img src="assets/images/list-icon.svg" alt="List">
-                        Security
-                    </a>
-                </li>
-                <li>
-                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#messaging-collapse" aria-expanded="false">
-                        <img src="assets/images/list-icon.svg" alt="List">
-                        Messaging
-                    </button>
-                    <div class="sideMenuWrapper collapse" id="messaging-collapse"  data-bs-parent="#accordionParent">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="log-mail.html" title="log mail" class="dropdown-item">Log Mail</a>
-                            </li>
-                            <li>
-                                <a href="template-management.html" title="template management" class="dropdown-item">Template Management</a>
-                            </li>
-                            <li>
-                                <a href="shipment-management.html" title="shipment management" class="dropdown-item">Shipment Management</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
-                        <img src="assets/images/list-icon.svg" alt="List">
-                        Epicenter
-                    </a>
-                </li>
-            </ul>
-            <div class="userMenu">
-          <ul class="sidebarMenu list-unstyled" id="accordionParent">
+      <div class="mainSidebar">
+        <div class="sidebarLogo sideBarPadding">
+          <img
+            src="assets/images/logo-white.svg"
+            alt="Logo"
+            class="sidebarMainLogo"
+          />
+          <button
+            class="navbar-toggler border-0 d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileSidebarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="menu-toggle-btn"
+          >
+            <span class="navbar-toggler-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+        <div class="collapse sidebarContent" id="mobileSidebarContent">
+          <ul
+            class="sidebarMenu list-unstyled main-sidebar sideBarPadding"
+            id="accordionParent"
+          >
             <li>
-              <a class="userMenuLink userLink" href="#">
-                <i class="fa-light fa-circle-user"></i>
-                John Smith
+              <button
+                class="sidebarMenuButton sideMenuLink collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#cards-collapse"
+                aria-expanded="false"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Cards
+              </button>
+              <div
+                class="sideMenuWrapper collapse"
+                id="cards-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="research.html"
+                      title="Research"
+                      class="dropdown-item"
+                      >Research</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="individual-card.html"
+                      title="Individual Card"
+                      class="dropdown-item"
+                      >Individual Card</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="state-management.html"
+                      title="State Management"
+                      class="dropdown-item"
+                      >State Management</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="import-kpi.html"
+                      title="Import KPI"
+                      class="dropdown-item"
+                      >Import KPI</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="participants.html"
+                      title="Participants"
+                      class="dropdown-item"
+                      >Participants</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button
+                class="sidebarMenuButton sideMenuLink"
+                data-bs-toggle="collapse"
+                data-bs-target="#payments-collapse"
+                aria-expanded="true"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Payments
+              </button>
+              <div
+                class="sideMenuWrapper collapse show"
+                id="payments-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="mass-liquidations.html"
+                      title="mass liquidations"
+                      class="dropdown-item"
+                      >Mass Liquidations</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="single-liquidation.html"
+                      title="single liquidation"
+                      class="dropdown-item active"
+                      >Single Liquidation</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="report.html" title="Report" class="sideMenuLink">
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Report
               </a>
             </li>
             <li>
-              <a class="userMenuLink" href="setting.html">
-                <i class="fa-light fa-gear"></i>
-                Settings
+              <button
+                class="sidebarMenuButton sideMenuLink collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#policies-collapse"
+                aria-expanded="false"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Policies
+              </button>
+              <div
+                class="sideMenuWrapper collapse"
+                id="policies-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="role-cards.html"
+                      title="role cards"
+                      class="dropdown-item"
+                      >Role Cards</a
+                    >
+                  </li>
+                  <li>
+                    <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
+                  </li>
+                  <li>
+                    <a
+                      href="overtarget-kpis.html"
+                      title="overtarget kpis"
+                      class="dropdown-item"
+                      >Overtarget KPIs</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button
+                class="sidebarMenuButton sideMenuLink collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#organization-collapse"
+                aria-expanded="false"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Organization
+              </button>
+              <div
+                class="sideMenuWrapper collapse"
+                id="organization-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="people.html" title="people" class="dropdown-item"
+                      >People</a
+                    >
+                  </li>
+                  <li>
+                    <a href="roles.html" title="roles" class="dropdown-item"
+                      >Roles</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="organizational-units.html"
+                      title="organizational units"
+                      class="dropdown-item"
+                      >Organizational Units</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="utilities.html"
+                      title="utilities"
+                      class="dropdown-item"
+                      >Utilities</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="security.html" title="Security" class="sideMenuLink">
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Security
               </a>
             </li>
             <li>
-              <a class="userMenuLink" href="login.html">
-                <i class="fa-light fa-arrow-left-from-bracket"></i>
-                Logout
+              <button
+                class="sidebarMenuButton sideMenuLink collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#messaging-collapse"
+                aria-expanded="false"
+              >
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Messaging
+              </button>
+              <div
+                class="sideMenuWrapper collapse"
+                id="messaging-collapse"
+                data-bs-parent="#accordionParent"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="log-mail.html"
+                      title="log mail"
+                      class="dropdown-item"
+                      >Log Mail</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="template-management.html"
+                      title="template management"
+                      class="dropdown-item"
+                      >Template Management</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="shipment-management.html"
+                      title="shipment management"
+                      class="dropdown-item"
+                      >Shipment Management</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
+                <img src="assets/images/list-icon.svg" alt="List" />
+                Epicenter
               </a>
             </li>
           </ul>
+          <div class="userMenu sideBarPadding">
+            <ul class="sidebarMenu list-unstyled" id="accordionParent">
+              <li>
+                <a class="userMenuLink userLink" href="#">
+                  <i class="fa-light fa-circle-user"></i>
+                  John Smith
+                </a>
+              </li>
+              <li>
+                <a class="userMenuLink" href="setting.html">
+                  <i class="fa-light fa-gear"></i>
+                  Settings
+                </a>
+              </li>
+              <li>
+                <a class="userMenuLink" href="login.html">
+                  <i class="fa-light fa-arrow-left-from-bracket"></i>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="contentBlock">
+        <div class="topTitle">Single Liquidations</div>
+        <div class="middleWrapper middleWrapperGrid">
+          <div class="customCard statCard blueCard">
+            <div class="value">12,800.00</div>
+            <p class="subText">Overall Bonus Target</p>
+          </div>
+          <div class="customCard statCard yelloCard">
+            <div class="value">462.72</div>
+            <p class="subText">Bonus Accrued So Far</p>
+          </div>
+          <div class="customCard statCard redCard">
+            <div class="value">513.92</div>
+            <p class="subText">Total Bonus Paid</p>
+          </div>
         </div>
-        <div class="contentBlock">
-            <div class="topTitle">Single Liquidations</div>
-            <div class="middleWrapper middleWrapperGrid">
-                <div class="customCard statCard blueCard">
-                    <div class="value">12,800.00</div>
-                    <p class="subText">Overall Bonus Target</p>
-                </div>
-                <div class="customCard statCard yelloCard">
-                    <div class="value">
-                        462.72
-                    </div>
-                    <p class="subText">Bonus Accrued So Far</p>
-                </div>
-                <div class="customCard statCard redCard">
-                    <div class="value">513.92</div>
-                    <p class="subText">Total Bonus Paid</p>
-                </div>
+        <div class="filterBlock">
+          <div class="dropDownWrapper">
+            <div class="dropdown custom-dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                2024 Year
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">2025 Year</a></li>
+                <li><a class="dropdown-item" href="#">2023 Year</a></li>
+                <li><a class="dropdown-item" href="#">2022 Year</a></li>
+              </ul>
             </div>
-            <div class="filterBlock">
-                <div class="dropDownWrapper">
-                    <div class="dropdown custom-dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            2024 Year
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">2025 Year</a></li>
-                            <li><a class="dropdown-item" href="#">2023 Year</a></li>
-                            <li><a class="dropdown-item" href="#">2022 Year</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown custom-dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Orange Alexander
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Orange Alexander 1</a></li>
-                            <li><a class="dropdown-item" href="#">Orange Alexander 2</a></li>
-                            <li><a class="dropdown-item" href="#">Orange Alexander 3</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <a href="#" class="btn all-btn" data-bs-toggle="modal" data-bs-target="#recordPaymentModal">
-                    <i class="fa-solid fa-plus me-1" aria-hidden="true"></i>
-                    Record Payment</a>
+            <div class="dropdown custom-dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Orange Alexander
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Orange Alexander 1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Orange Alexander 2</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Orange Alexander 3</a>
+                </li>
+              </ul>
             </div>
-            <div class="tableContent">
-                <table class="table single-liquidations-table">
-                    <thead>
-                        <tr>
-                            <th>Reference Sheet</th>
-                            <th>Period Target</th>
-                            <th>Matured</th>
-                            <th>Amount Disbursed</th>
-                            <th>Delta</th>
-                            <th>Payment Date</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="view">
-                            <td>Jan-Dec</td>
-                            <td>€ 12,800.00</td>
-                            <td>€ 462.72</td>
-                            <td>€ 462.72</td>
-                            <td>€ 0.00</td>
-                            <td>February 27, 2025</td>
-                            <td class="actionBtn">
-                                <i class="fa-light fa-trash deleteIcon" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="view">
-                            <td>Jan-Dec</td>
-                            <td>€ 12,800.00</td>
-                            <td>-</td>
-                            <td>€ -12.80</td>
-                            <td>€ -12.80</td>
-                            <td>February 27, 2025</td>
-                            <td class="actionBtn">
-                                <i class="fa-light fa-trash deleteIcon" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="view">
-                            <td>Jan-Dec</td>
-                            <td>€ 12,800.00</td>
-                            <td>-</td>
-                            <td>€ -12.80</td>
-                            <td>€ -25.60</td>
-                            <td>February 27, 2025</td>
-                            <td class="actionBtn">
-                                <i class="fa-light fa-trash deleteIcon" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="view">
-                            <td>Jan-Dec</td>
-                            <td>€ 12,800.00</td>
-                            <td>-</td>
-                            <td>€ -12.80</td>
-                            <td>€ -38.40</td>
-                            <td>February 27, 2025</td>
-                            <td class="actionBtn">
-                                <i class="fa-light fa-trash deleteIcon" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="view">
-                            <td>Jan-Dec</td>
-                            <td>€ 12,800.00</td>
-                            <td>-</td>
-                            <td>€ -12.80</td>
-                            <td>€ -51.20</td>
-                            <td>February 27, 2025</td>
-                            <td class="actionBtn">
-                                <i class="fa-light fa-trash deleteIcon" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-            <nav class="pagination-container">
-                <ul class="pagination list-unstyled">
-                    <li class="page-item disabled prevBtn">
-                        <a class="page-link">
-                            <i class="fa-light fa-chevron-left"></i>
-                            Previous
-                        </a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item dots"><a class="page-link" href="#">...</a></li>
-                    <li class="page-item"><a class="page-link" href="#">13</a></li>
-                    <li class="page-item"><a class="page-link" href="#">14</a></li>
-                    <li class="page-item">
-                        <a class="page-link">
-                            Next
-                            <i class="fa-light fa-chevron-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+          </div>
+          <a
+            href="#"
+            class="btn all-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#recordPaymentModal"
+          >
+            <i class="fa-solid fa-plus me-1" aria-hidden="true"></i>
+            Record Payment</a
+          >
         </div>
+        <div class="tableContent">
+          <table class="table single-liquidations-table">
+            <thead>
+              <tr>
+                <th>Reference Sheet</th>
+                <th>Period Target</th>
+                <th>Matured</th>
+                <th>Amount Disbursed</th>
+                <th>Delta</th>
+                <th>Payment Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="view">
+                <td>Jan-Dec</td>
+                <td>€ 12,800.00</td>
+                <td>€ 462.72</td>
+                <td>€ 462.72</td>
+                <td>€ 0.00</td>
+                <td>February 27, 2025</td>
+                <td>
+                  <div class="actionBtn">
+                    <i
+                      class="fa-light fa-trash deleteIcon"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deletePaymentModal"
+                    ></i>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="view">
+                <td>Jan-Dec</td>
+                <td>€ 12,800.00</td>
+                <td>-</td>
+                <td>€ -12.80</td>
+                <td>€ -12.80</td>
+                <td>February 27, 2025</td>
+                <td>
+                  <div class="actionBtn">
+                    <i
+                      class="fa-light fa-trash deleteIcon"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deletePaymentModal"
+                    ></i>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="view">
+                <td>Jan-Dec</td>
+                <td>€ 12,800.00</td>
+                <td>-</td>
+                <td>€ -12.80</td>
+                <td>€ -25.60</td>
+                <td>February 27, 2025</td>
+                <td>
+                  <div class="actionBtn">
+                    <i
+                      class="fa-light fa-trash deleteIcon"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deletePaymentModal"
+                    ></i>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="view">
+                <td>Jan-Dec</td>
+                <td>€ 12,800.00</td>
+                <td>-</td>
+                <td>€ -12.80</td>
+                <td>€ -38.40</td>
+                <td>February 27, 2025</td>
+                <td>
+                  <div class="actionBtn">
+                    <i
+                      class="fa-light fa-trash deleteIcon"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deletePaymentModal"
+                    ></i>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="view">
+                <td>Jan-Dec</td>
+                <td>€ 12,800.00</td>
+                <td>-</td>
+                <td>€ -12.80</td>
+                <td>€ -51.20</td>
+                <td>February 27, 2025</td>
+                <td>
+                  <div class="actionBtn">
+                    <i
+                      class="fa-light fa-trash deleteIcon"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deletePaymentModal"
+                    ></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <nav class="pagination-container">
+          <ul class="pagination list-unstyled">
+            <li class="page-item disabled prevBtn">
+              <a class="page-link">
+                <i class="fa-light fa-chevron-left"></i>
+                Previous
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item dots">
+              <a class="page-link" href="#">...</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">13</a></li>
+            <li class="page-item"><a class="page-link" href="#">14</a></li>
+            <li class="page-item">
+              <a class="page-link">
+                Next
+                <i class="fa-light fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
-    <div class="modal fade" id="recordPaymentModal" tabindex="-1" aria-labelledby="recordPaymentModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="recordPaymentModalLabel">Record Payment
-                    </h5>
-                    <i class="fa-solid fa-xmark-large" data-bs-dismiss="modal" aria-label="Close"></i>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-body-content">
-                        <div class="">
-                            <label for="statusSelect" class="form-label">Reference Sheet</label>
-                            <select class="form-select" id="statusSelect">
-                                <option selected>Choose Reference Sheet...</option>
-                                <option value="Jan-Dec">Jan-Dec</option>
-                                <option value="Jan-May">Jan-May</option>
-                                <option value="Aug-Dec">Aug-Dec</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="amountDisbursed" class="form-label">Amount Disbursed</label>
-                            <input class="form-control" type="text" placeholder="enter amount" aria-label="enter amount"
-                                id="amountDisbursed">
-                        </div>
-                        <div>
-                            <label for="paymentDate" class="form-label">Payment Date</label>
-                            <input class="form-control" type="date" placeholder="choose date" aria-label="payment date"
-                                id="paymentDate">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary allBtn" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn all-btn">Save</button>
-                </div>
+    <div
+      class="modal fade"
+      id="recordPaymentModal"
+      tabindex="-1"
+      aria-labelledby="recordPaymentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recordPaymentModalLabel">
+              Record Payment
+            </h5>
+            <i
+              class="fa-solid fa-xmark-large"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></i>
+          </div>
+          <div class="modal-body">
+            <div class="modal-body-content">
+              <div class="">
+                <label for="statusSelect" class="form-label"
+                  >Reference Sheet</label
+                >
+                <select class="form-select" id="statusSelect">
+                  <option selected>Choose Reference Sheet...</option>
+                  <option value="Jan-Dec">Jan-Dec</option>
+                  <option value="Jan-May">Jan-May</option>
+                  <option value="Aug-Dec">Aug-Dec</option>
+                </select>
+              </div>
+              <div>
+                <label for="amountDisbursed" class="form-label"
+                  >Amount Disbursed</label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="enter amount"
+                  aria-label="enter amount"
+                  id="amountDisbursed"
+                />
+              </div>
+              <div>
+                <label for="paymentDate" class="form-label">Payment Date</label>
+                <input
+                  class="form-control"
+                  type="date"
+                  placeholder="choose date"
+                  aria-label="payment date"
+                  id="paymentDate"
+                />
+              </div>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary allBtn"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn all-btn">Save</button>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="modal fade deletePaymentModal" id="deletePaymentModal" tabindex="-1" aria-labelledby="deletePaymentModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deletePaymentModalLabel">Delete Payment
-                    </h5>
-                    <i class="fa-solid fa-xmark-large" data-bs-dismiss="modal" aria-label="Close"></i>
-                </div>
-                <div class="modal-body">
-                    <p class="mb-0">Are you sure you want to delete this recorded payment ?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary allBtn" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn all-btn">Delete</button>
-                </div>
-            </div>
+    <div
+      class="modal fade deletePaymentModal"
+      id="deletePaymentModal"
+      tabindex="-1"
+      aria-labelledby="deletePaymentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deletePaymentModalLabel">
+              Delete Payment
+            </h5>
+            <i
+              class="fa-solid fa-xmark-large"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></i>
+          </div>
+          <div class="modal-body">
+            <p class="mb-0">
+              Are you sure you want to delete this recorded payment ?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary allBtn"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn all-btn">Delete</button>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/custom.js"></script>
-</body>
-
+  </body>
 </html>

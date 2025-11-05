@@ -10,6 +10,11 @@
     font-weight: 500;
 }
 
+@mixin text-size-13 {
+    font-size: 13px;
+    line-height: 18px;
+}
+
 @mixin text-sm-regular {
     font-size: 14px;
     line-height: 20px;

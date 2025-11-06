@@ -13,6 +13,28 @@ body {
   background-color: var.$white;
   @include text-md-regular;
   font-family: var.$body-font-family;
+
+  &:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: opacity 0.9s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: blur(4px);
+
+  }
+  &.overflow-hidden:before {
+  @media screen and (max-width: 1199px) {
+    opacity: 1;
+    visibility: visible;
+  }
+  }
 }
 
 h1,
@@ -27,7 +49,7 @@ p {
 }
 
 *:focus-visible {
-outline: none;
+  outline: none;
 }
 
 .primaryText {
@@ -144,10 +166,14 @@ p {
   gap: 5px;
 }
 
-
 .width-all-100 {
-  @media screen and (max-width:575px) {
+  @media screen and (max-width: 991px) {
     width: 100%;
-    
+  }
+}
+
+.width-all-100-md {
+  @media screen and (max-width: 767px) {
+    width: 100%;
   }
 }

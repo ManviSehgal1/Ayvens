@@ -30,7 +30,7 @@
             class="sidebarMainLogo"
           />
           <button
-            class="navbar-toggler border-0 d-lg-none"
+            class="navbar-toggler border-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#mobileSidebarContent"
@@ -317,7 +317,8 @@
       <div class="contentBlock">
         <div class="topTitle">Search Cards</div>
         <div class="filterBlock">
-          <div class="dropdown custom-dropdown width-all-100">
+          <div class="dropdown custom-dropdown researchFilter width-all-100">
+            <div class="dropdown width-all-100">
             <button
               class="btn dropdown-toggle width-all-100"
               type="button"
@@ -326,13 +327,14 @@
             >
               2025 Quarter
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu width-all-100">
               <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
               <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
               <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
             </ul>
-          </div>
-          <div class="searchBarWrapper width-all-100">
+            </div>
+
+            <div class="searchBarWrapper width-all-100">
             <ul
               class="nav nav-tabs custom-radio-tabs"
               id="searchBarTab"
@@ -369,7 +371,11 @@
                 </button>
               </li>
             </ul>
-            <div class="searchBarBlock width-all-100">
+            </div>
+          </div>
+          <div class="searchBarWrapper width-all-100">
+         
+            <div class="searchBarBlock width-all-100-md">
               <div class="dropdown searchBar-dropdown">
                 <button
                   class="btn dropdown-toggle"
@@ -391,11 +397,7 @@
                 placeholder="Search..."
                 aria-label="Search"
               />
-              <img
-                src="assets/images/search.svg"
-                alt="Search"
-                class="search-icon"
-              />
+              <i class="fa-light fa-magnifying-glass search-icon"></i>
             </div>
           </div>
         </div>

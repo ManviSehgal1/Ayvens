@@ -186,7 +186,7 @@
   display: flex;
   height: 100vh;
 
-  @media screen and (max-width: 991.98px) {
+  @media screen and (max-width: 1199.98px) {
     flex-direction: column;
   }
 }
@@ -223,6 +223,7 @@
       position: relative;
       width: 100%;
       text-decoration: none;
+      @include text-md-regular;
 
       &:hover {
         color: var.$secondary-color;
@@ -301,6 +302,7 @@
       gap: 10px;
       text-decoration: none;
       transition: color 0.2s ease-in-out;
+      @include text-md-regular;
 
       i {
         font-size: 20px;
@@ -322,9 +324,25 @@
       }
     }
 
-    @media screen and (max-width: 991.98px) {
+    @media screen and (max-width: 1199.98px) {
       padding-top: 24px;
       padding-bottom: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1599.98px) {
+    .sidebarMenu {
+      .sideMenuWrapper ul .dropdown-item {
+        font-size: 12px;
+      }
+
+      .sideMenuLink {
+        font-size: 14px;
+      }
+    }
+
+    .userMenu .userMenuLink {
+      font-size: 14px;
     }
   }
 }
@@ -337,6 +355,16 @@
   background-color: var.$gray-50;
   width: 100%;
 
+  @media screen and (min-width: 1200px) and (max-width: 1599.98px) {
+    padding: 30px 40px;
+    gap: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 36px;
+    gap: 24px;
+  }
+
   @media screen and (max-width: 767px) {
     padding: 24px 20px;
     gap: 20px;
@@ -345,7 +373,7 @@
   .topTitle {
     @include text-lg-medium;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 991px) {
       @include text-md-medium;
     }
   }
@@ -374,8 +402,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 991px) {
       flex-direction: column;
       gap: 16px;
     }
@@ -390,13 +419,17 @@
         gap: 16px;
       }
 
+      @media screen and (min-width: 768px) {
+        justify-content: end;
+      }
+
       .nav-tabs {
         border: none;
         gap: 10px;
 
         .nav-item {
           .nav-link {
-            @include text-md-regular;
+            @include text-sm-regular;
             color: var.$gray-300;
             border-radius: 0;
             // border: 1px solid var.$gray-200;
@@ -409,7 +442,7 @@
             }
 
             @media screen and (max-width: 767px) {
-              @include text-sm-regular;
+              @include text-size-13;
             }
           }
 
@@ -436,6 +469,10 @@
 
           &::placeholder {
             color: #bcbec0;
+          }
+
+          @media screen and (max-width: 767px) {
+            @include text-size-13;
           }
         }
 
@@ -466,6 +503,10 @@
               bottom: 0;
               margin: auto 0;
               display: flex;
+            }
+
+            @media screen and (max-width: 767px) {
+              @include text-size-13;
             }
           }
 
@@ -508,6 +549,11 @@
     max-height: 703px;
     overflow-y: auto;
     height: 100%;
+    padding-right: 33px;
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      padding-right: 20px;
+    }
 
     &::-webkit-scrollbar {
       width: 8px;
@@ -532,6 +578,7 @@
       background-color: var.$gray-400;
       border-radius: 5px;
     }
+
     .table {
       margin-bottom: 0;
 
@@ -592,12 +639,13 @@
             .actionBtn {
               display: flex;
               gap: 8px;
+
               i {
                 cursor: pointer;
               }
             }
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 991px) {
               @include text-xs-regular;
               padding: 10px;
             }
@@ -700,17 +748,12 @@
 
       &.research-table {
         tr {
-
-          th, td {
-
+          th,
+          td {
             vertical-align: middle;
 
             @media screen and (max-width: 767px) {
-              padding: 10px 5px 10px 10px;
-
-              &:nth-child(2), &:last-child {
-                padding: 10px;
-              }
+              padding: 10px;
             }
           }
 
@@ -727,6 +770,10 @@
 
   .pagination-container {
     padding: 12px 0;
+
+    @media screen and (max-width: 991px) {
+      padding: 0px;
+    }
 
     .pagination {
       margin-bottom: 0;
@@ -777,6 +824,7 @@
             }
           }
         }
+
         &.pageBtns {
           display: flex;
           align-items: center;
@@ -861,6 +909,15 @@
       }
     }
   }
+
+  @media screen and (max-width: 1599.98px) {
+    .middleWrapper {
+      .customCard.statCard {
+        flex: 0 0 350px;
+        max-width: 350px;
+      }
+    }
+  }
 }
 
 .custom-dropdown {
@@ -875,7 +932,8 @@
     &.all-btn {
       @include text-sm-semibold;
     }
-    @media screen and (max-width: 575px) {
+
+    @media screen and (max-width: 991px) {
       text-align: left;
     }
 
@@ -904,10 +962,35 @@
     .dropdown-item {
       @include text-sm-regular;
       color: var.$primary-color;
+
+      @media screen and (max-width: 767px) {
+        @include text-size-13;
+      }
     }
 
     @media screen and (max-width: 575px) {
       width: 100%;
+    }
+  }
+
+  &.researchFilter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .searchBarWrapper {
+      flex-direction: row !important;
+      justify-content: center;
+
+      @media screen and (min-width: 576px) {
+        justify-content: end;
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
     }
   }
 }
@@ -1039,6 +1122,7 @@
                     .CardChartTitle {
                       margin-bottom: 30px;
                     }
+
                     .CardChartSection {
                       display: flex;
                       gap: 20px;
@@ -1097,6 +1181,7 @@
                         }
                       }
                     }
+
                     .targetSection {
                       border-left: 1px solid var.$gray-100;
                       padding-left: 20px;
@@ -1436,10 +1521,6 @@
   }
 }
 
-.contentBlock .tableContent {
-  padding-right: 33px;
-}
-
 .contentBlock .tableContent .table.mass-liquidations-table thead {
   tr {
     th {
@@ -1705,6 +1786,7 @@
           &[type="number"] {
             appearance: textfield;
           }
+
           &::-webkit-outer-spin-button,
           &::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -1756,6 +1838,7 @@
               color: #4d7399;
             }
           }
+
           .upload-btn-wrapper {
             position: relative;
             overflow: hidden;
@@ -1885,6 +1968,7 @@
           flex-direction: column;
           gap: 24px;
         }
+
         p.text-muted {
           @include text-sm-regular;
           padding: 4px 16px 12px;
@@ -2043,6 +2127,7 @@
         &.actionBtn {
           display: flex;
           gap: 8px;
+
           i {
             font-size: 16px;
             color: var.$gray-700;
@@ -2088,7 +2173,8 @@
       border-radius: 5px;
       width: 6px;
     }
-    @media screen and (max-width: 991.98px) {
+
+    @media screen and (max-width: 1199.98px) {
       height: calc(100vh - 284px);
       padding-top: 24px;
       padding-bottom: 24px;
@@ -2099,7 +2185,7 @@
     padding-left: 64px;
     padding-right: 64px;
 
-    @media screen and (min-width: 786px) and (max-width: 991.98px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       padding-left: 36px;
       padding-right: 36px;
     }
@@ -2109,8 +2195,17 @@
       padding-right: 24px;
     }
   }
+  @media screen and (min-width: 1200px) and (max-width: 1599.98px) {
+    max-width: 270px;
+    flex: 0 0 270px;
 
-  @media (max-width: 991.98px) {
+    .sideBarPadding {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  @media (max-width: 1199.98px) {
     width: 100%;
     position: relative;
     max-width: 100%;
@@ -2127,7 +2222,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @media screen and (max-width: 991.98px) {
+  @media screen and (max-width: 1199.98px) {
     padding-top: 24px;
     padding-bottom: 24px;
   }
@@ -2141,7 +2236,7 @@
     display: flex;
   }
 
-  @media (max-width: 991.98px) {
+  @media screen and (max-width: 1199.98px) {
     background-color: var.$primary-color;
     padding: 10px 0;
     position: absolute;
@@ -2172,6 +2267,22 @@
       width: 100%;
     }
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    width: 328px;
+
+    &.collapse {
+      width: 328px;
+    }
+
+    &.collapse.show {
+      width: 328px;
+    }
+
+    &.collapsing {
+      width: 328px;
+    }
+  }
 }
 
 .navbar-toggler {
@@ -2183,6 +2294,11 @@
     outline: none;
     box-shadow: none;
   }
+
+ @media screen and (min-width: 1200px) {
+display: none;
+ }
+
 }
 
 .navbar-toggler-icon {
@@ -2207,10 +2323,12 @@
 .navbar-toggler-icon span:nth-child(1) {
   top: 0;
 }
+
 .navbar-toggler-icon span:nth-child(2),
 .navbar-toggler-icon span:nth-child(3) {
   top: 8px;
 }
+
 .navbar-toggler-icon span:nth-child(4) {
   top: 16px;
 }
@@ -2220,12 +2338,15 @@
   transform: rotate(45deg);
   top: 8px;
 }
+
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(2) {
   opacity: 0;
 }
+
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(3) {
   opacity: 0;
 }
+
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(4) {
   transform: rotate(-45deg);
   top: 8px;

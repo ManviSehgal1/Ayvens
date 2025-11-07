@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "./variables" as var;
+@use "./variables"as var;
 @import "mixin";
 
 * {
@@ -27,13 +27,13 @@ body {
     visibility: hidden;
     opacity: 0;
     backdrop-filter: blur(4px);
+  }
 
-  }
   &.overflow-hidden:before {
-  @media screen and (max-width: 1199px) {
-    opacity: 1;
-    visibility: visible;
-  }
+    @media screen and (max-width: 1199px) {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
@@ -58,6 +58,19 @@ p {
 
 .grayText {
   color: var.$gray-600;
+
+  @include text-md-regular;
+
+
+  @media screen and (min-width: 1200px) and (max-width: 1720px) {
+    font-size: 15px;
+
+  }
+
+  @media screen and (max-width: 1199px) {
+    @include text-sm-regular;
+
+  }
 }
 
 p {
@@ -71,6 +84,20 @@ p {
   padding: 18px;
   box-shadow: none !important;
   transition: all 0.3s ease-in-out;
+
+  @media screen and (min-width: 1200px) and (max-width: 1720px) {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    font-size: 14px;
+  }
+
+
+  @media screen and (max-width: 1199px) {
+    padding: 11px 16px;
+  }
 
   &.allBtn {
     height: 36px;
@@ -110,9 +137,7 @@ p {
 
   &:hover,
   &:focus {
-    background-color: var.$secondary-color;
-    color: var.$primary-color;
-    border-color: var.$secondary-color;
+    background-color: var.$primary-hover-color;
   }
 }
 
@@ -150,6 +175,12 @@ p {
   &:hover {
     color: var.$white;
   }
+
+  @media screen and (max-width:1199px) {
+    @include text-xs-medium;
+    padding: 7px 12px;
+
+  }
 }
 
 .modal-title {
@@ -175,5 +206,17 @@ p {
 .width-all-100-md {
   @media screen and (max-width: 767px) {
     width: 100%;
+  }
+}
+
+.width-all-100-sm {
+  @media screen and (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.global-flex-md {
+    @media screen  and (max-width: 991px) {
+   flex: 1;
   }
 }

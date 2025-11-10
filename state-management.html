@@ -189,12 +189,13 @@
       <div class="topMainTitle">
         <div class="topTitle">States</div>
         <div class="topMainRightSide">
-          <a href="#" class="btn all-btn" data-bs-toggle="modal" data-bs-target="#changeStatusModal">Change Status</a>
+          <a href="#" class="btn all-btn allSimilarBtn" data-bs-toggle="modal"
+            data-bs-target="#changeStatusModal">Change Status</a>
           <p>to <span>207</span> cards</p>
         </div>
       </div>
-      <div class="filterBlock">
-        <div class="searchBarWrapper searchBarWrapperSm width-all-100-md">
+      <div class="filterBlock filterBlockLg">
+        <div class="searchBarWrapper searchBarWrapperSm width-all-100-global">
           <div class="searchBarBlock width-all-100-sm">
             <div class="dropdown searchBar-dropdown">
               <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -206,7 +207,7 @@
                 <li><a class="dropdown-item" href="#">People 3</a></li>
               </ul>
             </div>
-            <input type="text" class="form-control" placeholder="Search..." aria-label="Search" />
+            <input type="text" class="form-control allSimilarBtn" placeholder="Search..." aria-label="Search" />
             <i class="fa-light fa-magnifying-glass search-icon"></i>
           </div>
           <ul class="nav nav-tabs custom-radio-tabs" id="searchBarTab" role="tablist">
@@ -226,9 +227,10 @@
             </li>
           </ul>
         </div>
-        <div class="dropDownWrapper width-all-100">
+        <div class="dropDownWrapper dropDownWrapperLg width-all-100-lg">
           <div class="dropdown custom-dropdown customDropdown global-flex-md">
-            <button class="btn dropdown-toggle width-all-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn dropdown-toggle width-all-100 allSimilarBtn" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               2025 Quarter <i class="fa-solid fa-chevron-down ms-1"></i>
             </button>
             <ul class="dropdown-menu">
@@ -238,7 +240,8 @@
             </ul>
           </div>
           <div class="dropdown custom-dropdown customDropdown global-flex-md">
-            <button class="btn dropdown-toggle width-all-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn dropdown-toggle width-all-100 allSimilarBtn" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Jan-Mar <i class="fa-solid fa-chevron-down ms-1"></i>
             </button>
             <ul class="dropdown-menu">
@@ -248,7 +251,8 @@
             </ul>
           </div>
           <div class="dropdown custom-dropdown customDropdown customDropdown1 global-flex-md">
-            <button class="btn dropdown-toggle width-all-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn dropdown-toggle width-all-100 allSimilarBtn" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               31/07/2025 - Log 1 <i class="fa-solid fa-chevron-down ms-1"></i>
             </button>
             <ul class="dropdown-menu">
@@ -273,7 +277,8 @@
             </ul>
           </div>
           <div class="dropdown custom-dropdown custom-dropdown1 customDropdown global-flex-md">
-            <button type="button" class="btn all-btn dropdown-toggle width-all-100" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn all-btn dropdown-toggle width-all-100 allSimilarBtn allSimilarBtnBold"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Export <i class="fa-solid fa-chevron-down ms-1"></i>
             </button>
             <ul class="dropdown-menu">
@@ -575,26 +580,30 @@
       </div>
       <nav class="pagination-container">
         <ul class="pagination list-unstyled">
-          <li class="page-item disabled prevBtn">
+          <li class="page-item disabled prevBtn pageBtns">
             <a class="page-link">
               <i class="fa-light fa-chevron-left"></i>
-              Previous
+              <span class="d-md-flex d-none">Previous</span>
             </a>
           </li>
           <li class="page-item active">
             <a class="page-link" href="#">1</a>
           </li>
           <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item">
+            <a class="page-link d-md-flex d-none" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link d-md-flex d-none" href="#">4</a>
+          </li>
           <li class="page-item dots">
             <a class="page-link" href="#">...</a>
           </li>
           <li class="page-item"><a class="page-link" href="#">13</a></li>
           <li class="page-item"><a class="page-link" href="#">14</a></li>
-          <li class="page-item">
+          <li class="page-item pageBtns">
             <a class="page-link">
-              Next
+              <span class="d-md-flex d-none">Next</span>
               <i class="fa-light fa-chevron-right"></i>
             </a>
           </li>

@@ -67,10 +67,8 @@
         border: 1px solid var.$primary-color;
         padding: 10px 20px;
         border-radius: 5px;
-
       }
     }
-
   }
 
   .logoBlock {
@@ -142,8 +140,8 @@
           margin-bottom: 4px;
 
           @media screen and (min-width: 1400px) and (max-width: 1720px) {
-        font-size: 28px;
-      }
+            font-size: 28px;
+          }
 
           @media screen and (min-width: 768px) and (max-width: 1399px) {
             font-size: 26px;
@@ -252,12 +250,12 @@
         cursor: pointer;
 
         @media screen and (min-width: 1200px) and (max-width: 1720px) {
-            font-size: 13px;
-          }
+          font-size: 13px;
+        }
 
-          @media screen and (max-width: 1199px) {
-            @include text-xs-regular;
-          }
+        @media screen and (max-width: 1199px) {
+          @include text-xs-regular;
+        }
 
         .form-check-input {
           width: 18px;
@@ -380,12 +378,10 @@
 
       @media screen and (min-width: 1200px) and (max-width: 1720px) {
         font-size: 15px;
-        
       }
 
       @media screen and (max-width: 1199px) {
-      @include text-sm-medium;
-        
+        @include text-sm-medium;
       }
     }
   }
@@ -424,6 +420,14 @@
     // flex: auto;
     // height: calc(100vh - 388px);
     // overflow: auto;
+
+    @media screen and (min-width: 1200px) and (max-width: 1720px) {
+      gap: 16px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      gap: 20px;
+    }
 
     .sideMenuLink {
       display: flex;
@@ -484,6 +488,14 @@
         &.active {
           color: var.$secondary-color;
           background: transparent;
+        }
+
+        @media screen and (max-width: 1720px) {
+          margin-bottom: 16px;
+        }
+
+        @media screen and (min-width: 1200px) and (max-width: 1399px) {
+          padding: 0 20px 0 30px;
         }
       }
     }
@@ -567,8 +579,13 @@
   background-color: var.$gray-50;
   width: 100%;
 
-  @media screen and (min-width: 1200px) and (max-width: 1599.98px) {
-    padding: 30px 40px;
+  @media screen and (min-width: 1400px) and (max-width: 1720px) {
+    padding: 40px;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    padding: 30px;
     gap: 20px;
   }
 
@@ -585,7 +602,7 @@
   .topTitle {
     @include text-lg-medium;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 1720px) {
       @include text-md-medium;
     }
   }
@@ -604,9 +621,9 @@
         @include text-md-regular;
         color: var.$gray-700;
 
-        @media screen and (max-width: 1199px) {
-      @include text-sm-medium;
-    }
+        @media screen and (max-width: 1720px) {
+          @include text-sm-medium;
+        }
       }
     }
   }
@@ -623,6 +640,33 @@
     @media screen and (max-width: 991px) {
       flex-direction: column;
       gap: 16px;
+      padding: 16px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1399px) {
+      gap: 10px;
+      padding: 12px;
+    }
+
+    &.filterBlockLg {
+
+      @media screen and (max-width: 1199px) {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+      }
+    }
+
+    &.filterBlockMd {
+
+      @media screen and (max-width: 1199px) {
+        gap: 10px;
+        padding: 16px;
+      }
+
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 16px;
+      }
     }
 
     .searchBarWrapper {
@@ -630,7 +674,6 @@
       gap: 20px;
       align-items: center;
       flex-direction: row;
-
 
       @media screen and (min-width: 768px) {
         justify-content: end;
@@ -640,19 +683,24 @@
         flex-direction: column;
         gap: 16px;
       }
-      
-      &.searchBarWrapperSm {
-           @media screen and (min-width: 575px) {
-              flex-direction: row;
-              justify-content: space-between;
-            }
 
-            .searchBarBlock {
-                @media screen and (min-width: 575px) and (max-width: 767px) {
-                  width: 55%;
-                }
-            }
+      &.searchBarWrapperSm {
+        @media screen and (min-width: 575px) {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 10px;
         }
+
+        @media screen and (min-width: 1200px) {
+          justify-content: flex-start;
+        }
+
+        .searchBarBlock {
+          @media screen and (min-width: 575px) and (max-width: 767px) {
+            width: 55%;
+          }
+        }
+      }
 
       .nav-tabs {
         border: none;
@@ -670,6 +718,15 @@
               color: var.$primary-color;
               // background-color: var.$primary-color;
               // border-color: var.$primary-color;
+            }
+
+            @media screen and (min-width: 1400px) and (max-width: 1720px) {
+              @include text-xs-regular
+            }
+
+            @media screen and (min-width: 1199px) and (max-width: 1399px) {
+              font-size: 11px;
+              line-height: 16px;
             }
 
             @media screen and (max-width: 767px) {
@@ -702,8 +759,29 @@
             color: #bcbec0;
           }
 
+          @media screen and (min-width: 1400px) and (max-width: 1720px) {
+            @include text-xs-regular;
+            padding: 10px 36px 10px 96px;
+          }
+
+          @media screen and (min-width: 1200px) and (max-width: 1399px) {
+            padding: 10px 32px 10px 96px;
+            width: 210px;            
+          }
+
+          @media screen and (min-width: 1200px) and (max-width: 1720px) {
+          @include text-xs-regular;
+          }
+
           @media screen and (max-width: 767px) {
+            @include text-xs-regular;
+            height: 36px;
+            padding: 10px 40px 10px 96px;
+          }
+
+          @media screen and (min-width: 768px) and (max-width: 991px) {
             @include text-size-13;
+            height: 38px;
           }
         }
 
@@ -735,8 +813,19 @@
               display: flex;
             }
 
-            @media screen and (max-width: 767px) {
-              @include text-size-13;
+            @media screen and (min-width: 1400px) and (max-width: 1720px) {
+              @include text-xs-regular
+            }
+
+
+
+            @media screen and (min-width: 1200px) and (max-width: 1399px) {
+              font-size: 11px;
+              line-height: 16px;
+            }
+
+            @media screen and (max-width: 1199px) {
+              @include text-xs-regular;
             }
           }
 
@@ -756,10 +845,7 @@
           right: 10px;
           cursor: pointer;
         }
-
-        
       }
-  
     }
 
     .blockTitle {
@@ -772,12 +858,10 @@
       gap: 10px;
       align-items: center;
 
-
       @media screen and (max-width: 767px) {
-       gap: 6px;
-       flex-wrap: wrap;
-       
-    }
+        gap: 6px;
+        flex-wrap: wrap;
+      }
 
       .btn-primary {
         padding: 8px 12px;
@@ -791,7 +875,7 @@
     height: 100%;
     padding-right: 33px;
 
-    @media screen and (min-width: 768px) and (max-width: 991px) {
+    @media screen and (max-width: 991px) {
       padding-right: 20px;
     }
 
@@ -856,8 +940,18 @@
             //   width: 317px;
             // }
 
+            @media screen and (min-width: 1200px) and (max-width: 1720px) {
+              font-size: 11px;
+              line-height: 16px;
+            }
+
+            @media screen and (max-width: 991px) {
+              padding: 10px;
+            }
+
             @media screen and (max-width: 767px) {
               padding: 10px;
+              top: -2px;
             }
           }
         }
@@ -883,6 +977,10 @@
               i {
                 cursor: pointer;
               }
+            }
+
+            @media screen and (min-width: 1200px) and (max-width: 1720px) {
+              @include text-size-13;
             }
 
             @media screen and (max-width: 991px) {
@@ -1172,29 +1270,53 @@
 
     &.all-btn {
       @include text-sm-semibold;
+
+      @media screen and (min-width: 1400px) and (max-width: 1720px) {
+        @include text-xs-semibold;
+      }
+
+      @media screen and (max-width: 991px) {
+        display: flex;
+        justify-content: left;
+      }
     }
 
     @media screen and (max-width: 991px) {
       text-align: left;
     }
 
+    @media screen and (min-width: 1400px) and (max-width: 1720px) {
+      @include text-xs-regular;
+    }
+
     @media screen and (max-width: 767px) {
-      @include text-size-13;
+      @include text-xs-regular;
+      height: 36px;
     }
   }
 
-  .dropdown-toggle:after {
-    position: absolute;
-    border: none;
-    background: url("../images/down-arrow-sm-primary.svg") no-repeat center;
-    background-size: contain;
-    right: 12px;
-    width: 8px;
-    height: 6px;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    display: flex;
+  .dropdown-toggle {
+    i {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      font-size: 12px;
+
+      @media screen and (min-width: 1400px) and (max-width: 1720px) {
+        right: 8px;
+        top: 11px;
+        font-size: 11px;
+      }
+
+      @media screen and (min-width: 1200px) and (max-width: 1399px) {
+        right: 8px;
+        font-size: 10px;
+      }
+    }
+
+    &:after {
+      content: none;
+    }
   }
 
   .dropdown-menu {
@@ -1227,7 +1349,7 @@
 
       @media screen and (min-width: 576px) {
         justify-content: end;
-      }      
+      }
     }
 
     @media screen and (max-width: 575px) {
@@ -1547,7 +1669,6 @@
 .customDropdown {
   .dropdown-menu {
     padding: 16px 8px;
-    top: 10px !important;
     min-width: 170px;
 
     li {
@@ -1621,6 +1742,16 @@
         }
       }
     }
+
+    &.dropDownWrapperCenter {
+      @media screen and (max-width: 1199px) {
+        gap: 10px;
+      }
+
+      @media screen and (max-width: 767px) {
+        gap: 16px;
+      }
+    }
   }
 
   .importKPI-table {
@@ -1632,6 +1763,16 @@
           border-radius: 5px;
           color: var.$white;
           @include text-sm-medium;
+
+          @media screen and (min-width: 1200px) and (max-width: 1720px) {
+            font-size: 13px;
+            line-height: 18px;
+          }
+
+          @media screen and (max-width: 991px) {
+            @include text-xs-medium;
+            padding: 3px 8px;
+          }
         }
       }
     }
@@ -1696,7 +1837,21 @@
   padding: 0;
   padding-left: 22px;
   color: #666;
-  @include text-md-regular;
+  @include text-sm-regular;
+
+  @media screen and (min-width: 1400px) and (max-width: 1720px) {
+  @include text-xs-regular;
+  }
+
+  @media screen and (min-width: 1199px) and (max-width: 1399px){
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+  @media screen and (max-width: 767px) {
+    @include text-size-13;
+
+  }
 }
 
 .radio-circle {
@@ -2391,6 +2546,14 @@
     height: calc(100vh - 333px);
     overflow: auto;
 
+    @media screen and (min-width: 1400px) and (max-width: 1720px) {
+      padding: 25px 40px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      padding: 25px 36px;
+    }
+
     &::-webkit-scrollbar {
       width: 8px;
     }
@@ -2428,13 +2591,23 @@
     }
   }
 
-  @media screen and (min-width: 1200px) and (max-width: 1599.98px) {
-    max-width: 270px;
-    flex: 0 0 270px;
+  @media screen and (min-width: 1400px) and (max-width: 1720px) {
+    max-width: 300px;
+    flex: 0 0 300px;
 
     .sideBarPadding {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    max-width: 255px;
+    flex: 0 0 255px;
+
+    .sideBarPadding {
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
 
@@ -2454,6 +2627,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 1400px) and (max-width: 1720px) {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
 
   @media screen and (max-width: 1199.98px) {
     padding-top: 24px;

@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "./variables"as var;
+@use "./variables" as var;
 @import "mixin";
 
 * {
@@ -61,15 +61,12 @@ p {
 
   @include text-md-regular;
 
-
   @media screen and (min-width: 1200px) and (max-width: 1720px) {
     font-size: 15px;
-
   }
 
   @media screen and (max-width: 1199px) {
     @include text-sm-regular;
-
   }
 }
 
@@ -93,7 +90,6 @@ p {
   @media screen and (max-width: 1199px) {
     font-size: 14px;
   }
-
 
   @media screen and (max-width: 1199px) {
     padding: 11px 16px;
@@ -176,10 +172,41 @@ p {
     color: var.$white;
   }
 
-  @media screen and (max-width:1199px) {
+  @media screen and (min-width: 1400px) and (max-width: 1720px) {
+    @include text-xs-semibold;
+  }
+
+  @media screen and (max-width: 1199px) {
     @include text-xs-medium;
     padding: 7px 12px;
+  }
+}
 
+.allSimilarBtn {
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    text-align: left !important;
+    font-size: 11px !important;
+    line-height: 16px !important;
+    height: 36px !important;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: left !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    height: 38px !important;
+  }
+
+  @media screen and (max-width: 991px) {
+    font-size: 12px !important;
+    line-height: 18px !important;
+    height: 36px !important;
+  }
+
+  &.allSimilarBtnBold {
+    @media screen and (max-width: 991px) {
+      font-weight: 600 !important;
+    }
   }
 }
 
@@ -195,6 +222,22 @@ p {
   color: var.$white !important;
   display: flex;
   gap: 5px;
+}
+
+.dropDownWrapperLg {
+  @media screen and (min-width: 991px) {
+    justify-content: end;
+  }
+}
+
+.width-all-100-global {
+  width: 100%;
+}
+
+.width-all-100-lg {
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+  }
 }
 
 .width-all-100 {
@@ -216,7 +259,15 @@ p {
 }
 
 .global-flex-md {
-    @media screen  and (max-width: 991px) {
-   flex: 1;
+  @media screen and (max-width: 991px) {
+    flex: 1;
+  }
+}
+
+
+.dropDownWrapperCenter {
+   @media screen and (max-width: 575px) {
+    flex-direction: column;
+    justify-content: center; 
   }
 }

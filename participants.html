@@ -14,497 +14,228 @@
 </head>
 
 <body>
-  <div class="dashboard">
-    <div class="mainSidebar">
+
+  <header class="header">
+    <nav class="navbar navbar-light">
       <div class="sidebarLogo sideBarPadding">
-        <img src="assets/images/logo-white.svg" alt="Logo" class="sidebarMainLogo" />
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-          data-bs-target="#mobileSidebarContent" aria-expanded="false" aria-label="Toggle navigation"
-          id="menu-toggle-btn">
-          <span class="navbar-toggler-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
+        <a href="research.html">
+          <img src="assets/images/logo-white.svg" alt="Logo" class="sidebarMainLogo" />
+        </a>
       </div>
-      <div class="collapse sidebarContent" id="mobileSidebarContent">
-        <ul class="sidebarMenu list-unstyled main-sidebar sideBarPadding" id="accordionParent">
-          <li>
-            <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse" data-bs-target="#cards-collapse"
-              aria-expanded="true">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Cards
-            </button>
-            <div class="sideMenuWrapper collapse show" id="cards-collapse" data-bs-parent="#accordionParent">
-              <ul class="list-unstyled">
-                <li>
-                  <a href="research.html" title="Research" class="dropdown-item">Research</a>
-                </li>
-                <li>
-                  <a href="individual-card.html" title="Individual Card" class="dropdown-item">Individual Card</a>
-                </li>
-                <li>
-                  <a href="state-management.html" title="State Management" class="dropdown-item">State Management</a>
-                </li>
-                <li>
-                  <a href="import-kpi.html" title="Import KPI" class="dropdown-item">Import KPI</a>
-                </li>
-                <li>
-                  <a href="participants.html" title="Participants" class="dropdown-item active">Participants</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
-              data-bs-target="#payments-collapse" aria-expanded="false">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Payments
-            </button>
-            <div class="sideMenuWrapper collapse" id="payments-collapse" data-bs-parent="#accordionParent">
-              <ul class="list-unstyled">
-                <li>
-                  <a href="mass-liquidations.html" title="mass liquidations" class="dropdown-item">Mass Liquidations</a>
-                </li>
-                <li>
-                  <a href="single-liquidation.html" title="single liquidation" class="dropdown-item">Single
-                    Liquidation</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="report.html" title="Report" class="sideMenuLink">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Report
+      <div class="headerTop">
+        <div class="topTitle">
+          <h1 class="header-title d-none d-xl-inline">Participants</h1>
+        </div>
+        <div class="user-info">
+          <div class="dropdown">
+            <a class="userMenuLink userLink dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown"
+              aria-expanded="false" href="#" title="John Smith">
+              <i class="fa-light fa-circle-user"></i>
+              <span class="d-none d-xl-inline">John Smith</span>
+              <span class="d-none d-xl-inline"><i class="fa-solid fa-chevron-down"></i></span>
             </a>
-          </li>
-          <li>
-            <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
-              data-bs-target="#policies-collapse" aria-expanded="false">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Policies
-            </button>
-            <div class="sideMenuWrapper collapse" id="policies-collapse" data-bs-parent="#accordionParent">
-              <ul class="list-unstyled">
-                <li>
-                  <a href="role-cards.html" title="role cards" class="dropdown-item">Role Cards</a>
-                </li>
-                <li>
-                  <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
-                </li>
-                <li>
-                  <a href="overtarget-kpis.html" title="overtarget kpis" class="dropdown-item">Overtarget KPIs</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
-              data-bs-target="#organization-collapse" aria-expanded="false">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Organization
-            </button>
-            <div class="sideMenuWrapper collapse" id="organization-collapse" data-bs-parent="#accordionParent">
-              <ul class="list-unstyled">
-                <li>
-                  <a href="people.html" title="people" class="dropdown-item">People</a>
-                </li>
-                <li>
-                  <a href="roles.html" title="roles" class="dropdown-item">Roles</a>
-                </li>
-                <li>
-                  <a href="organizational-units.html" title="organizational units" class="dropdown-item">Organizational
-                    Units</a>
-                </li>
-                <li>
-                  <a href="utilities.html" title="utilities" class="dropdown-item">Utilities</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="security.html" title="Security" class="sideMenuLink">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Security
-            </a>
-          </li>
-          <li>
-            <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
-              data-bs-target="#messaging-collapse" aria-expanded="false">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Messaging
-            </button>
-            <div class="sideMenuWrapper collapse" id="messaging-collapse" data-bs-parent="#accordionParent">
-              <ul class="list-unstyled">
-                <li>
-                  <a href="log-mail.html" title="log mail" class="dropdown-item">Log Mail</a>
-                </li>
-                <li>
-                  <a href="template-management.html" title="template management" class="dropdown-item">Template
-                    Management</a>
-                </li>
-                <li>
-                  <a href="shipment-management.html" title="shipment management" class="dropdown-item">Shipment
-                    Management</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
-              <img src="assets/images/list-icon.svg" alt="List" />
-              Epicenter
-            </a>
-          </li>
+            <ul class="dropdown-menu" aria-labelledby="userDropdown">
+              <li>
+                <a class="userMenuLink" href="login.html">
+                  <i class="fa-light fa-arrow-left-from-bracket"></i>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mobileSidebarContent" aria-expanded="false" aria-label="Toggle navigation"
+        id="menu-toggle-btn">
+        <span class="navbar-toggler-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mainSidebar">
+    <div class="collapse sidebarContent" id="mobileSidebarContent">
+      <ul class="sidebarMenu list-unstyled main-sidebar sideBarPadding" id="accordionParent">
+        <li>
+          <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse" data-bs-target="#cards-collapse"
+            aria-expanded="true">
+            <i class="fa-light fa-grid-2"></i>
+            Cards
+          </button>
+          <div class="sideMenuWrapper collapse show" id="cards-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="research.html" title="Research" class="dropdown-item">Research</a>
+              </li>
+              <li>
+                <a href="individual-card.html" title="Individual Card" class="dropdown-item">Individual Card</a>
+              </li>
+              <li>
+                <a href="state-management.html" title="State Management" class="dropdown-item">State
+                  Management</a>
+              </li>
+              <li>
+                <a href="import-kpi.html" title="Import KPI" class="dropdown-item">Import KPI</a>
+              </li>
+              <li>
+                <a href="participants.html" title="Participants" class="dropdown-item active">Participants</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#payments-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Payments
+          </button>
+          <div class="sideMenuWrapper collapse" id="payments-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="mass-liquidations.html" title="mass liquidations" class="dropdown-item">Mass Liquidations</a>
+              </li>
+              <li>
+                <a href="single-liquidation.html" title="single liquidation" class="dropdown-item">Single
+                  Liquidation</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="report.html" title="Report" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Report
+          </a>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#policies-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Policies
+          </button>
+          <div class="sideMenuWrapper collapse" id="policies-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="role-cards.html" title="role cards" class="dropdown-item">Role Cards</a>
+              </li>
+              <li>
+                <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
+              </li>
+              <li>
+                <a href="overtarget-kpis.html" title="overtarget kpis" class="dropdown-item">Overtarget KPIs</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#organization-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Organization
+          </button>
+          <div class="sideMenuWrapper collapse" id="organization-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="people.html" title="people" class="dropdown-item">People</a>
+              </li>
+              <li>
+                <a href="roles.html" title="roles" class="dropdown-item">Roles</a>
+              </li>
+              <li>
+                <a href="organizational-units.html" title="organizational units" class="dropdown-item">Organizational
+                  Units</a>
+              </li>
+              <li>
+                <a href="utilities.html" title="utilities" class="dropdown-item">Utilities</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="security.html" title="Security" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Security
+          </a>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#messaging-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Messaging
+          </button>
+          <div class="sideMenuWrapper collapse" id="messaging-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="log-mail.html" title="log mail" class="dropdown-item">Log Mail</a>
+              </li>
+              <li>
+                <a href="template-management.html" title="template management" class="dropdown-item">Template
+                  Management</a>
+              </li>
+              <li>
+                <a href="shipment-management.html" title="shipment management" class="dropdown-item">Shipment
+                  Management</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Epicenter
+          </a>
+        </li>
+        <li>
+          <a class="sideMenuLink" href="setting.html" title="Setting">
+            <i class="fa-light fa-gear"></i>
+            Settings
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="contentBlock import-kpi-section participants-section">
+    <div class="topMainTitle">
+      <div class="topTitle">Lorem Ipsum</div>
+    </div>
+    <div class="filterBlock flex-sm-row flex-column">
+      <div class="dropdown custom-dropdown width-all-100-sm">
+        <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          2025 Quarter <i class="fa-solid fa-chevron-down ms-1"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
+          <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
+          <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
         </ul>
-        <div class="userMenu sideBarPadding">
-          <ul class="sidebarMenu list-unstyled" id="accordionParent">
-            <li>
-              <a class="userMenuLink userLink" href="#">
-                <i class="fa-light fa-circle-user"></i>
-                John Smith
-              </a>
-            </li>
-            <li>
-              <a class="userMenuLink" href="setting.html">
-                <i class="fa-light fa-gear"></i>
-                Settings
-              </a>
-            </li>
-            <li>
-              <a class="userMenuLink" href="login.html">
-                <i class="fa-light fa-arrow-left-from-bracket"></i>
-                Logout
-              </a>
-            </li>
-          </ul>
+      </div>
+      <div class="dropDownWrapper width-all-100-sm">
+        <div class="custom-dropdown1 customDropdown fixBtnStyle global-flex-md">
+          <button type="button" class="btn all-btn width-all-100-sm allSimilarBtn">
+            <span><i class="fa-solid fa-up-from-bracket" aria-hidden="true"></i></span>Export
+          </button>
+        </div>
+        <div class="custom-dropdown1 customDropdown fixBtnStyle global-flex-md">
+          <button type="button" class="btn all-btn width-all-100-sm allSimilarBtn" data-bs-toggle="modal"
+            data-bs-target="#importKpiModal">
+            <span><i class="fa-solid fa-down-to-bracket" aria-hidden="true"></i></span>Import
+          </button>
         </div>
       </div>
     </div>
-    <div class="contentBlock import-kpi-section participants-section">
-      <div class="topMainTitle">
-        <div class="topTitle">Participants</div>
-      </div>
-      <div class="filterBlock flex-sm-row flex-column">
-        <div class="dropdown custom-dropdown width-all-100-sm">
-          <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            2025 Quarter <i class="fa-solid fa-chevron-down ms-1"></i>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
-            <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
-            <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
-          </ul>
-        </div>
-        <div class="dropDownWrapper width-all-100-sm">
-          <div class="custom-dropdown1 customDropdown fixBtnStyle global-flex-md">
-            <button type="button" class="btn all-btn width-all-100-sm allSimilarBtn">
-              <span><i class="fa-solid fa-up-from-bracket" aria-hidden="true"></i></span>Export
-            </button>
-          </div>
-          <div class="custom-dropdown1 customDropdown fixBtnStyle global-flex-md">
-            <button type="button" class="btn all-btn width-all-100-sm allSimilarBtn" data-bs-toggle="modal" data-bs-target="#importKpiModal">
-              <span><i class="fa-solid fa-down-to-bracket" aria-hidden="true"></i></span>Import
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="tab-content tableContent" id="myTabContent">
-        <div class="tab-pane fade show active" id="everyone-tab-pane" role="tabpanel" aria-labelledby="everyone-tab"
-          tabindex="0">
-          <div class="table-responsive">
-            <table class="table participants-table">
-              <thead>
-                <tr>
-                  <th>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </th>
-                  <th>Freshman</th>
-                  <th>Name</th>
-                  <th>Participate</th>
-                  <th>Card Type</th>
-                  <th>Period Target</th>
-                  <th>Quaterly Scheduling</th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-                <tr class="view">
-                  <td>
-                    <span class="form-check-wrapper">
-                      <input class="form-check-input" type="checkbox" />
-                      <span class="check-tick"></span>
-                    </span>
-                  </td>
-                  <td>1702</td>
-                  <td>
-                    <div class="participants-name">
-                      <h6>Christian Court</h6>
-                      <p>Local Corporate - Institutional&PA - Institutional
-                        & PA Key Account Commerce</p>
-                    </div>
-                  </td>
-                  <td><i class="fa-solid fa-check"></i></td>
-                  <td>S1 Card</td>
-                  <td>€ 12,000.00</td>
-                  <td>€ 2,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                  <td>€ 3,000.00</td>
-                </tr>
-                <tr class="spacing-tr">
-                  <td colspan="7"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="atleastOne-tab-pane" role="tabpanel" aria-labelledby="atleastOne-tab"
-          tabindex="0">
-          <table class="table importKPI-table">
+    <div class="tab-content tableContent" id="myTabContent">
+      <div class="tab-pane fade show active" id="everyone-tab-pane" role="tabpanel" aria-labelledby="everyone-tab"
+        tabindex="0">
+        <div class="table-responsive">
+          <table class="table participants-table">
             <thead>
               <tr>
                 <th>
@@ -513,10 +244,15 @@
                     <span class="check-tick"></span>
                   </span>
                 </th>
-                <th>KPI</th>
-                <th>Financial Statement</th>
-                <th>To Be Finalized</th>
-                <th>Actual Financial Statements</th>
+                <th>Freshman</th>
+                <th>Name</th>
+                <th>Participate</th>
+                <th>Card Type</th>
+                <th>Period Target</th>
+                <th>Quaterly Scheduling</th>
+                <th></th>
+                <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -527,10 +263,51 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Buyers</td>
-                <td>0</td>
-                <td>1</td>
-                <td>0/1</td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
+              </tr>
+
+              <tr class="view">
+                <td>
+                  <span class="form-check-wrapper">
+                    <input class="form-check-input" type="checkbox" />
+                    <span class="check-tick"></span>
+                  </span>
+                </td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
               <tr class="view">
                 <td>
@@ -539,10 +316,24 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Bidders</td>
-                <td>0</td>
-                <td>1</td>
-                <td>0/1</td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
               <tr class="view">
                 <td>
@@ -551,10 +342,24 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Extensions</td>
-                <td>140</td>
-                <td>0</td>
-                <td><span class="statementContent">140/140</span></td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
               <tr class="view">
                 <td>
@@ -563,10 +368,24 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Flex</td>
-                <td>122</td>
-                <td>0</td>
-                <td><span class="statementContent">122/122</span></td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
               <tr class="view">
                 <td>
@@ -575,10 +394,24 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Profitability Matrix - FFM</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0/0</td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
               <tr class="view">
                 <td>
@@ -587,10 +420,24 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Profitability Matrix - Large</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0/0</td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
               <tr class="view">
                 <td>
@@ -599,10 +446,24 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Profitability Matrix - Large</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0/0</td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
               <tr class="view">
                 <td>
@@ -611,10 +472,24 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Profitability Matrix - Large</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0/0</td>
+                <td>1702</td>
+                <td>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
               <tr class="view">
                 <td>
@@ -623,56 +498,199 @@
                     <span class="check-tick"></span>
                   </span>
                 </td>
-                <td>Profitability Matrix - Large</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0/0</td>
-              </tr>
-              <tr class="view">
+                <td>1702</td>
                 <td>
-                  <span class="form-check-wrapper">
-                    <input class="form-check-input" type="checkbox" />
-                    <span class="check-tick"></span>
-                  </span>
+                  <div class="participants-name">
+                    <h6>Christian Court</h6>
+                    <p>Local Corporate - Institutional&PA - Institutional
+                      & PA Key Account Commerce</p>
+                  </div>
                 </td>
-                <td>Profitability Matrix - Large</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0/0</td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td>S1 Card</td>
+                <td>€ 12,000.00</td>
+                <td>€ 2,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+                <td>€ 3,000.00</td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="7"></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <nav class="pagination-container">
-        <ul class="pagination list-unstyled">
-          <li class="page-item disabled prevBtn pageBtns">
-            <a class="page-link">
-              <i class="fa-light fa-chevron-left"></i>
-              <span class="d-md-flex d-none">Previous</span>
-            </a>
-          </li>
-          <li class="page-item active">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link d-md-flex d-none" href="#">3</a></li>
-          <li class="page-item"><a class="page-link d-md-flex d-none" href="#">4</a></li>
-          <li class="page-item dots">
-            <a class="page-link" href="#">...</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">13</a></li>
-          <li class="page-item"><a class="page-link" href="#">14</a></li>
-          <li class="page-item pageBtns">
-            <a class="page-link">
-              <span class="d-md-flex d-none">Next</span>
-              <i class="fa-light fa-chevron-right"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div class="tab-pane fade" id="atleastOne-tab-pane" role="tabpanel" aria-labelledby="atleastOne-tab" tabindex="0">
+        <table class="table importKPI-table">
+          <thead>
+            <tr>
+              <th>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </th>
+              <th>KPI</th>
+              <th>Financial Statement</th>
+              <th>To Be Finalized</th>
+              <th>Actual Financial Statements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Buyers</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0/1</td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Bidders</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0/1</td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Extensions</td>
+              <td>140</td>
+              <td>0</td>
+              <td><span class="statementContent">140/140</span></td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Flex</td>
+              <td>122</td>
+              <td>0</td>
+              <td><span class="statementContent">122/122</span></td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Profitability Matrix - FFM</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0/0</td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Profitability Matrix - Large</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0/0</td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Profitability Matrix - Large</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0/0</td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Profitability Matrix - Large</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0/0</td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Profitability Matrix - Large</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0/0</td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Profitability Matrix - Large</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0/0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+    <nav class="pagination-container">
+      <ul class="pagination list-unstyled">
+        <li class="page-item disabled prevBtn pageBtns">
+          <a class="page-link">
+            <i class="fa-light fa-chevron-left"></i>
+            <span class="d-md-flex d-none">Previous</span>
+          </a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link d-md-flex d-none" href="#">3</a></li>
+        <li class="page-item"><a class="page-link d-md-flex d-none" href="#">4</a></li>
+        <li class="page-item dots">
+          <a class="page-link" href="#">...</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">13</a></li>
+        <li class="page-item"><a class="page-link" href="#">14</a></li>
+        <li class="page-item pageBtns">
+          <a class="page-link">
+            <span class="d-md-flex d-none">Next</span>
+            <i class="fa-light fa-chevron-right"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
+
 
   <div class="modal fade" id="importKpiModal" tabindex="-1" aria-labelledby="importKpiModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">

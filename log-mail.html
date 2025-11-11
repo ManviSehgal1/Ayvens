@@ -2,290 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log Mail | Ayvens</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Font awesome link -->
-    <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log Mail | Ayvens</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Font awesome link -->
+  <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="dashboard">
-        <div class="mainSidebar">
-        <div class="sidebarLogo sideBarPadding">
+  <header class="header">
+    <nav class="navbar navbar-light">
+      <div class="sidebarLogo sideBarPadding">
+        <a href="research.html">
           <img src="assets/images/logo-white.svg" alt="Logo" class="sidebarMainLogo" />
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mobileSidebarContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            id="menu-toggle-btn"
-          >
-            <span class="navbar-toggler-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </button>
+        </a>
+      </div>
+      <div class="headerTop">
+        <div class="topTitle">
+          <h1 class="header-title d-none d-xl-inline">Log Mail</h1>
         </div>
-        <div class="collapse sidebarContent" id="mobileSidebarContent">
-          <ul class="sidebarMenu list-unstyled main-sidebar sideBarPadding" id="accordionParent">
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#cards-collapse"
-                aria-expanded="false"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Cards
-              </button>
-              <div
-                class="sideMenuWrapper collapse"
-                id="cards-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      href="research.html"
-                      title="Research"
-                      class="dropdown-item"
-                      >Research</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="individual-card.html"
-                      title="Individual Card"
-                      class="dropdown-item"
-                      >Individual Card</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="state-management.html"
-                      title="State Management"
-                      class="dropdown-item"
-                      >State Management</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="import-kpi.html"
-                      title="Import KPI"
-                      class="dropdown-item"
-                      >Import KPI</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="participants.html"
-                      title="Participants"
-                      class="dropdown-item"
-                      >Participants</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#payments-collapse"
-                aria-expanded="false"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Payments
-              </button>
-              <div
-                class="sideMenuWrapper collapse"
-                id="payments-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      href="mass-liquidations.html"
-                      title="mass liquidations"
-                      class="dropdown-item"
-                      >Mass Liquidations</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="single-liquidation.html"
-                      title="single liquidation"
-                      class="dropdown-item"
-                      >Single Liquidation</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="report.html" title="Report" class="sideMenuLink">
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Report
-              </a>
-            </li>
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#policies-collapse"
-                aria-expanded="false"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Policies
-              </button>
-              <div
-                class="sideMenuWrapper collapse"
-                id="policies-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      href="role-cards.html"
-                      title="role cards"
-                      class="dropdown-item"
-                      >Role Cards</a
-                    >
-                  </li>
-                  <li>
-                    <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
-                  </li>
-                  <li>
-                    <a
-                      href="overtarget-kpis.html"
-                      title="overtarget kpis"
-                      class="dropdown-item"
-                      >Overtarget KPIs</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#organization-collapse"
-                aria-expanded="false"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Organization
-              </button>
-              <div
-                class="sideMenuWrapper collapse"
-                id="organization-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="people.html" title="people" class="dropdown-item"
-                      >People</a
-                    >
-                  </li>
-                  <li>
-                    <a href="roles.html" title="roles" class="dropdown-item"
-                      >Roles</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="organizational-units.html"
-                      title="organizational units"
-                      class="dropdown-item"
-                      >Organizational Units</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="utilities.html"
-                      title="utilities"
-                      class="dropdown-item"
-                      >Utilities</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="security.html" title="Security" class="sideMenuLink">
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Security
-              </a>
-            </li>
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink"
-                data-bs-toggle="collapse"
-                data-bs-target="#messaging-collapse"
-                aria-expanded="true"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Messaging
-              </button>
-              <div
-                class="sideMenuWrapper collapse show"
-                id="messaging-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="log-mail.html" title="log mail" class="dropdown-item active"
-                      >Log Mail</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="template-management.html"
-                      title="template management"
-                      class="dropdown-item"
-                      >Template Management</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="shipment-management.html"
-                      title="shipment management"
-                      class="dropdown-item"
-                      >Shipment Management</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Epicenter
-              </a>
-            </li>
-          </ul>
-          <div class="userMenu sideBarPadding">
-            <ul class="sidebarMenu list-unstyled" id="accordionParent">
-              <li>
-                <a class="userMenuLink userLink" href="#">
-                  <i class="fa-light fa-circle-user"></i>
-                  John Smith
-                </a>
-              </li>
-              <li>
-                <a class="userMenuLink" href="setting.html">
-                  <i class="fa-light fa-gear"></i>
-                  Settings
-                </a>
-              </li>
+        <div class="user-info">
+          <div class="dropdown">
+            <a class="userMenuLink userLink dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown"
+              aria-expanded="false" href="#" title="John Smith">
+              <i class="fa-light fa-circle-user"></i>
+              <span class="d-none d-xl-inline">John Smith</span>
+              <span class="d-none d-xl-inline"><i class="fa-solid fa-chevron-down"></i></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="userDropdown">
               <li>
                 <a class="userMenuLink" href="login.html">
                   <i class="fa-light fa-arrow-left-from-bracket"></i>
@@ -296,226 +43,378 @@
           </div>
         </div>
       </div>
-        <div class="contentBlock">
-            <div class="topTitle">Log Mail</div>
-            <div class="filterBlock">
-                <div class="dropDownWrapper">
-                    <div class="searchBarWrapper">
-                        <div class="searchBarBlock w-286">
-                            <input type="text" class="form-control ps-2" placeholder="Search for generic text..."
-                                aria-label="Search">
-                            <i class="fa-light fa-magnifying-glass search-icon"></i>
-                        </div>
-                    </div>
-                    <div class="dropdown custom-dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            General
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Normal</a></li>
-                            <li><a class="dropdown-item" href="#">Secondary</a></li>
-                            <li><a class="dropdown-item" href="#">Higher</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown custom-dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Limit To
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Limit From</a></li>
-                            <li><a class="dropdown-item" href="#">Limit To</a></li>
-                            <li><a class="dropdown-item" href="#">Limit To</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown custom-dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Start Date
-                        </button>
-                    </div>
-                    <span class="primaryText">-</span>
-                    <div class="dropdown custom-dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            End Date
-                        </button>
-                    </div>
-                </div>
-                <div class="dropdown custom-dropdown custom-dropdown1 customDropdown">
-                    <button type="button" class="btn all-btn whiteBtn" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span><i class="fa-solid fa-up-from-bracket"></i></span>Export All
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="dropdown-item">
-                                <div class="dropdownSubItem"><i class="fa-light fa-table"></i>Excel</div><i
-                                    class="fa-regular fa-check"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dropdown-item">
-                                <div class="dropdownSubItem"><i class="fa-light fa-file-lines"></i>PDF</div><i
-                                    class="fa-regular fa-check"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dropdown-item">
-                                <div class="dropdownSubItem"><i class="fa-light fa-file-zipper"></i>Zip</div><i
-                                    class="fa-regular fa-check"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="tableContent">
-                <table class="table log-mail-table">
-                    <thead>
-                        <tr class="view">
-                            <th>Email</th>
-                            <th>Shipping Date</th>
-                            <th>Title</th>
-                            <th>State</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                        <tr class="view">
-                            <td>corrado.zapparoli@aldautomotive.com</td>
-                            <td>February 24, 2021, 12:37 PM</td>
-                            <td>Publication of actual and period performance</td>
-                            <td>
-                                <div class="shipBtn">Shipped</div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <nav class="pagination-container">
-                <ul class="pagination list-unstyled">
-                    <li class="page-item disabled prevBtn">
-                        <a class="page-link">
-                            <i class="fa-light fa-chevron-left"></i>
-                            Previous
-                        </a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item dots"><a class="page-link" href="#">...</a></li>
-                    <li class="page-item"><a class="page-link" href="#">13</a></li>
-                    <li class="page-item"><a class="page-link" href="#">14</a></li>
-                    <li class="page-item">
-                        <a class="page-link">
-                            Next
-                            <i class="fa-light fa-chevron-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mobileSidebarContent" aria-expanded="false" aria-label="Toggle navigation"
+        id="menu-toggle-btn">
+        <span class="navbar-toggler-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </nav>
+  </header>
+  <div class="mainSidebar">
+    <div class="collapse sidebarContent" id="mobileSidebarContent">
+      <ul class="sidebarMenu list-unstyled main-sidebar sideBarPadding" id="accordionParent">
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#cards-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Cards
+          </button>
+          <div class="sideMenuWrapper collapse" id="cards-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="research.html" title="Research" class="dropdown-item">Research</a>
+              </li>
+              <li>
+                <a href="individual-card.html" title="Individual Card" class="dropdown-item">Individual
+                  Card</a>
+              </li>
+              <li>
+                <a href="state-management.html" title="State Management" class="dropdown-item">State
+                  Management</a>
+              </li>
+              <li>
+                <a href="import-kpi.html" title="Import KPI" class="dropdown-item">Import KPI</a>
+              </li>
+              <li>
+                <a href="participants.html" title="Participants" class="dropdown-item">Participants</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#payments-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Payments
+          </button>
+          <div class="sideMenuWrapper collapse" id="payments-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="mass-liquidations.html" title="mass liquidations" class="dropdown-item">Mass
+                  Liquidations</a>
+              </li>
+              <li>
+                <a href="single-liquidation.html" title="single liquidation" class="dropdown-item">Single
+                  Liquidation</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="report.html" title="Report" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Report
+          </a>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#policies-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Policies
+          </button>
+          <div class="sideMenuWrapper collapse" id="policies-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="role-cards.html" title="role cards" class="dropdown-item">Role Cards</a>
+              </li>
+              <li>
+                <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
+              </li>
+              <li>
+                <a href="overtarget-kpis.html" title="overtarget kpis" class="dropdown-item">Overtarget
+                  KPIs</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#organization-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Organization
+          </button>
+          <div class="sideMenuWrapper collapse" id="organization-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="people.html" title="people" class="dropdown-item">People</a>
+              </li>
+              <li>
+                <a href="roles.html" title="roles" class="dropdown-item">Roles</a>
+              </li>
+              <li>
+                <a href="organizational-units.html" title="organizational units" class="dropdown-item">Organizational
+                  Units</a>
+              </li>
+              <li>
+                <a href="utilities.html" title="utilities" class="dropdown-item">Utilities</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="security.html" title="Security" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Security
+          </a>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse" data-bs-target="#messaging-collapse"
+            aria-expanded="true">
+            <i class="fa-light fa-grid-2"></i>
+            Messaging
+          </button>
+          <div class="sideMenuWrapper collapse show" id="messaging-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="log-mail.html" title="log mail" class="dropdown-item active">Log Mail</a>
+              </li>
+              <li>
+                <a href="template-management.html" title="template management" class="dropdown-item">Template
+                  Management</a>
+              </li>
+              <li>
+                <a href="shipment-management.html" title="shipment management" class="dropdown-item">Shipment
+                  Management</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Epicenter
+          </a>
+        </li>
+        <li>
+          <a class="sideMenuLink" href="setting.html" title="Setting">
+            <i class="fa-light fa-gear"></i>
+            Settings
+          </a>
+        </li>
+      </ul>
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    </div>
+  </div>
+  <div class="contentBlock">
+    <div class="topTitle">Lorem Ipsum</div>
+    <div class="filterBlock">
+      <div class="dropDownWrapper">
+        <div class="searchBarWrapper">
+          <div class="searchBarBlock w-286">
+            <input type="text" class="form-control ps-2" placeholder="Search for generic text..." aria-label="Search">
+            <i class="fa-light fa-magnifying-glass search-icon"></i>
+          </div>
+        </div>
+        <div class="dropdown custom-dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            General
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Normal</a></li>
+            <li><a class="dropdown-item" href="#">Secondary</a></li>
+            <li><a class="dropdown-item" href="#">Higher</a></li>
+          </ul>
+        </div>
+        <div class="dropdown custom-dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Limit To
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Limit From</a></li>
+            <li><a class="dropdown-item" href="#">Limit To</a></li>
+            <li><a class="dropdown-item" href="#">Limit To</a></li>
+          </ul>
+        </div>
+        <div class="dropdown custom-dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Start Date
+          </button>
+        </div>
+        <span class="primaryText">-</span>
+        <div class="dropdown custom-dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            End Date
+          </button>
+        </div>
+      </div>
+      <div class="dropdown custom-dropdown custom-dropdown1 customDropdown">
+        <button type="button" class="btn all-btn whiteBtn" data-bs-toggle="dropdown" aria-expanded="false">
+          <span><i class="fa-solid fa-up-from-bracket"></i></span>Export All
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <div class="dropdown-item">
+              <div class="dropdownSubItem"><i class="fa-light fa-table"></i>Excel</div><i
+                class="fa-regular fa-check"></i>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-item">
+              <div class="dropdownSubItem"><i class="fa-light fa-file-lines"></i>PDF</div><i
+                class="fa-regular fa-check"></i>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown-item">
+              <div class="dropdownSubItem"><i class="fa-light fa-file-zipper"></i>Zip</div><i
+                class="fa-regular fa-check"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tableContent">
+      <table class="table log-mail-table">
+        <thead>
+          <tr class="view">
+            <th>Email</th>
+            <th>Shipping Date</th>
+            <th>Title</th>
+            <th>State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+          <tr class="view">
+            <td>corrado.zapparoli@aldautomotive.com</td>
+            <td>February 24, 2021, 12:37 PM</td>
+            <td>Publication of actual and period performance</td>
+            <td>
+              <div class="shipBtn">Shipped</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <nav class="pagination-container">
+      <ul class="pagination list-unstyled">
+        <li class="page-item disabled prevBtn">
+          <a class="page-link">
+            <i class="fa-light fa-chevron-left"></i>
+            Previous
+          </a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+        <li class="page-item"><a class="page-link" href="#">13</a></li>
+        <li class="page-item"><a class="page-link" href="#">14</a></li>
+        <li class="page-item">
+          <a class="page-link">
+            Next
+            <i class="fa-light fa-chevron-right"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/custom.js"></script>
 </body>
 
 </html>

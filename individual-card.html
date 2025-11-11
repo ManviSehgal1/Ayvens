@@ -1,292 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Individual-card - Cards | Ayvens</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Font awesome link -->
-      <!-- Font awesome link -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Individual-card - Cards | Ayvens</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Font awesome link -->
+  <!-- Font awesome link -->
   <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
-  </head>
+</head>
 
-  <body>
-    <div class="dashboard">
-      <div class="mainSidebar">
-        <div class="sidebarLogo sideBarPadding">
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-light">
+      <div class="sidebarLogo sideBarPadding">
+        <a href="research.html">
           <img src="assets/images/logo-white.svg" alt="Logo" class="sidebarMainLogo" />
-          <button
-            class="navbar-toggler border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mobileSidebarContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            id="menu-toggle-btn"
-
-          >
-            <span class="navbar-toggler-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </button>
+        </a>
+      </div>
+      <div class="headerTop">
+        <div class="topTitle">
+          <h1 class="header-title d-none d-xl-inline">Individual Card</h1>
         </div>
-        <div class="collapse sidebarContent" id="mobileSidebarContent">
-          <ul class="sidebarMenu list-unstyled main-sidebar sideBarPadding" id="accordionParent">
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink"
-                data-bs-toggle="collapse"
-                data-bs-target="#cards-collapse"
-                aria-expanded="true"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Cards
-              </button>
-              <div
-                class="sideMenuWrapper collapse show"
-                id="cards-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      href="research.html"
-                      title="Research"
-                      class="dropdown-item"
-                      >Research</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="individual-card.html"
-                      title="Individual Card"
-                      class="dropdown-item active"
-                      >Individual Card</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="state-management.html"
-                      title="State Management"
-                      class="dropdown-item"
-                      >State Management</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="import-kpi.html"
-                      title="Import KPI"
-                      class="dropdown-item"
-                      >Import KPI</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="participants.html"
-                      title="Participants"
-                      class="dropdown-item"
-                      >Participants</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#payments-collapse"
-                aria-expanded="false"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Payments
-              </button>
-              <div
-                class="sideMenuWrapper collapse"
-                id="payments-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      href="mass-liquidations.html"
-                      title="mass liquidations"
-                      class="dropdown-item"
-                      >Mass Liquidations</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="single-liquidation.html"
-                      title="single liquidation"
-                      class="dropdown-item"
-                      >Single Liquidation</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="report.html" title="Report" class="sideMenuLink">
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Report
-              </a>
-            </li>
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#policies-collapse"
-                aria-expanded="false"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Policies
-              </button>
-              <div
-                class="sideMenuWrapper collapse"
-                id="policies-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a
-                      href="role-cards.html"
-                      title="role cards"
-                      class="dropdown-item"
-                      >Role Cards</a
-                    >
-                  </li>
-                  <li>
-                    <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
-                  </li>
-                  <li>
-                    <a
-                      href="overtarget-kpis.html"
-                      title="overtarget kpis"
-                      class="dropdown-item"
-                      >Overtarget KPIs</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#organization-collapse"
-                aria-expanded="false"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Organization
-              </button>
-              <div
-                class="sideMenuWrapper collapse"
-                id="organization-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="people.html" title="people" class="dropdown-item"
-                      >People</a
-                    >
-                  </li>
-                  <li>
-                    <a href="roles.html" title="roles" class="dropdown-item"
-                      >Roles</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="organizational-units.html"
-                      title="organizational units"
-                      class="dropdown-item"
-                      >Organizational Units</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="utilities.html"
-                      title="utilities"
-                      class="dropdown-item"
-                      >Utilities</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="security.html" title="Security" class="sideMenuLink">
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Security
-              </a>
-            </li>
-            <li>
-              <button
-                class="sidebarMenuButton sideMenuLink collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#messaging-collapse"
-                aria-expanded="false"
-              >
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Messaging
-              </button>
-              <div
-                class="sideMenuWrapper collapse"
-                id="messaging-collapse"
-                data-bs-parent="#accordionParent"
-              >
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="log-mail.html" title="log mail" class="dropdown-item"
-                      >Log Mail</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="template-management.html"
-                      title="template management"
-                      class="dropdown-item"
-                      >Template Management</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="shipment-management.html"
-                      title="shipment management"
-                      class="dropdown-item"
-                      >Shipment Management</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
-                <img src="assets/images/list-icon.svg" alt="List" />
-                Epicenter
-              </a>
-            </li>
-          </ul>
-          <div class="userMenu sideBarPadding">
-            <ul class="sidebarMenu list-unstyled" id="accordionParent">
-              <li>
-                <a class="userMenuLink userLink" href="#">
-                  <i class="fa-light fa-circle-user"></i>
-                  John Smith
-                </a>
-              </li>
-              <li>
-                <a class="userMenuLink" href="setting.html">
-                  <i class="fa-light fa-gear"></i>
-                  Settings
-                </a>
-              </li>
+        <div class="user-info">
+          <div class="dropdown">
+            <a class="userMenuLink userLink dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown"
+              aria-expanded="false" href="#" title="John Smith">
+              <i class="fa-light fa-circle-user"></i>
+              <span class="d-none d-xl-inline">John Smith</span>
+              <span class="d-none d-xl-inline"><i class="fa-solid fa-chevron-down"></i></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="userDropdown">
               <li>
                 <a class="userMenuLink" href="login.html">
                   <i class="fa-light fa-arrow-left-from-bracket"></i>
@@ -297,695 +45,766 @@
           </div>
         </div>
       </div>
-      <div class="contentBlock">
-        <div class="topTitle">Individual Incentive Card</div>
-        <div class="filterBlock">
-          <div class="blockTitle">S1 Card</div>
-          <div class="dropDownWrapper">
-            <div class="dropdown custom-dropdown">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                2025 Quarter
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
-                <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
-                <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
-              </ul>
-            </div>
-            <div class="dropdown custom-dropdown">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Christian Court
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Christian Court 1</a></li>
-                <li><a class="dropdown-item" href="#">Christian Court 2</a></li>
-                <li><a class="dropdown-item" href="#">Christian Court 3</a></li>
-              </ul>
-            </div>
-            <div class="dropdown custom-dropdown">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Jan-Mar
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Apr-Jun</a></li>
-                <li><a class="dropdown-item" href="#">Jul-Sep</a></li>
-                <li><a class="dropdown-item" href="#">Oct-Dec</a></li>
-              </ul>
-            </div>
-            <div class="dropdown custom-dropdown">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Report To Draft
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Report To Draft 1</a></li>
-                <li><a class="dropdown-item" href="#">Report To Draft 2</a></li>
-                <li><a class="dropdown-item" href="#">Report To Draft 3</a></li>
-              </ul>
-            </div>
-            <button type="button" class="btn btn-primary">Press</button>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mobileSidebarContent" aria-expanded="false" aria-label="Toggle navigation"
+        id="menu-toggle-btn">
+        <span class="navbar-toggler-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mainSidebar">
+    <div class="collapse sidebarContent" id="mobileSidebarContent">
+      <ul class="sidebarMenu list-unstyled main-sidebar sideBarPadding" id="accordionParent">
+        <li>
+          <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse" data-bs-target="#cards-collapse"
+            aria-expanded="true">
+            <i class="fa-light fa-grid-2"></i>
+            Cards
+          </button>
+          <div class="sideMenuWrapper collapse show" id="cards-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="research.html" title="Research" class="dropdown-item">Research</a>
+              </li>
+              <li>
+                <a href="individual-card.html" title="Individual Card" class="dropdown-item active">Individual Card</a>
+              </li>
+              <li>
+                <a href="state-management.html" title="State Management" class="dropdown-item">State Management</a>
+              </li>
+              <li>
+                <a href="import-kpi.html" title="Import KPI" class="dropdown-item">Import KPI</a>
+              </li>
+              <li>
+                <a href="participants.html" title="Participants" class="dropdown-item">Participants</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#payments-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Payments
+          </button>
+          <div class="sideMenuWrapper collapse" id="payments-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="mass-liquidations.html" title="mass liquidations" class="dropdown-item">Mass Liquidations</a>
+              </li>
+              <li>
+                <a href="single-liquidation.html" title="single liquidation" class="dropdown-item">Single
+                  Liquidation</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="report.html" title="Report" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Report
+          </a>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#policies-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Policies
+          </button>
+          <div class="sideMenuWrapper collapse" id="policies-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="role-cards.html" title="role cards" class="dropdown-item">Role Cards</a>
+              </li>
+              <li>
+                <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
+              </li>
+              <li>
+                <a href="overtarget-kpis.html" title="overtarget kpis" class="dropdown-item">Overtarget KPIs</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#organization-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Organization
+          </button>
+          <div class="sideMenuWrapper collapse" id="organization-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="people.html" title="people" class="dropdown-item">People</a>
+              </li>
+              <li>
+                <a href="roles.html" title="roles" class="dropdown-item">Roles</a>
+              </li>
+              <li>
+                <a href="organizational-units.html" title="organizational units" class="dropdown-item">Organizational
+                  Units</a>
+              </li>
+              <li>
+                <a href="utilities.html" title="utilities" class="dropdown-item">Utilities</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="security.html" title="Security" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Security
+          </a>
+        </li>
+        <li>
+          <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+            data-bs-target="#messaging-collapse" aria-expanded="false">
+            <i class="fa-light fa-grid-2"></i>
+            Messaging
+          </button>
+          <div class="sideMenuWrapper collapse" id="messaging-collapse" data-bs-parent="#accordionParent">
+            <ul class="list-unstyled">
+              <li>
+                <a href="log-mail.html" title="log mail" class="dropdown-item">Log Mail</a>
+              </li>
+              <li>
+                <a href="template-management.html" title="template management" class="dropdown-item">Template
+                  Management</a>
+              </li>
+              <li>
+                <a href="shipment-management.html" title="shipment management" class="dropdown-item">Shipment
+                  Management</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="epicenter.html" title="Epicenter" class="sideMenuLink">
+            <i class="fa-light fa-grid-2"></i>
+            Epicenter
+          </a>
+        </li>
+        <li>
+          <a class="sideMenuLink" href="setting.html" title="Setting">
+            <i class="fa-light fa-gear"></i>
+            Settings
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="contentBlock">
+    <div class="topTitle">Lorem Ipsum</div>
+    <div class="filterBlock">
+      <div class="blockTitle">S1 Card</div>
+      <div class="dropDownWrapper">
+        <div class="dropdown custom-dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            2025 Quarter
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
+            <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
+            <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
+          </ul>
+        </div>
+        <div class="dropdown custom-dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Christian Court
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Christian Court 1</a></li>
+            <li><a class="dropdown-item" href="#">Christian Court 2</a></li>
+            <li><a class="dropdown-item" href="#">Christian Court 3</a></li>
+          </ul>
+        </div>
+        <div class="dropdown custom-dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Jan-Mar
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Apr-Jun</a></li>
+            <li><a class="dropdown-item" href="#">Jul-Sep</a></li>
+            <li><a class="dropdown-item" href="#">Oct-Dec</a></li>
+          </ul>
+        </div>
+        <div class="dropdown custom-dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Report To Draft
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Report To Draft 1</a></li>
+            <li><a class="dropdown-item" href="#">Report To Draft 2</a></li>
+            <li><a class="dropdown-item" href="#">Report To Draft 3</a></li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-primary">Press</button>
+      </div>
+    </div>
+    <div class="middleWrapper">
+      <div class="customCard detailCard">
+        <div class="detailsCard-container">
+          <div class="detailsCard-content">
+            <p class="smallTitle">Management and Role:</p>
+            <p class="subText">Commerce, Institutional & PA Key Account</p>
+          </div>
+          <div class="detailsCard-content">
+            <p class="smallTitle">Current Status:</p>
+            <p class="subText">Targets Published</p>
           </div>
         </div>
-        <div class="middleWrapper">
-          <div class="customCard detailCard">
-            <div class="detailsCard-container">
-              <div class="detailsCard-content">
-                <p class="smallTitle">Management and Role:</p>
-                <p class="subText">Commerce, Institutional & PA Key Account</p>
-              </div>
-              <div class="detailsCard-content">
-                <p class="smallTitle">Current Status:</p>
-                <p class="subText">Targets Published</p>
-              </div>
-            </div>
-            <div class="detailsCard-textarea">
-              <p class="smallTitle">Current Status:</p>
-              <div class="finalTextarea">
-                <p class="subText editable-content">
-                  This sheet refers to the observation period February-March
-                  2025. The bonus for the period is consistently
-                  re-proportioned.
-                </p>
-                <i class="fa-light fa-pen" id="editPen"></i>
-              </div>
-            </div>
-          </div>
-          <div class="customCard statCard yelloCard">
-            <div class="value">
-              <img src="assets/images/euro-gray.svg" alt="Euro" />
-              12000.00
-            </div>
-            <p class="subText">
-              Annual bonus related to sales targets to be
-              <br class="d-none d-lg-block" />
-              re-proportioned for the 4 quarters
+        <div class="detailsCard-textarea">
+          <p class="smallTitle">Current Status:</p>
+          <div class="finalTextarea">
+            <p class="subText editable-content">
+              This sheet refers to the observation period February-March
+              2025. The bonus for the period is consistently
+              re-proportioned.
             </p>
-          </div>
-          <div class="customCard statCard redCard">
-            <div class="value">
-              <img src="assets/images/euro-white.svg" alt="Euro" />11000.00
-            </div>
-            <p class="subText">Accrued Bonus</p>
-          </div>
-        </div>
-
-        <div class="tab-content tableContent" id="myTabContent">
-          <div
-            class="tab-pane fade show active"
-            id="everyone-tab-pane"
-            role="tabpanel"
-            aria-labelledby="everyone-tab"
-            tabindex="0"
-          >
-            <div class="table-responsive">
-              <table class="table individual-card-table resize-td-table">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Objective</th>
-                    <th>Payment Frequency</th>
-                    <th>Target</th>
-                    <th>Current</th>
-                    <th>Performance</th>
-                    <th>Weight</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="view">
-                    <td class="arrowBtn">
-                      <img
-                        src="assets/images/down-arrow-white.svg"
-                        alt="Down Arrow"
-                      />
-                    </td>
-                    <td>Orders</td>
-                    <td>Quarterly</td>
-                    <td>30.00</td>
-                    <td>
-                      <div class="editable-td">
-                        <span>0.00</span
-                        ><span> <i class="fa-light fa-pen"></i></span>
-                      </div>
-                    </td>
-                    <td>0.00%</td>
-                    <td>50.00%</td>
-                    <td>€ 0.00</td>
-                  </tr>
-                  <tr class="fold">
-                    <td></td>
-                    <td colspan="7">
-                      <div class="collpaseTr">
-                        <div class="infoBlock">
-                          <span class="title">Objective</span>
-                          <p class="subText">
-                            KPIs that “Orders” impacts for performance
-                            calculation : <strong>Flex</strong>
-                          </p>
-                        </div>
-                        <div class="individualCardChart">
-                          <div class="ChartMainSection">
-                            <div class="CardChartTitle">
-                              <span class="title">Performance</span>
-                              <p class="subText">
-                                Performance calculation details
-                              </p>
-                            </div>
-                            <div class="CardChartSection">
-                              <div class="chart-section"></div>
-                              <div class="range-section">
-                                <div
-                                  class="rangeSectionTitle rangeSectionAlingment"
-                                >
-                                  <p class="smallTitle RangeTitle">
-                                    Actual Range
-                                  </p>
-                                  <p class="smallTitle RangeTitle">
-                                    Absolute Performance
-                                  </p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">< 23.99</p>
-                                  <p class="subText RangeTitle">0.00%</p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">24.00 ></p>
-                                  <p class="subText RangeTitle">
-                                    80.00%-79.2281625142643375935439503350000%
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="performanceSection">
-                            <div class="CardChartTitle CardChartTitle1">
-                              <span class="title">Performance</span>
-                              <p class="subText">Performance function orders</p>
-                            </div>
-                            <div class="targetSection">
-                              <div class="targetDetails">
-                                <p class="targetTitle">Target</p>
-                                <p class="targetValue">30.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Current</p>
-                                <p class="targetValue">0.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Absolute Performance</p>
-                                <p class="targetValue">0.00%</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="spacing-tr">
-                    <td colspan="8"></td>
-                  </tr>
-                  <tr class="view">
-                    <td class="arrowBtn">
-                      <img
-                        src="assets/images/down-arrow-white.svg"
-                        alt="Down Arrow"
-                      />
-                    </td>
-                    <td>Extensions</td>
-                    <td>Quarterly</td>
-                    <td>30.00</td>
-                    <td>
-                      <div class="editable-td">
-                        <span>0.00</span
-                        ><span> <i class="fa-light fa-pen"></i></span>
-                      </div>
-                    </td>
-                    <td>0.00%</td>
-                    <td>50.00%</td>
-                    <td>€ 0.00</td>
-                  </tr>
-                  <tr class="fold">
-                    <td></td>
-                    <td colspan="7">
-                      <div class="collpaseTr">
-                        <div class="infoBlock">
-                          <span class="title">Objective</span>
-                          <p class="subText">
-                            KPIs that “Orders” impacts for performance
-                            calculation : <strong>Flex</strong>
-                          </p>
-                        </div>
-                        <div class="individualCardChart">
-                          <div class="ChartMainSection">
-                            <div class="CardChartTitle">
-                              <span class="title">Performance</span>
-                              <p class="subText">
-                                Performance calculation details
-                              </p>
-                            </div>
-                            <div class="CardChartSection">
-                              <div class="chart-section"></div>
-                              <div class="range-section">
-                                <div
-                                  class="rangeSectionTitle rangeSectionAlingment"
-                                >
-                                  <p class="smallTitle RangeTitle">
-                                    Actual Range
-                                  </p>
-                                  <p class="smallTitle RangeTitle">
-                                    Absolute Performance
-                                  </p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">< 23.99</p>
-                                  <p class="subText RangeTitle">0.00%</p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">24.00 ></p>
-                                  <p class="subText RangeTitle">
-                                    80.00%-79.2281625142643375935439503350000%
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="performanceSection">
-                            <div class="CardChartTitle CardChartTitle1">
-                              <span class="title">Performance</span>
-                              <p class="subText">Performance function orders</p>
-                            </div>
-                            <div class="targetSection">
-                              <div class="targetDetails">
-                                <p class="targetTitle">Target</p>
-                                <p class="targetValue">30.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Current</p>
-                                <p class="targetValue">0.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Absolute Performance</p>
-                                <p class="targetValue">0.00%</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                   <tr class="spacing-tr">
-                    <td colspan="8"></td>
-                  </tr>
-                  <tr class="view">
-                    <td class="arrowBtn">
-                      <img
-                        src="assets/images/down-arrow-white.svg"
-                        alt="Down Arrow"
-                      />
-                    </td>
-                    <td>Orders</td>
-                    <td>Quarterly</td>
-                    <td>30.00</td>
-                    <td>
-                      <div class="editable-td">
-                        <span>0.00</span
-                        ><span> <i class="fa-light fa-pen"></i></span>
-                      </div>
-                    </td>
-                    <td>0.00%</td>
-                    <td>50.00%</td>
-                    <td>€ 0.00</td>
-                  </tr>
-                  <tr class="fold">
-                    <td></td>
-                    <td colspan="7">
-                      <div class="collpaseTr">
-                        <div class="infoBlock">
-                          <span class="title">Objective</span>
-                          <p class="subText">
-                            KPIs that “Orders” impacts for performance
-                            calculation : <strong>Flex</strong>
-                          </p>
-                        </div>
-                        <div class="individualCardChart">
-                          <div class="ChartMainSection">
-                            <div class="CardChartTitle">
-                              <span class="title">Performance</span>
-                              <p class="subText">
-                                Performance calculation details
-                              </p>
-                            </div>
-                            <div class="CardChartSection">
-                              <div class="chart-section"></div>
-                              <div class="range-section">
-                                <div
-                                  class="rangeSectionTitle rangeSectionAlingment"
-                                >
-                                  <p class="smallTitle RangeTitle">
-                                    Actual Range
-                                  </p>
-                                  <p class="smallTitle RangeTitle">
-                                    Absolute Performance
-                                  </p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">< 23.99</p>
-                                  <p class="subText RangeTitle">0.00%</p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">24.00 ></p>
-                                  <p class="subText RangeTitle">
-                                    80.00%-79.2281625142643375935439503350000%
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="performanceSection">
-                            <div class="CardChartTitle CardChartTitle1">
-                              <span class="title">Performance</span>
-                              <p class="subText">Performance function orders</p>
-                            </div>
-                            <div class="targetSection">
-                              <div class="targetDetails">
-                                <p class="targetTitle">Target</p>
-                                <p class="targetValue">30.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Current</p>
-                                <p class="targetValue">0.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Absolute Performance</p>
-                                <p class="targetValue">0.00%</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                   <tr class="spacing-tr">
-                    <td colspan="8"></td>
-                  </tr>
-                  <tr class="view">
-                    <td class="arrowBtn">
-                      <img
-                        src="assets/images/down-arrow-white.svg"
-                        alt="Down Arrow"
-                      />
-                    </td>
-                    <td>Orders</td>
-                    <td>Quarterly</td>
-                    <td>30.00</td>
-                    <td>
-                      <div class="editable-td">
-                        <span>0.00</span
-                        ><span> <i class="fa-light fa-pen"></i></span>
-                      </div>
-                    </td>
-                    <td>0.00%</td>
-                    <td>50.00%</td>
-                    <td>€ 0.00</td>
-                  </tr>
-                  <tr class="fold">
-                    <td></td>
-                    <td colspan="7">
-                      <div class="collpaseTr">
-                        <div class="infoBlock">
-                          <span class="title">Objective</span>
-                          <p class="subText">
-                            KPIs that “Orders” impacts for performance
-                            calculation : <strong>Flex</strong>
-                          </p>
-                        </div>
-                        <div class="individualCardChart">
-                          <div class="ChartMainSection">
-                            <div class="CardChartTitle">
-                              <span class="title">Performance</span>
-                              <p class="subText">
-                                Performance calculation details
-                              </p>
-                            </div>
-                            <div class="CardChartSection">
-                              <div class="chart-section"></div>
-                              <div class="range-section">
-                                <div
-                                  class="rangeSectionTitle rangeSectionAlingment"
-                                >
-                                  <p class="smallTitle RangeTitle">
-                                    Actual Range
-                                  </p>
-                                  <p class="smallTitle RangeTitle">
-                                    Absolute Performance
-                                  </p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">< 23.99</p>
-                                  <p class="subText RangeTitle">0.00%</p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">24.00 ></p>
-                                  <p class="subText RangeTitle">
-                                    80.00%-79.2281625142643375935439503350000%
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="performanceSection">
-                            <div class="CardChartTitle CardChartTitle1">
-                              <span class="title">Performance</span>
-                              <p class="subText">Performance function orders</p>
-                            </div>
-                            <div class="targetSection">
-                              <div class="targetDetails">
-                                <p class="targetTitle">Target</p>
-                                <p class="targetValue">30.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Current</p>
-                                <p class="targetValue">0.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Absolute Performance</p>
-                                <p class="targetValue">0.00%</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                   <tr class="spacing-tr">
-                    <td colspan="8"></td>
-                  </tr>
-                  <tr class="view">
-                    <td class="arrowBtn">
-                      <img
-                        src="assets/images/down-arrow-white.svg"
-                        alt="Down Arrow"
-                      />
-                    </td>
-                    <td>Orders</td>
-                    <td>Quarterly</td>
-                    <td>30.00</td>
-                    <td>
-                      <div class="editable-td">
-                        <span>0.00</span
-                        ><span> <i class="fa-light fa-pen"></i></span>
-                      </div>
-                    </td>
-                    <td>0.00%</td>
-                    <td>50.00%</td>
-                    <td>€ 0.00</td>
-                  </tr>
-                  <tr class="fold">
-                    <td></td>
-                    <td colspan="7">
-                      <div class="collpaseTr">
-                        <div class="infoBlock">
-                          <span class="title">Objective</span>
-                          <p class="subText">
-                            KPIs that “Orders” impacts for performance
-                            calculation : <strong>Flex</strong>
-                          </p>
-                        </div>
-                        <div class="individualCardChart">
-                          <div class="ChartMainSection">
-                            <div class="CardChartTitle">
-                              <span class="title">Performance</span>
-                              <p class="subText">
-                                Performance calculation details
-                              </p>
-                            </div>
-                            <div class="CardChartSection">
-                              <div class="chart-section"></div>
-                              <div class="range-section">
-                                <div
-                                  class="rangeSectionTitle rangeSectionAlingment"
-                                >
-                                  <p class="smallTitle RangeTitle">
-                                    Actual Range
-                                  </p>
-                                  <p class="smallTitle RangeTitle">
-                                    Absolute Performance
-                                  </p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">< 23.99</p>
-                                  <p class="subText RangeTitle">0.00%</p>
-                                </div>
-                                <div
-                                  class="rangeSectionBg rangeSectionAlingment"
-                                >
-                                  <p class="subText RangeTitle">24.00 ></p>
-                                  <p class="subText RangeTitle">
-                                    80.00%-79.2281625142643375935439503350000%
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="performanceSection">
-                            <div class="CardChartTitle CardChartTitle1">
-                              <span class="title">Performance</span>
-                              <p class="subText">Performance function orders</p>
-                            </div>
-                            <div class="targetSection">
-                              <div class="targetDetails">
-                                <p class="targetTitle">Target</p>
-                                <p class="targetValue">30.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Current</p>
-                                <p class="targetValue">0.00</p>
-                              </div>
-                              <div class="targetDetails">
-                                <p class="targetTitle">Absolute Performance</p>
-                                <p class="targetValue">0.00%</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                   <tr class="spacing-tr">
-                    <td colspan="8"></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <i class="fa-light fa-pen" id="editPen"></i>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="modal fade"
-      id="editModal"
-      tabindex="-1"
-      aria-labelledby="editModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="editModalLabel">Edit Comment</h5>
-            <i
-              class="fa-solid fa-xmark-large"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></i>
-          </div>
-          <div class="modal-body">
-            <p>Write your message below</p>
-            <textarea id="modalTextarea"></textarea>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary allBtn"
-              data-bs-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button type="button" class="btn btn-primary allBtn" id="saveModal">
-              Save
-            </button>
-          </div>
+      <div class="customCard statCard yelloCard">
+        <div class="value">
+          <img src="assets/images/euro-gray.svg" alt="Euro" />
+          12000.00
         </div>
+        <p class="subText">
+          Annual bonus related to sales targets to be
+          <br class="d-none d-lg-block" />
+          re-proportioned for the 4 quarters
+        </p>
+      </div>
+      <div class="customCard statCard redCard">
+        <div class="value">
+          <img src="assets/images/euro-white.svg" alt="Euro" />11000.00
+        </div>
+        <p class="subText">Accrued Bonus</p>
       </div>
     </div>
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <div class="tab-content tableContent" id="myTabContent">
+      <div class="tab-pane fade show active" id="everyone-tab-pane" role="tabpanel" aria-labelledby="everyone-tab"
+        tabindex="0">
+        <div class="table-responsive">
+          <table class="table individual-card-table resize-td-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Objective</th>
+                <th>Payment Frequency</th>
+                <th>Target</th>
+                <th>Current</th>
+                <th>Performance</th>
+                <th>Weight</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="view">
+                <td class="arrowBtn">
+                  <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                </td>
+                <td>Orders</td>
+                <td>Quarterly</td>
+                <td>30.00</td>
+                <td>
+                  <div class="editable-td">
+                    <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  </div>
+                </td>
+                <td>0.00%</td>
+                <td>50.00%</td>
+                <td>€ 0.00</td>
+              </tr>
+              <tr class="fold">
+                <td></td>
+                <td colspan="7">
+                  <div class="collpaseTr">
+                    <div class="infoBlock">
+                      <span class="title">Objective</span>
+                      <p class="subText">
+                        KPIs that “Orders” impacts for performance
+                        calculation : <strong>Flex</strong>
+                      </p>
+                    </div>
+                    <div class="individualCardChart">
+                      <div class="ChartMainSection">
+                        <div class="CardChartTitle">
+                          <span class="title">Performance</span>
+                          <p class="subText">
+                            Performance calculation details
+                          </p>
+                        </div>
+                        <div class="CardChartSection">
+                          <div class="chart-section"></div>
+                          <div class="range-section">
+                            <div class="rangeSectionTitle rangeSectionAlingment">
+                              <p class="smallTitle RangeTitle">
+                                Actual Range
+                              </p>
+                              <p class="smallTitle RangeTitle">
+                                Absolute Performance
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">
+                                < 23.99</p> <p class="subText RangeTitle">0.00%
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">24.00 ></p>
+                              <p class="subText RangeTitle">
+                                80.00%-79.2281625142643375935439503350000%
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="performanceSection">
+                        <div class="CardChartTitle CardChartTitle1">
+                          <span class="title">Performance</span>
+                          <p class="subText">Performance function orders</p>
+                        </div>
+                        <div class="targetSection">
+                          <div class="targetDetails">
+                            <p class="targetTitle">Target</p>
+                            <p class="targetValue">30.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Current</p>
+                            <p class="targetValue">0.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Absolute Performance</p>
+                            <p class="targetValue">0.00%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="8"></td>
+              </tr>
+              <tr class="view">
+                <td class="arrowBtn">
+                  <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                </td>
+                <td>Extensions</td>
+                <td>Quarterly</td>
+                <td>30.00</td>
+                <td>
+                  <div class="editable-td">
+                    <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  </div>
+                </td>
+                <td>0.00%</td>
+                <td>50.00%</td>
+                <td>€ 0.00</td>
+              </tr>
+              <tr class="fold">
+                <td></td>
+                <td colspan="7">
+                  <div class="collpaseTr">
+                    <div class="infoBlock">
+                      <span class="title">Objective</span>
+                      <p class="subText">
+                        KPIs that “Orders” impacts for performance
+                        calculation : <strong>Flex</strong>
+                      </p>
+                    </div>
+                    <div class="individualCardChart">
+                      <div class="ChartMainSection">
+                        <div class="CardChartTitle">
+                          <span class="title">Performance</span>
+                          <p class="subText">
+                            Performance calculation details
+                          </p>
+                        </div>
+                        <div class="CardChartSection">
+                          <div class="chart-section"></div>
+                          <div class="range-section">
+                            <div class="rangeSectionTitle rangeSectionAlingment">
+                              <p class="smallTitle RangeTitle">
+                                Actual Range
+                              </p>
+                              <p class="smallTitle RangeTitle">
+                                Absolute Performance
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">
+                                < 23.99</p> <p class="subText RangeTitle">0.00%
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">24.00 ></p>
+                              <p class="subText RangeTitle">
+                                80.00%-79.2281625142643375935439503350000%
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="performanceSection">
+                        <div class="CardChartTitle CardChartTitle1">
+                          <span class="title">Performance</span>
+                          <p class="subText">Performance function orders</p>
+                        </div>
+                        <div class="targetSection">
+                          <div class="targetDetails">
+                            <p class="targetTitle">Target</p>
+                            <p class="targetValue">30.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Current</p>
+                            <p class="targetValue">0.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Absolute Performance</p>
+                            <p class="targetValue">0.00%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="8"></td>
+              </tr>
+              <tr class="view">
+                <td class="arrowBtn">
+                  <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                </td>
+                <td>Orders</td>
+                <td>Quarterly</td>
+                <td>30.00</td>
+                <td>
+                  <div class="editable-td">
+                    <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  </div>
+                </td>
+                <td>0.00%</td>
+                <td>50.00%</td>
+                <td>€ 0.00</td>
+              </tr>
+              <tr class="fold">
+                <td></td>
+                <td colspan="7">
+                  <div class="collpaseTr">
+                    <div class="infoBlock">
+                      <span class="title">Objective</span>
+                      <p class="subText">
+                        KPIs that “Orders” impacts for performance
+                        calculation : <strong>Flex</strong>
+                      </p>
+                    </div>
+                    <div class="individualCardChart">
+                      <div class="ChartMainSection">
+                        <div class="CardChartTitle">
+                          <span class="title">Performance</span>
+                          <p class="subText">
+                            Performance calculation details
+                          </p>
+                        </div>
+                        <div class="CardChartSection">
+                          <div class="chart-section"></div>
+                          <div class="range-section">
+                            <div class="rangeSectionTitle rangeSectionAlingment">
+                              <p class="smallTitle RangeTitle">
+                                Actual Range
+                              </p>
+                              <p class="smallTitle RangeTitle">
+                                Absolute Performance
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">
+                                < 23.99</p> <p class="subText RangeTitle">0.00%
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">24.00 ></p>
+                              <p class="subText RangeTitle">
+                                80.00%-79.2281625142643375935439503350000%
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="performanceSection">
+                        <div class="CardChartTitle CardChartTitle1">
+                          <span class="title">Performance</span>
+                          <p class="subText">Performance function orders</p>
+                        </div>
+                        <div class="targetSection">
+                          <div class="targetDetails">
+                            <p class="targetTitle">Target</p>
+                            <p class="targetValue">30.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Current</p>
+                            <p class="targetValue">0.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Absolute Performance</p>
+                            <p class="targetValue">0.00%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="8"></td>
+              </tr>
+              <tr class="view">
+                <td class="arrowBtn">
+                  <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                </td>
+                <td>Orders</td>
+                <td>Quarterly</td>
+                <td>30.00</td>
+                <td>
+                  <div class="editable-td">
+                    <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  </div>
+                </td>
+                <td>0.00%</td>
+                <td>50.00%</td>
+                <td>€ 0.00</td>
+              </tr>
+              <tr class="fold">
+                <td></td>
+                <td colspan="7">
+                  <div class="collpaseTr">
+                    <div class="infoBlock">
+                      <span class="title">Objective</span>
+                      <p class="subText">
+                        KPIs that “Orders” impacts for performance
+                        calculation : <strong>Flex</strong>
+                      </p>
+                    </div>
+                    <div class="individualCardChart">
+                      <div class="ChartMainSection">
+                        <div class="CardChartTitle">
+                          <span class="title">Performance</span>
+                          <p class="subText">
+                            Performance calculation details
+                          </p>
+                        </div>
+                        <div class="CardChartSection">
+                          <div class="chart-section"></div>
+                          <div class="range-section">
+                            <div class="rangeSectionTitle rangeSectionAlingment">
+                              <p class="smallTitle RangeTitle">
+                                Actual Range
+                              </p>
+                              <p class="smallTitle RangeTitle">
+                                Absolute Performance
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">
+                                < 23.99</p> <p class="subText RangeTitle">0.00%
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">24.00 ></p>
+                              <p class="subText RangeTitle">
+                                80.00%-79.2281625142643375935439503350000%
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="performanceSection">
+                        <div class="CardChartTitle CardChartTitle1">
+                          <span class="title">Performance</span>
+                          <p class="subText">Performance function orders</p>
+                        </div>
+                        <div class="targetSection">
+                          <div class="targetDetails">
+                            <p class="targetTitle">Target</p>
+                            <p class="targetValue">30.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Current</p>
+                            <p class="targetValue">0.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Absolute Performance</p>
+                            <p class="targetValue">0.00%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="8"></td>
+              </tr>
+              <tr class="view">
+                <td class="arrowBtn">
+                  <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                </td>
+                <td>Orders</td>
+                <td>Quarterly</td>
+                <td>30.00</td>
+                <td>
+                  <div class="editable-td">
+                    <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  </div>
+                </td>
+                <td>0.00%</td>
+                <td>50.00%</td>
+                <td>€ 0.00</td>
+              </tr>
+              <tr class="fold">
+                <td></td>
+                <td colspan="7">
+                  <div class="collpaseTr">
+                    <div class="infoBlock">
+                      <span class="title">Objective</span>
+                      <p class="subText">
+                        KPIs that “Orders” impacts for performance
+                        calculation : <strong>Flex</strong>
+                      </p>
+                    </div>
+                    <div class="individualCardChart">
+                      <div class="ChartMainSection">
+                        <div class="CardChartTitle">
+                          <span class="title">Performance</span>
+                          <p class="subText">
+                            Performance calculation details
+                          </p>
+                        </div>
+                        <div class="CardChartSection">
+                          <div class="chart-section"></div>
+                          <div class="range-section">
+                            <div class="rangeSectionTitle rangeSectionAlingment">
+                              <p class="smallTitle RangeTitle">
+                                Actual Range
+                              </p>
+                              <p class="smallTitle RangeTitle">
+                                Absolute Performance
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">
+                                < 23.99</p> <p class="subText RangeTitle">0.00%
+                              </p>
+                            </div>
+                            <div class="rangeSectionBg rangeSectionAlingment">
+                              <p class="subText RangeTitle">24.00 ></p>
+                              <p class="subText RangeTitle">
+                                80.00%-79.2281625142643375935439503350000%
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="performanceSection">
+                        <div class="CardChartTitle CardChartTitle1">
+                          <span class="title">Performance</span>
+                          <p class="subText">Performance function orders</p>
+                        </div>
+                        <div class="targetSection">
+                          <div class="targetDetails">
+                            <p class="targetTitle">Target</p>
+                            <p class="targetValue">30.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Current</p>
+                            <p class="targetValue">0.00</p>
+                          </div>
+                          <div class="targetDetails">
+                            <p class="targetTitle">Absolute Performance</p>
+                            <p class="targetValue">0.00%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="spacing-tr">
+                <td colspan="8"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script>
-      // filepath: /Users/mtpc/Desktop/html-&-css/2025/10 Oct/HTML/ayvens/individual-card.html
-      // ...existing code...
-      document.addEventListener("DOMContentLoaded", function () {
-        const pen = document.getElementById("editPen");
-        const modalTextarea = document.getElementById("modalTextarea");
-        const editableContent = document.querySelector(".editable-content");
-        const saveModal = document.getElementById("saveModal");
-        const editModal = new bootstrap.Modal(
-          document.getElementById("editModal")
-        );
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Comment</h5>
+          <i class="fa-solid fa-xmark-large" data-bs-dismiss="modal" aria-label="Close"></i>
+        </div>
+        <div class="modal-body">
+          <p>Write your message below</p>
+          <textarea id="modalTextarea"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary allBtn" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-primary allBtn" id="saveModal">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        pen.addEventListener("click", function () {
-          modalTextarea.value = editableContent.textContent.trim();
-          editModal.show();
-        });
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/custom.js"></script>
 
-        saveModal.addEventListener("click", function () {
-          editableContent.textContent = modalTextarea.value;
-          editModal.hide();
-        });
+  <script>
+    // filepath: /Users/mtpc/Desktop/html-&-css/2025/10 Oct/HTML/ayvens/individual-card.html
+    // ...existing code...
+    document.addEventListener("DOMContentLoaded", function () {
+      const pen = document.getElementById("editPen");
+      const modalTextarea = document.getElementById("modalTextarea");
+      const editableContent = document.querySelector(".editable-content");
+      const saveModal = document.getElementById("saveModal");
+      const editModal = new bootstrap.Modal(
+        document.getElementById("editModal")
+      );
+
+      pen.addEventListener("click", function () {
+        modalTextarea.value = editableContent.textContent.trim();
+        editModal.show();
       });
-      document.querySelector("textarea").addEventListener("input", function () {
-        this.style.height = "auto"; // Reset height
-        this.style.height = this.scrollHeight + "px"; // Set height to scrollHeight
+
+      saveModal.addEventListener("click", function () {
+        editableContent.textContent = modalTextarea.value;
+        editModal.hide();
       });
-      // ...existing code...
-    </script>
-  </body>
+    });
+    document.querySelector("textarea").addEventListener("input", function () {
+      this.style.height = "auto"; // Reset height
+      this.style.height = this.scrollHeight + "px"; // Set height to scrollHeight
+    });
+    // ...existing code...
+  </script>
+</body>
+
 </html>

@@ -204,17 +204,17 @@
     </div>
     <div class="filterBlock">
       <div class="dropdown custom-dropdown">
-        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          2023 Sem
+        <button class="btn dropdown-toggle allSimilarBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          2023 Sem <i class="fa-solid fa-chevron-down ms-1"></i>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">2025 Sem</a></li>
-          <li><a class="dropdown-item" href="#">2024 Sem</a></li>
-          <li><a class="dropdown-item" href="#">2022 Sem</a></li>
+          <li><a class="dropdown-item allSimilarBtn" href="#">2025 Sem</a></li>
+          <li><a class="dropdown-item allSimilarBtn" href="#">2024 Sem</a></li>
+          <li><a class="dropdown-item allSimilarBtn" href="#">2022 Sem</a></li>
         </ul>
       </div>
       <div class="custom-dropdown1 customDropdown">
-        <button type="button" class="btn all-btn">
+        <button type="button" class="btn all-btn allSimilarBtn">
           <span class="me-1"><i class="fa-light fa-file-zipper"></i></span>Misaligned KPIs
         </button>
       </div>
@@ -222,7 +222,6 @@
     <div class="tab-content tableContent" id="myTabContent">
       <div class="tab-pane fade show active" id="everyone-tab-pane" role="tabpanel" aria-labelledby="everyone-tab"
         tabindex="0">
-        <div class="table-responsive">
           <table class="table role-cards-table overtarget-kpis-table">
             <thead>
               <tr class="second-th">
@@ -333,171 +332,34 @@
 
             </tbody>
           </table>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="atleastOne-tab-pane" role="tabpanel" aria-labelledby="atleastOne-tab" tabindex="0">
-        <table class="table importKPI-table">
-          <thead>
-            <tr>
-              <th>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </th>
-              <th>KPI</th>
-              <th>Financial Statement</th>
-              <th>To Be Finalized</th>
-              <th>Actual Financial Statements</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Buyers</td>
-              <td>0</td>
-              <td>1</td>
-              <td>0/1</td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Bidders</td>
-              <td>0</td>
-              <td>1</td>
-              <td>0/1</td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Extensions</td>
-              <td>140</td>
-              <td>0</td>
-              <td><span class="statementContent">140/140</span></td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Flex</td>
-              <td>122</td>
-              <td>0</td>
-              <td><span class="statementContent">122/122</span></td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Profitability Matrix - FFM</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0/0</td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Profitability Matrix - Large</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0/0</td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Profitability Matrix - Large</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0/0</td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Profitability Matrix - Large</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0/0</td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Profitability Matrix - Large</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0/0</td>
-            </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Profitability Matrix - Large</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0/0</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
     <nav class="pagination-container">
       <ul class="pagination list-unstyled">
-        <li class="page-item disabled prevBtn">
+        <li class="page-item disabled prevBtn pageBtns">
           <a class="page-link">
             <i class="fa-light fa-chevron-left"></i>
-            Previous
+            <span class="d-md-flex d-none">Previous</span>
           </a>
         </li>
         <li class="page-item active">
           <a class="page-link" href="#">1</a>
         </li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item">
+          <a class="page-link d-md-flex d-none" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link d-md-flex d-none" href="#">4</a>
+        </li>
         <li class="page-item dots">
           <a class="page-link" href="#">...</a>
         </li>
         <li class="page-item"><a class="page-link" href="#">13</a></li>
         <li class="page-item"><a class="page-link" href="#">14</a></li>
-        <li class="page-item">
+        <li class="page-item pageBtns">
           <a class="page-link">
-            Next
+            <span class="d-md-flex d-none">Next</span>
             <i class="fa-light fa-chevron-right"></i>
           </a>
         </li>

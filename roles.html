@@ -198,31 +198,32 @@
   </div>
   <div class="contentBlock">
     <div class="topTitle">Lorem Ipsum</div>
-    <div class="filterBlock">
-      <div class="dropDownWrapper">
-        <div class="dropdown custom-dropdown">
-          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            2017
+    <div class="filterBlock flex-column flex-sm-row">
+      <div class="dropDownWrapper width-all-100-sm global-flex-md">
+        <div class="dropdown custom-dropdown global-flex">
+          <button class="btn dropdown-toggle width-all-100-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            2017 <i class="fa-solid fa-chevron-down ms-1"></i>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">2024</a></li>
-            <li><a class="dropdown-item" href="#">2023</a></li>
-            <li><a class="dropdown-item" href="#">2022</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">2024</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">2023</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">2022</a></li>
           </ul>
         </div>
-        <div class="dropdown custom-dropdown">
-          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Select a role type
+        <div class="dropdown custom-dropdown global-flex">
+          <button class="btn dropdown-toggle width-all-100-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Select a role type <i class="fa-solid fa-chevron-down ms-1"></i>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Indirect Incentive 2017</a></li>
-            <li><a class="dropdown-item" href="#">Indirect Incentive 2017</a></li>
-            <li><a class="dropdown-item" href="#">NA</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">Indirect Incentive 2017</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">Indirect Incentive 2017</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">NA</a></li>
           </ul>
         </div>
       </div>
-      <div class="dropdown custom-dropdown custom-dropdown1 customDropdown">
-        <button type="button" class="btn all-btn whiteBtn" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="dropdown custom-dropdown custom-dropdown1 customDropdown width-all-100-sm">
+        <button type="button" class="btn all-btn whiteBtn allSimilarBtn width-all-100-sm" data-bs-toggle="dropdown"
+          aria-expanded="false">
           <span><i class="fa-solid fa-up-from-bracket"></i></span>Regulations
         </button>
         <ul class="dropdown-menu">
@@ -400,26 +401,26 @@
     </div>
     <nav class="pagination-container">
       <ul class="pagination list-unstyled">
-        <li class="page-item disabled prevBtn">
+        <li class="page-item disabled prevBtn pageBtns">
           <a class="page-link">
             <i class="fa-light fa-chevron-left"></i>
-            Previous
+            <span class="d-md-flex d-none">Previous</span>
           </a>
         </li>
         <li class="page-item active">
           <a class="page-link" href="#">1</a>
         </li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link d-md-flex d-none" href="#">3</a></li>
+        <li class="page-item"><a class="page-link d-md-flex d-none" href="#">4</a></li>
         <li class="page-item dots">
           <a class="page-link" href="#">...</a>
         </li>
         <li class="page-item"><a class="page-link" href="#">13</a></li>
         <li class="page-item"><a class="page-link" href="#">14</a></li>
-        <li class="page-item">
+        <li class="page-item pageBtns">
           <a class="page-link">
-            Next
+            <span class="d-md-flex d-none">Next</span>
             <i class="fa-light fa-chevron-right"></i>
           </a>
         </li>

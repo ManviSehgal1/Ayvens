@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "./variables" as var;
+@use "./variables"as var;
 @import "mixin";
 
 * {
@@ -220,8 +220,9 @@ p {
 .whiteBtn {
   padding: 8px 12px !important;
   color: var.$white !important;
-  display: flex;
   gap: 5px;
+  display: flex;
+  justify-content: center !important;
 }
 
 .dropDownWrapperLg {
@@ -258,16 +259,63 @@ p {
   }
 }
 
+.gap16 {
+  @media screen and (max-width:767px) {
+    gap: 16px !important;
+  }
+}
+
 .global-flex-md {
   @media screen and (max-width: 991px) {
     flex: 1;
   }
 }
 
+.global-flex {
+  @media screen and (max-width: 575px) {
+    flex: 1;
+  }
+}
+
 
 .dropDownWrapperCenter {
-   @media screen and (max-width: 575px) {
+  @media screen and (max-width: 575px) {
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
+  }
+}
+
+.nav-item {
+  .nav-link {
+    &.all-nav-link {
+      @include text-sm-regular;
+      color: var.$gray-300;
+      border-radius: 0;
+
+      &.active {
+        color: var.$primary-color;
+      }
+
+      @media screen and (min-width: 1400px) and (max-width: 1720px) {
+        @include text-xs-regular
+      }
+
+      @media screen and (min-width: 1200px) and (max-width: 1399px) {
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      @media screen and (max-width: 1199px) {
+        @include text-size-13;
+      }
+    }
+
+    &:first-child .nav-link {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child .nav-link {
+      border-radius: 0 5px 5px 0;
+    }
   }
 }

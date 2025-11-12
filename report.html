@@ -203,7 +203,7 @@
     <div class="topMainTitle">
       <div class="subTitle">All Results</div>
       <div class="dropdown custom-dropdown custom-dropdown1 customDropdown">
-        <button type="button" class="btn all-btn whiteBtn" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn all-btn whiteBtn allSimilarBtn" data-bs-toggle="dropdown" aria-expanded="false">
           <span><i class="fa-solid fa-up-from-bracket"></i></span>Export YTD
         </button>
         <ul class="dropdown-menu">
@@ -234,13 +234,13 @@
         </ul>
       </div>
     </div>
-    <div class="filterBlock">
+    <div class="filterBlock filterBlockLg">
       <div
-        class="dropDownWrapper width-all-100-md flex-column flex-sm-row  justify-content-sm-between  justify-content-center">
+        class="dropDownWrapper width-all-100-global gap16 justify-content-center justify-content-sm-between">
 
         <div class="dropDownWrapper dropDownWrapperCenter flex-row width-all-100-sm">
           <div class="dropdown custom-dropdown global-flex-md">
-            <button class="btn dropdown-toggle  width-all-100-sm" type="button" data-bs-toggle="dropdown"
+            <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               2025 Quarter <i class="fa-solid fa-chevron-down ms-1"></i>
             </button>
@@ -251,7 +251,7 @@
             </ul>
           </div>
           <div class="dropdown custom-dropdown global-flex-md">
-            <button class="btn dropdown-toggle width-all-100-sm" type="button" data-bs-toggle="dropdown"
+            <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Jan-Mar <i class="fa-solid fa-chevron-down ms-1"></i>
             </button>
@@ -281,10 +281,10 @@
           </ul>
         </div>
       </div>
-      <div class="searchBarWrapper">
-        <div class="searchBarBlock">
+      <div class="searchBarWrapper searchBarWrapperSm searchBarWrapperLg width-all-100">
+        <div class="searchBarBlock width-all-100-sm">
           <div class="dropdown searchBar-dropdown">
-            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn dropdown-toggle width-all-100-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               People
             </button>
             <ul class="dropdown-menu">
@@ -296,10 +296,10 @@
           <input type="text" class="form-control" placeholder="Search..." aria-label="Search" />
           <i class="fa-light fa-magnifying-glass search-icon"></i>
         </div>
-        <div class="dropdown custom-dropdown custom-dropdown1 customDropdown">
+        <div class="dropdown custom-dropdown custom-dropdown1 customDropdown width-all-100-sm">
           <!-- <button type="button" class="btn all-btn dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">Export</button> -->
-          <button type="button" class="btn all-btn whiteBtn" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn all-btn whiteBtn allSimilarBtn width-all-100-sm" data-bs-toggle="dropdown" aria-expanded="false">
             <span><i class="fa-solid fa-up-from-bracket"></i></span>Export
           </button>
           <ul class="dropdown-menu">
@@ -726,22 +726,30 @@
     </div>
     <nav class="pagination-container">
       <ul class="pagination list-unstyled">
-        <li class="page-item disabled prevBtn">
+        <li class="page-item disabled prevBtn pageBtns">
           <a class="page-link">
             <i class="fa-light fa-chevron-left"></i>
-            Previous
+            <span class="d-md-flex d-none">Previous</span>
           </a>
         </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+        <li class="page-item">
+          <a class="page-link d-md-flex d-none" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link d-md-flex d-none" href="#">4</a>
+        </li>
+        <li class="page-item dots">
+          <a class="page-link" href="#">...</a>
+        </li>
         <li class="page-item"><a class="page-link" href="#">13</a></li>
         <li class="page-item"><a class="page-link" href="#">14</a></li>
-        <li class="page-item">
+        <li class="page-item pageBtns">
           <a class="page-link">
-            Next
+            <span class="d-md-flex d-none">Next</span>
             <i class="fa-light fa-chevron-right"></i>
           </a>
         </li>

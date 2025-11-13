@@ -1029,7 +1029,14 @@
       .searchBarBlock {
         position: relative;
 
+        &.searchBarBlockFullWidth {
+          @media screen and (max-width:767px) {
+            width: 100%;
+          }
+        }
+
         .form-control {
+          width: auto;
           border: none;
           background-color: var.$gray-50;
           border-radius: 5px;
@@ -1054,7 +1061,7 @@
           }
 
           @media screen and (min-width: 1200px) and (max-width: 1399px) {
-            max-width: 230px;
+            width: 220px;
           }
 
           @media screen and (max-width: 1199px) {
@@ -1070,6 +1077,8 @@
             @include text-xs-regular;
             height: 36px;
             min-width: 240px;
+          width: 100%;
+
           }
 
         }
@@ -1180,6 +1189,7 @@
 
     @media screen and (max-width: 991px) {
       padding-right: 20px;
+      // min-height: 250px;
     }
 
     &::-webkit-scrollbar {
@@ -1216,25 +1226,20 @@
             @include text-xs-regular;
             border: none;
             box-shadow: none;
-            padding: 10px 20px;
+            padding: 10px;
             position: sticky;
-            top: 0;
+            top: -2px;
             background: var.$gray-50;
-            z-index: 1;       
+            z-index: 1;
 
             @media screen and (min-width: 1200px) and (max-width: 1720px) {
               font-size: 11px;
               line-height: 16px;
             }
 
-            @media screen and (max-width: 1720px) {
-              padding: 10px;
-            }
-
-            @media screen and (max-width: 767px) {
-              padding: 10px;
-              top: -2px;
-            }
+            // @media screen and (max-width: 1720px) {
+            //   top: -2px;
+            // }
           }
         }
       }
@@ -1248,7 +1253,7 @@
             @include text-sm-regular;
             box-shadow: none;
             vertical-align: top;
-            padding: 10px 20px;
+            padding: 10px;
             border: none;
             background-color: var.$white;
 
@@ -1262,11 +1267,12 @@
             }
 
             @media screen and (max-width: 1720px) {
-               padding: 10px;
+              padding: 10px;
             }
 
             @media screen and (min-width: 1200px) and (max-width: 1720px) {
-              @include text-size-13;
+              font-size: 10px;
+              line-height: 14px;
             }
 
             @media screen and (max-width: 991px) {
@@ -1467,7 +1473,18 @@
       border-radius: 5px;
       padding: 12px 20px;
       display: flex;
+      align-items: flex-start;
+      justify-content: center;
       flex-direction: column;
+      height: 140px;
+
+      @media screen and (min-width:1200px) and (max-width:1720px) {
+        height: 120px;
+      }
+
+      @media screen and (max-width:767px) {
+        height: 110px;
+      }
 
       .smallTitle {
         @include text-xs-regular;
@@ -1477,6 +1494,14 @@
       .subText {
         @include text-sm-regular;
         color: #292929;
+
+        @media screen and (min-width:1200px) and (max-width:1720px) {
+          @include text-size-13;
+        }
+
+        @media screen and (max-width:1199px) {
+          @include text-xs-medium;
+        }
       }
 
       &.detailCard {
@@ -1505,16 +1530,29 @@
 
       &.statCard {
         gap: 8px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        max-width: 392px;
-        flex: 0 0 392px;
+
+        @media screen and (min-width:1200px) and (max-width:1720px) {
+          gap: 6px;
+        }
+
+        @media screen and (max-width:1199px) {
+          gap: 4px;
+        }
 
         .value {
           display: flex;
           align-items: center;
           gap: 2px;
           @include display-xs-medium;
+
+          @media screen and (min-width:1200px) and (max-width:1720px) {
+            font-size: 20px;
+            line-height: 28px;
+          }
+
+          @media screen and (max-width:1199px) {
+            @include text-lg-medium;
+          }
         }
 
         &.yelloCard {
@@ -1534,14 +1572,7 @@
     }
   }
 
-  @media screen and (max-width: 1599.98px) {
-    .middleWrapper {
-      .customCard.statCard {
-        flex: 0 0 350px;
-        max-width: 350px;
-      }
-    }
-  }
+
 }
 
 .custom-dropdown {
@@ -1731,7 +1762,7 @@
             @include text-xs-regular;
             border: none;
             box-shadow: none;
-            padding: 10px 20px;
+            padding: 10px;
             position: sticky;
             top: 0;
             background: var.$gray-50;
@@ -2086,7 +2117,7 @@
 
           @media screen and (min-width: 1200px) and (max-width: 1720px) {
             font-size: 13px;
-            line-height: 18px;
+            line-height: 10px;
           }
 
           @media screen and (max-width: 991px) {
@@ -2144,6 +2175,39 @@
     }
   }
 }
+
+// Participants page CSS
+
+.participants-table {
+
+    tr {
+      th, td {
+        vertical-align: middle !important;
+      }
+
+      td {
+        .participants-name {
+          h6 {
+            @include text-sm-regular;
+            color:var.$black;
+          }
+          p {
+             @include text-sm-regular;
+             color: var.$gray-400;
+          }
+        }
+
+        &:nth-child(3) {
+          width: 22.5%;
+        }
+
+        .td-check-icon {
+          color: var.$base-green !important;
+        }
+      }
+    }
+  }
+
 
 .custom-radio-tabs {
   border: none;
@@ -2206,22 +2270,6 @@
   transform: translate(-50%, -50%);
 }
 
-// .table-responsive {
-//   overflow-x: auto;
-//   .table {
-//     tr {
-//       th {
-//         width: auto !important;
-//       }
-
-//       th,
-//       td {
-//         white-space: nowrap;
-//       }
-//     }
-//   }
-// }
-
 .contentBlock .middleWrapper .customCard.statCard.blueCard {
   background: rgba(95, 168, 193, 1);
   color: rgba(255, 255, 255, 1);
@@ -2233,8 +2281,15 @@
 
 .middleWrapper.middleWrapperGrid {
   .customCard.statCard {
-    max-width: 100%;
-    flex: auto;
+    flex: 1;
+
+    @media screen and (max-width:767px) {
+      flex: auto;
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    flex-direction: column;
   }
 }
 
@@ -2314,9 +2369,17 @@
 }
 
 .deleteIcon {
-  font-size: 20px;
+  font-size: 16px;
   color: #f10909;
   cursor: pointer;
+
+  @media screen and (min-width: 1200px) and (max-width: 1720px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 991px) {
+    font-size: 13px;
+  }
 }
 
 .deletePaymentModal .modal-content {
@@ -2369,19 +2432,6 @@
   @include text-xs-medium;
 }
 
-.contentBlock .tableContent .table.log-mail-table thead tr th {
-  &:nth-child(1) {
-    width: 494px;
-  }
-
-  &:nth-child(2) {
-    width: 346px;
-  }
-
-  &:nth-child(4) {
-    width: 131px;
-  }
-}
 
 .form-control::placeholder {
   color: var.$gray-300;
@@ -2419,10 +2469,39 @@
 // People page CSS
 
 .people-table {
-  tbody {
-    tr.view {
-      td.arrowBtn {
+  tr {
+
+    th,
+    td {
+
+      &:first-child,
+      &:nth-child(2) {
+        width: 40px;
+      }
+
+      &:nth-child(3) {
+        padding: 10px 10px 10px 20px !important;
+      }
+    }
+
+    td {
+      &.arrowBtn {
         border-radius: 0 !important;
+      }
+    }
+
+    &.fold {
+
+      th,
+      td {
+        &:nth-child(2) {
+          width: auto;
+          padding: 10px 10px 10px 20px !important;
+        }
+
+        &:nth-child(3) {
+          padding: 10px !important;
+        }
       }
     }
   }
@@ -2754,12 +2833,12 @@
               width: 71%;
               @include text-sm-regular;
 
-              @media  screen and (min-width:1200px) and (max-width:1720px) {
+              @media screen and (min-width:1200px) and (max-width:1720px) {
                 @include text-size-13;
-                 width: 80%;
+                width: 80%;
               }
 
-              @media  screen and (max-width:991px) {
+              @media screen and (max-width:991px) {
                 @include text-xs-regular;
               }
 
@@ -2783,17 +2862,17 @@
 
           &.tr-sticky {
             th {
-            position: sticky;
-            top: 38px;
+              position: sticky;
+              top: 34px;
 
-            @media screen and (min-width: 1200px) and (max-width: 1720px){
-              top: 36px;              
-            }
+              @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                top: 36px;
+              }
 
-            @media screen and (max-width: 900px) {
-              top: 54px;              
+              @media screen and (max-width: 900px) {
+                top: 54px;
+              }
             }
-          }
           }
         }
       }
@@ -2884,7 +2963,9 @@
 .roles-table {
 
   tr {
-    th, td {
+
+    th,
+    td {
       &:first-child {
         width: 40px;
       }

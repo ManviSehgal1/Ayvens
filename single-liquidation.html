@@ -214,39 +214,40 @@
         <p class="subText">Total Bonus Paid</p>
       </div>
     </div>
-    <div class="filterBlock">
-      <div class="dropDownWrapper">
-        <div class="dropdown custom-dropdown">
-          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            2024 Year
+
+    <div class="filterBlock flex-column flex-sm-row">
+      <div class="dropDownWrapper width-all-100-sm global-flex-md">
+        <div class="dropdown custom-dropdown global-flex">
+          <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            2024 Year <i class="fa-regular fa-chevron-down ms-2"></i>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">2025 Year</a></li>
-            <li><a class="dropdown-item" href="#">2023 Year</a></li>
-            <li><a class="dropdown-item" href="#">2022 Year</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">2025 Year</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">2023 Year</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">2022 Year</a></li>
           </ul>
         </div>
-        <div class="dropdown custom-dropdown">
-          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Orange Alexander
+        <div class="dropdown custom-dropdown global-flex">
+          <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Orange Alexander <i class="fa-regular fa-chevron-down ms-2"></i>
           </button>
           <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">Orange Alexander 1</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Orange Alexander 2</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Orange Alexander 3</a>
-            </li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">Orange Alexander 1</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">Orange Alexander 2</a></li>
+            <li><a class="dropdown-item allSimilarBtn" href="#">Orange Alexander 3</a></li>
           </ul>
         </div>
       </div>
-      <a href="#" class="btn all-btn" data-bs-toggle="modal" data-bs-target="#recordPaymentModal">
-        <i class="fa-solid fa-plus me-1" aria-hidden="true"></i>
-        Record Payment</a>
+      <div class="dropdown custom-dropdown custom-dropdown1 customDropdown width-all-100-sm">
+        <a class="btn all-btn whiteBtn allSimilarBtn width-all-100-sm" data-bs-toggle="modal"
+          data-bs-target="#recordPaymentModal">
+          <i class="fa-solid fa-plus"></i> Record Payment
+        </a>
+      </div>
     </div>
+
     <div class="tableContent">
       <table class="table single-liquidations-table">
         <thead>
@@ -274,6 +275,9 @@
               </div>
             </td>
           </tr>
+          <tr class="spacing-tr">
+            <td colspan="7"></td>
+          </tr>
 
           <tr class="view">
             <td>Jan-Dec</td>
@@ -287,6 +291,9 @@
                 <i class="fa-light fa-trash deleteIcon" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
               </div>
             </td>
+          </tr>
+          <tr class="spacing-tr">
+            <td colspan="7"></td>
           </tr>
 
           <tr class="view">
@@ -302,6 +309,9 @@
               </div>
             </td>
           </tr>
+          <tr class="spacing-tr">
+            <td colspan="7"></td>
+          </tr>
 
           <tr class="view">
             <td>Jan-Dec</td>
@@ -315,6 +325,9 @@
                 <i class="fa-light fa-trash deleteIcon" data-bs-toggle="modal" data-bs-target="#deletePaymentModal"></i>
               </div>
             </td>
+          </tr>
+          <tr class="spacing-tr">
+            <td colspan="7"></td>
           </tr>
 
           <tr class="view">
@@ -330,31 +343,33 @@
               </div>
             </td>
           </tr>
+
         </tbody>
       </table>
     </div>
+
     <nav class="pagination-container">
       <ul class="pagination list-unstyled">
-        <li class="page-item disabled prevBtn">
+        <li class="page-item disabled prevBtn pageBtns">
           <a class="page-link">
             <i class="fa-light fa-chevron-left"></i>
-            Previous
+            <span class="d-md-flex d-none">Previous</span>
           </a>
         </li>
         <li class="page-item active">
           <a class="page-link" href="#">1</a>
         </li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link d-md-flex d-none" href="#">3</a></li>
+        <li class="page-item"><a class="page-link d-md-flex d-none" href="#">4</a></li>
         <li class="page-item dots">
           <a class="page-link" href="#">...</a>
         </li>
         <li class="page-item"><a class="page-link" href="#">13</a></li>
         <li class="page-item"><a class="page-link" href="#">14</a></li>
-        <li class="page-item">
+        <li class="page-item pageBtns">
           <a class="page-link">
-            Next
+            <span class="d-md-flex d-none">Next</span>
             <i class="fa-light fa-chevron-right"></i>
           </a>
         </li>
@@ -362,8 +377,7 @@
     </nav>
   </div>
 
-  <div class="modal fade" id="recordPaymentModal" tabindex="-1" aria-labelledby="recordPaymentModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="recordPaymentModal" tabindex="-1" aria-labelledby="recordPaymentModalLabel">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -406,7 +420,7 @@
   </div>
 
   <div class="modal fade deletePaymentModal" id="deletePaymentModal" tabindex="-1"
-    aria-labelledby="deletePaymentModalLabel" aria-hidden="true">
+    aria-labelledby="deletePaymentModalLabel">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">

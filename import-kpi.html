@@ -259,12 +259,12 @@
 
         <div class="custom-dropdown1 customDropdown fixBtnStyle width-all-100-sm">
           <button type="button" class="btn all-btn width-all-100 allSimilarBtn">
-            <span><i class="fa-solid fa-up-from-bracket" aria-hidden="true"></i></span>Export
+            <span><i class="fa-solid fa-up-from-bracket" ></i></span>Export
           </button>
         </div>
         <div class="custom-dropdown1 customDropdown fixBtnStyle width-all-100-sm">
-          <button type="button" class="btn all-btn width-all-100 allSimilarBtn" data-bs-toggle="modal" data-bs-target"#importKpiModal">
-            <span><i class="fa-solid fa-down-to-bracket" aria-hidden="true"></i></span>Import
+          <button type="button" class="btn all-btn width-all-100 allSimilarBtn" data-bs-toggle="modal" data-bs-target="#importKpiModal">
+            <span><i class="fa-solid fa-down-to-bracket" ></i></span>Import
           </button>
         </div>
       </div>
@@ -272,7 +272,7 @@
     <div class="tab-content tableContent" id="myTabContent">
       <div class="tab-pane fade show active" id="everyone-tab-pane" role="tabpanel" aria-labelledby="everyone-tab"
         tabindex="0">
-        <table class="table importKPI-table">
+        <table class="table importKPI-table resize-td-table">
           <thead>
             <tr>
               <th>
@@ -442,7 +442,7 @@
         </table>
       </div>
       <div class="tab-pane fade" id="atleastOne-tab-pane" role="tabpanel" aria-labelledby="atleastOne-tab" tabindex="0">
-        <table class="table importKPI-table">
+        <table class="table importKPI-table resize-td-table">
           <thead>
             <tr>
               <th>
@@ -465,10 +465,13 @@
                   <span class="check-tick"></span>
                 </span>
               </td>
-              <td>Buyers</td>
+              <td>Bidders</td>
               <td>0</td>
               <td>1</td>
               <td>0/1</td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
             </tr>
             <tr class="view">
               <td>
@@ -477,10 +480,13 @@
                   <span class="check-tick"></span>
                 </span>
               </td>
-              <td>Bidders</td>
+              <td>Buyers</td>
               <td>0</td>
               <td>1</td>
               <td>0/1</td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
             </tr>
             <tr class="view">
               <td>
@@ -494,6 +500,9 @@
               <td>0</td>
               <td><span class="statementContent">140/140</span></td>
             </tr>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
+            </tr>
             <tr class="view">
               <td>
                 <span class="form-check-wrapper">
@@ -505,6 +514,9 @@
               <td>122</td>
               <td>0</td>
               <td><span class="statementContent">122/122</span></td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
             </tr>
             <tr class="view">
               <td>
@@ -518,17 +530,8 @@
               <td>0</td>
               <td>0/0</td>
             </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Profitability Matrix - Large</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0/0</td>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
             </tr>
             <tr class="view">
               <td>
@@ -542,17 +545,8 @@
               <td>0</td>
               <td>0/0</td>
             </tr>
-            <tr class="view">
-              <td>
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
-              </td>
-              <td>Profitability Matrix - Large</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0/0</td>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
             </tr>
             <tr class="view">
               <td>
@@ -566,6 +560,9 @@
               <td>0</td>
               <td>0/0</td>
             </tr>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
+            </tr>
             <tr class="view">
               <td>
                 <span class="form-check-wrapper">
@@ -577,6 +574,39 @@
               <td>0</td>
               <td>0</td>
               <td>0/0</td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Profitability Matrix - Large</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0/0</td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
+            </tr>
+            <tr class="view">
+              <td>
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+              </td>
+              <td>Profitability Matrix - Large</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0/0</td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="7"></td>
             </tr>
           </tbody>
         </table>
@@ -616,7 +646,7 @@
   </div>
 
 
-  <div class="modal fade" id="importKpiModal" tabindex="-1" aria-labelledby="importKpiModalLabel" aria-hidden="true">
+  <div class="modal fade" id="importKpiModal" tabindex="-1" aria-labelledby="importKpiModalLabel" >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">

@@ -879,6 +879,12 @@
     height: calc(100vh - 72px);
   }
 
+  @media screen and (max-width:991px) {
+    margin-left: 0;
+    margin-top: 72px;
+    height: calc(100% - 72px);
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 24px 30px;
     gap: 20px;
@@ -1077,7 +1083,7 @@
             @include text-xs-regular;
             height: 36px;
             min-width: 240px;
-          width: 100%;
+            width: 100%;
 
           }
 
@@ -1182,14 +1188,19 @@
   }
 
   .tableContent {
-    max-height: 703px;
+    max-height: 700px;
     overflow-y: auto;
     height: 100%;
     padding-right: 33px;
 
+    @media screen and (min-width: 992px) and (max-width: 1720px) {
+      padding-right: 24px;
+    }
+
     @media screen and (max-width: 991px) {
       padding-right: 20px;
       // min-height: 250px;
+      max-height: 500px;
     }
 
     &::-webkit-scrollbar {
@@ -1512,6 +1523,10 @@
         .detailsCard-container {
           display: flex;
           gap: 60px;
+
+          @media screen and (max-width:1720px) {
+            gap: 24px;
+          }
         }
 
         .detailsCard-textarea {
@@ -1570,9 +1585,69 @@
         }
       }
     }
+
+    .customCard.statCard.blueCard {
+      background: rgba(95, 168, 193, 1);
+      color: rgba(255, 255, 255, 1);
+
+      .subText {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    &.middleWrapperGrid {
+      .customCard.statCard {
+        flex: 1;
+
+        @media screen and (max-width:767px) {
+          flex: auto;
+        }
+      }
+
+      @media screen and (max-width:767px) {
+        flex-direction: column;
+      }
+    }
+
+    &.individualCardDetails {
+
+      .numberCard {
+        display: flex;
+        gap: 20px;
+
+        @media screen and (max-width:767px) {
+          flex-direction: column;
+        }
+      }
+
+      .customCard {
+        flex: auto;
+        height: auto;
+        justify-content: flex-start;
+
+        &.detailCard {
+          width: 21.2%;
+
+          @media screen and (min-width:1200px) and (max-width:1720px) {
+            width: 55%;
+          }
+
+          @media screen and (max-width:1199px) {
+            width: 100%;
+          }
+        }
+
+        &.statCard {
+          flex: 1;
+          padding: 30px 20px;
+        }
+      }
+
+      @media screen and (max-width:1199px) {
+        flex-direction: column;
+      }
+    }
   }
-
-
 }
 
 .custom-dropdown {
@@ -2180,33 +2255,36 @@
 
 .participants-table {
 
-    tr {
-      th, td {
-        vertical-align: middle !important;
+  tr {
+
+    th,
+    td {
+      vertical-align: middle !important;
+    }
+
+    td {
+      .participants-name {
+        h6 {
+          @include text-sm-regular;
+          color: var.$black;
+        }
+
+        p {
+          @include text-sm-regular;
+          color: var.$gray-400;
+        }
       }
 
-      td {
-        .participants-name {
-          h6 {
-            @include text-sm-regular;
-            color:var.$black;
-          }
-          p {
-             @include text-sm-regular;
-             color: var.$gray-400;
-          }
-        }
+      &:nth-child(3) {
+        width: 22.5%;
+      }
 
-        &:nth-child(3) {
-          width: 22.5%;
-        }
-
-        .td-check-icon {
-          color: var.$base-green !important;
-        }
+      .td-check-icon {
+        color: var.$base-green !important;
       }
     }
   }
+}
 
 
 .custom-radio-tabs {
@@ -2268,29 +2346,6 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.contentBlock .middleWrapper .customCard.statCard.blueCard {
-  background: rgba(95, 168, 193, 1);
-  color: rgba(255, 255, 255, 1);
-
-  .subText {
-    color: rgba(255, 255, 255, 1);
-  }
-}
-
-.middleWrapper.middleWrapperGrid {
-  .customCard.statCard {
-    flex: 1;
-
-    @media screen and (max-width:767px) {
-      flex: auto;
-    }
-  }
-
-  @media screen and (max-width:767px) {
-    flex-direction: column;
-  }
 }
 
 .contentBlock .tableContent .table.mass-liquidations-table thead {
@@ -2513,15 +2568,29 @@
   display: flex;
   gap: 10px;
 
+  @media screen and (max-width:767px) {
+    flex-direction: column;
+  }
+
   .leftAsideSetting {
     background: var.$white;
     border-radius: 5px;
     padding: 16px;
-  }
-
-  .leftAsideSetting {
     height: calc(100vh - 162px);
     width: 22.7%;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 26%;
+    }
+
+    @media screen and (max-width:1199px) {
+      padding: 12px;
+    }
+
+    @media screen and (max-width:767px) {
+      height: 100%;
+      width: 100%;
+    }
 
     .settings-nav {
       flex-direction: column;
@@ -2531,10 +2600,19 @@
         padding: 10px 12px;
         color: var.$black-500;
         border-radius: 5px;
+        @include text-sm-regular;
 
         &.active,
         &:hover {
           background: var.$gray-100;
+        }
+
+        @media screen and (max-width: 1720px) {
+          @include text-xs-regular;
+        }
+
+        @media screen and (max-width:1199px) {
+          padding: 8px 10px;
         }
       }
     }
@@ -2543,6 +2621,10 @@
   .rightAsideSetting {
     flex: 1;
     max-height: calc(100vh - 162px);
+
+    @media screen and (max-width:767px) {
+      max-height: 100%;
+    }
 
     .tab-content {
       .tab-pane {
@@ -2554,11 +2636,27 @@
         max-height: calc(100vh - 162px);
         overflow: hidden;
         overflow-y: auto;
+
+        @media screen and (min-width: 1200px) and (max-width: 1399px) {
+          padding: 8px;
+        }
+
+        @media screen and (max-width:767px) {
+          max-height: 100%;
+        }
       }
 
       form {
         label {
           @include text-md-medium;
+
+          @media screen and (max-width: 1399px) {
+            @include text-sm-medium;
+          }
+
+          @media screen and (max-width: 767px) {
+            @include text-size-13;
+          }
         }
 
         input,
@@ -2568,6 +2666,17 @@
           padding: 9px 15px;
           @include text-sm-regular;
           color: var.$black-500;
+
+         
+
+          @media screen and (min-width: 768px) and (max-width: 1399px) {
+            @include text-size-13;
+          }
+
+          @media screen and (max-width: 767px) {
+            @include text-xs-regular;
+            padding: 8px 12px;
+          }
 
           &[type="number"] {
             appearance: textfield;
@@ -2589,16 +2698,40 @@
         @include text-lg-medium;
         color: var.$black-500;
         padding: 16px 16px 8px;
+
+        @media screen and (min-width: 1200px) and (max-width: 1399px) {
+          padding: 12px 8px 8px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          padding: 12px 12px 8px;
+        }
+
+        @media screen and (max-width: 1399px) {
+          @include text-md-medium;
+        }
+
+        @media screen and (max-width: 767px) {
+          padding: 12px 12px 8px 8px;
+        }
       }
 
       h6 {
         @include text-md-medium;
         color: var.$black-500;
+
+        @media screen and (max-width: 1399px) {
+          @include text-sm-medium;
+        }
       }
 
       p {
         @include text-md-regular;
         color: var.$black-500;
+
+        @media screen and (max-width: 1399px) {
+          @include text-xs-regular;
+        }
       }
 
       .settingInnerSection {
@@ -2614,10 +2747,23 @@
             align-items: center;
             gap: 16px;
 
+
+
+
+            @media screen and (max-width: 1199px) {
+              padding: 8px 12px;
+              gap: 12px;
+            }
+
             img {
               width: 56px;
               height: 56px;
               object-fit: cover;
+
+              @media screen and (max-width: 767px) {
+                width: 44px;
+                height: 44px;
+              }
             }
 
             p {
@@ -2631,6 +2777,14 @@
             display: inline-block;
             width: fit-content;
             margin: 12px 16px;
+
+            @media screen and (min-width: 1200px) and (max-width: 1399px) {
+              margin: 12px;
+            }
+
+            @media screen and (max-width: 1199px) {
+              margin: 8px;
+            }
 
             input[type="file"] {
               position: absolute;
@@ -2647,6 +2801,11 @@
               padding: 10px 16px;
               border-radius: 8px;
               cursor: pointer;
+
+              @media screen and (max-width: 1399px) {
+                @include text-xs-regular;
+                padding: 8px 12px;
+              }
             }
           }
         }
@@ -2660,14 +2819,28 @@
         padding: 12px 0px 12px 16px;
         margin-top: 13px;
 
+        @media screen and (max-width: 1399px) {
+          gap: 8px;
+          padding: 8px 0px 8px 16px;
+          margin-top: 8px;
+        }
+
         .allBtn {
           padding: 10px 16px;
           height: 40px;
           border-radius: 8px;
+
+          @media screen and (max-width: 1399px) {
+            padding: 8px 12px;
+            height: 36px;
+            @include text-xs-regular
+          }
         }
       }
 
       .form-switch {
+        padding-left: 36px;
+
         .form-check-input {
           width: 51px;
           height: 31px;
@@ -2678,6 +2851,11 @@
           transition: background-color 0.3s, border-color 0.3s;
           cursor: pointer;
           position: relative;
+
+          @media screen and (max-width: 1399px) {
+            width: 40px;
+            height: 22px;
+          }
 
           &:checked {
             background-color: var.$primary-color;
@@ -2705,10 +2883,21 @@
             background-color: #fff;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease-in-out;
+
+            @media screen and (max-width: 1399px) {
+              top: 1px;
+              left: 1px;
+              width: 20px;
+              height: 20px;
+            }
           }
 
           &:checked::before {
             transform: translateX(20px);
+
+            @media screen and (max-width: 1399px) {
+              transform: translateX(18px);
+            }
           }
         }
       }
@@ -2719,6 +2908,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (max-width: 1399px) {
+          padding: 12px;
+        }
       }
 
       .profileSettings {
@@ -2726,6 +2919,17 @@
           .inputPadding {
             padding: 12px 16px;
             margin-bottom: 13px;
+
+            @media screen and (min-width:768px) and (max-width:1720px) {
+              padding: 8px;
+              margin-bottom: 8px;
+            }
+
+            @media screen and (max-width:767px) {
+              padding: 4px;
+              margin-bottom: 4px;
+              gap: 12px;
+            }
           }
         }
       }
@@ -2735,9 +2939,22 @@
           .preferncesOption {
             padding: 12px 16px;
 
+            @media screen and (min-width: 1199px) and (max-width:1399px) {
+              padding: 8px;
+            }
+
+            @media screen and (min-width:768px) and (max-width:1199px) {
+              padding: 8px 4px;
+            }
+
+            @media screen and (max-width:767px) {
+              padding: 4px 4px 8px;
+            }
+
             &.preferncesOption1 {
               display: flex;
               justify-content: space-between;
+              gap: 8px;
             }
           }
         }
@@ -2746,6 +2963,14 @@
       .securityPrivacy {
         h6 {
           padding: 20px 16px;
+
+           @media screen and (min-width:1200px) and (max-width:1399px) {
+            padding: 16px 8px;
+          }
+
+          @media screen and (max-width:1199px) {
+            padding: 8px 4px 12px;
+          }
         }
 
         form {
@@ -2753,11 +2978,30 @@
           display: flex;
           flex-direction: column;
           gap: 24px;
+
+           @media screen and (min-width:1200px) and (max-width:1399px) {
+            padding: 0px 8px 8px;
+            gap: 16px;
+          }
+
+          @media screen and (max-width:1199px) {
+            padding: 4px 4px 16px;
+            gap: 12px;
+          }
         }
 
         p.text-muted {
           @include text-sm-regular;
           padding: 4px 16px 12px;
+
+          @media screen and (max-width:1399px) {
+            @include text-xs-regular;
+            padding: 4px 8px 8px;
+          }
+
+          @media screen and (max-width:767px) {
+            padding: 4px 4px 12px;
+          }
         }
 
         .deviceManagementSection {
@@ -2765,6 +3009,10 @@
             .status {
               @include text-sm-regular;
               color: #4d7399;
+
+              @media screen and (max-width: 1399px) {
+                @include text-xs-regular;
+              }
             }
 
             .btn-sm {
@@ -2773,6 +3021,11 @@
               @include text-sm-regular;
               border-radius: 5px;
               padding: 6px 16px;
+
+              @media screen and (max-width: 1399px) {
+                @include text-xs-regular;
+                padding: 4px 12px;
+              }
             }
           }
         }
@@ -2783,13 +3036,43 @@
         flex-direction: column;
         gap: 13px;
 
+        @media screen and (max-width: 1399px) {
+          gap: 8px;
+        }
+
         h5 {
           padding: 20px 16px 0px;
+
+          
+          @media screen and (min-width:1200px) and (max-width: 1399px) {
+            padding: 12px 8px 0px;
+          }
+
+          @media screen and (min-width:768px) and (max-width: 1199px) {
+            padding: 12px 4px 0px;
+          }
+
+          @media screen and (max-width:767px) {
+            padding: 8px 4px 0px;
+          }
         }
 
         .notificationInnerSection {
+
           h6 {
             padding: 16px 16px 8px;
+
+             @media screen and (min-width:1200px) and (max-width: 1399px) {
+            padding: 8px;
+          }
+
+            @media screen and (min-width:768px) and (max-width: 1199px) {
+              padding: 8px 4px 8px
+            }
+
+            @media screen and (max-width:767px) {
+              padding: 4px 4px 8px;
+            }
           }
 
           .notification-toggle {
@@ -2803,11 +3086,122 @@
             p {
               color: rgba(13, 20, 28, 0.52);
             }
+
+             @media screen and (max-width: 1399px) {
+              padding: 12px;
+              margin: 0 8px;
+            }
+
+            @media screen and (max-width: 1199px) {
+              margin: 0 4px 8px;
+            }
+          }
+
+          .checkBoxWithTitle {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0px 12px 16px;
+
+            @media screen and (min-width:1200px) and (max-width: 1399px) {
+               padding: 8px;
+            }
+
+            @media screen and (min-width:768px) and (max-width: 1199px) {
+              padding: 8px 0px;
+            }
+
+            @media screen and (max-width:767px) {
+              padding: 8px 0px 6px 4px
+            }
+          }
+
+          .form-check-label {
+            @include text-md-regular;
+            color: rgba(13, 20, 28, 0.5);
+
+            @media screen and (min-width:768px) and (max-width: 1399px) {
+              @include text-sm-regular
+            }
+
+            @media screen and (max-width:767px) {
+              @include text-xs-regular
+            }
+
+          }
+
+          .form-check-wrapper {
+            position: relative;
+            display: flex;
+            width: 18px;
+            height: 18px;
+
+            input[type="checkbox"] {
+              cursor: pointer;
+              opacity: 0;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              margin: 0;
+              z-index: 1;
+              padding: 0;
+
+            }
+
+            .check-tick {
+              width: 18px;
+              height: 18px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1.5px solid rgba(13, 20, 28, 0.5);
+              position: absolute;
+              left: 0;
+              top: 0;
+              border-radius: 4px;
+              background: transparent;
+              pointer-events: none; // Prevents the tick from blocking clicks
+            }
+
+            .form-check-input:checked+.check-tick {
+              background: var.$primary-color;
+              border-color: var.$primary-color;
+            }
+
+            .form-check-input:checked+.check-tick:after {
+              content: "";
+              position: absolute;
+              width: 4px;
+              height: 8px;
+              border: 1px solid #fff;
+              border-left: 0;
+              border-top: 0;
+              transform: rotate(45deg);
+              top: 3px;
+              right: 6px;
+            }
+
+
+          }
+
+          &.emailNotificationSection {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+
+            @media screen and (max-width: 1399px) {
+              gap: 8px;
+            }
           }
         }
 
         .button-group {
           padding: 12px 16px;
+
+          @media screen and (max-width: 1199px) {
+            padding: 8px 0px 8px 16px;
+            margin-top: 8px;
+          }
         }
       }
     }

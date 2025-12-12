@@ -11,6 +11,10 @@
   <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
 </head>
 
 <body>
@@ -349,7 +353,9 @@
                         </p>
                       </div>
                       <div class="CardChartSection">
-                        <div class="chart-section"></div>
+                        <div class="chart-section">
+                          <canvas id="performanceChart"></canvas>
+                        </div>
                         <div class="range-section">
                           <div class="rangeSectionTitle rangeSectionAlingment">
                             <p class="smallTitle RangeTitle">
@@ -361,13 +367,14 @@
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">
-                              < 23.99</p> <p class="subText RangeTitle">0.00%
-                            </p>
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">24.00 ></p>
                             <p class="subText RangeTitle">
-                              80.00%-79.2281625142643375935439503350000%
+                              80.00%-79.228
                             </p>
                           </div>
                         </div>
@@ -436,7 +443,9 @@
                         </p>
                       </div>
                       <div class="CardChartSection">
-                        <div class="chart-section"></div>
+                        <div class="chart-section">
+                          <canvas id="performanceChart2"></canvas>
+                        </div>
                         <div class="range-section">
                           <div class="rangeSectionTitle rangeSectionAlingment">
                             <p class="smallTitle RangeTitle">
@@ -448,13 +457,14 @@
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">
-                              < 23.99</p> <p class="subText RangeTitle">0.00%
-                            </p>
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">24.00 ></p>
                             <p class="subText RangeTitle">
-                              80.00%-79.2281625142643375935439503350000%
+                              80.00%-79.228
                             </p>
                           </div>
                         </div>
@@ -523,7 +533,9 @@
                         </p>
                       </div>
                       <div class="CardChartSection">
-                        <div class="chart-section"></div>
+                        <div class="chart-section">
+                          <canvas id="performanceChart3"></canvas>
+                        </div>
                         <div class="range-section">
                           <div class="rangeSectionTitle rangeSectionAlingment">
                             <p class="smallTitle RangeTitle">
@@ -535,13 +547,14 @@
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">
-                              < 23.99</p> <p class="subText RangeTitle">0.00%
-                            </p>
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">24.00 ></p>
                             <p class="subText RangeTitle">
-                              80.00%-79.2281625142643375935439503350000%
+                              80.00%-79.228
                             </p>
                           </div>
                         </div>
@@ -610,7 +623,9 @@
                         </p>
                       </div>
                       <div class="CardChartSection">
-                        <div class="chart-section"></div>
+                        <div class="chart-section">
+                          <canvas id="performanceChart4"></canvas>
+                        </div>
                         <div class="range-section">
                           <div class="rangeSectionTitle rangeSectionAlingment">
                             <p class="smallTitle RangeTitle">
@@ -622,13 +637,14 @@
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">
-                              < 23.99</p> <p class="subText RangeTitle">0.00%
-                            </p>
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">24.00 ></p>
                             <p class="subText RangeTitle">
-                              80.00%-79.2281625142643375935439503350000%
+                              80.00%-79.228
                             </p>
                           </div>
                         </div>
@@ -697,7 +713,9 @@
                         </p>
                       </div>
                       <div class="CardChartSection">
-                        <div class="chart-section"></div>
+                        <div class="chart-section">
+                          <canvas id="performanceChart5"></canvas>
+                        </div>
                         <div class="range-section">
                           <div class="rangeSectionTitle rangeSectionAlingment">
                             <p class="smallTitle RangeTitle">
@@ -709,13 +727,14 @@
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">
-                              < 23.99</p> <p class="subText RangeTitle">0.00%
-                            </p>
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
                           </div>
                           <div class="rangeSectionBg rangeSectionAlingment">
                             <p class="subText RangeTitle">24.00 ></p>
                             <p class="subText RangeTitle">
-                              80.00%-79.2281625142643375935439503350000%
+                              80.00%-79.228
                             </p>
                           </div>
                         </div>
@@ -797,6 +816,126 @@
         modalTextarea.value = editableContent.textContent.trim();
         editModal.show();
       });
+
+      // Chart Implementation
+      function renderChart(canvasId) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        // Data from the user request
+        // < 23.99 => 0.00%
+        // 24.00 > => 80.00%...
+
+        const data = {
+          datasets: [{
+            label: 'Performance',
+            data: [
+              { x: -7.2, y: 0 }, // Extending line start
+              { x: 0, y: 0 },    // Red point
+              { x: 23.99, y: 0 }, // Step before jump
+              { x: 24, y: 80 },   // Jump to Green point
+              { x: 36, y: 110 }   // Extending line end (projected)
+            ],
+            borderColor: '#5D9CAF', // Blue-ish line color from image
+            borderWidth: 2,
+            fill: false,
+            pointRadius: [0, 8, 0, 8, 0], // Only show points at 0 and 24
+            pointBackgroundColor: ['transparent', '#FF6B6B', 'transparent', '#4ECDC4', 'transparent'], // Red and Green
+            pointBorderColor: ['transparent', '#FFD3D3', 'transparent', '#C7F3E9', 'transparent'], // Lighter border for halo effect
+            pointBorderWidth: [0, 4, 0, 4, 0],
+            tension: 0
+          }]
+        };
+
+        const config = {
+          type: 'line',
+          data: data,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: {
+                type: 'linear',
+                position: 'bottom',
+                title: {
+                  display: true,
+                  text: 'Actual Range',
+                  color: '#5D9CAF',
+                  font: { size: 14 }
+                },
+                min: -7.2,
+                max: 36, // Guessing max based on image aspect
+                grid: {
+                  color: '#f0f0f0'
+                },
+                ticks: {
+                  stepSize: 7.2
+                }
+              },
+              y: {
+                beginAtZero: true,
+                max: 120,
+                title: {
+                  display: true,
+                  text: 'Absolute Performance',
+                  color: '#5D9CAF',
+                  font: { size: 14 }
+                },
+                ticks: {
+                  callback: function (value) {
+                    return value.toFixed(2) + '%';
+                  },
+                  stepSize: 20
+                },
+                grid: {
+                  color: '#f0f0f0'
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              annotation: {
+                annotations: {
+                  label1: {
+                    type: 'label',
+                    xValue: 0,
+                    yValue: 10, // Slightly above the point
+                    backgroundColor: 'rgba(200, 200, 200, 0.7)',
+                    content: ['(0-0%)'],
+                    font: {
+                      size: 12,
+                      weight: 'bold'
+                    },
+                    borderRadius: 4,
+                    padding: 6,
+                    color: 'black',
+                    position: 'center'
+                  }
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    return `(${context.parsed.x}, ${context.parsed.y}%)`;
+                  }
+                }
+              }
+            }
+          }
+        };
+
+        new Chart(ctx, config);
+      }
+
+      renderChart('performanceChart');
+      renderChart('performanceChart2');
+      renderChart('performanceChart3');
+      renderChart('performanceChart4');
+      renderChart('performanceChart5');
+
 
       saveModal.addEventListener("click", function () {
         editableContent.textContent = modalTextarea.value;

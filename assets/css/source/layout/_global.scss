@@ -157,8 +157,13 @@ p {
 
 .fa-pen {
   color: var.$gray-500;
-  font-size: 13px;
+  font-size: 17px;
+
+  @media screen and (min-width: 1200px) and (max-width: 1720px) {
+    font-size: 13px;
+  }
 }
+
 
 .all-btn {
   background: var.$primary-color;

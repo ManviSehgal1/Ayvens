@@ -13,8 +13,8 @@
   <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js">
+  </script>
 </head>
 
 <body>
@@ -277,7 +277,7 @@
               2025. The bonus for the period is consistently
               re-proportioned.
             </p>
-            <i class="fa-light fa-pen" id="editPen"></i>
+            <i class="fa-light fa-pen" id="editPen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i>
           </div>
         </div>
       </div>
@@ -319,14 +319,14 @@
           <tbody>
             <tr class="view">
               <td class="arrowBtn">
-                <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                  <i class="fa-light fa-chevron-down"></i>
               </td>
               <td>Orders</td>
               <td>Quarterly</td>
               <td>30.00</td>
               <td>
                 <div class="editable-td">
-                  <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
                 </div>
               </td>
               <td>0.00%</td>
@@ -409,14 +409,14 @@
             </tr>
             <tr class="view">
               <td class="arrowBtn">
-                <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                  <i class="fa-light fa-chevron-down"></i>
               </td>
               <td>Extensions</td>
               <td>Quarterly</td>
               <td>30.00</td>
               <td>
                 <div class="editable-td">
-                  <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
                 </div>
               </td>
               <td>0.00%</td>
@@ -499,14 +499,14 @@
             </tr>
             <tr class="view">
               <td class="arrowBtn">
-                <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                  <i class="fa-light fa-chevron-down"></i>
               </td>
               <td>Orders</td>
               <td>Quarterly</td>
               <td>30.00</td>
               <td>
                 <div class="editable-td">
-                  <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
                 </div>
               </td>
               <td>0.00%</td>
@@ -589,14 +589,14 @@
             </tr>
             <tr class="view">
               <td class="arrowBtn">
-                <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                  <i class="fa-light fa-chevron-down"></i>
               </td>
               <td>Orders</td>
               <td>Quarterly</td>
               <td>30.00</td>
               <td>
                 <div class="editable-td">
-                  <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
                 </div>
               </td>
               <td>0.00%</td>
@@ -679,14 +679,464 @@
             </tr>
             <tr class="view">
               <td class="arrowBtn">
-                <img src="assets/images/down-arrow-white.svg" alt="Down Arrow" />
+                  <i class="fa-light fa-chevron-down"></i>
               </td>
               <td>Orders</td>
               <td>Quarterly</td>
               <td>30.00</td>
               <td>
                 <div class="editable-td">
-                  <span>0.00</span><span> <i class="fa-light fa-pen"></i></span>
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
+                </div>
+              </td>
+              <td>0.00%</td>
+              <td>50.00%</td>
+              <td>€ 0.00</td>
+            </tr>
+            <tr class="fold">
+              <td></td>
+              <td colspan="7">
+                <div class="collpaseTr">
+                  <div class="infoBlock">
+                    <span class="title">Objective</span>
+                    <p class="subText">
+                      KPIs that “Orders” impacts for performance
+                      calculation : <strong>Flex</strong>
+                    </p>
+                  </div>
+                  <div class="individualCardChart">
+                    <div class="ChartMainSection">
+                      <div class="CardChartTitle">
+                        <span class="title">Performance</span>
+                        <p class="subText">
+                          Performance calculation details
+                        </p>
+                      </div>
+                      <div class="CardChartSection">
+                        <div class="chart-section">
+                          <canvas id="performanceChart5"></canvas>
+                        </div>
+                        <div class="range-section">
+                          <div class="rangeSectionTitle rangeSectionAlingment">
+                            <p class="smallTitle RangeTitle">
+                              Actual Range
+                            </p>
+                            <p class="smallTitle RangeTitle">
+                              Absolute Performance
+                            </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">24.00 ></p>
+                            <p class="subText RangeTitle">
+                              80.00%-79.228
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="performanceSection">
+                      <div class="CardChartTitle CardChartTitle1">
+                        <span class="title">Performance</span>
+                        <p class="subText">Performance function orders</p>
+                      </div>
+                      <div class="targetSection">
+                        <div class="targetDetails">
+                          <p class="targetTitle">Target</p>
+                          <p class="targetValue">30.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Current</p>
+                          <p class="targetValue">0.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Absolute Performance</p>
+                          <p class="targetValue">0.00%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="8"></td>
+            </tr>
+            <tr class="view">
+              <td class="arrowBtn">
+                  <i class="fa-light fa-chevron-down"></i>
+              </td>
+              <td>Orders</td>
+              <td>Quarterly</td>
+              <td>30.00</td>
+              <td>
+                <div class="editable-td">
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
+                </div>
+              </td>
+              <td>0.00%</td>
+              <td>50.00%</td>
+              <td>€ 0.00</td>
+            </tr>
+            <tr class="fold">
+              <td></td>
+              <td colspan="7">
+                <div class="collpaseTr">
+                  <div class="infoBlock">
+                    <span class="title">Objective</span>
+                    <p class="subText">
+                      KPIs that “Orders” impacts for performance
+                      calculation : <strong>Flex</strong>
+                    </p>
+                  </div>
+                  <div class="individualCardChart">
+                    <div class="ChartMainSection">
+                      <div class="CardChartTitle">
+                        <span class="title">Performance</span>
+                        <p class="subText">
+                          Performance calculation details
+                        </p>
+                      </div>
+                      <div class="CardChartSection">
+                        <div class="chart-section">
+                          <canvas id="performanceChart"></canvas>
+                        </div>
+                        <div class="range-section">
+                          <div class="rangeSectionTitle rangeSectionAlingment">
+                            <p class="smallTitle RangeTitle">
+                              Actual Range
+                            </p>
+                            <p class="smallTitle RangeTitle">
+                              Absolute Performance
+                            </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">24.00 ></p>
+                            <p class="subText RangeTitle">
+                              80.00%-79.228
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="performanceSection">
+                      <div class="CardChartTitle CardChartTitle1">
+                        <span class="title">Performance</span>
+                        <p class="subText">Performance function orders</p>
+                      </div>
+                      <div class="targetSection">
+                        <div class="targetDetails">
+                          <p class="targetTitle">Target</p>
+                          <p class="targetValue">30.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Current</p>
+                          <p class="targetValue">0.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Absolute Performance</p>
+                          <p class="targetValue">0.00%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="8"></td>
+            </tr>
+            <tr class="view">
+              <td class="arrowBtn">
+                  <i class="fa-light fa-chevron-down"></i>
+              </td>
+              <td>Extensions</td>
+              <td>Quarterly</td>
+              <td>30.00</td>
+              <td>
+                <div class="editable-td">
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
+                </div>
+              </td>
+              <td>0.00%</td>
+              <td>50.00%</td>
+              <td>€ 0.00</td>
+            </tr>
+            <tr class="fold">
+              <td></td>
+              <td colspan="7">
+                <div class="collpaseTr">
+                  <div class="infoBlock">
+                    <span class="title">Objective</span>
+                    <p class="subText">
+                      KPIs that “Orders” impacts for performance
+                      calculation : <strong>Flex</strong>
+                    </p>
+                  </div>
+                  <div class="individualCardChart">
+                    <div class="ChartMainSection">
+                      <div class="CardChartTitle">
+                        <span class="title">Performance</span>
+                        <p class="subText">
+                          Performance calculation details
+                        </p>
+                      </div>
+                      <div class="CardChartSection">
+                        <div class="chart-section">
+                          <canvas id="performanceChart2"></canvas>
+                        </div>
+                        <div class="range-section">
+                          <div class="rangeSectionTitle rangeSectionAlingment">
+                            <p class="smallTitle RangeTitle">
+                              Actual Range
+                            </p>
+                            <p class="smallTitle RangeTitle">
+                              Absolute Performance
+                            </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">24.00 ></p>
+                            <p class="subText RangeTitle">
+                              80.00%-79.228
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="performanceSection">
+                      <div class="CardChartTitle CardChartTitle1">
+                        <span class="title">Performance</span>
+                        <p class="subText">Performance function orders</p>
+                      </div>
+                      <div class="targetSection">
+                        <div class="targetDetails">
+                          <p class="targetTitle">Target</p>
+                          <p class="targetValue">30.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Current</p>
+                          <p class="targetValue">0.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Absolute Performance</p>
+                          <p class="targetValue">0.00%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="8"></td>
+            </tr>
+            <tr class="view">
+              <td class="arrowBtn">
+                  <i class="fa-light fa-chevron-down"></i>
+              </td>
+              <td>Orders</td>
+              <td>Quarterly</td>
+              <td>30.00</td>
+              <td>
+                <div class="editable-td">
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
+                </div>
+              </td>
+              <td>0.00%</td>
+              <td>50.00%</td>
+              <td>€ 0.00</td>
+            </tr>
+            <tr class="fold">
+              <td></td>
+              <td colspan="7">
+                <div class="collpaseTr">
+                  <div class="infoBlock">
+                    <span class="title">Objective</span>
+                    <p class="subText">
+                      KPIs that “Orders” impacts for performance
+                      calculation : <strong>Flex</strong>
+                    </p>
+                  </div>
+                  <div class="individualCardChart">
+                    <div class="ChartMainSection">
+                      <div class="CardChartTitle">
+                        <span class="title">Performance</span>
+                        <p class="subText">
+                          Performance calculation details
+                        </p>
+                      </div>
+                      <div class="CardChartSection">
+                        <div class="chart-section">
+                          <canvas id="performanceChart3"></canvas>
+                        </div>
+                        <div class="range-section">
+                          <div class="rangeSectionTitle rangeSectionAlingment">
+                            <p class="smallTitle RangeTitle">
+                              Actual Range
+                            </p>
+                            <p class="smallTitle RangeTitle">
+                              Absolute Performance
+                            </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">24.00 ></p>
+                            <p class="subText RangeTitle">
+                              80.00%-79.228
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="performanceSection">
+                      <div class="CardChartTitle CardChartTitle1">
+                        <span class="title">Performance</span>
+                        <p class="subText">Performance function orders</p>
+                      </div>
+                      <div class="targetSection">
+                        <div class="targetDetails">
+                          <p class="targetTitle">Target</p>
+                          <p class="targetValue">30.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Current</p>
+                          <p class="targetValue">0.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Absolute Performance</p>
+                          <p class="targetValue">0.00%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="8"></td>
+            </tr>
+            <tr class="view">
+              <td class="arrowBtn">
+                  <i class="fa-light fa-chevron-down"></i>
+              </td>
+              <td>Orders</td>
+              <td>Quarterly</td>
+              <td>30.00</td>
+              <td>
+                <div class="editable-td">
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
+                </div>
+              </td>
+              <td>0.00%</td>
+              <td>50.00%</td>
+              <td>€ 0.00</td>
+            </tr>
+            <tr class="fold">
+              <td></td>
+              <td colspan="7">
+                <div class="collpaseTr">
+                  <div class="infoBlock">
+                    <span class="title">Objective</span>
+                    <p class="subText">
+                      KPIs that “Orders” impacts for performance
+                      calculation : <strong>Flex</strong>
+                    </p>
+                  </div>
+                  <div class="individualCardChart">
+                    <div class="ChartMainSection">
+                      <div class="CardChartTitle">
+                        <span class="title">Performance</span>
+                        <p class="subText">
+                          Performance calculation details
+                        </p>
+                      </div>
+                      <div class="CardChartSection">
+                        <div class="chart-section">
+                          <canvas id="performanceChart4"></canvas>
+                        </div>
+                        <div class="range-section">
+                          <div class="rangeSectionTitle rangeSectionAlingment">
+                            <p class="smallTitle RangeTitle">
+                              Actual Range
+                            </p>
+                            <p class="smallTitle RangeTitle">
+                              Absolute Performance
+                            </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">
+                              < 23.99</p>
+                                <p class="subText RangeTitle">0.00%
+                                </p>
+                          </div>
+                          <div class="rangeSectionBg rangeSectionAlingment">
+                            <p class="subText RangeTitle">24.00 ></p>
+                            <p class="subText RangeTitle">
+                              80.00%-79.228
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="performanceSection">
+                      <div class="CardChartTitle CardChartTitle1">
+                        <span class="title">Performance</span>
+                        <p class="subText">Performance function orders</p>
+                      </div>
+                      <div class="targetSection">
+                        <div class="targetDetails">
+                          <p class="targetTitle">Target</p>
+                          <p class="targetValue">30.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Current</p>
+                          <p class="targetValue">0.00</p>
+                        </div>
+                        <div class="targetDetails">
+                          <p class="targetTitle">Absolute Performance</p>
+                          <p class="targetValue">0.00%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacing-tr">
+              <td colspan="8"></td>
+            </tr>
+            <tr class="view">
+              <td class="arrowBtn">
+                  <i class="fa-light fa-chevron-down"></i>
+              </td>
+              <td>Orders</td>
+              <td>Quarterly</td>
+              <td>30.00</td>
+              <td>
+                <div class="editable-td">
+                  <span>0.00</span><span> <i class="fa-light fa-pen" data-bs-toggle="tooltip" data-bs-html="true" title="edit"></i></span>
                 </div>
               </td>
               <td>0.00%</td>
@@ -830,19 +1280,35 @@
         const data = {
           datasets: [{
             label: 'Performance',
-            data: [
-              { x: -7.2, y: 0 }, // Extending line start
-              { x: 0, y: 0 },    // Red point
-              { x: 23.99, y: 0 }, // Step before jump
-              { x: 24, y: 80 },   // Jump to Green point
-              { x: 36, y: 110 }   // Extending line end (projected)
+            data: [{
+                x: -7.2,
+                y: 0
+              }, // Extending line start
+              {
+                x: 0,
+                y: 0
+              }, // Red point
+              {
+                x: 23.99,
+                y: 0
+              }, // Step before jump
+              {
+                x: 24,
+                y: 80
+              }, // Jump to Green point
+              {
+                x: 36,
+                y: 110
+              } // Extending line end (projected)
             ],
             borderColor: '#5D9CAF', // Blue-ish line color from image
             borderWidth: 2,
             fill: false,
             pointRadius: [0, 8, 0, 8, 0], // Only show points at 0 and 24
-            pointBackgroundColor: ['transparent', '#FF6B6B', 'transparent', '#4ECDC4', 'transparent'], // Red and Green
-            pointBorderColor: ['transparent', '#FFD3D3', 'transparent', '#C7F3E9', 'transparent'], // Lighter border for halo effect
+            pointBackgroundColor: ['transparent', '#FF6B6B', 'transparent', '#4ECDC4',
+            'transparent'], // Red and Green
+            pointBorderColor: ['transparent', '#FFD3D3', 'transparent', '#C7F3E9',
+            'transparent'], // Lighter border for halo effect
             pointBorderWidth: [0, 4, 0, 4, 0],
             tension: 0
           }]
@@ -862,7 +1328,9 @@
                   display: true,
                   text: 'Actual Range',
                   color: '#5D9CAF',
-                  font: { size: 14 }
+                  font: {
+                    size: 14
+                  }
                 },
                 min: -7.2,
                 max: 36, // Guessing max based on image aspect
@@ -880,7 +1348,9 @@
                   display: true,
                   text: 'Absolute Performance',
                   color: '#5D9CAF',
-                  font: { size: 14 }
+                  font: {
+                    size: 14
+                  }
                 },
                 ticks: {
                   callback: function (value) {

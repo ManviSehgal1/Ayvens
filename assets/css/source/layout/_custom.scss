@@ -1188,7 +1188,7 @@
   }
 
   .tableContent {
-    max-height: 700px;
+    max-height: 100vh;
     overflow-y: auto;
     height: 100%;
     padding-right: 33px;
@@ -1271,9 +1271,16 @@
             .actionBtn {
               display: flex;
               gap: 8px;
+              width: fit-content;
 
               i {
                 cursor: pointer;
+                font-size: 17px;
+                color: var.$gray-700;
+
+                @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                  font-size: 14px;
+                }
               }
             }
 
@@ -1296,11 +1303,21 @@
               &.arrowBtn {
                 background-color: var.$primary-color;
                 border-radius: 5px 0 0 5px;
-                padding: 10px;
+                padding: 12px 10px;
                 cursor: pointer;
 
-                img {
+                @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                  padding: 12px 10px;
+                }
+
+                i {
                   transition: transform 0.2s ease-in-out;
+                  color: var.$white;
+                  font-size: 16px;
+
+                  @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                    font-size: 14px;
+                  }
                 }
               }
             }
@@ -1353,7 +1370,7 @@
                 &.arrowBtn {
                   border: none;
 
-                  img {
+                  i {
                     transform: rotate(-180deg);
                   }
                 }
@@ -1538,6 +1555,15 @@
             .fa-pen {
               cursor: pointer;
               color: #7c7c7c;
+              font-size: 14px;
+
+              @media screen and (min-width:1200px) and (max-width:1720px) {
+                font-size: 13px;
+              }
+
+              @media screen and (max-width:1199px) {
+                font-size: 12px;
+              }
             }
           }
         }
@@ -1888,18 +1914,39 @@
                   display: flex;
                   gap: 20px;
 
+                  @media  screen and (max-width: 991px) {
+                    flex-direction: column;
+                  }
+
                   .ChartMainSection {
                     width: 76.1%;
 
+                    @media screen and (min-width:1400px) and (max-width:1720px) {
+                      width: 70%;
+
+                    }
+
+                    @media screen and (min-width:992px) and (max-width:1399px) {
+                      width: 75%;
+                    }
+
+                    @media screen and (max-width: 991px) {
+                      width: 100%;
+                    }
+
                     .CardChartTitle {
                       margin-bottom: 30px;
+
+                      @media screen and (max-width: 991px) {
+                        margin-bottom: 16px;
+                      }
                     }
 
                     .CardChartSection {
                       display: flex;
                       gap: 20px;
 
-                      @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                      @media screen and (max-width: 1720px) {
                         gap: 16px;
                       }
 
@@ -1908,7 +1955,15 @@
                         height: 219px;
                         // background: black;
 
-                        @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                        @media screen and (min-width: 1400px) and (max-width: 1720px) {
+                          width: 50%;
+                        }
+
+                        @media screen and (min-width: 992px) and (max-width: 1399px) {
+                          width: 55%;
+                        }
+
+                        @media screen and (max-width: 991px) {
                           width: 50%;
                         }
                       }
@@ -1922,7 +1977,7 @@
                         gap: 8px;
                         flex-direction: column;
 
-                        @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                        @media screen and (max-width: 1720px) {
                           padding: 16px;
                         }
 
@@ -1936,7 +1991,7 @@
                             }
 
                             &.subText {
-                              @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                              @media screen and (max-width: 1720px) {
                                 font-size: 12px;
                                 line-height: 16px;
                               }
@@ -1966,15 +2021,37 @@
                   .performanceSection {
                     display: flex;
                     flex-direction: column;
-                    width: 23.9%;
+                    width: 28%;
+
+                    @media screen and (min-width:1400px) and (max-width:1720px) {
+                      width: 30%;
+                    }
+
+                    @media screen and (min-width:992px) and (max-width:1399px) {
+                      width: 35%;
+                    }
+
+                    @media screen and (max-width: 991px) {
+                      width: 100%;
+                    }
 
                     .CardChartTitle {
                       margin-bottom: 30px;
                       padding-left: 20px;
 
+                      @media screen and (max-width: 991px) {
+                        padding-left: 0px;
+                        margin-bottom: 16px;
+                      }
+
                       &.CardChartTitle1 {
                         .title {
                           opacity: 0;
+                        }
+
+                        .subText {
+                          font-size: 12px;
+                          line-height: 16px;
                         }
                       }
                     }
@@ -1985,6 +2062,11 @@
                       display: flex;
                       flex-direction: column;
                       gap: 8px;
+
+                      @media screen and (max-width: 991px) {
+                        padding-left: 0px;
+                        border-left: none;
+                      }
 
                       .targetDetails {
                         display: flex;
@@ -1998,6 +2080,27 @@
                           background: rgba(95, 168, 193, 0.2);
                           border-radius: 4px 0px 0px 4px;
                           padding: 14px 10px;
+
+                          @media screen and (min-width:1400px) and (max-width:1720px) {
+                            font-size: 13px;
+                            line-height: 18px;
+                          }
+
+                          @media screen and (min-width:992px) and (max-width:1720px) {
+                            width: 70%;
+                          }
+
+                          @media screen and (min-width:992px) and (max-width:1399px) {
+                     
+                            font-size: 11px;
+                            line-height: 16px;
+                          }
+
+                          @media screen and (max-width: 991px) {
+                            width: 35%;
+                            font-size: 12px;
+                            line-height: 16px;
+                          }
                         }
 
                         .targetValue {
@@ -2007,6 +2110,27 @@
                           background: var.$white;
                           border-radius: 0px 4px 4px 0px;
                           padding: 14px 10px;
+
+                           @media screen and (min-width:1400px) and (max-width:1720px) {
+                            font-size: 13px;
+                            line-height: 18px;
+                          }
+
+                          @media screen and (min-width:992px) and (max-width:1720px) {
+                            width: 30%;
+                          }
+
+                          @media screen and (min-width:992px) and (max-width:1399px) {
+                     
+                            font-size: 11px;
+                            line-height: 16px;
+                          }
+
+                          @media screen and (max-width: 991px) {
+                            width: 25%;
+                            font-size: 12px;
+                            line-height: 16px;
+                          }
                         }
                       }
                     }
@@ -2023,6 +2147,15 @@
 
             i {
               cursor: pointer;
+              font-size: 14px;
+
+              @media screen and (min-width: 1200px) and (max-width: 1720px) {
+                font-size: 13px;
+              }
+
+              @media screen and (max-width: 1199px) {
+                font-size: 12px;
+              }
             }
           }
         }
@@ -2376,6 +2509,10 @@
 .contentBlock .tableContent .table.mass-liquidations-table thead {
   tr {
     th {
+      &:nth-child(1) {
+        width: 40px;
+      }
+
       &:nth-child(2) {
         width: 140px;
       }
@@ -2540,9 +2677,17 @@
   gap: 5px;
 
   i {
-    font-size: 16px;
+    font-size: 17px;
     color: var.$gray-700;
     cursor: pointer;
+
+    @media screen and (min-width: 1200px) and (max-width: 1720px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      font-size: 13px;
+    }
   }
 }
 
@@ -3343,9 +3488,7 @@
                 color: var.$gray-700;
               }
 
-              .fa-trash {
-                color: #f10909;
-              }
+
             }
           }
 
@@ -3465,4 +3608,20 @@
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon span:nth-child(4) {
   transform: rotate(-45deg);
   top: 7px;
+}
+
+.fa-trash {
+  color: #f10909 !important;
+}
+
+.tooltip .tooltip-inner {
+  font-size: 12px;
+ font-family: var.$body-font-family;
+}
+
+.tooltipChips {
+  background: rgba(255, 204, 0, 0.15) !important;
+  padding: 3px 5px;
+  color: #e2b018;
+  border-radius: 6px;
 }

@@ -364,14 +364,17 @@
     </div>
   </div>
 
-  <div class="modal fade" id="recordPaymentModal" tabindex="-1" aria-labelledby="recordPaymentModalLabel">
+  <div class="modal fade" id="recordPaymentModal" tabindex="-1" role="dialog" aria-labelledby="recordPaymentModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="recordPaymentModalLabel">
             Record Payment
           </h5>
-          <i class="fa-solid fa-xmark-large" data-bs-dismiss="modal" aria-label="Close"></i>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark-large" aria-hidden="true"></i>
+          </button>
         </div>
         <div class="modal-body">
           <div class="modal-body-content">
@@ -391,8 +394,7 @@
             </div>
             <div>
               <label for="paymentDate" class="form-label">Payment Date</label>
-              <input class="form-control" type="date" placeholder="choose date" aria-label="payment date"
-                id="paymentDate" />
+              <input class="form-control" type="date" aria-label="payment date" id="paymentDate" />
             </div>
           </div>
         </div>
@@ -406,15 +408,17 @@
     </div>
   </div>
 
-  <div class="modal fade deletePaymentModal" id="deletePaymentModal" tabindex="-1"
-    aria-labelledby="deletePaymentModalLabel">
+  <div class="modal fade deletePaymentModal" id="deletePaymentModal" tabindex="-1" role="dialog"
+    aria-labelledby="deletePaymentModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="deletePaymentModalLabel">
             Delete Payment
           </h5>
-          <i class="fa-solid fa-xmark-large" data-bs-dismiss="modal" aria-label="Close"></i>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark-large" aria-hidden="true"></i>
+          </button>
         </div>
         <div class="modal-body">
           <p class="mb-0">

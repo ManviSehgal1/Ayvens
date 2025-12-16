@@ -46,15 +46,16 @@
 
     .goToWebsiteLink {
       @include text-lg-medium;
-      color: var.$black;
+      color: var.$primary-color;
       text-decoration: none;
       display: flex;
       align-items: center;
       gap: 14px;
+      width: fit-content;
 
       &:hover,
       &:focus {
-        background: var.$secondary-hover-color;
+        color: var.$primary-hover-color
       }
 
       @media screen and (min-width: 1400px) and (max-width: 1720px) {
@@ -1306,6 +1307,10 @@
                 padding: 12px 10px;
                 cursor: pointer;
 
+                &:hover {
+                  background-color: var.$primary-hover-color;
+                }
+
                 @media screen and (min-width: 1200px) and (max-width: 1720px) {
                   padding: 12px 10px;
                 }
@@ -1815,6 +1820,19 @@
           line-height: 1.5;
         }
 
+        .btn-close {
+          background: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
         i {
           color: var.$dark-gray;
           font-size: 14px;
@@ -1914,7 +1932,7 @@
                   display: flex;
                   gap: 20px;
 
-                  @media  screen and (max-width: 991px) {
+                  @media screen and (max-width: 991px) {
                     flex-direction: column;
                   }
 
@@ -2091,7 +2109,7 @@
                           }
 
                           @media screen and (min-width:992px) and (max-width:1399px) {
-                     
+
                             font-size: 11px;
                             line-height: 16px;
                           }
@@ -2111,7 +2129,7 @@
                           border-radius: 0px 4px 4px 0px;
                           padding: 14px 10px;
 
-                           @media screen and (min-width:1400px) and (max-width:1720px) {
+                          @media screen and (min-width:1400px) and (max-width:1720px) {
                             font-size: 13px;
                             line-height: 18px;
                           }
@@ -2121,7 +2139,7 @@
                           }
 
                           @media screen and (min-width:992px) and (max-width:1399px) {
-                     
+
                             font-size: 11px;
                             line-height: 16px;
                           }
@@ -3616,7 +3634,7 @@
 
 .tooltip .tooltip-inner {
   font-size: 12px;
- font-family: var.$body-font-family;
+  font-family: var.$body-font-family;
 }
 
 .tooltipChips {

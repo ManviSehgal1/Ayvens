@@ -1,0 +1,338 @@
+@use "sass:color";
+@use "./variables"as var;
+@import "mixin";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var.$black;
+  background-color: var.$white;
+  @include text-md-regular;
+  font-family: var.$body-font-family;
+
+  &:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: opacity 0.9s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: blur(4px);
+  }
+
+  &.overflow-hidden:before {
+    @media screen and (max-width: 1199px) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+.primaryText {
+  color: var.$primary-color;
+}
+
+.grayText {
+  color: var.$gray-600;
+
+  @include text-md-regular;
+
+  @media screen and (min-width: 1200px) and (max-width: 1720px) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    @include text-sm-regular;
+  }
+}
+
+p {
+  @include text-md-regular;
+}
+
+.btn {
+  @include text-md-medium;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 18px;
+  box-shadow: none !important;
+  transition: all 0.3s ease-in-out;
+  // min-width: 135px;
+
+  @media screen and (min-width: 1200px) and (max-width: 1720px) {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    padding: 11px 16px;
+  }
+
+  &.allBtn {
+    height: 36px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 0;
+    font-weight: 400;
+    @include text-sm-medium;
+
+    &.btn-primary {
+      background: var.$primary-color;
+      color: var.$white;
+      padding: 8px 20px;
+
+      &:hover,
+      &:focus {
+        background-color: var.$primary-hover-color;
+        border-color: var.$primary-hover-color;
+      }
+    }
+
+    &.btn-secondary {
+      background: transparent;
+      color: var.$primary-color;
+      border: 1px solid #0f3549;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: var.$primary-color;
+  color: var.$white;
+
+  &:hover,
+  &:focus {
+    background-color: var.$primary-hover-color;
+  }
+}
+
+.title {
+  color: var.$primary-color;
+  @include text-xs-medium;
+}
+
+.subText {
+  @include text-sm-regular;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.smallTitle {
+  @include text-xs-regular;
+}
+
+.fa-pen {
+  color: var.$gray-500;
+  font-size: 17px;
+
+  @media screen and (min-width: 1200px) and (max-width: 1720px) {
+    font-size: 13px;
+  }
+}
+
+
+.all-btn {
+  background: var.$primary-color;
+  color: var.$white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  @include text-sm-medium;
+  min-width: 74px;
+  margin: 0;
+
+  &:hover {
+  background: var.$primary-hover-color;
+  color: var.$white;
+  }
+
+  @media screen and (min-width: 1400px) and (max-width: 1720px) {
+    @include text-xs-semibold;
+  }
+
+  @media screen and (max-width: 1199px) {
+    @include text-xs-medium;
+    padding: 7px 12px;
+  }
+
+  &.topBtn {
+    font-weight: 600;
+  }
+}
+
+.allSimilarBtn {
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    text-align: left !important;
+    font-size: 11px !important;
+    line-height: 16px !important;
+    height: 36px !important;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: left !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    height: 38px !important;
+  }
+
+  @media screen and (max-width: 991px) {
+    font-size: 12px !important;
+    line-height: 18px !important;
+    height: 36px !important;
+  }
+
+  &.allSimilarBtnBold {
+    @media screen and (max-width: 991px) {
+      font-weight: 600 !important;
+    }
+  }
+}
+
+.modal-title {
+  span {
+    @include text-md-regular;
+    color: #5fa8c1;
+  }
+}
+
+.whiteBtn {
+  padding: 8px 12px !important;
+  color: var.$white !important;
+  gap: 5px;
+  display: flex;
+  justify-content: center !important;
+}
+
+.dropDownWrapperLg {
+  @media screen and (min-width: 991px) {
+    justify-content: end;
+  }
+}
+
+.width-all-100-global {
+  width: 100%;
+}
+
+.width-all-100-lg {
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+  }
+}
+
+.width-all-100 {
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
+}
+
+.width-all-100-md {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.width-all-100-sm {
+  @media screen and (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.gap16 {
+  @media screen and (max-width:767px) {
+    gap: 16px !important;
+  }
+}
+
+.global-flex-md {
+  @media screen and (max-width: 991px) {
+    flex: 1;
+  }
+}
+
+.global-flex-sm {
+  @media screen and (max-width: 767px) {
+    flex: 1;
+  }
+}
+
+.global-flex {
+  @media screen and (max-width: 575px) {
+    flex: 1;
+  }
+}
+
+
+.dropDownWrapperCenter {
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.nav-item {
+  .nav-link {
+    &.all-nav-link {
+      @include text-sm-regular;
+      color: var.$gray-300;
+      border-radius: 0;
+
+      &.active {
+        color: var.$primary-color;
+      }
+
+      @media screen and (min-width: 1400px) and (max-width: 1720px) {
+        @include text-xs-regular
+      }
+
+      @media screen and (min-width: 1200px) and (max-width: 1399px) {
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      @media screen and (max-width: 1199px) {
+        @include text-size-13;
+      }
+    }
+
+    &:first-child .nav-link {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child .nav-link {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}

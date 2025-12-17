@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup Step</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Font awesome link -->
+  <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="onBoardingSect loginSect">
+    <div class="logoBlock">
+      <img src="assets/images/logo.svg" alt="Logo" />
+    </div>
+    <div class="goToWebsiteBlock goToWebsiteBlockMobile">
+      <a href="https://www.ayvens.com/en-cp/international/" class="goToWebsiteLink">
+        <i class="fa-light fa-chevron-left"></i>
+        Go to website
+      </a>
+    </div>
+    <div class="detailWrapper">
+      <div class="goToWebsiteBlock">
+        <a href="https://www.ayvens.com/en-cp/international/" class="goToWebsiteLink">
+          <i class="fa-light fa-chevron-left"></i>
+          Go to website
+        </a>
+      </div>
+      <div class="detailBlock">
+        <div class="topText">
+          <div class="title">Confirm email addresst</div>
+          <p class="primaryText textWithLink">
+            We’ve sent a verification code to your email address
+          </p>
+        </div>
+        <div class="condirmEmailAddress">
+          <span>john.smith@gmail.com</span>
+          <i class="fa-light fa-pen"></i>
+        </div>
+        <div class="inputBlock emailBlock">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" value="john.smith@gmail.com" />
+        </div>
+        <div class="inputBlock">
+          <label class="form-label">Enter the 6-digit code</label>
+          <div class="boxContent">
+            <input type="number" class="form-control otp-input" maxlength="1" />
+            <input type="number" class="form-control otp-input" maxlength="1" />
+            <input type="number" class="form-control otp-input" maxlength="1" />
+            <input type="number" class="form-control otp-input" maxlength="1" />
+            <input type="number" class="form-control otp-input" maxlength="1" />
+            <input type="number" class="form-control otp-input" maxlength="1" />
+          </div>
+        </div>
+        <a href="signup-step3.html" class="btn btn-primary">Verify</a>
+        <div class="textWithLink primaryText text-center">
+          Didn’t received OTP ?&nbsp;<a href="#">RESEND</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const otpInputs = document.querySelectorAll(".otp-input");
+
+    otpInputs.forEach((input, index) => {
+      input.addEventListener("input", () => {
+        input.value = input.value.replace(/[^0-9]/g, "").slice(0, 1);
+
+        // move to next input if one digit entered
+        if (input.value && index < otpInputs.length - 1) {
+          otpInputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" && !input.value && index > 0) {
+          otpInputs[index - 1].focus();
+        }
+      });
+    });
+
+    /* show email block */
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const editIcon = document.querySelector(".condirmEmailAddress img");
+      const emailBlock = document.querySelector(".emailBlock");
+      const confirmEmail = document.querySelector(".condirmEmailAddress");
+
+      editIcon.addEventListener("click", function () {
+        emailBlock.classList.add("show"); // Show the email input
+        confirmEmail.classList.add("none"); // Hide the current email display
+      });
+    });
+  </script>
+</body>
+
+</html>

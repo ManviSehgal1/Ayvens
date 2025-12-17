@@ -108,6 +108,17 @@ p {
     font-weight: 400;
     @include text-sm-medium;
 
+
+  @media screen and (min-width: 1400px) and (max-width: 1720px) {
+    @include text-xs-semibold;
+  }
+
+    @media screen and (max-width: 1199px) {
+      @include text-xs-medium;
+      padding: 7px 12px;
+          height: auto;
+    }
+
     &.btn-primary {
       background: var.$primary-color;
       color: var.$white;

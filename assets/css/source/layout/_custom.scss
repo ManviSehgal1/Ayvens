@@ -763,6 +763,7 @@
         padding: 0px 0px 0px 30px;
         transition: all 0.2s ease-in-out;
         @include text-sm-regular;
+        width: fit-content;
 
         &:hover,
         &.active {
@@ -1226,6 +1227,10 @@
     &::-webkit-scrollbar-thumb:horizontal {
       background-color: var.$gray-400;
       border-radius: 5px;
+    }
+
+    &#myTabContent1 {
+      display: none;
     }
 
     .table {
@@ -2700,11 +2705,11 @@
     cursor: pointer;
 
     @media screen and (min-width: 1200px) and (max-width: 1720px) {
-      font-size: 14px;
+      font-size: 15px;
     }
 
     @media screen and (max-width: 1199px) {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 }

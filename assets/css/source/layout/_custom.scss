@@ -1187,6 +1187,18 @@
         padding: 8px 12px;
       }
     }
+
+    .dropdown {
+      .dropdown-menu {
+        li {
+          .dropdown-item {
+            &:active {
+              background: #e9ecef;
+            }
+          }
+        }
+      }
+    }
   }
 
   .tableContent {
@@ -1852,14 +1864,43 @@
           margin-bottom: 8px;
         }
 
-        textarea {
+        label {
+          @include text-sm-regular;
+          color: var.$gray-950;
+
+          @media screen and (max-width: 1720px) {
+            @include text-xs-regular;
+          }
+        }
+
+        input, textarea {
           border-radius: 5px;
           border: 1.5px solid #dcdcdc;
-          padding: 16px;
-          @include text-xs-regular;
-          width: 100%;
-          height: 82px;
+          padding: 12px 10px;
+          @include text-sm-regular;
+          width: 100%;        
           margin: 0;
+
+          @media screen and (max-width: 1720px) {
+            @include text-xs-regular;
+            padding:7px 10px
+          }
+        }
+
+        textarea {
+          height: 82px;
+        }
+
+        .form-select {
+          @include text-sm-regular;
+
+
+
+          @media screen and (max-width: 1720px) {
+            @include text-xs-regular;
+            padding:7px 10px
+          }
+
         }
       }
 
@@ -2426,7 +2467,17 @@
 
     .modal-footer {
       .all-btn {
-        @include text-sm-regular;
+        @include text-sm-medium;
+
+         @media screen and (max-width: 1720px) {
+    @include text-xs-medium;
+    padding: 8px 12px;
+  }
+
+     @media screen and (max-width: 1199px) {
+    padding: 7px 12px;
+  }
+
       }
     }
   }

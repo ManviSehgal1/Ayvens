@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Role Cards - Policies | Ayvens</title>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Font awesome link -->
@@ -202,353 +203,419 @@
     <div class="topMainTitle">
       <div class="topTitle">Lorem Ipsum</div>
     </div>
-    <div class="filterBlock flex-column flex-sm-row">
-      <div class="dropdown custom-dropdown width-all-100-sm">
-        <button class="btn dropdown-toggle allSimilarBtn width-all-100-sm" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          2025 Quarter <i class="fa-regular fa-chevron-down ms-2"></i>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
-          <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
-          <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
-        </ul>
+
+    <div class="filter-root">
+      <div class="filterBlock flex-column flex-sm-row align-items-start">
+        <div class="dropdown custom-dropdown width-all-100-sm">
+          <button class="btn dropdown-toggle allSimilarBtn width-all-100-sm" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            2025 Quarter <i class="fa-regular fa-chevron-down ms-2"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
+            <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
+            <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
+          </ul>
+        </div>
+        <!-- <div class="dropdown custom-dropdown customDropdown customDropdown1 width-all-100-sm">
+          <button class="btn dropdown-toggle allSimilarBtn width-all-100-sm" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Select a Role Type <i class="fa-regular fa-chevron-down ms-2"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="dropdown-item">
+                <div class="dropdownSubItem">Direct Sales <span>(225)</span></div><i class="fa-regular fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <div class="dropdownSubItem">FFM <span>(16)</span></div><i class="fa-regular fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <div class="dropdownSubItem">International <span>(77)</span></div><i class="fa-regular fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <div class="dropdownSubItem">IT Business Development <span>(20)</span></div><i
+                  class="fa-regular fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <div class="dropdownSubItem">IT Direct Retail <span>(16)</span></div><i class="fa-regular fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <div class="dropdownSubItem">IT Partnership <span>(16)</span></div><i class="fa-regular fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-item">
+                <div class="dropdownSubItem">Local Corporate <span>(164)</span></div><i class="fa-regular fa-check"></i>
+              </div>
+            </li>
+          </ul>
+        </div> -->
+        <div class="dropdown custom-dropdown customDropdown customDropdown1 customDropdown-width width-all-100-sm">
+          <button class="btn dropdown-toggle allSimilarBtn width-all-100-sm togglable_area" type="button">
+            Filters <i class="fa-regular fa-chevron-down ms-2"></i>
+          </button>
+          <div class="dropdown-menu-area">
+            <!-- Select a Customer (DDL) -->
+            <div class="row">
+              <div class="col-12 col-md-12">
+                <div class="mb-2" id="projectsSection">
+                  <div class="d-flex flex-column">
+                    <label class="form-label label-custom mb-2">KPI</label>
+                    <div class="select-dv select2-multiple-dv">
+                    <select id="projectsSelect" class="form-select select2-custom" multiple="multiple">
+                      <option value="orders">Orders</option>
+                      <option value="extensions">Extensions</option>
+                      <option value="profitability">Profitability</option>
+                      <option value="remark">Remark</option>
+                    </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-12  mt-2">
+                <div class="mb-2" id="projectsSection1">
+                  <div class="d-flex flex-column">
+                    <label class="form-label label-custom mb-2">Category</label>
+                    <div class="select-dv select2-multiple-dv">
+                    <select id="projectsSelect1" class="form-select select2-custom" multiple="multiple">
+                      <option value="cat-01">Category 01</option>
+                      <option value="cat-02">Category 02</option>
+                    </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex flex-column mt-2">
+                <label class="form-label label-custom mb-2">Role</label>
+                <div class="select-dv">
+                <select id="customerSelect" class="form-select select2-custom">
+                  <option value="">Select a role</option>
+                  <option value="role-01">Role 01</option>
+                  <option value="role-02">Role 02</option>
+                  <option value="role-03">Role 03</option>
+                  <option value="role-04">Role 04</option>
+                  <option value="role-05">Role 05</option>
+                </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12">
+                <div class="d-flex align-items-center gap-2">
+                  <button class="btn btn-primary apply-filter-btn" type="button">Apply Filter</button>
+                  <button class="btn btn-secondary clear-filter-btn" type="button">Clear Filter</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="dropdown custom-dropdown customDropdown customDropdown1 width-all-100-sm">
-        <button class="btn dropdown-toggle allSimilarBtn width-all-100-sm" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Select a Role Type <i class="fa-regular fa-chevron-down ms-2"></i>
-        </button>
-        <ul class="dropdown-menu">
-          <li>
-            <div class="dropdown-item">
-              <div class="dropdownSubItem">Direct Sales <span>(225)</span></div><i class="fa-regular fa-check"></i>
-            </div>
-          </li>
-          <li>
-            <div class="dropdown-item">
-              <div class="dropdownSubItem">FFM <span>(16)</span></div><i class="fa-regular fa-check"></i>
-            </div>
-          </li>
-          <li>
-            <div class="dropdown-item">
-              <div class="dropdownSubItem">International <span>(77)</span></div><i class="fa-regular fa-check"></i>
-            </div>
-          </li>
-          <li>
-            <div class="dropdown-item">
-              <div class="dropdownSubItem">IT Business Development <span>(20)</span></div><i
-                class="fa-regular fa-check"></i>
-            </div>
-          </li>
-          <li>
-            <div class="dropdown-item">
-              <div class="dropdownSubItem">IT Direct Retail <span>(16)</span></div><i class="fa-regular fa-check"></i>
-            </div>
-          </li>
-          <li>
-            <div class="dropdown-item">
-              <div class="dropdownSubItem">IT Partnership <span>(16)</span></div><i class="fa-regular fa-check"></i>
-            </div>
-          </li>
-          <li>
-            <div class="dropdown-item">
-              <div class="dropdownSubItem">Local Corporate <span>(164)</span></div><i class="fa-regular fa-check"></i>
-            </div>
-          </li>
-        </ul>
+
+      <div class="appliedFilterSection p-0 mt-3">
+        <h6 class="mb-0">Applied Filters:</h6>
+        <div class="filteredContent">
+          <div class="mb-0 applied-section">
+            <p class="mb-0">Orders</p><i class="fa-regular fa-xmark" aria-hidden="true"></i>
+          </div>
+          <div class="mb-0 applied-section">
+            <p class="mb-0">Category 01</p><i class="fa-regular fa-xmark" aria-hidden="true"></i>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="tab-content tableContent" id="myTabContent">
-      <table class="table role-cards-table">
-        <thead>
-          <tr>
-            <th>Card Name</th>
-            <th>Associated Roles</th>
-            <th colspan="3">Associated KPIs</th>
-            <th>People</th>
-            <th>Action</th>
-          </tr>
-          <tr class="second-th tr-sticky">
-            <th></th>
-            <th>Local Corporate - Institutional & PA</th>
-            <th></th>
-            <th>Unit</th>
-            <th>Absolute Weight</th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
 
-          <!-- S1 Card -->
-          <tr>
-            <td rowspan="4">S1 Card</td>
-            <td rowspan="4" class="role-text">
-              <p class="corp-p">Institutional & PA Key Account<span>8</span></p>
-              <p class="corp-p">Institutional & PA Sales Manager<span>1</span></p>
-            </td>
-            <td>
-              Orders
-            </td>
-            <td>
-              #
-            </td>
-            <td>
-              50.00%
-            </td>
-            <td rowspan="4">9</td>
-            <td rowspan="4">
-              <div class="actionBtn">
-                <span title="edit">
-                  <i class="fa-light fa-pen action-icon"></i>
-                </span>
+    <div class="cst-accordion" id="accordion">
+      <div class="data-card-item mb-3">
+        <a class="d-flex align-items-center justify-content-between data-card-name" data-bs-toggle="collapse"
+          href="#collapseOne">
+          <div class="data-card-title">
+            S1 Card
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="data-badge">9</span>
+          </div>
+        </a>
+        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+          <div class="tab-content tableContent" id="myTabContent">
+            <!-- <table class="table role-cards-table">
+              <thead>
+                <tr>
+                  <th>Card Name</th>
+                  <th>Associated Roles</th>
+                  <th colspan="3">Associated KPIs</th>
+                  <th>People</th>
+                  <th>Action</th>
+                </tr>
+                <tr class="second-th tr-sticky">
+                  <th></th>
+                  <th>Local Corporate - Institutional & PA</th>
+                  <th></th>
+                  <th>Unit</th>
+                  <th>Absolute Weight</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+                <tr>
+                  <td rowspan="4">S1 Card</td>
+                  <td rowspan="4" class="role-text">
+                    <p class="corp-p">Institutional & PA Key Account<span>8</span></p>
+                    <p class="corp-p">Institutional & PA Sales Manager<span>1</span></p>
+                  </td>
+                  <td>
+                    Orders
+                  </td>
+                  <td>
+                    #
+                  </td>
+                  <td>
+                    50.00%
+                  </td>
+                  <td rowspan="4">9</td>
+                  <td rowspan="4">
+                    <div class="actionBtn">
+                      <span title="edit">
+                        <i class="fa-light fa-pen action-icon"></i>
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Extensions</td>
+                  <td>#</td>
+                  <td>25.00%</td>
+                </tr>
+                <tr>
+                  <td class="disabled-gray">Orders x Profitability - Large</td>
+                  <td class="disabled-gray">#</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Flex</td>
+                  <td>#</td>
+                  <td>25.00%</td>
+                </tr>
+
+                <tr class="spacing-tr">
+                  <td colspan="7"></td>
+                </tr>
+
+              </tbody>
+            </table> -->
+            <div class="dashboard-container">
+              <div class="table-section">
+                <h2 class="section-header">Card Structure</h2>
+                <div class="grid card-structure">
+                  <div class="header-1 text-center">Weight</div>
+                  <div class="header-1 text-center">Associated KPIs</div>
+                  <div class="header-1 text-center">Incentive Curve</div>
+                  <div class="header-1 text-center">Payout Cap</div>
+
+                  <div class="cell text-center" data-label="Weight">50.00%</div>
+                  <div class="cell text-center bold" data-label="KPI">Orders</div>
+                  <div class="cell text-center" data-label="Curve">0% - Inf</div>
+                  <div class="cell text-center" data-label="Cap">150.00%</div>
+
+                  <div class="cell text-center">25.00%</div>
+                  <div class="cell text-center bold">Extensions</div>
+                  <div class="cell text-center">80% - Inf</div>
+                  <div class="cell text-center">-</div>
+
+                  <div class="cell text-center empty"></div>
+                  <div class="cell text-center secondary-text">Orders x Profitability - Large</div>
+                  <div class="cell text-center secondary-text">Profitability</div>
+                  <div class="cell text-center empty"></div>
+
+                  <div class="cell text-center">25.00%</div>
+                  <div class="cell text-center bold">Remark</div>
+                  <div class="cell text-center">80% - 150%</div>
+                  <div class="cell text-center">120.00%</div>
+                </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Extensions</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-          <tr>
-            <td class="disabled-gray">Orders x Profitability - Large</td>
-            <td class="disabled-gray">#</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Flex</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
 
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+              <div class="table-section">
+                <h2 class="section-header">Assignees</h2>
+                <div class="grid assignees-list">
+                  <div class="cell indent-0 underlined">Category 01</div>
+                  <div class="cell align-right">12</div>
 
-          <!-- S2 Card -->
-          <tr>
-            <td rowspan="4">S1 Card</td>
-            <td rowspan="4" class="role-text">
-              <p class="corp-p">Institutional & PA Key Account<span>8</span></p>
-              <p class="corp-p">Institutional & PA Sales Manager<span>1</span></p>
-            </td>
-            <td>
-              Orders
-            </td>
-            <td>
-              #
-            </td>
-            <td>
-              50.00%
-            </td>
-            <td rowspan="4">9</td>
-            <td rowspan="4">
-              <div class="actionBtn">
-                <span title="edit">
-                  <i class="fa-light fa-pen action-icon"></i>
-                </span>
+                  <div class="cell indent-1 underlined">Role 01</div>
+                  <div class="cell align-right">6</div>
+
+                  <div class="cell indent-1 underlined">Role 02</div>
+                  <div class="cell align-right">4</div>
+
+                  <div class="cell indent-1 underlined">Role 03</div>
+                  <div class="cell align-right">2</div>
+
+                  <div class="cell indent-0 underlined">Category 02</div>
+                  <div class="cell align-right">10</div>
+
+                  <div class="cell indent-1 underlined">Role 04</div>
+                  <div class="cell align-right">3</div>
+
+                  <div class="cell indent-1 underlined">Role 05</div>
+                  <div class="cell align-right">7</div>
+                </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Extensions</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-          <tr>
-            <td class="disabled-gray">Orders x Profitability - Large</td>
-            <td class="disabled-gray">#</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Flex</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="data-card-item mb-3">
+        <a class="d-flex align-items-center justify-content-between data-card-name" data-bs-toggle="collapse"
+          href="#collapseTwo">
+          <div class="data-card-title">
+            S2 Card
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="data-badge">9</span>
+          </div>
+        </a>
+        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+          <div class="tab-content tableContent" id="myTabContent">
+            <!-- <table class="table role-cards-table">
+              <thead>
+                <tr>
+                  <th>Card Name</th>
+                  <th>Associated Roles</th>
+                  <th colspan="3">Associated KPIs</th>
+                  <th>People</th>
+                  <th>Action</th>
+                </tr>
+                <tr class="second-th tr-sticky">
+                  <th></th>
+                  <th>Local Corporate - Institutional & PA</th>
+                  <th></th>
+                  <th>Unit</th>
+                  <th>Absolute Weight</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
 
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
 
-          <!-- S3 Card -->
-          <tr>
-            <td rowspan="4">S1 Card</td>
-            <td rowspan="4" class="role-text">
-              <p class="corp-p">Institutional & PA Key Account<span>8</span></p>
-              <p class="corp-p">Institutional & PA Sales Manager<span>1</span></p>
-            </td>
-            <td>
-              Orders
-            </td>
-            <td>
-              #
-            </td>
-            <td>
-              50.00%
-            </td>
-            <td rowspan="4">9</td>
-            <td rowspan="4">
-              <div class="actionBtn">
-                <span title="edit">
-                  <i class="fa-light fa-pen action-icon"></i>
-                </span>
+                <tr>
+                  <td rowspan="4">S1 Card</td>
+                  <td rowspan="4" class="role-text">
+                    <p class="corp-p">Institutional & PA Key Account<span>8</span></p>
+                    <p class="corp-p">Institutional & PA Sales Manager<span>1</span></p>
+                  </td>
+                  <td>
+                    Orders
+                  </td>
+                  <td>
+                    #
+                  </td>
+                  <td>
+                    50.00%
+                  </td>
+                  <td rowspan="4">9</td>
+                  <td rowspan="4">
+                    <div class="actionBtn">
+                      <span title="edit">
+                        <i class="fa-light fa-pen action-icon"></i>
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Extensions</td>
+                  <td>#</td>
+                  <td>25.00%</td>
+                </tr>
+                <tr>
+                  <td class="disabled-gray">Orders x Profitability - Large</td>
+                  <td class="disabled-gray">#</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Flex</td>
+                  <td>#</td>
+                  <td>25.00%</td>
+                </tr>
+
+                <tr class="spacing-tr">
+                  <td colspan="7"></td>
+                </tr>
+
+              </tbody>
+            </table> -->
+            <div class="dashboard-container">
+              <div class="table-section">
+                <h2 class="section-header">Card Structure</h2>
+                <div class="grid card-structure">
+                  <div class="header-1 text-center">Weight</div>
+                  <div class="header-1 text-center">Associated KPIs</div>
+                  <div class="header-1 text-center">Incentive Curve</div>
+                  <div class="header-1 text-center">Payout Cap</div>
+
+                  <div class="cell text-center" data-label="Weight">50.00%</div>
+                  <div class="cell text-center bold" data-label="KPI">Orders</div>
+                  <div class="cell text-center" data-label="Curve">0% - Inf</div>
+                  <div class="cell text-center" data-label="Cap">150.00%</div>
+
+                  <div class="cell text-center">25.00%</div>
+                  <div class="cell text-center bold">Extensions</div>
+                  <div class="cell text-center">80% - Inf</div>
+                  <div class="cell text-center">-</div>
+
+                  <div class="cell text-center empty"></div>
+                  <div class="cell text-center secondary-text">Orders x Profitability - Large</div>
+                  <div class="cell text-center secondary-text">Profitability</div>
+                  <div class="cell text-center empty"></div>
+
+                  <div class="cell text-center">25.00%</div>
+                  <div class="cell text-center bold">Remark</div>
+                  <div class="cell text-center">80% - 150%</div>
+                  <div class="cell text-center">120.00%</div>
+                </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Extensions</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-          <tr>
-            <td class="disabled-gray">Orders x Profitability - Large</td>
-            <td class="disabled-gray">#</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Flex</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
 
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+              <div class="table-section">
+                <h2 class="section-header">Assignees</h2>
+                <div class="grid assignees-list">
+                  <div class="cell indent-0 underlined">Category 01</div>
+                  <div class="cell align-right">12</div>
 
-          <!-- S4 Card -->
-          <tr>
-            <td rowspan="4">S1 Card</td>
-            <td rowspan="4" class="role-text">
-              <p class="corp-p">Institutional & PA Key Account<span>8</span></p>
-              <p class="corp-p">Institutional & PA Sales Manager<span>1</span></p>
-            </td>
-            <td>
-              Orders
-            </td>
-            <td>
-              #
-            </td>
-            <td>
-              50.00%
-            </td>
-            <td rowspan="4">9</td>
-            <td rowspan="4">
-              <div class="actionBtn">
-                <span title="edit">
-                  <i class="fa-light fa-pen action-icon"></i>
-                </span>
+                  <div class="cell indent-1 underlined">Role 01</div>
+                  <div class="cell align-right">6</div>
+
+                  <div class="cell indent-1 underlined">Role 02</div>
+                  <div class="cell align-right">4</div>
+
+                  <div class="cell indent-1 underlined">Role 03</div>
+                  <div class="cell align-right">2</div>
+
+                  <div class="cell indent-0 underlined">Category 02</div>
+                  <div class="cell align-right">10</div>
+
+                  <div class="cell indent-1 underlined">Role 04</div>
+                  <div class="cell align-right">3</div>
+
+                  <div class="cell indent-1 underlined">Role 05</div>
+                  <div class="cell align-right">7</div>
+                </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Extensions</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-          <tr>
-            <td>Orders x Profitability - Large</td>
-            <td>#</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Flex</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-
-          <!-- S4 Card -->
-          <tr>
-            <td rowspan="4">S1 Card</td>
-            <td rowspan="4" class="role-text">
-              <p class="corp-p">Institutional & PA Key Account<span>8</span></p>
-              <p class="corp-p">Institutional & PA Sales Manager<span>1</span></p>
-            </td>
-            <td>
-              Orders
-            </td>
-            <td>
-              #
-            </td>
-            <td>
-              50.00%
-            </td>
-            <td rowspan="4">9</td>
-            <td rowspan="4">
-              <div class="actionBtn">
-                <span title="edit">
-                  <i class="fa-light fa-pen action-icon"></i>
-                </span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Extensions</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-          <tr>
-            <td>Orders x Profitability - Large</td>
-            <td>#</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Flex</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-
-          <!-- S4 Card -->
-          <tr>
-            <td rowspan="4">S1 Card</td>
-            <td rowspan="4" class="role-text">
-              <p class="corp-p">Institutional & PA Key Account<span>8</span></p>
-              <p class="corp-p">Institutional & PA Sales Manager<span>1</span></p>
-            </td>
-            <td>
-              Orders
-            </td>
-            <td>
-              #
-            </td>
-            <td>
-              50.00%
-            </td>
-            <td rowspan="4">9</td>
-            <td rowspan="4">
-              <div class="actionBtn">
-                <span title="edit">
-                  <i class="fa-light fa-pen action-icon"></i>
-                </span>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>Extensions</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-          <tr>
-            <td>Orders x Profitability - Large</td>
-            <td>#</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Flex</td>
-            <td>#</td>
-            <td>25.00%</td>
-          </tr>
-
-        </tbody>
-      </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <nav class="pagination-container">
       <ul class="pagination list-unstyled">
@@ -622,6 +689,7 @@
 
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="assets/js/custom.js"></script>
 </body>
 

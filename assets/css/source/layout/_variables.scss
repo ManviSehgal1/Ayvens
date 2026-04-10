@@ -1,4 +1,6 @@
-$white:    #FFFFFF !default;
+@use "sass:string";
+
+$white: #FFFFFF !default;
 
 /* Fonts settings */
 $body-font-family: 'Sora', sans-serif;
@@ -40,4 +42,4 @@ $border-form-color: #DBDBDB;
 $transition-animate: all ease 0.4s;
 
 /* important */
-$i: unquote("!important");
+$i: string.unquote("!important");

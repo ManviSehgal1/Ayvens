@@ -14719,18 +14719,29 @@ p {
     font-size: 14px;
   }
 }
+.count-badge {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: rgba(63, 93, 109, 0.4392156863);
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
 .data-card-name {
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
-  background-color: #ffc001;
-  padding: 10px 15px;
+  background-color: #0f3549;
+  padding: 10px 16px;
+  border-radius: 5px;
 }
 .data-card-name:hover {
-  background-color: #ffc001;
-  color: #000000;
+  background-color: #0f3549;
+  color: #fff;
 }
 
 .dashboard-container {
@@ -14741,15 +14752,22 @@ p {
   padding: 15px;
 }
 .dashboard-container .table-section {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  background-color: #fff;
   border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dashboard-container .table-section:last-child {
+  margin-bottom: 0;
 }
 .dashboard-container .table-section .section-header {
   background-color: #dcdcdc;
-  padding: 10px 15px;
-  font-size: 1.1rem;
+  padding: 10px 16px;
+  font-size: 1rem;
   font-weight: bold;
   margin: 0;
+  cursor: pointer;
 }
 .dashboard-container .grid {
   display: grid;
@@ -14772,7 +14790,7 @@ p {
   max-width: 600px;
 }
 .dashboard-container .header-1 {
-  font-size: 0.85rem;
+  font-size: 14px;
   font-weight: 800;
   font-style: italic;
   border-bottom: 1px solid #eee;
@@ -14784,7 +14802,7 @@ p {
   }
 }
 .dashboard-container .cell {
-  font-size: 0.95rem;
+  font-size: 16px;
   padding: 2px 10px;
 }
 .dashboard-container .cell.bold {
@@ -14792,7 +14810,7 @@ p {
 }
 .dashboard-container .cell.secondary-text {
   color: #999;
-  font-size: 0.85rem;
+  font-size: 14px;
 }
 .dashboard-container .cell.align-right {
   text-align: right;
@@ -14831,6 +14849,9 @@ p {
   }
 }
 
+.cst-accordion {
+  padding-bottom: 30px;
+}
 .cst-accordion .tableContent {
   padding: 0;
 }
@@ -15212,4 +15233,54 @@ body .select2-multiple-dv .select2-container--default:after {
   width: 10px;
   height: 12px;
   padding: 0;
+}
+
+.assignees-root-table {
+  padding: 10px 100px;
+  overflow-x: auto;
+}
+@media (max-width: 992px) {
+  .assignees-root-table {
+    padding-inline: 15px;
+  }
+}
+
+.table.table-cst-role th,
+.table.table-cst-role td {
+  border-bottom: 1px solid rgba(220, 220, 220, 0.8) !important;
+  width: 50%;
+  padding: 8px 15px 8px 15px;
+  box-shadow: none;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 15px !important;
+  height: 40px;
+  letter-spacing: 0;
+}
+.table.table-cst-role th {
+  padding-left: 120px;
+  font-weight: 400;
+}
+@media (max-width: 992px) {
+  .table.table-cst-role th {
+    padding-left: 15px;
+  }
+}
+.table.table-cst-role td:last-child {
+  text-align: right;
+}
+.table.table-cst-role .category-tr {
+  padding-left: 8px;
+}
+.table.table-cst-role .category-tr th {
+  padding-left: 8px;
+}
+.table.table-cst-role .category-tr th,
+.table.table-cst-role .category-tr td {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+.table.table-cst-role tr:last-child th,
+.table.table-cst-role tr:last-child td {
+  border-bottom: none !important;
 }/*# sourceMappingURL=style.css.map */

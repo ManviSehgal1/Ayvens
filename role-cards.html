@@ -273,12 +273,12 @@
                   <div class="d-flex flex-column">
                     <label class="form-label label-custom mb-2">KPI</label>
                     <div class="select-dv select2-multiple-dv">
-                    <select id="projectsSelect" class="form-select select2-custom" multiple="multiple">
-                      <option value="orders">Orders</option>
-                      <option value="extensions">Extensions</option>
-                      <option value="profitability">Profitability</option>
-                      <option value="remark">Remark</option>
-                    </select>
+                      <select id="projectsSelect" class="form-select select2-custom" multiple="multiple">
+                        <option value="orders">Orders</option>
+                        <option value="extensions">Extensions</option>
+                        <option value="profitability">Profitability</option>
+                        <option value="remark">Remark</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -288,10 +288,10 @@
                   <div class="d-flex flex-column">
                     <label class="form-label label-custom mb-2">Category</label>
                     <div class="select-dv select2-multiple-dv">
-                    <select id="projectsSelect1" class="form-select select2-custom" multiple="multiple">
-                      <option value="cat-01">Category 01</option>
-                      <option value="cat-02">Category 02</option>
-                    </select>
+                      <select id="projectsSelect1" class="form-select select2-custom" multiple="multiple">
+                        <option value="cat-01">Category 01</option>
+                        <option value="cat-02">Category 02</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -299,14 +299,14 @@
               <div class="col-12 d-flex flex-column mt-2">
                 <label class="form-label label-custom mb-2">Role</label>
                 <div class="select-dv">
-                <select id="customerSelect" class="form-select select2-custom">
-                  <option value="">Select a role</option>
-                  <option value="role-01">Role 01</option>
-                  <option value="role-02">Role 02</option>
-                  <option value="role-03">Role 03</option>
-                  <option value="role-04">Role 04</option>
-                  <option value="role-05">Role 05</option>
-                </select>
+                  <select id="customerSelect" class="form-select select2-custom">
+                    <option value="">Select a role</option>
+                    <option value="role-01">Role 01</option>
+                    <option value="role-02">Role 02</option>
+                    <option value="role-03">Role 03</option>
+                    <option value="role-04">Role 04</option>
+                    <option value="role-05">Role 05</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -350,40 +350,61 @@
           <div class="tab-content tableContent" id="myTabContent">
             <div class="dashboard-container">
               <div class="table-section">
-                <h2 class="section-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapseCS1_1">Card Structure</h2>
+                <h2 class="section-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapseCS1_1">Card
+                  Structure</h2>
                 <div class="collapse show" id="collapseCS1_1">
-                  <div class="grid card-structure">
-                    <div class="header-1 text-center">Weight</div>
-                    <div class="header-1 text-center">Associated KPIs</div>
-                    <div class="header-1 text-center">Incentive Curve</div>
-                    <div class="header-1 text-center">Payout Cap</div>
+                  <div class="table-responsive table-data-cst">
+                    <table class="table align-middle">
+                      <thead class="border-bottom">
+                        <tr>
+                          <th class="text-center">Weight</th>
+                          <th>Associated KPIs</th>
+                          <th class="text-center">Incentive Curve</th>
+                          <th class="text-center">Payout Cap</th>
+                        </tr>
+                      </thead>
 
-                    <div class="cell text-center" data-label="Weight">50.00%</div>
-                    <div class="cell text-center bold" data-label="KPI">Orders</div>
-                    <div class="cell text-center" data-label="Curve">0% - Inf</div>
-                    <div class="cell text-center" data-label="Cap">150.00%</div>
+                      <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                          <td class="text-center">50.00%</td>
+                          <td class="fw-semibold">Orders</td>
+                          <td class="text-center">0% - Inf</td>
+                          <td class="text-center">150.00%</td>
+                        </tr>
 
-                    <div class="cell text-center">25.00%</div>
-                    <div class="cell text-center bold">Extensions</div>
-                    <div class="cell text-center">80% - Inf</div>
-                    <div class="cell text-center">-</div>
+                        <!-- Row 2 -->
+                        <tr>
+                          <td class="text-center">25.00%</td>
+                          <td class="fw-semibold">
+                            Extension
+                            <br>
+                            <span class="sub-text kpi-sub-text">Orders x Profitability - Large </span>
+                          </td>
+                          <td class="text-center">
+                            80% - Inf
+                            <br>
+                            <span class="sub-text"> Profitability</span>
+                          </td>
+                          <td class="text-center">-</td>
+                        </tr>
 
-                    <div class="cell text-center empty"></div>
-                    <div class="cell text-center secondary-text">Orders x Profitability - Large</div>
-                    <div class="cell text-center secondary-text">Profitability</div>
-                    <div class="cell text-center empty"></div>
-
-                    <div class="cell text-center">25.00%</div>
-                    <div class="cell text-center bold">Remark</div>
-                    <div class="cell text-center">80% - 150%</div>
-                    <div class="cell text-center">120.00%</div>
+                        <!-- Row 3 -->
+                        <tr>
+                          <td class="text-center">25.00%</td>
+                          <td class="fw-semibold">Remark</td>
+                          <td class="text-center">80% - 150%</td>
+                          <td class="text-center">100.00%</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
 
               <div class="table-section">
                 <h2 class="section-header" data-bs-toggle="collapse" data-bs-target="#collapseAS1_2">Assignees</h2>
-                <div class="collapse"id="collapseAS1_2">
+                <div class="collapse show" id="collapseAS1_2">
                   <div class="assignees-root-table">
                     <table class="table table-cst-role">
                       <tr class="category-tr">
@@ -438,40 +459,61 @@
           <div class="tab-content tableContent" id="myTabContent">
             <div class="dashboard-container">
               <div class="table-section">
-                <h2 class="section-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapseCS1_1">Card Structure</h2>
+                <h2 class="section-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapseCS1_1">Card
+                  Structure</h2>
                 <div class="collapse show" id="collapseCS1_1">
-                  <div class="grid card-structure">
-                    <div class="header-1 text-center">Weight</div>
-                    <div class="header-1 text-center">Associated KPIs</div>
-                    <div class="header-1 text-center">Incentive Curve</div>
-                    <div class="header-1 text-center">Payout Cap</div>
+                  <div class="table-responsive table-data-cst">
+                    <table class="table align-middle">
+                      <thead class="border-bottom">
+                        <tr>
+                          <th class="text-center">Weight</th>
+                          <th>Associated KPIs</th>
+                          <th class="text-center">Incentive Curve</th>
+                          <th class="text-center">Payout Cap</th>
+                        </tr>
+                      </thead>
 
-                    <div class="cell text-center" data-label="Weight">50.00%</div>
-                    <div class="cell text-center bold" data-label="KPI">Orders</div>
-                    <div class="cell text-center" data-label="Curve">0% - Inf</div>
-                    <div class="cell text-center" data-label="Cap">150.00%</div>
+                      <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                          <td class="text-center">50.00%</td>
+                          <td class="fw-semibold">Orders</td>
+                          <td class="text-center">0% - Inf</td>
+                          <td class="text-center">150.00%</td>
+                        </tr>
 
-                    <div class="cell text-center">25.00%</div>
-                    <div class="cell text-center bold">Extensions</div>
-                    <div class="cell text-center">80% - Inf</div>
-                    <div class="cell text-center">-</div>
+                        <!-- Row 2 -->
+                        <tr>
+                          <td class="text-center">25.00%</td>
+                          <td class="fw-semibold">
+                            Extension
+                            <br>
+                            <span class="sub-text kpi-sub-text">Orders x Profitability - Large </span>
+                          </td>
+                          <td class="text-center">
+                            80% - Inf
+                            <br>
+                            <span class="sub-text"> Profitability</span>
+                          </td>
+                          <td class="text-center">-</td>
+                        </tr>
 
-                    <div class="cell text-center empty"></div>
-                    <div class="cell text-center secondary-text">Orders x Profitability - Large</div>
-                    <div class="cell text-center secondary-text">Profitability</div>
-                    <div class="cell text-center empty"></div>
-
-                    <div class="cell text-center">25.00%</div>
-                    <div class="cell text-center bold">Remark</div>
-                    <div class="cell text-center">80% - 150%</div>
-                    <div class="cell text-center">120.00%</div>
+                        <!-- Row 3 -->
+                        <tr>
+                          <td class="text-center">25.00%</td>
+                          <td class="fw-semibold">Remark</td>
+                          <td class="text-center">80% - 150%</td>
+                          <td class="text-center">100.00%</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
 
               <div class="table-section">
                 <h2 class="section-header" data-bs-toggle="collapse" data-bs-target="#collapseAS1_2">Assignees</h2>
-                <div class="collapse"id="collapseAS1_2">
+                <div class="collapse show" id="collapseAS1_2">
                   <div class="assignees-root-table">
                     <table class="table table-cst-role">
                       <tr class="category-tr">

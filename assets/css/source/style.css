@@ -14809,12 +14809,12 @@ p {
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
-  background-color: #008484;
+  background-color: #0f3549;
   padding: 10px 16px;
   border-radius: 5px;
 }
 .data-card-name:hover {
-  background-color: #008484;
+  background-color: #0f3549;
   color: #fff;
 }
 
@@ -15358,22 +15358,3 @@ body .select2-multiple-dv .select2-container--default:after {
 .table.table-cst-role tr:last-child td {
   border-bottom: none !important;
 }
-
-.table-responsive.table-data-cst .table thead tr th {
-  font-size: 16px;
-  color: #000;
-  font-weight: 600;
-  border-bottom: 2px solid #000;
-  background-color: transparent;
-}
-.table-responsive.table-data-cst .table tbody tr:not(:last-child) {
-  border-bottom: 1px solid #dee2e6;
-}
-.table-responsive.table-data-cst .kpi-sub-text {
-  color: #ccc;
-}
-.table-responsive.table-data-cst .sub-text {
-  display: block;
-  width: 100%;
-  margin-top: 20px;
-}/*# sourceMappingURL=style.css.map */

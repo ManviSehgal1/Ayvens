@@ -4155,12 +4155,12 @@
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
-  background-color: #0f3549;
+  background-color: #008484;
   padding: 10px 16px;
   border-radius: 5px;
 
   &:hover {
-    background-color: #0f3549;
+    background-color: #008484;
     color: #fff;
   }
 }
@@ -4786,5 +4786,36 @@ body .select2-multiple-dv .select2-container--default:after {
         border-bottom: none !important;
       }
     }
+  }
+}
+
+.table-responsive.table-data-cst {
+  .table {
+    thead {
+      tr th {
+        font-size: 16px;
+        color: #000;
+        font-weight: 600;
+        border-bottom: 2px solid #000;
+        background-color: transparent;
+      }
+    }
+
+    tbody {
+
+      tr:not(:last-child) {
+        border-bottom: 1px solid #dee2e6;
+      }
+    }
+  }
+
+  .kpi-sub-text {
+    color: #ccc;
+  }
+
+  .sub-text {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
   }
 }

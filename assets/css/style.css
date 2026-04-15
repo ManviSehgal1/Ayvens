@@ -15363,8 +15363,11 @@ body .select2-multiple-dv .select2-container--default:after {
   font-size: 16px;
   color: #000;
   font-weight: 600;
-  border-bottom: 2px solid #000;
-  background-color: transparent;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+}
+.table-responsive.table-data-cst .table tbody tr td {
+  font-size: 15px;
 }
 .table-responsive.table-data-cst .table tbody tr:not(:last-child) {
   border-bottom: 1px solid #dee2e6;
@@ -15375,5 +15378,5 @@ body .select2-multiple-dv .select2-container--default:after {
 .table-responsive.table-data-cst .sub-text {
   display: block;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */

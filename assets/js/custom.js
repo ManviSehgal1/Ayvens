@@ -88,4 +88,24 @@ $(document).ready(function () {
     });
   });
 
+  // Initialize when modal opens
+  $('#nwModal').on('shown.bs.modal', function () {
+
+    // Datepicker
+    $('.datepicker').datepicker({
+      format: 'dd-mm-yyyy',
+      autoclose: true,
+      todayHighlight: true,
+      container: '#nwModal',
+      orientation: 'bottom auto'
+    });
+
+    // Select2 (important: dropdownParent for modal)
+    $('.select2-sessioni').select2({
+      dropdownParent: $('#nwModal'),
+      width: '100%'
+    });
+
+  });
+
 });

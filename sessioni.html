@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Role Cards - Policies | Ayvens</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-light">
+            <div class="sidebarLogo sideBarPadding">
+                <a href="research.html">
+                    <img src="assets/images/logo-white.svg" alt="Logo" class="sidebarMainLogo" />
+                </a>
+            </div>
+            <div class="headerTop">
+                <div class="topTitle">
+                    <h1 class="header-title d-none d-xl-inline">Associated Cards and Roles</h1>
+                </div>
+                <div class="user-info">
+                    <div class="dropdown">
+                        <a class="userMenuLink userLink dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false" href="#" title="John Smith">
+                            <i class="fa-light fa-circle-user"></i>
+                            <span class="d-none d-xl-inline">John Smith</span>
+                            <span class="d-none d-xl-inline"><i class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li>
+                                <a class="userMenuLink" href="login.html">
+                                    <i class="fa-light fa-arrow-left-from-bracket"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileSidebarContent" aria-expanded="false" aria-label="Toggle navigation"
+                id="menu-toggle-btn">
+                <span class="navbar-toggler-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </nav>
+    </header>
+    <div class="mainSidebar">
+        <div class="collapse sidebarContent" id="mobileSidebarContent">
+            <ul class="sidebarMenu list-unstyled main-sidebar sideBarPadding" id="accordionParent">
+                <li>
+                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#cards-collapse" aria-expanded="false" title="cards">
+                        <i class="fa-light fa-grid-2"></i>
+                        Cards
+                    </button>
+                    <div class="sideMenuWrapper collapse" id="cards-collapse" data-bs-parent="#accordionParent">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="research.html" title="research" class="dropdown-item">Research</a>
+                            </li>
+                            <li>
+                                <a href="individual-card.html" title="individual card" class="dropdown-item">Individual
+                                    Card</a>
+                            </li>
+                            <li>
+                                <a href="state-management.html" title="state management" class="dropdown-item">State
+                                    Management</a>
+                            </li>
+                            <li>
+                                <a href="import-kpi.html" title="import kpi" class="dropdown-item">Import KPI</a>
+                            </li>
+                            <li>
+                                <a href="participants.html" title="participants" class="dropdown-item">Participants</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#payments-collapse" aria-expanded="false" title="payments">
+                        <i class="fa-light fa-grid-2"></i>
+                        Payments
+                    </button>
+                    <div class="sideMenuWrapper collapse" id="payments-collapse" data-bs-parent="#accordionParent">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="mass-liquidations.html" title="mass liquidations" class="dropdown-item">Mass
+                                    Liquidations</a>
+                            </li>
+                            <li>
+                                <a href="single-liquidation.html" title="single liquidation"
+                                    class="dropdown-item">Single
+                                    Liquidation</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="report.html" title="report" class="sideMenuLink">
+                        <i class="fa-light fa-grid-2"></i>
+                        Report
+                    </a>
+                </li>
+                <li>
+                    <button class="sidebarMenuButton sideMenuLink" data-bs-toggle="collapse"
+                        data-bs-target="#policies-collapse" aria-expanded="true">
+                        <i class="fa-light fa-grid-2"></i>
+                        Policies
+                    </button>
+                    <div class="sideMenuWrapper collapse show" id="policies-collapse" data-bs-parent="#accordionParent">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="role-cards.html" title="role cards" class="dropdown-item active">Role Cards</a>
+                            </li>
+                            <li>
+                                <a href="kpi.html" title="kpi" class="dropdown-item">KPI</a>
+                            </li>
+                            <li>
+                                <a href="overtarget-kpis.html" title="overtarget kpis" class="dropdown-item">Overtarget
+                                    KPIs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#organization-collapse" aria-expanded="false" title="organization">
+                        <i class="fa-light fa-grid-2"></i>
+                        Organization
+                    </button>
+                    <div class="sideMenuWrapper collapse" id="organization-collapse" data-bs-parent="#accordionParent">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="people.html" title="people" class="dropdown-item">People</a>
+                            </li>
+                            <li>
+                                <a href="roles.html" title="roles" class="dropdown-item">Roles</a>
+                            </li>
+                            <li>
+                                <a href="organizational-units.html" title="organizational units"
+                                    class="dropdown-item">Organizational
+                                    Units</a>
+                            </li>
+                            <li>
+                                <a href="utilities.html" title="utilities" class="dropdown-item">Utilities</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="security.html" title="security" class="sideMenuLink">
+                        <i class="fa-light fa-grid-2"></i>
+                        Security
+                    </a>
+                </li>
+                <li>
+                    <button class="sidebarMenuButton sideMenuLink collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#messaging-collapse" aria-expanded="false" title="messaging">
+                        <i class="fa-light fa-grid-2"></i>
+                        Messaging
+                    </button>
+                    <div class="sideMenuWrapper collapse" id="messaging-collapse" data-bs-parent="#accordionParent">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="log-mail.html" title="log mail" class="dropdown-item">Log Mail</a>
+                            </li>
+                            <li>
+                                <a href="template-management.html" title="template management"
+                                    class="dropdown-item">Template
+                                    Management</a>
+                            </li>
+                            <li>
+                                <a href="shipment-management.html" title="shipment management"
+                                    class="dropdown-item">Shipment
+                                    Management</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="epicenter.html" title="epicenter" class="sideMenuLink">
+                        <i class="fa-light fa-grid-2"></i>
+                        Epicenter
+                    </a>
+                </li>
+                <li>
+                    <a class="sideMenuLink" href="setting.html" title="setting">
+                        <i class="fa-light fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="contentBlock import-kpi-section">
+        <div class="topMainTitle">
+            <div class="topTitle">Lorem Ipsum</div>
+        </div>
+
+        <div class="filter-root">
+            <div class="filterBlock flex-column flex-sm-row align-items-start justify-content-end">
+                <div class="d-flex">
+                    <a href="#" class="btn btn-primary btn-medium">Nuova sessione</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentBlock sessioni-table">
+            <div class="tableContent">
+                <div class="table-wrapper-sessioni">
+
+                    <div class="table-responsive">
+                        <table class="table custom-table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Data di inizio</th>
+                                    <th>Data di fine</th>
+                                    <th>Periodicità</th>
+                                    <th>Tipologia di sessione</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2026 Trim</td>
+                                    <td>01/01/2026</td>
+                                    <td>31/12/2026</td>
+                                    <td>Trimestrale</td>
+                                    <td>Chiusa</td>
+                                    <td class="text-end">
+                                        <div data-bs-toggle="modal" data-bs-target="#nwModal">
+                                            <i class="fa-light fa-pen"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2025 Anno</td>
+                                    <td>01/01/2025</td>
+                                    <td>31/12/2025</td>
+                                    <td>Annuale</td>
+                                    <td>Chiusa</td>
+                                    <td class="text-end">
+                                        <div class="open-modal-sessioni">
+                                            <i class="fa-light fa-pen"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2025 Trim</td>
+                                    <td>01/01/2025</td>
+                                    <td>31/12/2025</td>
+                                    <td>Trimestrale</td>
+                                    <td>Chiusa</td>
+                                    <td class="text-end">
+                                        <div class="open-modal-sessioni">
+                                            <i class="fa-light fa-pen"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2024 Anno</td>
+                                    <td>01/01/2024</td>
+                                    <td>31/12/2024</td>
+                                    <td>Annuale</td>
+                                    <td>Chiusa</td>
+                                    <td class="text-end">
+                                        <div class="open-modal-sessioni">
+                                            <i class="fa-light fa-pen"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade modal-sessioni" id="nwModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-data">
+                        <div class="row">
+
+                            <!-- Datepicker 1 -->
+                            <div class="col-md-6 mb-3">
+                                <label>Date</label>
+                                <input type="text" class="form-control datepicker" placeholder="Select Date">
+                            </div>
+
+                            <!-- Datepicker 2 -->
+                            <div class="col-md-6 mb-3">
+                                <label>Date</label>
+                                <input type="text" class="form-control datepicker" placeholder="Select Date">
+                            </div>
+
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label>DDL single choice</label>
+                                <select class="form-control select2-sessioni">
+                                    <option value="">Select option</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>DDL single choice</label>
+                                <select class="form-control select2-sessioni">
+                                    <option value="">Select option</option>
+                                    <option>Option A</option>
+                                    <option>Option B</option>
+                                    <option>Option C</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn clear-modal-btn">Annulla</button>
+                    <button type="button" class="btn btn-normal-blue">Salva</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

@@ -106,6 +106,13 @@ $(document).ready(function () {
       width: '100%'
     });
 
+    $('.select2-funzioni').select2({
+      dropdownParent: $('#nwModal'),
+      width: '100%'
+    });
+
   });
+
+
 
 });

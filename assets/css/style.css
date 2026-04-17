@@ -15440,12 +15440,6 @@ body .select2-multiple-dv .select2-container--default:after {
   color: #000;
 }
 
-.sessioni-table {
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
 .btn-normal-blue {
   padding: 10px 20px;
   border-radius: 6px;
@@ -15476,4 +15470,66 @@ body .select2-multiple-dv .select2-container--default:after {
 
 .modal-sessioni .modal-dialog {
   max-width: 800px;
+}
+
+.sessioni-table {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .sessioni-table .custom-table {
+    width: 800px;
+  }
+}
+.sessioni-table .tb-head.head-name {
+  width: 25%;
+}
+.sessioni-table .tb-head.head-session-type {
+  width: 15%;
+}
+
+.row-box-area .data-line-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row-box-area .data-line-inner:first-child {
+  gap: 30px;
+}
+.row-box-area .data-line-inner .data-check-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.row-box-area .data-line-inner .data-col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.row-box-area .header-data {
+  text-align: center;
+}
+
+.add-data-btn,
+.remove-data-btn {
+  background-color: #18a45f;
+  color: #fff;
+  border-radius: 50%;
+  border: 0;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.remove-data-btn {
+  background-color: #ff2d12;
+}
+
+.header-data,
+.data-line-inner {
+  padding: 15px 5px;
 }/*# sourceMappingURL=style.css.map */

@@ -226,9 +226,20 @@
         </div>
 
         <div class="filter-root">
-            <div class="filterBlock flex-column flex-sm-row align-items-start justify-content-end">
+            <div class="filterBlock flex-column flex-sm-row align-items-start justify-content-between">
+                <div class="dropdown custom-dropdown width-all-100-sm">
+                    <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        2025 Quarter <i class="fa-regular fa-chevron-down ms-2"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
+                        <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
+                        <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
+                    </ul>
+                </div>
                 <div class="d-flex">
-                    <a href="#" class="btn all-btn whiteBtn">Nuova sessione</a>
+                    <a href="#" class="btn all-btn whiteBtn">Nuova funzione</a>
                 </div>
             </div>
         </div>
@@ -237,74 +248,78 @@
             <div class="tableContent">
                 <div class="table-wrapper-sessioni">
 
-                    <div class="table-responsive">
-                        <table class="table custom-table align-middle">
-                            <thead>
-                                <tr>
-                                    <th class="tb-head head-name">Nome</th>
-                                    <th class="tb-head head-start-date">Data di inizio</th>
-                                    <th class="tb-head head-end-date">Data di fine</th>
-                                    <th class="tb-head head-periodicity">Periodicità</th>
-                                    <th class="tb-head head-session-type">Tipologia di sessione</th>
-                                    <th class="tb-head"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>2026 Trim</td>
-                                    <td>01/01/2026</td>
-                                    <td>31/12/2026</td>
-                                    <td>Trimestrale</td>
-                                    <td>Chiusa</td>
-                                    <td class="text-end">
-                                        <div data-bs-toggle="modal" data-bs-target="#nwModal">
-                                            <i class="fa-light fa-pen"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2025 Anno</td>
-                                    <td>01/01/2025</td>
-                                    <td>31/12/2025</td>
-                                    <td>Annuale</td>
-                                    <td>Chiusa</td>
-                                    <td class="text-end">
-                                        <div class="open-modal-sessioni">
-                                            <i class="fa-light fa-pen"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2025 Trim</td>
-                                    <td>01/01/2025</td>
-                                    <td>31/12/2025</td>
-                                    <td>Trimestrale</td>
-                                    <td>Chiusa</td>
-                                    <td class="text-end">
-                                        <div class="open-modal-sessioni">
-                                            <i class="fa-light fa-pen"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2024 Anno</td>
-                                    <td>01/01/2024</td>
-                                    <td>31/12/2024</td>
-                                    <td>Annuale</td>
-                                    <td>Chiusa</td>
-                                    <td class="text-end">
-                                        <div class="open-modal-sessioni">
-                                            <i class="fa-light fa-pen"></i>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table class="table custom-table align-middle mb-0 participants-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>KPI’s Name & KPI’s Description</th>
+                                <th>Tipologia di funzione</th>
+                                <th class="text-end">Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>
+                                    <div class="">Gate pagamento > 0</div>
+                                    <small>Create admin dashboard with charts and analytics.</small>
+                                </td>
+                                <td>Management</td>
+                                <td class="text-end">
+                                    <div data-bs-toggle="modal" data-bs-target="#nwModal">
+                                        <i class="fa-light fa-pen"></i>
+                                    </div>
+                                </td>
+                            </tr>
 
+                            <tr>
+                                <td>#002</td>
+                                <td>
+                                    <div class="">Soglia Mobile a Step</div>
+                                    <small>Manage user roles and permission settings.</small>
+                                </td>
+                                <td>Security</td>
+                                <td class="text-end">
+                                    <div>
+                                        <i class="fa-light fa-pen"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#003</td>
+                                <td>
+                                    <div class="">Soglia Mobile -2.5</div>
+                                    <small>Generate monthly reports with export options.</small>
+                                </td>
+                                <td>Analytics</td>
+                                <td class="text-end">
+                                    <div>
+                                        <i class="fa-light fa-pen"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#004</td>
+                                <td>
+                                    <div class="">ON/OFF Inversa</div>
+                                    <small>Send alerts and system notifications.</small>
+                                </td>
+                                <td>Communication</td>
+                                <td class="text-end">
+                                    <div>
+                                        <i class="fa-light fa-pen"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+
             </div>
         </div>
+    </div>
 
     </div>
 
@@ -313,43 +328,109 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="modal-data">
-                        <div class="row">
-
-                            <!-- Datepicker 1 -->
-                            <div class="col-md-6 mb-3">
-                                <label>Date</label>
-                                <input type="text" class="form-control datepicker" placeholder="Select Date">
+                        <!-- Row 1 -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" placeholder="Enter Name">
                             </div>
 
-                            <!-- Datepicker 2 -->
-                            <div class="col-md-6 mb-3">
-                                <label>Date</label>
-                                <input type="text" class="form-control datepicker" placeholder="Select Date">
+                            <div class="col-md-6">
+                                <label class="form-label">Description</label>
+                                <input type="text" class="form-control" placeholder="Enter Description">
                             </div>
+                        </div>
 
-                            <div class="col-md-6 mb-3">
-                                <label>DDL single choice</label>
-                                <select class="form-control select2-sessioni">
-                                    <option value="">Select option</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
+                        <!-- Row 2 -->
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <label class="form-label">Function Type</label>
+                                <select class="form-control select2-funzioni">
+                                    <option value="">Select Function Type</option>
+                                    <option>Type 1</option>
+                                    <option>Type 2</option>
+                                    <option>Type 3</option>
                                 </select>
                             </div>
+                        </div>
 
-                            <div class="col-md-6 mb-3">
-                                <label>DDL single choice</label>
-                                <select class="form-control select2-sessioni">
-                                    <option value="">Select option</option>
-                                    <option>Option A</option>
-                                    <option>Option B</option>
-                                    <option>Option C</option>
-                                </select>
+                        <!-- Buttons -->
+                        <div class="row mb-4">
+                            <div class="col-md-12 text-end">
+                                <button type="button" class="btn clear-modal-btn">Annulla</button>
+                                <button type="button" class="btn btn-normal-blue">Salva</button>
                             </div>
+                        </div>
 
-                            <div class="col-12 mb-3 mb-md-0 inputPadding">
-                                <label class="form-label">Session Name</label>
-                                <input type="text" class="form-control" placeholder="Edit Session Name">
+                        <!-- Table Row Like Image -->
+                        <div class="row-box-area overflow-hidden">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-4 header-data border-bottom">% Target</div>
+                                <div class="col-4 header-data border-bottom">Function</div>
+                                <div class="col-4 header-data border-bottom"><button type="button"
+                                        class="add-data-btn"><i class="fa-solid fa-plus"></i> </button></div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-line-inner col-4 border-bottom">
+                                    <div class="data-col">
+                                        <div class="data-check-box">
+                                            <div class="data-col-value">
+                                                0.84
+                                            </div>
+                                            <span class="form-check-wrapper">
+                                                <input class="form-check-input" type="checkbox">
+                                                <span class="check-tick"></span>
+                                            </span>
+                                        </div>
+                                        <div class="data-check-box">
+                                            <span class="form-check-wrapper">
+                                                <input class="form-check-input" type="checkbox">
+                                                <span class="check-tick"></span>
+                                            </span>
+                                            <div class="data-col-value">
+                                                0.84
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-line-inner col-4 border-bottom">
+                                    0
+                                </div>
+                                <div class="data-col col-4 text-center d-flex align-items-center border-bottom">
+                                    <button type="button" class="remove-data-btn"><i
+                                            class="fa-solid fa-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="data-row row">
+                                <div class="data-line-inner col-4">
+                                    <div class="data-col">
+                                        <div class="data-check-box">
+                                            <div class="data-col-value">
+                                                0.84
+                                            </div>
+                                            <span class="form-check-wrapper">
+                                                <input class="form-check-input" type="checkbox">
+                                                <span class="check-tick"></span>
+                                            </span>
+                                        </div>
+                                        <div class="data-check-box">
+                                            <span class="form-check-wrapper">
+                                                <input class="form-check-input" type="checkbox">
+                                                <span class="check-tick"></span>
+                                            </span>
+                                            <div class="data-col-value">
+                                                0.84
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-line-inner col-4">
+                                    0
+                                </div>
+                                <div class="data-col col-4 text-center d-flex align-items-center">
+                                    <button type="button" class="remove-data-btn"><i class="fa-solid fa-minus"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

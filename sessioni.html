@@ -228,7 +228,8 @@
         <div class="filter-root">
             <div class="filterBlock flex-column flex-sm-row align-items-start justify-content-end">
                 <div class="d-flex">
-                    <a href="#" class="btn all-btn whiteBtn">Nuova sessione</a>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#nwModal"
+                        class="btn all-btn whiteBtn">Nuova sessione</a>
                 </div>
             </div>
         </div>
@@ -315,6 +316,11 @@
                     <div class="modal-data">
                         <div class="row">
 
+                            <div class="col-12 mb-3 inputPadding">
+                                <label class="form-label">Session Name</label>
+                                <input type="text" class="form-control" placeholder="Edit Session Name">
+                            </div>
+
                             <!-- Datepicker 1 -->
                             <div class="col-md-6 mb-3">
                                 <label>Date</label>
@@ -327,7 +333,7 @@
                                 <input type="text" class="form-control datepicker" placeholder="Select Date">
                             </div>
 
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
                                 <label>DDL single choice</label>
                                 <select class="form-control select2-sessioni">
                                     <option value="">Select option</option>
@@ -337,7 +343,7 @@
                                 </select>
                             </div>
 
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-6">
                                 <label>DDL single choice</label>
                                 <select class="form-control select2-sessioni">
                                     <option value="">Select option</option>
@@ -347,10 +353,6 @@
                                 </select>
                             </div>
 
-                            <div class="col-12 mb-3 mb-md-0 inputPadding">
-                                <label class="form-label">Session Name</label>
-                                <input type="text" class="form-control" placeholder="Edit Session Name">
-                            </div>
                         </div>
                     </div>
                 </div>

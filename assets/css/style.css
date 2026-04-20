@@ -15538,6 +15538,19 @@ body .select2-multiple-dv .select2-container--default:after {
   gap: 10px;
 }
 
+.datepicker.datepicker-dropdown {
+  font-size: 11px;
+  padding: 0 8px;
+  min-width: auto;
+  margin-top: 8px;
+}
+
+body .datepicker td,
+body .datepicker th {
+  width: 24px !important;
+  height: 16px !important;
+}
+
 @media screen and (max-width: 1720px) {
   .select2-container .select2-search--inline .select2-search__field,
   .select2-container--default .select2-selection--single .select2-selection__rendered {

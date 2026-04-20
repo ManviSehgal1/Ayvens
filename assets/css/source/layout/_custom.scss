@@ -4903,22 +4903,22 @@ body .select2-multiple-dv .select2-container--default:after {
 
 
 .btn-normal-blue {
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 6px;
   font-size: 15px;
   font-weight: 300;
-  color: #FFDC46;
+  color: #fff;
   background-color: #0f3549;
   margin: 0;
 
   &:hover {
-    color: #FFDC46;
+    color: #fff;
     background-color: #1f4d65;
   }
 }
 
 .clear-modal-btn {
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 6px;
   font-size: 15px;
   font-weight: 300;
@@ -5013,4 +5013,8 @@ body .select2-multiple-dv .select2-container--default:after {
 .header-data,
 .data-line-inner {
   padding: 15px 5px;
+}
+
+.gap-10px {
+  gap: 10px;
 }

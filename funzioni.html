@@ -323,122 +323,158 @@
 
     </div>
 
-    <div class="modal fade modal-sessioni" id="nwModal">
-        <div class="modal-dialog modal-xl">
+    <div class="modal fade custom-wizard-modal modal-sessioni" id="nwModal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div class="modal-data">
-                        <!-- Row 1 -->
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Name</label>
-                                <input type="text" class="form-control" placeholder="Enter Name">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                    <!-- Wizard Step 1 -->
+                    <div class="wizard-step wizard-step-1" id="wizard-step-1">
+                        <div class="modal-data">
+                            <h5 class="mb-4">Informazioni Generali</h5>
+                            <!-- Row 1 -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="funzione-nome"
+                                            placeholder="Enter Name">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Descrizione</label>
+                                        <textarea class="form-control" placeholder="Enter Description"></textarea>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <label class="form-label">Description</label>
-                                <input type="text" class="form-control" placeholder="Enter Description">
-                            </div>
-                        </div>
-
-                        <!-- Row 2 -->
-                        <div class="row mb-4">
-                            <div class="col-md-12">
-                                <label class="form-label">Function Type</label>
-                                <select class="form-control select2-funzioni">
-                                    <option value="">Select Function Type</option>
-                                    <option>Type 1</option>
-                                    <option>Type 2</option>
-                                    <option>Type 3</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Buttons -->
-                        <div class="row mb-4">
-                            <div class="col-md-12 text-end d-flex justify-content-end gap-10px">
-                                <button type="button" class="btn clear-modal-btn">Annulla</button>
-                                <button type="button" class="btn btn-normal-blue">Salva</button>
-                            </div>
-                        </div>
-
-                        <!-- Table Row Like Image -->
-                        <div class="row-box-area overflow-hidden">
-                            <div class="row align-items-center justify-content-between">
-                                <div class="col-4 header-data border-bottom">% Target</div>
-                                <div class="col-4 header-data border-bottom">Function</div>
-                                <div class="col-4 header-data border-bottom"><button type="button"
-                                        class="add-data-btn"><i class="fa-solid fa-plus"></i> </button></div>
-                            </div>
-                            <div class="data-row row">
-                                <div class="data-line-inner col-4 border-bottom">
-                                    <div class="data-col">
-                                        <div class="data-check-box">
-                                            <div class="data-col-value">
-                                                0.84
+                            <!-- Row 2 -->
+                            <div class="row mb-4 flex-column">
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label">Tipologia</label>
+                                        <select class="form-control select2-funzioni" id="funzione-tipologia">
+                                            <option value="">Select Function Type</option>
+                                            <option value="Lineare">Lineare</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" id="dynamic-params-lineare" style="display:none;">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label class="form-label">Soglia</label>
+                                                <input type="text" class="form-control" placeholder="0,80">
                                             </div>
-                                            <span class="form-check-wrapper">
-                                                <input class="form-check-input" type="checkbox">
-                                                <span class="check-tick"></span>
-                                            </span>
                                         </div>
-                                        <div class="data-check-box">
-                                            <span class="form-check-wrapper">
-                                                <input class="form-check-input" type="checkbox">
-                                                <span class="check-tick"></span>
-                                            </span>
-                                            <div class="data-col-value">
-                                                0.84
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label class="form-label">CAP</label>
+                                                <input type="text" class="form-control" placeholder="1,50">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group mb-3">
+                                                <label class="form-label">Testo</label>
+                                                <input type="text" class="form-control" placeholder="Ciao">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="data-line-inner col-4 border-bottom">
-                                    0
-                                </div>
-                                <div class="data-col col-4 text-center d-flex align-items-center border-bottom">
-                                    <button type="button" class="remove-data-btn"><i
-                                            class="fa-solid fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-normal-blue" id="btn-next-step" disabled>Salva e
+                                procedi</button>
+                        </div>
+                    </div>
+
+                    <!-- Wizard Step 2 -->
+                    <div class="wizard-step wizard-step-2" id="wizard-step-2" style="display:none;">
+                        <div class="modal-data">
+                            <h5 class="mb-4">Definizione della Funzione di Performance</h5>
+
+                            <div class="title-name-dv mb-3">
+                                <label class="form-label">Nome:</label>
+                                <p id="step2-nome-display"></p>
+                            </div>
+
+                            <!-- LINEARE Segments Area -->
+                            <div class="lineare-card" id="step-2-lineare" style="display:none;">
+                                <div class="table-responsive lineare-table-wrapper">
+                                    <table class="table align-middle lineare-table">
+                                        <!-- Header -->
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center" style="width: 45%;">% Target</th>
+                                                <th class="text-center" style="width: 45%;">Function</th>
+                                                <th class="text-end" style="width: 10%;">
+                                                    <i class="fa-solid fa-circle-plus add-data-btn text-success d-inline-flex text-end fs-5"
+                                                        style="cursor:pointer;"></i>
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <!-- Default Row 1 -->
+                                        <tbody class="row-box-area">
+                                            <tr class="data-row">
+                                                <!-- % Target Column -->
+                                                <td class="border-bottom py-3">
+                                                    <div class="d-flex justify-content-center align-items-center gap-4">
+                                                        <div class="d-flex align-items-center gap-2 flex-grow-1">
+                                                            <input type="text"
+                                                                class="form-control text-end px-2 flex-grow-1 text-center"
+                                                                value="">
+                                                            <div class="custom-wizard-checkbox">
+                                                                <input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2 flex-grow-1">
+                                                            <div class="custom-wizard-checkbox">
+                                                                <input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                            <input type="text"
+                                                                class="form-control px-2 flex-grow-1 text-center"
+                                                                value="">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- Function Column -->
+                                                <td class="border-bottom py-3">
+                                                    <div class="d-flex justify-content-center">
+                                                        <input type="text" class="form-control text-center px-2"
+                                                            value="">
+                                                    </div>
+                                                </td>
+                                                <!-- Action Column -->
+                                                <td class="border-bottom text-end py-3">
+                                                    <i class="fa-solid fa-circle-minus remove-data-btn text-danger fs-5"
+                                                        style="cursor:pointer;"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <div class="data-row row">
-                                <div class="data-line-inner col-4">
-                                    <div class="data-col">
-                                        <div class="data-check-box">
-                                            <div class="data-col-value">
-                                                0.84
-                                            </div>
-                                            <span class="form-check-wrapper">
-                                                <input class="form-check-input" type="checkbox">
-                                                <span class="check-tick"></span>
-                                            </span>
-                                        </div>
-                                        <div class="data-check-box">
-                                            <span class="form-check-wrapper">
-                                                <input class="form-check-input" type="checkbox">
-                                                <span class="check-tick"></span>
-                                            </span>
-                                            <div class="data-col-value">
-                                                0.84
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="data-line-inner col-4">
-                                    0
-                                </div>
-                                <div class="data-col col-4 text-center d-flex align-items-center">
-                                    <button type="button" class="remove-data-btn"><i class="fa-solid fa-minus"></i>
-                                    </button>
-                                </div>
+
+
+
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between mt-3">
+                            <button type="button" class="btn clear-modal-btn" id="btn-prev-step">Indietro</button>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-normal-blue" id="btn-save-wizard">Salva</button>
+                                <button type="button" class="btn btn-normal-blue btn-secondary"
+                                    data-bs-dismiss="modal">Chiudi</button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn clear-modal-btn">Annulla</button>
-                    <button type="button" class="btn btn-normal-blue">Salva</button>
                 </div>
             </div>
         </div>

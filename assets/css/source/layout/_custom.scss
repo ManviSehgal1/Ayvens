@@ -5333,6 +5333,12 @@ body .datepicker th {
       background: transparent;
     }
   }
+
+  .fa-circle-info {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #0F3549;
+  }
 }
 
 @media (max-width: 991px) {
@@ -5349,5 +5355,14 @@ body .datepicker th {
   .custom-wizard-modal .btn-normal-blue,
   .custom-wizard-modal .clear-modal-btn {
     padding: 6px 15px;
+  }
+
+  .custom-wizard-modal .matrix-table {
+    width: 200%;
+  }
+
+  .custom-wizard-modal .modal-dialog .modal-content .modal-body .form-control {
+    min-height: 40px;
+    font-size: 12px;
   }
 }

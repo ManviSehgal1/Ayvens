@@ -359,6 +359,8 @@
                                         <select class="form-control select2-funzioni" id="funzione-tipologia">
                                             <option value="">Select Function Type</option>
                                             <option value="Lineare">Lineare</option>
+                                            <option value="Matrice">Matrice</option>
+                                            <option value="Altro">Altro</option>
                                         </select>
                                     </div>
                                 </div>
@@ -462,7 +464,113 @@
                                 </div>
                             </div>
 
+                            <!-- MATRICE Area -->
+                            <div class="matrice-card" id="step-2-matrice" style="display:none;">
+                                <div class="table-responsive matrix-table-wrapper">
+                                    <table class="table table-bordered text-center align-middle matrix-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-green-light col-data action-cell"><i
+                                                        class="fa-solid fa-circle-plus add-matrix-col fs-5"></i></th>
+                                                <th class="bg-yellow-light col-data action-cell"><i
+                                                        class="fa-solid fa-circle-minus remove-matrix-col fs-5"></i>
+                                                </th>
+                                                <th class="border-none col-action"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Row 1 -->
+                                            <tr class="matrix-data-row">
+                                                <td class="bg-blue-light data-cell">
+                                                    <div class="d-flex justify-content-center gap-2">
+                                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
+                                                            <input type="text"
+                                                                class="form-control text-center px-2 py-1" value="">
+                                                            <div class="custom-wizard-checkbox"><input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
+                                                            <input type="text"
+                                                                class="form-control text-center px-2 py-1" value="">
+                                                            <div class="custom-wizard-checkbox"><input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="bg-white-cell data-cell">
+                                                    <div
+                                                        class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-3">
+                                                        <input type="text"
+                                                            class="form-control text-center px-2 py-1 flex-grow-1 w-100"
+                                                            value="">
+                                                        <small class="text-muted mt-2"
+                                                            style="font-size:11px; font-weight: 500;">Performance</small>
+                                                    </div>
+                                                </td>
+                                                <td class="bg-yellow-light action-cell"><i
+                                                        class="fa-solid fa-circle-minus remove-matrix-row fs-5"></i>
+                                                </td>
+                                            </tr>
+                                            <!-- Row 2 (Bottom axis) -->
+                                            <tr class="matrix-x-axis-row">
+                                                <td class="bg-white-cell data-cell">
+                                                    <div class="d-flex justify-content-center gap-2">
+                                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
+                                                            <input type="text"
+                                                                class="form-control text-center px-2 py-1" value="">
+                                                            <div class="custom-wizard-checkbox"><input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
+                                                            <input type="text"
+                                                                class="form-control text-center px-2 py-1" value="">
+                                                            <div class="custom-wizard-checkbox"><input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="bg-blue-light data-cell">
+                                                    <div class="d-flex justify-content-center gap-2">
+                                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
+                                                            <input type="text"
+                                                                class="form-control text-center px-2 py-1" value="">
+                                                            <div class="custom-wizard-checkbox"><input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
+                                                            <input type="text"
+                                                                class="form-control text-center px-2 py-1" value="">
+                                                            <div class="custom-wizard-checkbox"><input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="bg-green-light action-cell"><i
+                                                        class="fa-solid fa-circle-plus add-matrix-row fs-5"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
 
+                            <!-- ALTRO Area -->
+                            <div id="step-2-altro" style="display:none;">
+                                <div class="text-center py-5">
+                                    <h6 class="fst-italic text-muted fw-normal" style="line-height:1.6;">
+                                        <i class="fa-solid fa-circle-info"></i> <br>
+                                        I parametri della curva sono già stati settati a livello di tipologia di
+                                        funzione,
+                                        <br>
+                                        non è necessario aggiungerli qui
+                                    </h6>
+                                </div>
+                            </div>
 
                         </div>
                         <div class="modal-footer d-flex justify-content-between mt-3">

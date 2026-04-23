@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll('.togglable_area').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      e.stopPropagation(); // prevent bubbling to document
+      e.stopPropagation();
       document.querySelector('.dropdown-menu-area').classList.toggle('open');
     });
   });

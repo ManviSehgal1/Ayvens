@@ -397,11 +397,11 @@
                     <!-- Wizard Step 2 -->
                     <div class="wizard-step wizard-step-2" id="wizard-step-2" style="display:none;">
                         <div class="modal-data">
-                            <h5 class="mb-4">Definizione della Funzione di Performance</h5>
+                            <h5 class="mb-3">Definizione della Funzione di Performance</h5>
 
                             <div class="title-name-dv mb-3">
-                                <label class="form-label">Nome:</label>
-                                <p id="step2-nome-display"></p>
+                                <label class="form-label mb-0">Nome:</label>
+                                <p class="mb-0" id="step2-nome-display"></p>
                             </div>
 
                             <!-- LINEARE Segments Area -->
@@ -411,9 +411,9 @@
                                         <!-- Header -->
                                         <thead>
                                             <tr>
-                                                <th class="text-center" style="width: 45%;">% Target</th>
-                                                <th class="text-center" style="width: 45%;">Function</th>
-                                                <th class="text-end" style="width: 10%;">
+                                                <th class="text-center">% Target</th>
+                                                <th class="text-center">Function</th>
+                                                <th class="text-end add-col-thead">
                                                     <i class="fa-solid fa-circle-plus add-data-btn text-success d-inline-flex text-end fs-5"
                                                         style="cursor:pointer;"></i>
                                                 </th>
@@ -475,7 +475,7 @@
                                                 <th class="bg-yellow-light col-data action-cell"><i
                                                         class="fa-solid fa-circle-minus remove-matrix-col fs-5"></i>
                                                 </th>
-                                                <th class="border-none col-action"></th>
+                                                <th class="border-none col-action last-col-action"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -501,12 +501,11 @@
                                                 </td>
                                                 <td class="bg-white-cell data-cell">
                                                     <div
-                                                        class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-3">
+                                                        class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
                                                         <input type="text"
                                                             class="form-control text-center px-2 py-1 flex-grow-1 w-100"
                                                             value="">
-                                                        <small class="text-muted mt-2"
-                                                            style="font-size:11px; font-weight: 500;">Performance</small>
+                                                        <small class="text-muted small-txt mt-2">Performance</small>
                                                     </div>
                                                 </td>
                                                 <td class="bg-yellow-light action-cell"><i

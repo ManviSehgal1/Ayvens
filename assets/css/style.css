@@ -15414,6 +15414,25 @@ body .select2-multiple-dv .select2-container--default:after {
 .sessioni-table .tb-head.head-session-type {
   width: 15%;
 }
+.sessioni-table.contentBlock .tableContent .table thead tr th {
+  font-size: 14px;
+  line-height: 20px;
+}
+.sessioni-table.contentBlock .tableContent .table tbody tr td {
+  font-size: 15px;
+  line-height: 20px;
+}
+@media (max-width: 767px) {
+  .sessioni-table.contentBlock .tableContent .table tbody tr td {
+    font-size: 14px;
+  }
+}
+.sessioni-table.contentBlock .tableContent .table tbody tr td .small,
+.sessioni-table.contentBlock .tableContent .table tbody tr td small {
+  font-size: 12px;
+  line-height: 18px;
+  display: inline-block;
+}
 
 .row-box-area .data-line-inner {
   display: flex;
@@ -15499,7 +15518,7 @@ body .datepicker th {
   animation: fadeIn 0.3s ease-in-out;
 }
 .custom-wizard-modal .matrix-table-wrapper {
-  max-height: calc(100dvh - 280px);
+  max-height: calc(100dvh - 270px);
   overflow: auto;
 }
 .custom-wizard-modal .matrix-table {
@@ -15575,8 +15594,7 @@ body .datepicker th {
   line-height: 16px;
 }
 .custom-wizard-modal .matrix-table .col-data {
-  min-width: 167px;
-  width: 45%;
+  min-width: 150px;
 }
 .custom-wizard-modal .matrix-table .col-action {
   min-width: 80px;
@@ -15685,7 +15703,7 @@ body .datepicker th {
   margin-bottom: 2px;
 }
 .custom-wizard-modal .modal-dialog {
-  max-width: 1100px;
+  max-width: 1170px;
 }
 .custom-wizard-modal .modal-dialog .modal-content {
   border-radius: 20px;
@@ -15700,6 +15718,19 @@ body .datepicker th {
   font-weight: 400;
   color: #0D141C;
   min-height: 42px;
+}
+.custom-wizard-modal .modal-dialog .modal-content .modal-body .matrix-data-row .form-control {
+  min-height: 36px;
+}
+@media (max-width: 1200px) {
+  .custom-wizard-modal .modal-dialog {
+    max-width: calc(100% - 40px);
+  }
+}
+@media (max-width: 767px) {
+  .custom-wizard-modal .modal-dialog {
+    max-width: 100%;
+  }
 }
 .custom-wizard-modal .error-msg {
   font-size: 14px;
@@ -15750,25 +15781,124 @@ body .datepicker th {
   margin-bottom: 10px;
   color: #0F3549;
 }
+.custom-wizard-modal .box-header-wizard {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right: 44px;
+}
+@media (max-width: 767px) {
+  .custom-wizard-modal .box-header-wizard {
+    padding-right: 36px;
+    gap: 8px;
+  }
+}
+.custom-wizard-modal .step-count {
+  background: #dcdcdc;
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 8px;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  top: -4px;
+  margin-bottom: -4px;
+  color: #000;
+  pointer-events: none;
+}
+.custom-wizard-modal .step-count b,
+.custom-wizard-modal .step-count strong {
+  font-weight: 600;
+  color: #0f3549;
+}
+@media (max-width: 767px) {
+  .custom-wizard-modal .step-count {
+    padding: 4px 6px;
+    gap: 2px;
+    font-size: 12px;
+    line-height: 18px;
+    top: -1px;
+    margin: -1px;
+  }
+}
+@media (max-width: 1720px) {
+  .custom-wizard-modal .select2-container .select2-search--inline .select2-search__field,
+  .custom-wizard-modal .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 14px;
+  }
+}
 
 @media (max-width: 991px) {
   .custom-wizard-modal .modal-data h5 {
     font-size: 16px;
-    max-width: 230px;
-    margin-bottom: 10px !important;
-  }
-  .custom-wizard-modal #step-2-lineare .lineare-table {
-    width: 500px;
   }
   .custom-wizard-modal .btn-normal-blue,
   .custom-wizard-modal .clear-modal-btn {
     padding: 6px 15px;
   }
-  .custom-wizard-modal .matrix-table {
-    width: 200%;
-  }
   .custom-wizard-modal .modal-dialog .modal-content .modal-body .form-control {
     min-height: 40px;
     font-size: 12px;
+  }
+  .custom-wizard-modal .select2-container .select2-search--inline .select2-search__field,
+  .custom-wizard-modal .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .custom-wizard-modal .modal-data .box-header-wizard {
+    padding-right: 36px;
+    gap: 8px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .custom-wizard-modal .modal-data .box-header-wizard h5 {
+    margin-bottom: 0 !important;
+  }
+  .custom-wizard-modal .modal-dialog .modal-content {
+    padding: 16px;
+    gap: 16px;
+  }
+  .custom-wizard-modal .btn-normal-blue,
+  .custom-wizard-modal .clear-modal-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    min-height: 40px;
+  }
+  .custom-wizard-modal .lineare-table {
+    min-width: 470px;
+  }
+  .custom-wizard-modal .lineare-table thead th {
+    padding: 8px 8px;
+  }
+  .custom-wizard-modal .lineare-table thead th.add-col-thead {
+    width: 36px;
+    position: sticky;
+    right: 0;
+    z-index: 2;
+  }
+  .custom-wizard-modal .lineare-table tbody td {
+    padding: 5px 8px !important;
+  }
+  .custom-wizard-modal .lineare-table tbody td:last-child {
+    position: sticky;
+    right: 0;
+    z-index: 2;
+    background-color: #fff;
+  }
+  .custom-wizard-modal .title-name-dv {
+    gap: 0.25rem;
+  }
+  .custom-wizard-modal .matrix-table th:last-child,
+  .custom-wizard-modal .matrix-table td:last-child {
+    width: 38px;
+    min-width: 38px;
+  }
+  .custom-wizard-modal .matrix-table .col-data {
+    min-width: 115px;
+  }
+  .custom-wizard-modal .matrix-table .data-cell {
+    padding: 0 6px 6px;
   }
 }/*# sourceMappingURL=style.css.map */

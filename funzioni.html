@@ -252,9 +252,9 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>KPI’s Name & KPI’s Description</th>
+                                <th>Denominazione e descrizione del KPI​</th>
                                 <th>Tipologia di funzione</th>
-                                <th class="text-end">Edit</th>
+                                <th class="text-end">Modifica</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -332,7 +332,12 @@
                     <!-- Wizard Step 1 -->
                     <div class="wizard-step wizard-step-1" id="wizard-step-1">
                         <div class="modal-data">
-                            <h5 class="mb-4">Informazioni Generali</h5>
+                            <div class="box-header-wizard mb-4">
+                                <h5>Informazioni generali</h5>
+                                <span class="step-count">
+                                    <strong>Step 1</strong> di 2
+                                </span>
+                            </div>
                             <!-- Row 1 -->
                             <div class="row">
                                 <div class="col-md-12">
@@ -354,7 +359,7 @@
                             <!-- Row 2 -->
                             <div class="row mb-4 flex-column">
                                 <div class="col-md-12">
-                                    <div class="form-group mb-3">
+                                    <div class="form-group mb-lg-0 mb-3">
                                         <label class="form-label">Tipologia</label>
                                         <select class="form-control select2-funzioni" id="funzione-tipologia">
                                             <option value="">Select Function Type</option>
@@ -365,21 +370,21 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="dynamic-params-lineare" style="display:none;">
-                                    <div class="row">
+                                    <div class="row mt-lg-3 mt-0">
                                         <div class="col-md-4">
-                                            <div class="form-group mb-3">
+                                            <div class="form-group mb-lg-0 mb-3">
                                                 <label class="form-label">Soglia</label>
                                                 <input type="text" class="form-control" placeholder="0,80">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="form-group mb-3">
+                                            <div class="form-group mb-lg-0 mb-3">
                                                 <label class="form-label">CAP</label>
                                                 <input type="text" class="form-control" placeholder="1,50">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="form-group mb-3">
+                                            <div class="form-group mb-lg-0 mb-3">
                                                 <label class="form-label">Testo</label>
                                                 <input type="text" class="form-control" placeholder="Ciao">
                                             </div>
@@ -397,7 +402,12 @@
                     <!-- Wizard Step 2 -->
                     <div class="wizard-step wizard-step-2" id="wizard-step-2" style="display:none;">
                         <div class="modal-data">
-                            <h5 class="mb-3">Definizione della Funzione di Performance</h5>
+                            <div class="box-header-wizard mb-3">
+                                <h5>Definizione della Funzione di Performance</h5>
+                                <span class="step-count">
+                                    <strong>Step 2</strong> di 2
+                                </span>
+                            </div>
 
                             <div class="title-name-dv mb-3">
                                 <label class="form-label mb-0">Nome:</label>
@@ -475,6 +485,9 @@
                                                 <th class="bg-yellow-light col-data action-cell"><i
                                                         class="fa-solid fa-circle-minus remove-matrix-col fs-5"></i>
                                                 </th>
+                                                <th class="bg-yellow-light col-data action-cell"><i
+                                                        class="fa-solid fa-circle-minus remove-matrix-col fs-5"></i>
+                                                </th>
                                                 <th class="border-none col-action last-col-action"></th>
                                             </tr>
                                         </thead>
@@ -508,13 +521,67 @@
                                                         <small class="text-muted small-txt mt-2">Performance</small>
                                                     </div>
                                                 </td>
+                                                <td class="bg-white-cell data-cell">
+                                                    <div
+                                                        class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
+                                                        <input type="text"
+                                                            class="form-control text-center px-2 py-1 flex-grow-1 w-100"
+                                                            value="">
+                                                        <small class="text-muted small-txt mt-2">Performance</small>
+                                                    </div>
+                                                </td>
                                                 <td class="bg-yellow-light action-cell"><i
                                                         class="fa-solid fa-circle-minus remove-matrix-row fs-5"></i>
                                                 </td>
                                             </tr>
-                                            <!-- Row 2 (Bottom axis) -->
-                                            <tr class="matrix-x-axis-row">
+                                            <!-- Row 2 -->
+                                            <tr class="matrix-data-row">
+                                                <td class="bg-blue-light data-cell">
+                                                    <div class="d-flex justify-content-center gap-2">
+                                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
+                                                            <input type="text"
+                                                                class="form-control text-center px-2 py-1" value="">
+                                                            <div class="custom-wizard-checkbox"><input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
+                                                            <input type="text"
+                                                                class="form-control text-center px-2 py-1" value="">
+                                                            <div class="custom-wizard-checkbox"><input type="checkbox">
+                                                                <div class="check-mark"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
                                                 <td class="bg-white-cell data-cell">
+                                                    <div
+                                                        class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
+                                                        <input type="text"
+                                                            class="form-control text-center px-2 py-1 flex-grow-1 w-100"
+                                                            value="">
+                                                        <small class="text-muted small-txt mt-2">Performance</small>
+                                                    </div>
+                                                </td>
+                                                <td class="bg-white-cell data-cell">
+                                                    <div
+                                                        class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
+                                                        <input type="text"
+                                                            class="form-control text-center px-2 py-1 flex-grow-1 w-100"
+                                                            value="">
+                                                        <small class="text-muted small-txt mt-2">Performance</small>
+                                                    </div>
+                                                </td>
+                                                <td class="bg-yellow-light action-cell"><i
+                                                        class="fa-solid fa-circle-minus remove-matrix-row fs-5"></i>
+                                                </td>
+                                            </tr>
+                                            <!-- Row 4 (Bottom axis) -->
+                                            <tr class="matrix-x-axis-row">
+                                                <td class="bg-white-cell data-cell border-0">
+
+                                                </td>
+                                                <td class="bg-blue-light data-cell">
                                                     <div class="d-flex justify-content-center gap-2">
                                                         <div class="d-flex flex-column align-items-center gap-2 w-50">
                                                             <input type="text"
@@ -572,12 +639,12 @@
                             </div>
 
                         </div>
-                        <div class="modal-footer d-flex justify-content-between mt-3">
+                        <div class="modal-footer d-flex justify-content-between mt-4">
                             <button type="button" class="btn clear-modal-btn" id="btn-prev-step">Indietro</button>
                             <div class="d-flex gap-2">
                                 <button type="button" class="btn btn-normal-blue" id="btn-save-wizard">Salva</button>
                                 <button type="button" class="btn btn-normal-blue btn-secondary"
-                                    data-bs-dismiss="modal">Chiudi</button>
+                                    data-bs-dismiss="modal">Salva e Chiudi​</button>
                             </div>
                         </div>
                     </div>

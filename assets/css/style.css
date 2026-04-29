@@ -15717,10 +15717,13 @@ body .datepicker th {
   line-height: 20px;
   font-weight: 400;
   color: #0D141C;
-  min-height: 42px;
+  min-height: 46px;
 }
 .custom-wizard-modal .modal-dialog .modal-content .modal-body .matrix-data-row .form-control {
   min-height: 36px;
+}
+.custom-wizard-modal .modal-dialog .modal-content .modal-body .lineare-card .form-control {
+  min-height: 42px;
 }
 @media (max-width: 1200px) {
   .custom-wizard-modal .modal-dialog {
@@ -15829,6 +15832,72 @@ body .datepicker th {
   }
 }
 
+.kpis-table.table thead tr th {
+  min-width: 80px;
+}
+.kpis-table.table thead tr th:nth-child(2) {
+  min-width: 220px;
+}
+.kpis-table.table thead tr th:nth-child(4) {
+  min-width: 160px;
+}
+.kpis-table.table thead tr th:nth-child(5) {
+  min-width: 220px;
+}
+.kpis-table.table thead tr th:nth-child(6) {
+  min-width: 105px;
+}
+
+.radio-form-group .custom-radio-tabs {
+  gap: 16px;
+}
+
+label.form-radio-label {
+  display: flex;
+  align-items: center;
+  width: auto;
+  cursor: pointer;
+  position: relative;
+}
+label.form-radio-label .radio-circle {
+  border-color: #999;
+}
+label.form-radio-label .form-radio-input {
+  display: none;
+}
+label.form-radio-label .form-radio-input:checked + .form-radio-text {
+  color: #0F3549;
+}
+label.form-radio-label .form-radio-input:checked + .form-radio-text .radio-circle {
+  border-color: #0F3549;
+}
+label.form-radio-label .form-radio-input:checked + .form-radio-text .radio-circle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #0F3549;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+label.form-radio-label .form-radio-text {
+  padding: 0 0 0 22px;
+  color: #999;
+}
+
+.form-radio-flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.setting-kpis-table .tableContent {
+  padding: 0;
+}
+
 @media (max-width: 991px) {
   .custom-wizard-modal .modal-data h5 {
     font-size: 16px;
@@ -15900,5 +15969,20 @@ body .datepicker th {
   }
   .custom-wizard-modal .matrix-table .data-cell {
     padding: 0 6px 6px;
+  }
+  .kpi-setting-modal .lineare-table thead th {
+    min-width: 240px !important;
+    width: 240px;
+  }
+  .add-btn-btm {
+    display: flex;
+    margin: 8px 0 0;
+    justify-content: flex-end;
+    padding-right: 8px;
+    font-size: 14px;
+    align-items: center;
+    gap: 6px;
+    color: #198754;
+    font-weight: 600;
   }
 }/*# sourceMappingURL=style.css.map */

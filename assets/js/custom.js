@@ -113,7 +113,6 @@ $(document).ready(function () {
       dropdownParent: $('#nwModal'),
       width: '100%'
     });
-
   });
 
   // Wizard Logic for nwModal  // Reset on modal close
@@ -289,5 +288,93 @@ $(document).ready(function () {
     }
   });
 
+  /* setting - KPIs modal */
 
+  $('#kpiSettingModal').on('shown.bs.modal', function () {
+    $('#kpi-wizard-step-1').show();
+    $('#kpi-wizard-step-2').hide();
+
+    $('.select2-frequenza').select2({
+      dropdownParent: $('#kpiSettingModal'),
+      width: '100%',
+      minimumResultsForSearch: -1
+    });
+
+    $('.select2-performance').select2({
+      dropdownParent: $('#kpiSettingModal'),
+      width: '100%',
+    });
+
+    $('#kpi-relations-table .dynamic-select').select2({
+      dropdownParent: $('#kpiSettingModal'),
+      width: '100%',
+      minimumResultsForSearch: -1
+    });
+  });
+
+  $("#kpi-btn-next-step").on("click", function () {
+    $("#kpi-wizard-step-2").show();
+    $("#kpi-wizard-step-1").hide();
+  });
+
+  $("#kpi-btn-prev-step").on("click", function () {
+    $("#kpi-wizard-step-1").show();
+    $("#kpi-wizard-step-2").hide();
+  });
+
+  $(document).on('click', '.add-kpi-relation-btn', function () {
+    var $tbody = $('#kpi-relations-table tbody');
+    
+    var newRowHtml = `
+        <tr class="kpi-relation-row data-row">
+            <td class="border-bottom py-3">
+                <select class="form-control select2-relation dynamic-select w-100">
+                    <option value="">Seleziona Relazione</option>
+                    <option value="Asse X">Asse X</option>
+                    <option value="Asse Y">Asse Y</option>
+                </select>
+            </td>
+            <td class="border-bottom py-3">
+                <select class="form-control select2-kpi dynamic-select w-100">
+                    <option value="">Seleziona KPI</option>
+                    <option value="123 - KPI asse X matrice">123 - KPI asse X matrice</option>
+                    <option value="124 - Altro KPI">124 - Altro KPI</option>
+                </select>
+            </td>
+            <td class="border-bottom py-3">
+                <select class="form-control select2-function dynamic-select w-100">
+                    <option value="">Seleziona Funzione</option>
+                    <option value="456 - OP Actual">456 - OP Actual</option>
+                    <option value="457 - Altra funzione">457 - Altra funzione</option>
+                </select>
+            </td>
+            <td class="border-bottom text-end py-3">
+                <i class="fa-solid fa-circle-minus remove-kpi-relation-btn text-danger fs-5" style="cursor:pointer;"></i>
+            </td>
+        </tr>
+    `;
+    
+    $tbody.append(newRowHtml);
+    
+    $tbody.find('.kpi-relation-row:last-child .dynamic-select').select2({
+        dropdownParent: $('#kpiSettingModal'),
+        width: '100%',
+        minimumResultsForSearch: -1 
+    });
+  });
+
+  $(document).on('click', '.remove-kpi-relation-btn', function () {
+    var $tbody = $(this).closest('tbody');
+    if ($tbody.find('tr.kpi-relation-row').length > 1) {
+      $(this).closest('tr.kpi-relation-row').remove();
+    }
+  });
+
+  $('#kpiSettingModal').on('hidden.bs.modal', function () {
+    var $tbody = $('#kpi-relations-table tbody');
+    $tbody.find('tr.kpi-relation-row:not(:first)').remove();
+    $tbody.find('tr.kpi-relation-row:first .dynamic-select').val('').trigger('change');
+  });
+
+  /* End of setting - KPIs modal */
 });

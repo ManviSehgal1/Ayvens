@@ -2012,6 +2012,17 @@
           }
 
         }
+
+        .empty-state-text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          margin: 0;
+          padding: 4px 0;
+          color: #6c757d;
+          font-size: 14px;
+        }
       }
 
       .modal-footer {
@@ -5482,6 +5493,23 @@ body .datepicker th {
   }
 }
 
+.scorecards-table {
+  &.table {
+
+    thead tr th {
+      min-width: 80px;
+
+      &:nth-child(2) {
+        min-width: 220px;
+      }
+
+      &:nth-child(3) {
+        min-width: 280px;
+      }
+    }
+  }
+}
+
 .radio-form-group {
   .custom-radio-tabs {
     gap: 16px;
@@ -5539,6 +5567,50 @@ label.form-radio-label {
 .setting-kpis-table {
   .tableContent {
     padding: 0;
+  }
+}
+
+.scorecards-setting-modal {
+  .scorecards-relations-card {
+    .table {
+      .form-control {
+        border: 1px solid #cbd5e1 !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+        border-radius: 8px !important;
+        min-height: 46px !important;
+      }
+
+      .input-group {
+        .form-control {
+          flex: 1;
+          border-radius: 8px 0 0 8px !important;
+        }
+
+        .input-group-text {
+          font-size: 16px;
+          background: #f6f6f6;
+          border-radius: 0 8px 8px 0;
+        }
+      }
+    }
+
+    .lineare-table {
+      thead {
+        th {
+          &:nth-child(1) {
+            width: 240px;
+          }
+         
+          &:nth-child(2) {
+            width: 180px;
+          }
+
+          &:nth-child(4) {
+            width: 140px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -5643,6 +5715,13 @@ label.form-radio-label {
   }
 
   .kpi-setting-modal {
+    .lineare-table thead th {
+      min-width: 240px !important;
+      width: 240px;
+    }
+  }
+
+  .scorecards-setting-modal {
     .lineare-table thead th {
       min-width: 240px !important;
       width: 240px;

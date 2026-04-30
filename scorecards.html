@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KPIs​ | Ayvens</title>
+    <title>Schede di Incentivazione​ | Ayvens</title>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
@@ -27,7 +27,7 @@
             </div>
             <div class="headerTop">
                 <div class="topTitle">
-                    <h1 class="header-title d-none d-xl-inline">KPIs​</h1>
+                    <h1 class="header-title d-none d-xl-inline">Schede di Incentivazione​</h1>
                 </div>
                 <div class="user-info">
                     <div class="dropdown">
@@ -214,11 +214,10 @@
                                 <a href="funzioni.html" title="overtarget kpis" class="dropdown-item">Funzioni</a>
                             </li>
                             <li>
-                                <a href="setting-kpis.html" title="setting kpis" class="dropdown-item active">
-                                    KPIs</a>
+                                <a href="setting-kpis.html" title="setting kpis" class="dropdown-item">KPIs</a>
                             </li>
                             <li>
-                                <a href="scorecards.html" title="setting kpis" class="dropdown-item ">Scorecards</a>
+                                <a href="scorecards.html" title="scorecards" class="dropdown-item active">Scorecards</a>
                             </li>
                         </ul>
                     </div>
@@ -246,7 +245,7 @@
                     </ul>
                 </div>
                 <div class="d-flex">
-                    <a href="#" class="btn all-btn whiteBtn" data-bs-toggle="modal" data-bs-target="#kpiSettingModal">Nuovo KPI​</a>
+                    <a href="#" class="btn all-btn whiteBtn" data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal">Nuovo KPI​</a>
                 </div>
             </div>
         </div>
@@ -255,106 +254,72 @@
             <div class="tableContent">
                 <div class="table-wrapper-sessioni">
 
-                    <table class="table custom-table align-middle mb-0 kpis-table">
+                    <table class="table custom-table align-middle mb-0 scorecards-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nome KPI</th>
-                                <th>Unità </th>
-                                <th>Frequenza  </th>
-                                <th>Funzione di performance </th>
-                                <th>Payout Cap </th>
+                                <th>Scheda </th>
+                                <th>Funzione di performance</th>
                                 <th class="text-end">Modifica</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1234</td>
-                                <td>Matrice Profittabilità New Business</td>
-                                <td>%</td>
-                                <td>Trimestrale</td>
-                                <td>987 - Matrice Profittabilità New Business</td>
-                                <td>100%</td>
+                                <td>1001</td>
+                                <td>Scheda S1</td>
+                                <td>Performance di scheda</td>
                                 <td class="text-end">
-                                    <div data-bs-toggle="modal" data-bs-target="#kpiSettingModal" style="cursor: pointer;">
+                                    <div data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal" style="cursor: pointer;">
                                         <i class="fa-light fa-pen"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1235</td>
-                                <td>Volume Vendite Veicoli Elettrici</td>
-                                <td>#</td>
-                                <td>Annuale</td>
-                                <td>988 - Vendite Veicoli Elettrici</td>
-                                <td>120%</td>
+                                <td>1002</td>
+                                <td>Scheda S2</td>
+                                <td>Performance di scheda</td>
                                 <td class="text-end">
-                                    <div data-bs-toggle="modal" data-bs-target="#kpiSettingModal" style="cursor: pointer;">
+                                    <div data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal" style="cursor: pointer;">
                                         <i class="fa-light fa-pen"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1236</td>
-                                <td>Tasso di Ritenzione Clienti</td>
-                                <td>%</td>
-                                <td>Annuale</td>
-                                <td>989 - Customer Retention</td>
-                                <td>100%</td>
+                                <td>1003</td>
+                                <td>Scheda S3</td>
+                                <td>Performance di scheda</td>
                                 <td class="text-end">
-                                    <div data-bs-toggle="modal" data-bs-target="#kpiSettingModal" style="cursor: pointer;">
+                                    <div data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal" style="cursor: pointer;">
                                         <i class="fa-light fa-pen"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1237</td>
-                                <td>Margine Operativo Lordo</td>
-                                <td>%</td>
-                                <td>Annuale</td>
-                                <td>990 - EBITDA</td>
-                                <td>150%</td>
+                                <td>1004</td>
+                               <td>Scheda S4</td>
+                                <td>Performance di scheda</td>
                                 <td class="text-end">
-                                    <div data-bs-toggle="modal" data-bs-target="#kpiSettingModal" style="cursor: pointer;">
+                                    <div data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal" style="cursor: pointer;">
                                         <i class="fa-light fa-pen"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1238</td>
-                                <td>Penetrazione Servizi Accessori</td>
-                                <td>%</td>
-                                <td>Trimestrale</td>
-                                <td>991 - Cross-selling Servizi</td>
-                                <td>110%</td>
+                                <td>1005</td>
+                                <td>Scheda S5</td>
+                                <td>Performance di scheda</td>
                                 <td class="text-end">
-                                    <div data-bs-toggle="modal" data-bs-target="#kpiSettingModal" style="cursor: pointer;">
+                                    <div data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal" style="cursor: pointer;">
                                         <i class="fa-light fa-pen"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1239</td>
-                                <td>Soddisfazione Cliente (NPS)</td>
-                                <td>#</td>
-                                <td>Trimestrale</td>
-                                <td>992 - Net Promoter Score</td>
-                                <td>100%</td>
+                                <td>1006</td>
+                               <td>Scheda S6</td>
+                                <td>Performance di scheda</td>
                                 <td class="text-end">
-                                    <div data-bs-toggle="modal" data-bs-target="#kpiSettingModal" style="cursor: pointer;">
-                                        <i class="fa-light fa-pen"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1240</td>
-                                <td>Costo Medio di Acquisizione</td>
-                                <td>#</td>
-                                <td>Annuale</td>
-                                <td>993 - CAC</td>
-                                <td>100%</td>
-                                <td class="text-end">
-                                    <div data-bs-toggle="modal" data-bs-target="#kpiSettingModal" style="cursor: pointer;">
+                                    <div data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal" style="cursor: pointer;">
                                         <i class="fa-light fa-pen"></i>
                                     </div>
                                 </td>
@@ -369,17 +334,17 @@
 
     </div>
 
-    <div class="modal fade custom-wizard-modal modal-sessioni kpi-setting-modal" id="kpiSettingModal">
+    <div class="modal fade custom-wizard-modal modal-sessioni scorecards-setting-modal" id="scorecardsSettingModal">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     </button>
                     <!-- Wizard Step 1 -->
-                    <div class="wizard-step wizard-step-1" id="kpi-wizard-step-1">
+                    <div class="wizard-step wizard-step-1" id="scorecards-wizard-step-1">
                         <div class="modal-data">
                             <div class="box-header-wizard mb-4">
-                                <h5>Definizione KPI​</h5>
+                                <h5>Definizione Scheda di Incentivazione​</h5>
                                 <span class="step-count">
                                     <strong>Step 1</strong> di 2
                                 </span>
@@ -388,26 +353,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
-                                        <label class="form-label">Nome KPI</label>
-                                        <input type="text" class="form-control" placeholder="Enter Nome KPI">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group mb-3">
-                                        <label class="form-label">Unità</label>
-                                        <input type="text" class="form-control" placeholder="Enter Unità">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group mb-3">
-                                        <label class="form-label">Frequenza </label>
-                                        <select class="form-control select2-frequenza" id="funzione-frequenza">
-                                            <option value="">Select Frequenza</option>
-                                            <option value="Trimestrale">Trimestrale </option>
-                                            <option value="Annuale">Annuale</option>
-                                        </select>
+                                        <label class="form-label">Nome Scheda</label>
+                                        <input type="text" class="form-control" placeholder="Enter Nome Scheda">
                                     </div>
                                 </div>
 
@@ -420,23 +367,6 @@
                                             </option>
                                             <option value="992 - Net Promoter Score">992 - Net Promoter Score</option>
                                             <option value="993 - CAC">993 - CAC</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group mb-3">
-                                        <label class="form-label">Payout Cap</label>
-                                        <input type="number" class="form-control" placeholder="Enter Payout Cap">
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <div class="form-group radio-form-group mb-3">
-                                        <label class="form-label">Approssimato all’intero</label>
-                                        <select class="form-control select2-approximate mt-2" id="select2-approximate">
-                                            <option value="No">No</option>
-                                            <option value="Yes">Yes</option>
                                         </select>
                                     </div>
                                 </div>
@@ -457,40 +387,41 @@
                             </div>
                         </div>
                         <div class="modal-footer mt-2">
-                            <button type="button" class="btn btn-normal-blue" id="kpi-btn-next-step">Salva e
+                            <button type="button" class="btn btn-normal-blue" id="scorecards-btn-next-step">Salva e
                                 procedi</button>
                         </div>
                     </div>
 
                     <!-- Wizard Step 2 -->
-                    <div class="wizard-step wizard-step-2" id="kpi-wizard-step-2" style="display:none;">
+                    <div class="wizard-step wizard-step-2" id="scorecards-wizard-step-2" style="display:none;">
                         <div class="modal-data">
                             <div class="box-header-wizard mb-3">
-                                <h5>Relazioni con altri KPIs​</h5>
+                                <h5>KPIs che compongono la Scheda</h5>
                                 <span class="step-count">
                                     <strong>Step 2</strong> di 2
                                 </span>
                             </div>
 
-                            <div class="lineare-card kpi-relations-card" id="kpi-relations-card">
+                            <div class="lineare-card scorecards-relations-card" id="scorecards-relations-card">
                                 <div class="table-responsive lineare-table-wrapper">
-                                    <table class="table align-middle lineare-table" id="kpi-relations-table">
+                                    <table class="table align-middle lineare-table" id="scorecards-relations-table">
                                         <!-- Header -->
                                         <thead>
                                             <tr>
-                                                <th class="text-center">Relazione</th>
                                                 <th class="text-center">KPI</th>
-                                                <th class="text-center">Funzione</th>
+                                                <th class="text-center">Peso</th>
+                                                <th class="text-center">Note</th>
+                                                <th class="text-center">Ordinamento</th>
                                                 <th class="text-end add-col-thead">
-                                                    <i class="fa-solid fa-circle-plus add-kpi-relation-btn text-success d-inline-flex text-end fs-5" style="cursor:pointer;"></i>
+                                                    <i class="fa-solid fa-circle-plus add-scorecards-relation-btn text-success d-inline-flex text-end fs-5" style="cursor:pointer;"></i>
                                                 </th>
                                             </tr>
                                         </thead>
 
                                         <tbody class="row-box-area">
                                             <tr class="empty-state-row">
-                                                <td colspan="4" class="text-center text-muted py-4">
-                                                    <p class="empty-state-text">No related KPIs added yet. Click <i class="fa-solid fa-circle-plus add-kpi-relation-btn text-success d-inline-flex text-end fs-5" style="cursor:pointer;" aria-hidden="true"></i> to add one.</p>
+                                                <td colspan="5" class="text-center text-muted py-4">
+                                                    <p class="empty-state-text">No related KPIs added yet. Click <i class="fa-solid fa-circle-plus add-scorecards-relation-btn text-success d-inline-flex text-end fs-5" style="cursor:pointer;" aria-hidden="true"></i> to add one.</p>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -499,9 +430,9 @@
                             </div>
                         </div>
                         <div class="modal-footer d-flex justify-content-between mt-4">
-                            <button type="button" class="btn clear-modal-btn" id="kpi-btn-prev-step">Indietro</button>
+                            <button type="button" class="btn clear-modal-btn" id="scorecards-btn-prev-step">Indietro</button>
                             <div class="d-flex gap-2">
-                                <button type="button" class="btn btn-normal-blue" id="kpi-btn-save-wizard">Salva</button>
+                                <button type="button" class="btn btn-normal-blue" id="scorecards-btn-save-wizard">Salva</button>
                                 <button type="button" class="btn btn-normal-blue btn-secondary"
                                     data-bs-dismiss="modal">Salva e Chiudi​</button>
                             </div>

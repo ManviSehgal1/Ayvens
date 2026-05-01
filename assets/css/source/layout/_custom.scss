@@ -5597,16 +5597,144 @@ label.form-radio-label {
     .lineare-table {
       thead {
         th {
+
           &:nth-child(1) {
-            width: 240px;
+            @media (max-width: 992px) {
+              width: 300px;
+            }
           }
-         
+
           &:nth-child(2) {
             width: 180px;
           }
 
+          &:nth-child(3) {
+            width: 180px;
+          }
+
           &:nth-child(4) {
-            width: 140px;
+            width: 216px;
+
+            @media (max-width:991px) {
+              width: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-scorecards-div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @media (max-width:991px) {
+    gap: 12px;
+  }
+}
+
+.btn-normal-blue.add-note-btn {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 16px;
+  border-radius: 8px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+
+  &:disabled {
+    opacity: 1;
+    background: #e9ecef;
+    color: #333;
+    font-weight: 400;
+    cursor: not-allowed;
+    pointer-events: auto;
+
+    i {
+      opacity: 0.5;
+    }
+
+    @media (max-width: 991px) {
+      background: transparent;
+    }
+  }
+
+  i {
+    font-size: 18px;
+  }
+
+  @media (max-width: 991px) {
+    padding: 6px !important;
+    background: transparent;
+    color: #0f3549;
+    width: auto;
+    flex: auto;
+  }
+}
+
+.modal-notes {
+  &.modal {
+    .modal-dialog {
+      max-width: 600px;
+
+      .modal-content {
+        gap: 0;
+
+        .modal-header {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding-right: 44px;
+          margin: 0 0 24px;
+          position: relative;
+
+          h5 {
+            color: #000;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.2;
+
+            @media (max-width: 767px) {
+              font-size: 1rem;
+            }
+          }
+
+          i {
+            color: #000000;
+            font-size: 18px;
+            cursor: pointer;
+          }
+
+          @media (max-width: 767px) {
+            margin-bottom: 20px;
+          }
+        }
+
+        .modal-footer {
+          gap: 10px;
+          margin-top: 28px;
+
+          @media (max-width: 767px) {
+            margin-top: 20px;
+          }
+        }
+
+        textarea {
+          height: 120px;
+        }
+
+        .modal-body {
+          p {
+            @media (max-width: 767px) {
+              font-size: 14px;
+              line-height: 1.5;
+            }
           }
         }
       }

@@ -425,8 +425,10 @@ $(document).ready(function () {
   /* setting - Scorecards modal */
 
   $("#scorecardsSettingModal").on("shown.bs.modal", function () {
-    $("#scorecards-wizard-step-1").show();
-    $("#scorecards-wizard-step-2").hide();
+    if (!$(this).data("is-toggling-note")) {
+      $("#scorecards-wizard-step-1").show();
+      $("#scorecards-wizard-step-2").hide();
+    }
 
     $(".select2-frequenza, .select2-approximate").select2({
       dropdownParent: $("#scorecardsSettingModal"),
@@ -451,6 +453,11 @@ $(document).ready(function () {
       dropdownParent: $("#scorecardsSettingModal"),
       width: "100%",
     });
+
+    // Clear the toggling flag after modal is fully shown
+    if ($(this).data("is-toggling-note")) {
+      $(this).data("is-toggling-note", false);
+    }
   });
 
   $("#scorecards-btn-next-step").on("click", function () {
@@ -483,13 +490,13 @@ $(document).ready(function () {
                 </div>
             </td>
             <td class="border-bottom py-3">
-                <textarea class="form-control resize-textarea" rows="1" placeholder=""></textarea>
-            </td>
-            <td class="border-bottom py-3">
                 <input type="number" class="form-control text-center" placeholder="" min="1">
             </td>
             <td class="border-bottom text-end py-3">
-                <i class="fa-solid fa-circle-minus remove-scorecards-relation-btn text-danger fs-5" style="cursor:pointer;"></i>
+              <div class="btn-scorecards-div">
+                <button type="button" class="btn btn-normal-blue add-note-btn" data-bs-toggle="modal" data-bs-target="#scorecardsNoteModal" data-bs-dismiss="modal" disabled><span class="d-none d-lg-inline"> Add / Edit Note</span><span class="d-flex d-lg-none"><i class="fa-regular fa-message-plus"></i></span></button>
+                <i class="fa-solid fa-circle-minus remove-scorecards-relation-btn text-danger fs-5" style="cursor:pointer;" title="Delete"></i>
+              </div>
             </td>
         </tr>
     `;
@@ -500,16 +507,15 @@ $(document).ready(function () {
       dropdownParent: $("#scorecardsSettingModal"),
       width: "100%",
     });
+  });
 
-    // Auto-resize for the new dynamically added textarea
-    const newTextarea = $tbody.find(".scorecards-relation-row:last-child .resize-textarea")[0];
-    if (newTextarea) {
-      autoResizeTextarea(newTextarea);
-      ["input", "change", "focus"].forEach((event) => {
-        newTextarea.addEventListener(event, function () {
-          autoResizeTextarea(this);
-        });
-      });
+  $(document).on("change", ".scorecards-relation-row .select2-kpi", function () {
+    var $row = $(this).closest("tr");
+    var $noteBtn = $row.find(".add-note-btn");
+    if ($(this).val()) {
+      $noteBtn.prop("disabled", false);
+    } else {
+      $noteBtn.prop("disabled", true);
     }
   });
 
@@ -519,7 +525,7 @@ $(document).ready(function () {
     if ($tbody.find("tr.scorecards-relation-row").length === 0) {
       $tbody.append(`
         <tr class="empty-state-row">
-            <td colspan="5" class="text-center text-muted py-4">
+            <td colspan="4" class="text-center text-muted py-4">
               <p class="empty-state-text">No related KPIs added yet. Click <i class="fa-solid fa-circle-plus add-scorecards-relation-btn text-success d-inline-flex text-end fs-5" style="cursor:pointer;" aria-hidden="true"></i> to add one.</p>
             </td>
         </tr>
@@ -528,56 +534,33 @@ $(document).ready(function () {
   });
 
   $("#scorecardsSettingModal").on("hidden.bs.modal", function () {
+    if ($(this).data("is-toggling-note")) {
+      return;
+    }
+    
     var $tbody = $("#scorecards-relations-table tbody");
     $tbody.empty();
     $tbody.append(`
         <tr class="empty-state-row">
-            <td colspan="5" class="text-center text-muted py-4">
+            <td colspan="4" class="text-center text-muted py-4">
               <p class="empty-state-text">No related KPIs added yet. Click <i class="fa-solid fa-circle-plus add-scorecards-relation-btn text-success d-inline-flex text-end fs-5" style="cursor:pointer;" aria-hidden="true"></i> to add one.</p>
             </td>
         </tr>
     `);
   });
 
+  $(document).on("click", ".add-note-btn", function () {
+    var $row = $(this).closest("tr");
+    var kpiName = $row.find(".select2-kpi option:selected").text();
+    if (!kpiName || kpiName === "Seleziona KPI") {
+      kpiName = "Selected KPI";
+    }
+    $("#scorecardsNoteModalLabel").text("Add Note - " + kpiName);
+    
+    // Set flag so settings modal doesn't reset when hiding/showing for note modal
+    $("#scorecardsSettingModal").data("is-toggling-note", true);
+  });
+
   /* End of setting - Scorecards modal */
 });
 
-// Auto resize textarea with min/max height
-function autoResizeTextarea(textarea) {
-    if (!textarea) return;
-
-    const minHeight = 46;
-    const maxHeight = 82;
-
-    textarea.style.minHeight = minHeight + "px";
-    textarea.style.maxHeight = maxHeight + "px";
-
-    textarea.style.height = "auto"; // Reset height
-
-    let newHeight = textarea.scrollHeight;
-    newHeight = Math.max(newHeight, minHeight);
-    newHeight = Math.min(newHeight, maxHeight);
-
-    textarea.style.height = newHeight + "px";
-    textarea.style.overflowY = textarea.scrollHeight > maxHeight ? "auto" : "hidden";
-}
-
-// Apply on all textareas
-function initAutoResizeTextarea(selector = ".resize-textarea") {
-    const textareas = document.querySelectorAll(selector);
-
-    textareas.forEach((textarea) => {
-        autoResizeTextarea(textarea);
-
-        ["input", "change", "focus"].forEach((event) => {
-            textarea.addEventListener(event, function () {
-                autoResizeTextarea(this);
-            });
-        });
-    });
-}
-
-// Run after page load
-document.addEventListener("DOMContentLoaded", function () {
-    initAutoResizeTextarea();
-});

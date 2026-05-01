@@ -410,7 +410,6 @@
                                             <tr>
                                                 <th class="text-center">KPI</th>
                                                 <th class="text-center">Peso</th>
-                                                <th class="text-center">Note</th>
                                                 <th class="text-center">Ordinamento</th>
                                                 <th class="text-end add-col-thead">
                                                     <i class="fa-solid fa-circle-plus add-scorecards-relation-btn text-success d-inline-flex text-end fs-5" style="cursor:pointer;"></i>
@@ -420,7 +419,7 @@
 
                                         <tbody class="row-box-area">
                                             <tr class="empty-state-row">
-                                                <td colspan="5" class="text-center text-muted py-4">
+                                                <td colspan="4" class="text-center text-muted py-4">
                                                     <p class="empty-state-text">No related KPIs added yet. Click <i class="fa-solid fa-circle-plus add-scorecards-relation-btn text-success d-inline-flex text-end fs-5" style="cursor:pointer;" aria-hidden="true"></i> to add one.</p>
                                                 </td>
                                             </tr>
@@ -444,6 +443,31 @@
         </div>
     </div>
 
+
+    <div class="modal fade custom-wizard-modal modal-notes" id="scorecardsNoteModal" tabindex="-1" aria-labelledby="scorecardsNoteModalLabel" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scorecardsNoteModalLabel">Add Note</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark-large" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                    <p>Write your message below</p>
+                    <textarea class="form-control resize-textarea" rows="4" placeholder="Scrivi qui la nota...">   </textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn clear-modal-btn" data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="button" class="btn btn-normal-blue" id="saveModal" data-bs-toggle="modal" data-bs-target="#scorecardsSettingModal" data-bs-dismiss="modal">
+                        Add Note
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

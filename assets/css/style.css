@@ -11926,6 +11926,10 @@ p {
   right: 10px;
   cursor: pointer;
 }
+.contentBlock .filterBlock .searchBarWrapper.searchbar-participants .form-control {
+  padding-left: 12px;
+  border-radius: 4px;
+}
 .contentBlock .filterBlock .blockTitle {
   color: #292929;
   font-size: 16px;
@@ -12500,6 +12504,14 @@ p {
   .contentBlock .middleWrapper.individualCardDetails {
     flex-direction: column;
   }
+}
+.contentBlock .participants-filter .dropDownWrapper {
+  gap: 12px;
+}
+.contentBlock .participants-filter .custom-dropdown .btn.dropdown-toggle {
+  min-height: 40px;
+  border-radius: 4px;
+  padding-right: 32px;
 }
 
 .custom-dropdown .btn {
@@ -14444,20 +14456,30 @@ p {
     padding: 24px 40px 0;
   }
 }
-.participants-section .topMainTitle,
-.participants-section .filterBlock {
+.participants-section .topMainTitle {
   margin-bottom: 30px;
 }
 @media screen and (max-width: 1399px) {
-  .participants-section .topMainTitle,
-  .participants-section .filterBlock {
+  .participants-section .topMainTitle {
     margin-bottom: 16px;
   }
 }
 @media screen and (min-width: 1400px) and (max-width: 1720px) {
-  .participants-section .topMainTitle,
-  .participants-section .filterBlock {
+  .participants-section .topMainTitle {
     margin-bottom: 20px;
+  }
+}
+.participants-section .filterBlock {
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 1399px) {
+  .participants-section .filterBlock {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1720px) {
+  .participants-section .filterBlock {
+    margin-bottom: 12px;
   }
 }
 
@@ -15977,6 +15999,21 @@ label.form-radio-label .form-radio-text {
   text-align: center;
   flex: 1;
 }
+.btn-normal-blue.add-note-btn.has-note {
+  background-color: #198754;
+  border-color: #198754;
+  color: #fff;
+}
+.btn-normal-blue.add-note-btn.has-note:hover {
+  background-color: #157347;
+  border-color: #146c43;
+}
+@media (max-width: 991px) {
+  .btn-normal-blue.add-note-btn.has-note {
+    background: transparent;
+    color: #198754;
+  }
+}
 .btn-normal-blue.add-note-btn:disabled {
   opacity: 1;
   background: #e9ecef;
@@ -16058,6 +16095,12 @@ label.form-radio-label .form-radio-text {
     font-size: 14px;
     line-height: 1.5;
   }
+}
+
+.prt-filter-dv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 @media (max-width: 991px) {

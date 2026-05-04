@@ -63,24 +63,54 @@ document.addEventListener("DOMContentLoaded", () => {
 $(document).ready(function () {
   // Init Customer dropdown (single select with clear)
   $("#customerSelect").select2({
-    placeholder: "Select a customer",
+    placeholder: "Select a role",
+    minimumResultsForSearch: -1,
     allowClear: true,
-    width: "auto",
+    width: "100%",
   });
 
   // Init Projects dropdown (multi-select)
   $("#projectsSelect").select2({
-    placeholder: "Select projects",
+    placeholder: "Select KPI",
     allowClear: true,
     multiple: true,
-    width: "auto",
+    width: "100%",
   });
 
   $("#projectsSelect1").select2({
-    placeholder: "Select projects",
+    placeholder: "Select Category",
     allowClear: true,
     multiple: true,
-    width: "auto",
+    width: "100%",
+  });
+
+  // Init Participants Filters dropdowns
+  $("#tipoSchedaSelect").select2({
+    placeholder: "Select Tipo Scheda",
+    minimumResultsForSearch: -1,
+    allowClear: true,
+    width: "100%",
+  });
+
+  $("#partecipaSelect").select2({
+    placeholder: "Select Partecipa",
+    minimumResultsForSearch: -1,
+    allowClear: true,
+    width: "100%",
+  });
+
+  $("#categoriaSelect").select2({
+    placeholder: "Select Categoria",
+    minimumResultsForSearch: -1,
+    allowClear: true,
+    width: "100%",
+  });
+
+  $("#ruoloSelect").select2({
+    placeholder: "Select Ruolo",
+    minimumResultsForSearch: -1,
+    allowClear: true,
+    width: "100%",
   });
 
   $(document).on("select2:open", function () {
@@ -559,8 +589,65 @@ $(document).ready(function () {
     
     // Set flag so settings modal doesn't reset when hiding/showing for note modal
     $("#scorecardsSettingModal").data("is-toggling-note", true);
+    
+    // Store current note and active row reference
+    var existingNote = $row.data('note-content') || "";
+    $("#scorecardsNoteModal textarea").val(existingNote);
+    $("#scorecardsNoteModal").data("active-row", $row);
+  });
+
+  $(document).on("click", "#saveModal", function () {
+    var $activeRow = $("#scorecardsNoteModal").data("active-row");
+    if ($activeRow) {
+      var noteContent = $("#scorecardsNoteModal textarea").val().trim();
+      $activeRow.data('note-content', noteContent);
+      
+      var $btn = $activeRow.find('.add-note-btn');
+      if (noteContent !== "") {
+        $btn.addClass('has-note');
+      } else {
+        $btn.removeClass('has-note');
+      }
+    }
   });
 
   /* End of setting - Scorecards modal */
-});
 
+  // Quick search for participants table
+  $("#quickSearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    var hasResults = false;
+
+    $(".participants-table tbody tr.view").each(function() {
+      var matricola = $(this).find("td:eq(1)").text().toLowerCase();
+      var persona = $(this).find("td:eq(2)").text().toLowerCase();
+      
+      var match = matricola.indexOf(value) > -1 || persona.indexOf(value) > -1;
+      
+      if (match) {
+        $(this).show();
+        var nextTr = $(this).next(".spacing-tr");
+        if (nextTr.length) nextTr.show();
+        hasResults = true;
+      } else {
+        $(this).hide();
+        var nextTr = $(this).next(".spacing-tr");
+        if (nextTr.length) nextTr.hide();
+      }
+    });
+
+    var $tbody = $(".participants-table tbody");
+    if (!hasResults && value.trim() !== "") {
+      if ($tbody.find(".no-results-row").length === 0) {
+        $tbody.append('<tr class="no-results-row"><td colspan="10" class="text-center py-4 text-muted">No results found</td></tr>');
+      }
+      $tbody.find(".no-results-row").show();
+    } else if (!hasResults && value.trim() === "") {
+        // Edge case: if somehow everything is hidden but input is empty, wait, if input is empty match is true for all.
+        // So hasResults will be true. But just in case:
+        $tbody.find(".no-results-row").hide();
+    } else {
+      $tbody.find(".no-results-row").hide();
+    }
+  });
+});

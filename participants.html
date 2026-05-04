@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Participants - Cards | Ayvens</title>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Font awesome link -->
@@ -205,32 +206,136 @@
     <div class="topMainTitle">
       <div class="topTitle">Lorem Ipsum</div>
     </div>
-    <div class="filterBlock flex-sm-row flex-column">
-      <div class="dropdown custom-dropdown width-all-100-sm">
-        <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          2025 Quarter <i class="fa-regular fa-chevron-down ms-2"></i>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
-          <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
-          <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
-        </ul>
-      </div>
-      <div class="dropDownWrapper width-all-100-sm">
-        <div class="custom-dropdown1 customDropdown fixBtnStyle global-flex-md">
-          <button type="button" class="btn all-btn width-all-100-sm allSimilarBtn">
-            <span><i class="fa-solid fa-up-from-bracket"></i></span>Export
+
+    <div class="filter-root">
+      <div class="filterBlock participants-filter flex-sm-row flex-column">
+        <div class="dropdown custom-dropdown width-all-100-sm">
+          <button class="btn dropdown-toggle width-all-100-sm allSimilarBtn" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            2025 Quarter <i class="fa-regular fa-chevron-down ms-2"></i>
           </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">2024 Quarter</a></li>
+            <li><a class="dropdown-item" href="#">2023 Quarter</a></li>
+            <li><a class="dropdown-item" href="#">2022 Quarter</a></li>
+          </ul>
         </div>
-        <div class="custom-dropdown1 customDropdown fixBtnStyle global-flex-md">
-          <button type="button" class="btn all-btn width-all-100-sm allSimilarBtn" data-bs-toggle="modal"
-            data-bs-target="#importKpiModal">
-            <span><i class="fa-solid fa-down-to-bracket"></i></span>Import
-          </button>
+  
+        <div class="prt-filter-dv">
+          <div class="searchBarWrapper searchbar-participants">
+            <div class="searchBarBlock">
+              <input type="text" class="form-control allSimilarBtn" placeholder="Search..." aria-label="Search" id="quickSearch1">
+              <i class="fa-light fa-magnifying-glass search-icon" aria-hidden="true"></i>
+            </div>
+          </div>
+    
+          <div class="dropdown custom-dropdown customDropdown customDropdown1 customDropdown-width width-all-100-sm">
+            <button class="btn dropdown-toggle allSimilarBtn width-all-100-sm togglable_area" type="button">
+              Filtri <i class="fa-regular fa-chevron-down ms-2"></i>
+            </button>
+            <div class="dropdown-menu-area">
+              <div class="row">
+                <div class="col-12 col-md-12">
+                  <div class="mb-2" id="tipoSchedaSection">
+                    <div class="d-flex flex-column">
+                      <label class="form-label label-custom mb-2">Tipo Scheda</label>
+                      <div class="select-dv">
+                        <select id="tipoSchedaSelect" class="form-select select2-custom">
+                          <option value="">Select Tipo Scheda</option>
+                          <option value="s1-card">S1 Card</option>
+                          <option value="s2-card">S2 Card</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-12 mt-2">
+                  <div class="mb-2" id="partecipaSection">
+                    <div class="d-flex flex-column">
+                      <label class="form-label label-custom mb-2">Partecipa</label>
+                      <div class="select-dv">
+                        <select id="partecipaSelect" class="form-select select2-custom">
+                          <option value="">Select Partecipa</option>
+                          <option value="-">-</option>
+                          <option value="si">Sì</option>
+                          <option value="no">No</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-12 mt-2">
+                  <div class="mb-2" id="categoriaSection">
+                    <div class="d-flex flex-column">
+                      <label class="form-label label-custom mb-2">Categoria</label>
+                      <div class="select-dv">
+                        <select id="categoriaSelect" class="form-select select2-custom">
+                          <option value="">Select Categoria</option>
+                          <option value="cat-01">Category 01</option>
+                          <option value="cat-02">Category 02</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-12 mt-2">
+                  <div class="mb-2" id="ruoloSection">
+                    <div class="d-flex flex-column">
+                      <label class="form-label label-custom mb-2">Ruolo</label>
+                      <div class="select-dv">
+                        <select id="ruoloSelect" class="form-select select2-custom">
+                          <option value="">Select Ruolo</option>
+                          <option value="role-01">Role 01</option>
+                          <option value="role-02">Role 02</option>
+                          <option value="role-03">Role 03</option>
+                          <option value="role-04">Role 04</option>
+                          <option value="role-05">Role 05</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-12">
+                  <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-primary apply-filter-btn" type="button">Apply Filter</button>
+                    <button class="btn btn-secondary clear-filter-btn" type="button">Clear Filter</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="dropDownWrapper width-all-100-sm">
+            <div class="custom-dropdown1 customDropdown fixBtnStyle global-flex-md">
+              <button type="button" class="btn all-btn width-all-100-sm allSimilarBtn">
+                <span><i class="fa-solid fa-up-from-bracket"></i></span>Export
+              </button>
+            </div>
+            <div class="custom-dropdown1 customDropdown fixBtnStyle global-flex-md">
+              <button type="button" class="btn all-btn width-all-100-sm allSimilarBtn" data-bs-toggle="modal"
+                data-bs-target="#importKpiModal">
+                <span><i class="fa-solid fa-down-to-bracket"></i></span>Import
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="appliedFilterSection p-0 my-3">
+        <h6 class="mb-0">Applied Filters:</h6>
+        <div class="filteredContent">
+          <div class="mb-0 applied-section">
+            <p class="mb-0">S1 Card</p><i class="fa-regular fa-xmark" aria-hidden="true"></i>
+          </div>
+          <div class="mb-0 applied-section">
+            <p class="mb-0">Category 01</p><i class="fa-regular fa-xmark" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="tab-content tableContent" id="myTabContent">
       <table class="table participants-table">
         <thead>
@@ -241,11 +346,11 @@
                 <span class="check-tick"></span>
               </span>
             </th>
-            <th>Freshman</th>
-            <th>Name</th>
-            <th>Participate</th>
-            <th>Card Type</th>
-            <th>Period Target</th>
+            <th>Matricola​</th>
+            <th>Persona</th>
+            <th>Partecipa</th>
+            <th>Scheda</th>
+            <th>Bonus Target</th>
             <th>Quaterly Scheduling</th>
             <th></th>
             <th></th>
@@ -844,6 +949,7 @@
 
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="assets/js/custom.js"></script>
 </body>
 

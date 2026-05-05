@@ -2649,6 +2649,23 @@
     th,
     td {
       vertical-align: middle !important;
+      height: 40px;
+
+      &.prt-th {
+        width: 66px;
+      }
+
+      &.min-w400 {
+        min-width: 400px;
+      }
+
+      &.min-w280 {
+        min-width: 280px;
+      }
+
+      &.min-w100 {
+        min-width: 100px;
+      }
     }
 
     td {
@@ -4765,6 +4782,10 @@ body .select2-multiple-dv .select2-container--default:after {
         padding: 0;
       }
     }
+
+    .fa-xmark {
+      cursor: pointer;
+    }
   }
 }
 
@@ -5920,5 +5941,173 @@ label.form-radio-label {
     gap: 6px;
     color: #198754;
     font-weight: 600;
+  }
+}
+
+.participants-table tbody tr.view td:nth-child(n+7) {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+.delete-link-custom {
+  padding: 0 !important;
+  color: #CF0606;
+  margin: 0;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 15px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.modal-participants {
+  &.modal {
+    .modal-dialog {
+      max-width: 500px;
+
+      .modal-content {
+        padding: 20px 20px 28px;
+        gap: 0;
+        border-radius: 20px;
+
+        .modal-header {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding-right: 44px;
+          margin: 0 0 24px;
+          position: relative;
+
+          h5 {
+            color: #000;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 4px;
+
+            @media (max-width: 767px) {
+              font-size: 1rem;
+            }
+          }
+
+          i {
+            color: #000000;
+            font-size: 18px;
+            cursor: pointer;
+          }
+
+          @media (max-width: 767px) {
+            margin-bottom: 20px;
+          }
+        }
+
+        .modal-footer {
+          gap: 10px;
+          margin-top: 30px;
+          padding: 0;
+          border: none;
+
+          @media (max-width: 767px) {
+            margin-top: 20px;
+          }
+        }
+
+        textarea {
+          height: 120px;
+        }
+
+        .modal-body {
+          p {
+            @media (max-width: 767px) {
+              font-size: 14px;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-header {
+    align-items: flex-start;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  p.modal-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #767676;
+  }
+
+  .periodo-form-group {
+    .form-control {
+      border-radius: 8px !important;
+
+      &[readonly] {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .row {
+      --bs-gutter-x: 1rem;
+    }
+
+    .btn-prt-group {
+      width: 100%;
+
+      .btn {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.currency-group {
+  .form-control {
+    flex: 1;
+    border-radius: 0 8px 8px 0 !important;
+  }
+
+  .input-group-text {
+    border-radius: 8px 0 0 8px !important;
+    font-size: 15px;
+    background: #f6f6f6;
+  }
+}
+
+.check-prt-dv {
+  gap: 10px;
+
+  .delete-link-custom {
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.delete-records-modal {
+  &.modal {
+    .modal-dialog {
+      .modal-content {
+        border-radius: 20px;
+      }
+    }
   }
 }

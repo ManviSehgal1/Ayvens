@@ -61,6 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 $(document).ready(function () {
+  // Init Tooltips
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+
   // Init Customer dropdown (single select with clear)
   $("#customerSelect").select2({
     placeholder: "Select a role",
@@ -613,12 +619,16 @@ $(document).ready(function () {
 
   /* End of setting - Scorecards modal */
 
+  /* Participants Page */
   // Quick search for participants table
   $("#quickSearch").on("keyup", function() {
+    var $tbody = $("#participants-table tbody");
+    if ($tbody.find("tr.view").length === 0) return;
+
     var value = $(this).val().toLowerCase();
     var hasResults = false;
 
-    $(".participants-table tbody tr.view").each(function() {
+    $("#participants-table tbody tr.view").each(function() {
       var matricola = $(this).find("td:eq(1)").text().toLowerCase();
       var persona = $(this).find("td:eq(2)").text().toLowerCase();
       
@@ -636,7 +646,7 @@ $(document).ready(function () {
       }
     });
 
-    var $tbody = $(".participants-table tbody");
+    var $tbody = $("#participants-table tbody");
     if (!hasResults && value.trim() !== "") {
       if ($tbody.find(".no-results-row").length === 0) {
         $tbody.append('<tr class="no-results-row"><td colspan="10" class="text-center py-4 text-muted">No results found</td></tr>');
@@ -650,4 +660,155 @@ $(document).ready(function () {
       $tbody.find(".no-results-row").hide();
     }
   });
+
+
+  // Handle click on editable bonus cells
+  $(document).on("click", "#participants-table tbody tr.view td.editable-cell", function() {
+    var $cell = $(this);
+    var $row = $cell.closest("tr.view");
+    var cellText = $cell.text().trim();
+    
+    // Only open if there's a value (or if we want to allow editing empty cells)
+    var value = cellText.replace('€', '').trim();
+    
+    // Extract Matricola and Persona
+    var matricola = $row.find("td:eq(1)").text().trim();
+    var personaName = $row.find("td:eq(2) .participants-name h6").text().trim();
+    if (!personaName) {
+      personaName = $row.find("td:eq(2)").text().trim();
+    }
+    
+    // Set dynamic subtitle
+    $("#matricolaModal").text(matricola + " - " + personaName);
+
+    // Extract period from data attribute
+    var periodText = $cell.data("period") || "";
+    
+    // Set values in modal
+    $(".periodo-form-group input").val(periodText);
+    $("#bonusPeriodoInput").val(value);
+    
+    // Store active cell
+    $("#participantsModal").data("active-cell", $cell);
+    
+    // Show modal
+    $("#participantsModal").modal("show");
+  });
+
+  // Handle Save Bonus Modal
+  $("#saveBonusModal").on("click", function() {
+    $("#participantsModal").modal("hide");
+    $("#confirmSaveBonusModal").modal("show");
+  });
+
+  // Handle Actual Save from Confirmation Modal
+  $("#confirmSaveBtn").on("click", function() {
+    var $cell = $("#participantsModal").data("active-cell");
+    if ($cell) {
+      var newValue = $("#bonusPeriodoInput").val().trim();
+      // Keep the euro sign in front of the value
+      $cell.text("€ " + newValue);
+    }
+    $("#confirmSaveBonusModal").modal("hide");
+  });
+
+  // Handle Delete Scorecard Modal
+  $("#deleteScorecardBtn").on("click", function(e) {
+    e.preventDefault();
+    $("#participantsModal").modal("hide");
+    $("#deleteRecordsModal").data("delete-type", "single");
+    $("#deleteRecordsMessage").text("Are you sure you want to delete this record?");
+    $("#deleteRecordsModal").modal("show");
+  });
+
+  function toggleTrashIcon() {
+    var checkedCount = $("#participants-table tbody .form-check-input:checked").length;
+    if (checkedCount > 0) {
+      $("#participants-table thead .delete-link-custom").removeClass("d-none");
+    } else {
+      $("#participants-table thead .delete-link-custom").addClass("d-none");
+    }
+  }
+
+  function checkEmptyTable() {
+    var $tbody = $("#participants-table tbody");
+    if ($tbody.find("tr.view").length === 0) {
+      if ($tbody.find(".empty-table-row").length === 0) {
+        $tbody.append('<tr class="empty-table-row"><td colspan="10" class="text-center py-4 text-muted">No record found</td></tr>');
+      }
+      $tbody.find(".empty-table-row").show();
+      $(".pagination-container").hide();
+    } else {
+      $tbody.find(".empty-table-row").hide();
+      $(".pagination-container").show();
+    }
+  }
+
+  // Select All Checkbox Logic
+  $(document).on("change", "#participants-table thead .form-check-input", function() {
+    var isChecked = $(this).prop("checked");
+    $("#participants-table tbody .form-check-input").prop("checked", isChecked);
+    toggleTrashIcon();
+  });
+
+  // Individual Checkbox Logic (uncheck select-all if one is unchecked)
+  $(document).on("change", "#participants-table tbody .form-check-input", function() {
+    var totalCheckboxes = $("#participants-table tbody .form-check-input").length;
+    var checkedCheckboxes = $("#participants-table tbody .form-check-input:checked").length;
+    
+    if (totalCheckboxes > 0 && totalCheckboxes === checkedCheckboxes) {
+      $("#participants-table thead .form-check-input").prop("checked", true);
+    } else {
+      $("#participants-table thead .form-check-input").prop("checked", false);
+    }
+    toggleTrashIcon();
+  });
+
+  // Massive Delete Logic
+  $(document).on("click", ".check-prt-dv .delete-link-custom", function() {
+    var checkedCheckboxes = $("#participants-table tbody .form-check-input:checked");
+    if (checkedCheckboxes.length > 0) {
+      $("#deleteRecordsModal").data("delete-type", "massive");
+      $("#deleteRecordsMessage").text("Are you sure you want to delete the " + checkedCheckboxes.length + " selected record(s)?");
+      $("#deleteRecordsModal").modal("show");
+    } else {
+      alert("Please select at least one record to delete.");
+    }
+  });
+
+  $("#confirmDeleteRecordsBtn").on("click", function() {
+    var deleteType = $("#deleteRecordsModal").data("delete-type");
+
+    if (deleteType === "single") {
+      var $cell = $("#participantsModal").data("active-cell");
+      if ($cell) {
+        var $row = $cell.closest("tr.view");
+        var $spacingRow = $row.next(".spacing-tr");
+        
+        $row.remove();
+        if ($spacingRow.length) {
+          $spacingRow.remove();
+        }
+      }
+    } else {
+      // massive
+      var checkedCheckboxes = $("#participants-table tbody .form-check-input:checked");
+      checkedCheckboxes.each(function() {
+        var $row = $(this).closest("tr.view");
+        var $spacingRow = $row.next(".spacing-tr");
+        $row.remove();
+        if ($spacingRow.length) {
+          $spacingRow.remove();
+        }
+      });
+      // Uncheck select all after delete
+      $("#participants-table thead .form-check-input").prop("checked", false);
+    }
+    
+    toggleTrashIcon();
+    checkEmptyTable();
+    $("#deleteRecordsModal").modal("hide");
+  });
+
+  /* End of Participants Page */
 });

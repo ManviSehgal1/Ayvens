@@ -13288,6 +13288,23 @@ p {
 .participants-table tr th,
 .participants-table tr td {
   vertical-align: middle !important;
+  height: 40px;
+}
+.participants-table tr th.prt-th,
+.participants-table tr td.prt-th {
+  width: 66px;
+}
+.participants-table tr th.min-w400,
+.participants-table tr td.min-w400 {
+  min-width: 400px;
+}
+.participants-table tr th.min-w280,
+.participants-table tr td.min-w280 {
+  min-width: 280px;
+}
+.participants-table tr th.min-w100,
+.participants-table tr td.min-w100 {
+  min-width: 100px;
 }
 .participants-table tr td .participants-name h6,
 .participants-table tr td .participants-name p {
@@ -15266,6 +15283,9 @@ body .select2-multiple-dv .select2-container--default:after {
   height: 12px;
   padding: 0;
 }
+.appliedFilterSection .filteredContent .fa-xmark {
+  cursor: pointer;
+}
 
 .assignees-root-table {
   padding: 10px 100px;
@@ -16194,4 +16214,138 @@ label.form-radio-label .form-radio-text {
     color: #198754;
     font-weight: 600;
   }
+}
+.participants-table tbody tr.view td:nth-child(n+7) {
+  cursor: pointer;
+}
+.participants-table tbody tr.view td:nth-child(n+7):hover {
+  background-color: #f8f9fa;
+}
+
+.delete-link-custom {
+  padding: 0 !important;
+  color: #CF0606;
+  margin: 0;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 15px;
+}
+.delete-link-custom:hover {
+  text-decoration: underline;
+}
+
+.modal-participants.modal .modal-dialog {
+  max-width: 500px;
+}
+.modal-participants.modal .modal-dialog .modal-content {
+  padding: 20px 20px 28px;
+  gap: 0;
+  border-radius: 20px;
+}
+.modal-participants.modal .modal-dialog .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right: 44px;
+  margin: 0 0 24px;
+  position: relative;
+}
+.modal-participants.modal .modal-dialog .modal-content .modal-header h5 {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+@media (max-width: 767px) {
+  .modal-participants.modal .modal-dialog .modal-content .modal-header h5 {
+    font-size: 1rem;
+  }
+}
+.modal-participants.modal .modal-dialog .modal-content .modal-header i {
+  color: #000000;
+  font-size: 18px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .modal-participants.modal .modal-dialog .modal-content .modal-header {
+    margin-bottom: 20px;
+  }
+}
+.modal-participants.modal .modal-dialog .modal-content .modal-footer {
+  gap: 10px;
+  margin-top: 30px;
+  padding: 0;
+  border: none;
+}
+@media (max-width: 767px) {
+  .modal-participants.modal .modal-dialog .modal-content .modal-footer {
+    margin-top: 20px;
+  }
+}
+.modal-participants.modal .modal-dialog .modal-content textarea {
+  height: 120px;
+}
+@media (max-width: 767px) {
+  .modal-participants.modal .modal-dialog .modal-content .modal-body p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+.modal-participants .modal-header {
+  align-items: flex-start;
+}
+.modal-participants .btn-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.modal-participants p.modal-subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #767676;
+}
+.modal-participants .periodo-form-group .form-control {
+  border-radius: 8px !important;
+}
+.modal-participants .periodo-form-group .form-control[readonly] {
+  background-color: #f6f6f6;
+}
+@media (max-width: 480px) {
+  .modal-participants .row {
+    --bs-gutter-x: 1rem;
+  }
+  .modal-participants .btn-prt-group {
+    width: 100%;
+  }
+  .modal-participants .btn-prt-group .btn {
+    flex: 1;
+  }
+}
+
+.currency-group .form-control {
+  flex: 1;
+  border-radius: 0 8px 8px 0 !important;
+}
+.currency-group .input-group-text {
+  border-radius: 8px 0 0 8px !important;
+  font-size: 15px;
+  background: #f6f6f6;
+}
+
+.check-prt-dv {
+  gap: 10px;
+}
+.check-prt-dv .delete-link-custom {
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  text-decoration: none;
+}
+.check-prt-dv .delete-link-custom:hover {
+  text-decoration: none;
+}
+
+.delete-records-modal.modal .modal-dialog .modal-content {
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */

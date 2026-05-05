@@ -224,7 +224,7 @@
         <div class="prt-filter-dv">
           <div class="searchBarWrapper searchbar-participants">
             <div class="searchBarBlock">
-              <input type="text" class="form-control allSimilarBtn" placeholder="Search..." aria-label="Search" id="quickSearch1">
+              <input type="text" class="form-control allSimilarBtn" placeholder="Search..." aria-label="Search" id="quickSearch">
               <i class="fa-light fa-magnifying-glass search-icon" aria-hidden="true"></i>
             </div>
           </div>
@@ -337,24 +337,24 @@
     </div>
 
     <div class="tab-content tableContent" id="myTabContent">
-      <table class="table participants-table">
+      <table class="table participants-table" id="participants-table">
         <thead>
           <tr>
-            <th>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
+            <th class="prt-th">
+              <div class="check-prt-dv d-flex align-items-center">
+                <span class="form-check-wrapper">
+                  <input class="form-check-input" type="checkbox" />
+                  <span class="check-tick"></span>
+                </span>
+                <span class="delete-link-custom d-none" title="Elimina" data-bs-toggle="tooltip" data-bs-placement="top"><i class="fa-light fa-trash" aria-hidden="true"></i></span>
+              </div>
             </th>
             <th>Matricola​</th>
-            <th>Persona</th>
+            <th class="min-w280">Persona</th>
             <th>Partecipa</th>
             <th>Scheda</th>
-            <th>Bonus Target</th>
-            <th>Quaterly Scheduling</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th class="min-w100">Bonus Target</th>
+            <th class="min-w400" colspan="4">Quaterly Scheduling</th>
           </tr>
         </thead>
         <tbody>
@@ -365,25 +365,23 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1701</td>
             <td>
               <div class="participants-name">
                 <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <p>Local Corporate - Institutional&PA - Institutional & PA Key Account Commerce</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -394,22 +392,20 @@
             <td>1702</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>Maria Garcia</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -417,25 +413,23 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1703</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>James Smith</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -443,25 +437,23 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1704</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>Linda Johnson</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -469,25 +461,23 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1705</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>Robert Brown</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -495,25 +485,23 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1706</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>Patricia Davis</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -521,25 +509,23 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1707</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>Michael Miller</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -547,25 +533,23 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1708</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>Jennifer Wilson</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -573,25 +557,23 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1709</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>William Moore</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
+
           <tr class="view">
             <td>
               <span class="form-check-wrapper">
@@ -599,282 +581,22 @@
                 <span class="check-tick"></span>
               </span>
             </td>
-            <td>1702</td>
+            <td>1710</td>
             <td>
               <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
+                <h6>Elizabeth Taylor</h6>
+                <p>Local Corporate - Institutional&PA</p>
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
+            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
+            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
+            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
           </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr">
-            <td colspan="7"></td>
-          </tr>
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1702</td>
-            <td>
-              <div class="participants-name">
-                <h6>Christian Court</h6>
-                <p>Local Corporate - Institutional&PA - Institutional
-                  & PA Key Account Commerce</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td>€ 2,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-            <td>€ 3,000.00</td>
-          </tr>
+          <tr class="spacing-tr"><td colspan="10"></td></tr>
         </tbody>
       </table>
     </div>
@@ -942,6 +664,108 @@
             Cancel
           </button>
           <button type="button" class="btn all-btn">Import</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-general modal-participants" id="participantsModal" tabindex="-1" aria-labelledby="ModalLabel" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <div class="modal-header-content">
+            <h5 class="modal-title" id="ModalLabel">Modifica scheda di periodo</h5>
+            <p class="modal-subtitle"><span id="matricolaModal">1702 - Christian Court</span></p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal">
+            <i class="fa-solid fa-xmark-large"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group periodo-form-group">
+                <label class="form-label">Periodo:</label>
+                <input type="text" class="form-control" value="Ott-Dic" readonly>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label">Bonus periodo:</label>
+                <div class="input-group currency-group">
+                  <span class="input-group-text currency-sign">€</span>
+                  <input type="text" class="form-control currency-amount" id="bonusPeriodoInput">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer d-flex justify-content-between align-items-center gap-3">
+          <button type="button" class="delete-link-custom border-0 bg-transparent p-0" id="deleteScorecardBtn">Elimina scheda di periodo</button>
+          <div class="d-flex align-items-center gap-3 m-0 btn-prt-group">
+            <button type="button" class="btn btn-normal-blue m-0" id="saveBonusModal">
+              Salva
+            </button>
+            <button type="button" class="btn clear-modal-btn m-0" data-bs-dismiss="modal">
+              Annulla
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade deletePaymentModal delete-records-modal" id="deleteRecordsModal" tabindex="-1" role="dialog"
+    aria-labelledby="deleteRecordsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteRecordsModalLabel">
+            Delete Records
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark-large" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0" id="deleteRecordsMessage">
+            Are you sure you want to delete the selected record(s)?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary allBtn" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn all-btn" id="confirmDeleteRecordsBtn">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade deletePaymentModal delete-records-modal" id="confirmSaveBonusModal" tabindex="-1" role="dialog"
+    aria-labelledby="confirmSaveBonusModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmSaveBonusModalLabel">
+            Attenzione
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark-large" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">
+            Sei sicuro di voler modificare il bonus di periodo?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-normal-blue m-0" id="confirmSaveBtn">Ok</button>
+          <button type="button" class="btn clear-modal-btn m-0" data-bs-dismiss="modal">Annulla</button>
         </div>
       </div>
     </div>

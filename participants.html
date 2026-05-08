@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Participants - Cards | Ayvens</title>
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Font awesome link -->
@@ -352,6 +353,8 @@
             <th>Matricola​</th>
             <th class="min-w280">Persona</th>
             <th>Partecipa</th>
+            <th>Dal</th>
+            <th>Al</th>
             <th>Scheda</th>
             <th class="min-w100">Bonus Target</th>
             <th class="min-w400" colspan="4">Quaterly Scheduling</th>
@@ -373,6 +376,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -397,6 +402,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -421,6 +428,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -445,6 +454,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -469,6 +480,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -493,6 +506,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -517,6 +532,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -541,6 +558,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -565,6 +584,8 @@
               </div>
             </td>
             <td><i class="fa-solid fa-check td-check-icon"></i></td>
+            <td>01/01/2025</td>
+            <td>31/12/2025</td>
             <td>S1 Card</td>
             <td>€ 12,000.00</td>
             <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
@@ -574,29 +595,7 @@
           </tr>
           <tr class="spacing-tr"><td colspan="10"></td></tr>
 
-          <tr class="view">
-            <td>
-              <span class="form-check-wrapper">
-                <input class="form-check-input" type="checkbox" />
-                <span class="check-tick"></span>
-              </span>
-            </td>
-            <td>1710</td>
-            <td>
-              <div class="participants-name">
-                <h6>Elizabeth Taylor</h6>
-                <p>Local Corporate - Institutional&PA</p>
-              </div>
-            </td>
-            <td><i class="fa-solid fa-check td-check-icon"></i></td>
-            <td>S1 Card</td>
-            <td>€ 12,000.00</td>
-            <td class="editable-cell" data-period="Gen-Mar">€ 2,000.00</td>
-            <td class="editable-cell" data-period="Apr-Giu">€ 3,000.00</td>
-            <td class="editable-cell" data-period="Lug-Set">€ 3,000.00</td>
-            <td class="editable-cell" data-period="Ott-Dic">€ 3,000.00</td>
-          </tr>
-          <tr class="spacing-tr"><td colspan="10"></td></tr>
+          
         </tbody>
       </table>
     </div>
@@ -684,6 +683,20 @@
         </div>
         
         <div class="modal-body">
+          <div class="row mb-3">
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label">Dal:</label>
+                <input type="text" class="form-control datepicker" placeholder="DD/MM/YYYY" id="dalInput">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label class="form-label">Al:</label>
+                <input type="text" class="form-control datepicker" placeholder="DD/MM/YYYY" id="alInput">
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-6">
               <div class="form-group periodo-form-group">
@@ -773,6 +786,7 @@
 
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="assets/js/custom.js"></script>
 </body>

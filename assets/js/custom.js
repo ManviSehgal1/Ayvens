@@ -129,13 +129,16 @@ $(document).ready(function () {
   });
 
   // Initialize when modal opens
-  $("#nwModal").on("shown.bs.modal", function () {
+  $("#nwModal, #participantsModal").on("shown.bs.modal", function () {
+    // Determine the container (the modal that is currently shown)
+    var modalId = "#" + $(this).attr("id");
+    
     // Datepicker
-    $(".datepicker").datepicker({
-      format: "dd-mm-yyyy",
+    $(this).find(".datepicker").datepicker({
+      format: "dd/mm/yyyy",
       autoclose: true,
       todayHighlight: true,
-      container: "#nwModal",
+      container: modalId,
       orientation: "bottom auto",
     });
 
@@ -684,9 +687,22 @@ $(document).ready(function () {
     // Extract period from data attribute
     var periodText = $cell.data("period") || "";
     
+    // Extract Dal and Al
+    var dal = $row.find("td:eq(4)").text().trim();
+    var al = $row.find("td:eq(5)").text().trim();
+
     // Set values in modal
     $(".periodo-form-group input").val(periodText);
     $("#bonusPeriodoInput").val(value);
+    $("#dalInput").val(dal);
+    if ($("#dalInput").data("datepicker")) {
+      $("#dalInput").datepicker("update", dal);
+    }
+    
+    $("#alInput").val(al);
+    if ($("#alInput").data("datepicker")) {
+      $("#alInput").datepicker("update", al);
+    }
     
     // Store active cell
     $("#participantsModal").data("active-cell", $cell);
@@ -705,9 +721,15 @@ $(document).ready(function () {
   $("#confirmSaveBtn").on("click", function() {
     var $cell = $("#participantsModal").data("active-cell");
     if ($cell) {
+      var $row = $cell.closest("tr.view");
       var newValue = $("#bonusPeriodoInput").val().trim();
       // Keep the euro sign in front of the value
       $cell.text("€ " + newValue);
+      
+      var newDal = $("#dalInput").val().trim();
+      var newAl = $("#alInput").val().trim();
+      $row.find("td:eq(4)").text(newDal);
+      $row.find("td:eq(5)").text(newAl);
     }
     $("#confirmSaveBonusModal").modal("hide");
   });

@@ -12376,17 +12376,18 @@ p {
   flex: 1;
 }
 .contentBlock .middleWrapper .customCard.detailCard .detailsCard-container {
-  display: flex;
-  gap: 60px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 170px auto auto;
 }
 @media screen and (max-width: 1720px) {
   .contentBlock .middleWrapper .customCard.detailCard .detailsCard-container {
-    gap: 24px;
+    gap: 16px;
   }
 }
 .contentBlock .middleWrapper .customCard.detailCard .detailsCard-textarea .finalTextarea {
   display: flex;
-  gap: 20px;
+  gap: 12px;
   align-items: flex-start;
 }
 .contentBlock .middleWrapper .customCard.detailCard .detailsCard-textarea .finalTextarea .fa-pen {
@@ -12421,9 +12422,16 @@ p {
   display: flex;
   align-items: center;
   gap: 2px;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 1.5;
   font-weight: 500;
+}
+.contentBlock .middleWrapper .customCard.statCard .value .euro-icon {
+  position: relative;
+  width: 21px;
+  top: -2px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (min-width: 1200px) and (max-width: 1720px) {
   .contentBlock .middleWrapper .customCard.statCard .value {
@@ -12469,9 +12477,12 @@ p {
     flex-direction: column;
   }
 }
+.contentBlock .middleWrapper.individualCardDetails {
+  gap: 16px;
+}
 .contentBlock .middleWrapper.individualCardDetails .numberCard {
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 @media screen and (max-width: 767px) {
   .contentBlock .middleWrapper.individualCardDetails .numberCard {
@@ -12481,10 +12492,25 @@ p {
 .contentBlock .middleWrapper.individualCardDetails .customCard {
   flex: auto;
   height: auto;
+  gap: 2px;
+  border-radius: 12px;
   justify-content: flex-start;
 }
+.contentBlock .middleWrapper.individualCardDetails .customCard .subText {
+  font-size: 12px;
+  line-height: 16px;
+}
+.contentBlock .middleWrapper.individualCardDetails .customCard .subText.editable-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.contentBlock .middleWrapper.individualCardDetails .customCard .smallTitle {
+  font-weight: 600;
+}
 .contentBlock .middleWrapper.individualCardDetails .customCard.detailCard {
-  width: 21.2%;
+  width: 20%;
 }
 @media screen and (min-width: 1200px) and (max-width: 1720px) {
   .contentBlock .middleWrapper.individualCardDetails .customCard.detailCard {
@@ -12498,7 +12524,8 @@ p {
 }
 .contentBlock .middleWrapper.individualCardDetails .customCard.statCard {
   flex: 1;
-  padding: 30px 20px;
+  padding: 16px;
+  max-width: 400px;
 }
 @media screen and (max-width: 1199px) {
   .contentBlock .middleWrapper.individualCardDetails {
@@ -15542,10 +15569,19 @@ body .select2-multiple-dv .select2-container--default:after {
   margin-top: 8px;
 }
 
-body .datepicker td,
-body .datepicker th {
+body .datepicker .datepicker-days td,
+body .datepicker .datepicker-days th {
   width: 24px !important;
   height: 16px !important;
+}
+
+body .datepicker .datepicker-months table tr td span,
+body .datepicker .datepicker-years table tr td span,
+body .datepicker .datepicker-decades table tr td span,
+body .datepicker .datepicker-centuries table tr td span {
+  height: auto;
+  line-height: 1.5;
+  padding: 4px;
 }
 
 @media screen and (max-width: 1720px) {
@@ -16304,6 +16340,9 @@ label.form-radio-label .form-radio-text {
   font-size: 14px;
   line-height: 1.5;
   color: #767676;
+}
+.modal-participants .datepicker {
+  border-radius: 8px !important;
 }
 .modal-participants .periodo-form-group .form-control {
   border-radius: 8px !important;

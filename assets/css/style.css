@@ -12385,6 +12385,11 @@ p {
     gap: 16px;
   }
 }
+@media screen and (max-width: 767px) {
+  .contentBlock .middleWrapper .customCard.detailCard .detailsCard-container {
+    grid-template-columns: 1fr;
+  }
+}
 .contentBlock .middleWrapper .customCard.detailCard .detailsCard-textarea .finalTextarea {
   display: flex;
   gap: 12px;
@@ -15584,6 +15589,120 @@ body .datepicker .datepicker-centuries table tr td span {
   padding: 4px;
 }
 
+.matrix-ind-card {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 380px;
+}
+.matrix-ind-card .ind-card-left {
+  position: relative;
+  padding: 0 0 0 31px;
+  flex: 1;
+}
+.matrix-ind-card .ind-card-right {
+  border-left: 1px solid #f1f1f1;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.matrix-ind-card .ind-performance-card {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.matrix-ind-card .ind-performance-card .ind-card-title {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+.matrix-ind-card .ind-performance-card .ind-card-title .title {
+  color: #292929;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.matrix-ind-card .ind-performance-card p.ind-target-title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  flex: 0 0 60%;
+  border: 1px solid #F1F1F1;
+  border-right: none;
+  background: rgba(95, 168, 193, 0.2);
+  border-radius: 4px 0px 0px 4px;
+  padding: 10px;
+}
+.matrix-ind-card .ind-performance-card p.ind-target-value {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  border: 1px solid rgba(95, 168, 193, 0.2);
+  background: #FFFFFF;
+  border-radius: 0px 4px 4px 0px;
+  padding: 10px;
+  flex: 0 0 40%;
+}
+.matrix-ind-card .ind-performance-card .ind-target-details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.matrix-ind-card .ind-performance-card .ind-target-section {
+  display: grid;
+  gap: 8px;
+}
+.matrix-ind-card .table-responsive {
+  max-height: none !important;
+  height: auto !important;
+}
+.matrix-ind-card .table th, .matrix-ind-card .table td {
+  position: static !important;
+}
+.matrix-ind-card .table th:last-child, .matrix-ind-card .table td:last-child {
+  width: auto !important;
+  min-width: 150px !important;
+}
+.matrix-ind-card .table thead tr th {
+  padding: 0 !important;
+}
+.matrix-ind-card .table tbody tr td {
+  position: static !important;
+  padding: 10px !important;
+  vertical-align: middle !important;
+  border-right: 1px solid #dcdcdc !important;
+  border-bottom: 1px solid #dcdcdc !important;
+  background-clip: padding-box !important;
+  height: 42px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
+.matrix-ind-card .table tbody tr td:first-child {
+  border-left: 1px solid #dcdcdc !important;
+}
+.matrix-ind-card .table tbody tr:first-child td {
+  border-top: 1px solid #dcdcdc !important;
+}
+.matrix-ind-card .table tbody tr:last-child td:first-child {
+  border-bottom: none !important;
+  border-left: none !important;
+}
+.matrix-ind-card.custom-wizard-modal .matrix-table-view .bg-yellow-light {
+  color: #000 !important;
+}
+
+.ind-txt {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+.ind-txt.ind-txt-vertical {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  writing-mode: sideways-lr;
+}
+
 @media screen and (max-width: 1720px) {
   .select2-container .select2-search--inline .select2-search__field,
   .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -15609,7 +15728,8 @@ body .datepicker .datepicker-centuries table tr td span {
   max-height: calc(100dvh - 270px);
   overflow: auto;
 }
-.custom-wizard-modal .matrix-table {
+.custom-wizard-modal .matrix-table,
+.custom-wizard-modal .matrix-table-view {
   font-size: 14px;
   table-layout: auto;
   width: 100%;
@@ -15618,31 +15738,41 @@ body .datepicker .datepicker-centuries table tr td span {
   border-spacing: 0;
 }
 .custom-wizard-modal .matrix-table th,
-.custom-wizard-modal .matrix-table td {
+.custom-wizard-modal .matrix-table td,
+.custom-wizard-modal .matrix-table-view th,
+.custom-wizard-modal .matrix-table-view td {
   border-right: 1px solid #dcdcdc;
   border-bottom: 1px solid #dcdcdc;
   background-clip: padding-box;
 }
-.custom-wizard-modal .matrix-table thead tr:first-child th {
+.custom-wizard-modal .matrix-table thead tr:first-child th,
+.custom-wizard-modal .matrix-table-view thead tr:first-child th {
   border-top: 1px solid #dcdcdc;
 }
 .custom-wizard-modal .matrix-table th:first-child,
-.custom-wizard-modal .matrix-table td:first-child {
+.custom-wizard-modal .matrix-table td:first-child,
+.custom-wizard-modal .matrix-table-view th:first-child,
+.custom-wizard-modal .matrix-table-view td:first-child {
   border-left: 1px solid #dcdcdc;
 }
-.custom-wizard-modal .matrix-table thead th {
+.custom-wizard-modal .matrix-table thead th,
+.custom-wizard-modal .matrix-table-view thead th {
   position: sticky;
   top: 0;
   z-index: 10;
 }
 .custom-wizard-modal .matrix-table th:first-child,
-.custom-wizard-modal .matrix-table td:first-child {
+.custom-wizard-modal .matrix-table td:first-child,
+.custom-wizard-modal .matrix-table-view th:first-child,
+.custom-wizard-modal .matrix-table-view td:first-child {
   position: sticky;
   left: 0;
   z-index: 5;
 }
 .custom-wizard-modal .matrix-table th:last-child,
-.custom-wizard-modal .matrix-table td:last-child {
+.custom-wizard-modal .matrix-table td:last-child,
+.custom-wizard-modal .matrix-table-view th:last-child,
+.custom-wizard-modal .matrix-table-view td:last-child {
   position: sticky;
   right: 0;
   z-index: 5;
@@ -15651,48 +15781,67 @@ body .datepicker .datepicker-centuries table tr td span {
   min-width: 52px;
 }
 .custom-wizard-modal .matrix-table thead th:first-child,
-.custom-wizard-modal .matrix-table thead th:last-child {
+.custom-wizard-modal .matrix-table thead th:last-child,
+.custom-wizard-modal .matrix-table-view thead th:first-child,
+.custom-wizard-modal .matrix-table-view thead th:last-child {
   z-index: 15;
 }
-.custom-wizard-modal .matrix-table .border-none {
+.custom-wizard-modal .matrix-table .border-none,
+.custom-wizard-modal .matrix-table-view .border-none {
   border-top: none !important;
   border-right: none !important;
 }
-.custom-wizard-modal .matrix-table .bg-green-light {
+.custom-wizard-modal .matrix-table .bg-green-light,
+.custom-wizard-modal .matrix-table-view .bg-green-light {
   background-color: #f0fdf4 !important;
   color: #166534 !important;
 }
-.custom-wizard-modal .matrix-table .bg-yellow-light {
+.custom-wizard-modal .matrix-table .bg-yellow-light,
+.custom-wizard-modal .matrix-table-view .bg-yellow-light {
   background-color: #fef9c3 !important;
   color: #b91c1c !important;
 }
-.custom-wizard-modal .matrix-table .bg-blue-light {
+.custom-wizard-modal .matrix-table .bg-blue-light,
+.custom-wizard-modal .matrix-table-view .bg-blue-light {
   background-color: #e3f2fd !important;
 }
-.custom-wizard-modal .matrix-table .bg-white-cell {
+.custom-wizard-modal .matrix-table .bg-white-cell,
+.custom-wizard-modal .matrix-table-view .bg-white-cell {
   background-color: #ffffff !important;
 }
-.custom-wizard-modal .matrix-table .data-cell {
+.custom-wizard-modal .matrix-table .bg-yellow-active,
+.custom-wizard-modal .matrix-table-view .bg-yellow-active {
+  background-color: #ffdc46 !important;
+  color: #292929 !important;
+  font-weight: 600 !important;
+}
+.custom-wizard-modal .matrix-table .data-cell,
+.custom-wizard-modal .matrix-table-view .data-cell {
   vertical-align: top;
   padding: 0 15px 12px;
 }
-.custom-wizard-modal .matrix-table .data-cell .small-txt {
+.custom-wizard-modal .matrix-table .data-cell .small-txt,
+.custom-wizard-modal .matrix-table-view .data-cell .small-txt {
   font-size: 11px;
   font-weight: 500;
   line-height: 16px;
 }
-.custom-wizard-modal .matrix-table .col-data {
+.custom-wizard-modal .matrix-table .col-data,
+.custom-wizard-modal .matrix-table-view .col-data {
   min-width: 150px;
 }
-.custom-wizard-modal .matrix-table .col-action {
+.custom-wizard-modal .matrix-table .col-action,
+.custom-wizard-modal .matrix-table-view .col-action {
   min-width: 80px;
   width: 10%;
 }
-.custom-wizard-modal .matrix-table .action-cell {
+.custom-wizard-modal .matrix-table .action-cell,
+.custom-wizard-modal .matrix-table-view .action-cell {
   font-size: 18px;
   cursor: pointer;
 }
-.custom-wizard-modal .matrix-table .action-cell.last-col-action {
+.custom-wizard-modal .matrix-table .action-cell.last-col-action,
+.custom-wizard-modal .matrix-table-view .action-cell.last-col-action {
   width: 42px;
   min-width: 42px;
 }
@@ -16221,14 +16370,18 @@ label.form-radio-label .form-radio-text {
     gap: 0.25rem;
   }
   .custom-wizard-modal .matrix-table th:last-child,
-  .custom-wizard-modal .matrix-table td:last-child {
+  .custom-wizard-modal .matrix-table td:last-child,
+  .custom-wizard-modal .matrix-table-view th:last-child,
+  .custom-wizard-modal .matrix-table-view td:last-child {
     width: 38px;
     min-width: 38px;
   }
-  .custom-wizard-modal .matrix-table .col-data {
+  .custom-wizard-modal .matrix-table .col-data,
+  .custom-wizard-modal .matrix-table-view .col-data {
     min-width: 115px;
   }
-  .custom-wizard-modal .matrix-table .data-cell {
+  .custom-wizard-modal .matrix-table .data-cell,
+  .custom-wizard-modal .matrix-table-view .data-cell {
     padding: 0 6px 6px;
   }
   .kpi-setting-modal .lineare-table thead th {

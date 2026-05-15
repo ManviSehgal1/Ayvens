@@ -1679,9 +1679,13 @@
           display: grid;
           gap: 16px;
           grid-template-columns: 170px auto auto;
-          
+
           @media screen and (max-width:1720px) {
             gap: 16px;
+          }
+
+          @media screen and (max-width:767px) {
+            grid-template-columns: 1fr;
           }
         }
 
@@ -5160,6 +5164,159 @@ body .datepicker .datepicker-centuries table tr td span {
   padding: 4px;
 }
 
+.matrix-ind-card {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: 1fr 380px;
+
+  .ind-card-left {
+    position: relative;
+    padding: 0 0 0 31px;
+    flex: 1;
+  }
+
+  .ind-card-right {
+    border-left: 1px solid #f1f1f1;
+    padding: 0 0 0 20px;
+    position: relative;
+  }
+
+  .ind-performance-card {
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .ind-card-title {
+      margin-bottom: 16px;
+      margin-top: 0;
+
+      .title {
+        color: #292929;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+    }
+
+    p.ind-target-title {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      flex: 0 0 60%;
+      border: 1px solid #F1F1F1;
+      border-right: none;
+      background: rgba(95, 168, 193, 0.2);
+      border-radius: 4px 0px 0px 4px;
+      padding: 10px;
+    }
+
+    p.ind-target-value {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      border: 1px solid rgba(95, 168, 193, 0.2);
+      background: #FFFFFF;
+      border-radius: 0px 4px 4px 0px;
+      padding: 10px;
+      flex: 0 0 40%;
+    }
+
+    .ind-target-details {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .ind-target-section {
+      display: grid;
+      gap: 8px;
+    }
+  }
+
+  .table-responsive {
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  .table {
+    th, td {
+      position: static !important;
+      
+      &:last-child {
+        width: auto !important;
+        min-width: 150px !important;
+      }
+    }
+
+    thead {
+      tr {
+        th {
+          padding: 0 !important;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          position: static !important;
+          padding: 10px !important;
+          vertical-align: middle !important;
+          border-right: 1px solid #dcdcdc !important;
+          border-bottom: 1px solid #dcdcdc !important;
+          background-clip: padding-box !important;
+          height: 42px !important;
+          font-size: 14px !important;
+          line-height: 20px !important;
+
+          &:first-child {
+            border-left: 1px solid #dcdcdc !important;
+          }
+        }
+
+        &:first-child {
+          td {
+            border-top: 1px solid #dcdcdc !important;
+          }
+        }
+
+        &:last-child {
+          td {
+            &:first-child {
+              border-bottom: none !important;
+              border-left: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.custom-wizard-modal {
+    .matrix-table-view {
+      .bg-yellow-light {
+        color: #000 !important;
+      }
+    }
+  }
+}
+
+.ind-txt {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0 0;
+  line-height: 1.5;
+
+  &.ind-txt-vertical {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    writing-mode: sideways-lr;
+  }
+}
+
 @media screen and (max-width: 1720px) {
 
   .select2-container .select2-search--inline .select2-search__field,
@@ -5195,7 +5352,8 @@ body .datepicker .datepicker-centuries table tr td span {
     overflow: auto;
   }
 
-  .matrix-table {
+  .matrix-table,
+  .matrix-table-view {
     font-size: 14px;
     table-layout: auto;
     width: 100%;
@@ -5268,6 +5426,12 @@ body .datepicker .datepicker-centuries table tr td span {
 
     .bg-white-cell {
       background-color: #ffffff !important;
+    }
+
+    .bg-yellow-active {
+      background-color: #ffdc46 !important;
+      color: #292929 !important;
+      font-weight: 600 !important;
     }
 
     .data-cell {
@@ -5940,7 +6104,8 @@ label.form-radio-label {
       gap: 0.25rem;
     }
 
-    .matrix-table {
+    .matrix-table,
+    .matrix-table-view {
 
       th:last-child,
       td:last-child {

@@ -343,81 +343,28 @@
                     calculation : <strong>Flex</strong>
                   </p>
                 </div>
-                <!-- 3. Boxed Representation -->
-                <div class="representation-block">
-                  <div class="boxed-representation p-4 bg-white rounded border shadow-sm">
-                      <div class="d-flex align-items-center justify-content-between">
-                         <div class="d-flex align-items-center gap-4 w-100">
-                             <!-- Box Group 1: Ordini -->
-                             <div class="box-group flex-grow-1">
-                                 <div class="text-center text-muted small mb-1">Ordini</div>
-                                 <div class="d-flex align-items-stretch box-group-container">
-                                     <div class="box-target ordini-target d-flex flex-column align-items-center justify-content-center px-3 position-relative">
-                                         <span class="fs-5 fw-bold text-dark">40</span>
-                                         <span class="small target-label">Target</span>
-                                     </div>
-                                     <div class="box-actual ordini-actual d-flex flex-column align-items-center justify-content-center px-3 position-relative">
-                                         <span class="fs-5 fw-bold text-dark">33</span>
-                                         <span class="small target-label">Totale</span>
-                                     </div>
-                                     <div class="box-performance ordini-performance d-flex flex-column align-items-center justify-content-center px-3 position-relative">
-                                         <span class="fs-5 fw-bold">82,50%</span>
-                                         <span class="small text-white-50">Performance</span>
-                                         <!-- Checkmark overlay -->
-                                         <div class="position-absolute checkmark-overlay bg-success text-white rounded-circle d-flex align-items-center justify-content-center shadow">
-                                             <i class="fa-solid fa-check"></i>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="text-center mt-2 threshold-text">
-                                     Soglia di accesso: 80% su Ordini
-                                 </div>
-                             </div>
-
-                             <!-- Box Group 2: Profittabilità -->
-                             <div class="box-group flex-grow-1">
-                                 <div class="text-center text-muted small mb-1">Profittabilità</div>
-                                 <div class="d-flex align-items-stretch box-group-container">
-                                     <div class="box-target profit-target d-flex flex-column align-items-center justify-content-center px-3 position-relative">
-                                         <span class="fs-5 fw-bold text-dark">-</span>
-                                         <span class="small target-label">Target</span>
-                                     </div>
-                                     <div class="box-actual profit-actual d-flex flex-column align-items-center justify-content-center px-3 position-relative">
-                                         <span class="fs-5 fw-bold text-dark">1,4</span>
-                                         <span class="small target-label">Actual</span>
-                                     </div>
-                                     <div class="box-performance profit-performance d-flex flex-column align-items-center justify-content-center px-3 position-relative">
-                                         <span class="fs-5 fw-bold">144,00%</span>
-                                         <span class="small text-white-50">Performance</span>
-                                     </div>
-                                 </div>
-                             </div>
-                             
-                             <!-- Global Threshold -->
-                             
-                         </div>
-                      </div>
-                  </div>
-                </div>
 
                 <div class="box-kpi-rs-root">
                   <div class="box-kpi-rs-col orders-kpi-rs-col">
                     <h4 class="box-kpi-title">Ordini</h4>
                     <div class="box-kpi-group-row">
                       <div class="box-kpi-group-card target-group-card">
+                        <span class="bx-icon-abs"><i class="fa-solid fa-bullseye"></i></span>
                         <span class="box-kpi-value">40</span>
                         <span class="box-kpi-label">Target</span>
                       </div>
 
                       <div class="box-kpi-group-card actual-group-card">
+                        <span class="bx-icon-abs"><i class="fa-solid fa-square-check"></i></span>
                         <span class="box-kpi-value">33</span>
                         <span class="box-kpi-label">Totale</span>
                       </div>
 
                       <div class="box-kpi-group-card performance-group-card">
+                        <span class="bx-icon-abs"><i class="fa-solid fa-percent"></i></span>
                         <span class="box-kpi-value">82,50%</span>
                         <span class="box-kpi-label">Performance</span>
-                        <div class="position-absolute checkmark-overlay bg-success text-white rounded-circle d-flex align-items-center justify-content-center shadow">
+                        <div class="checkmark-overlay">
                             <i class="fa-solid fa-check"></i>
                         </div>
                       </div>
@@ -428,16 +375,19 @@
                     <h4 class="box-kpi-title">Profittabilità</h4>
                     <div class="box-kpi-group-row">
                       <div class="box-kpi-group-card target-group-card-2">
+                        <span class="bx-icon-abs"><i class="fa-solid fa-bullseye"></i></span>
                         <span class="box-kpi-value">-</span>
                         <span class="box-kpi-label">Target</span>
                       </div>
 
                       <div class="box-kpi-group-card actual-group-card-2">
+                        <span class="bx-icon-abs"><i class="fa-solid fa-square-check"></i></span>
                         <span class="box-kpi-value">1,4</span>
                         <span class="box-kpi-label">Actual</span>
                       </div>
                       
                       <div class="box-kpi-group-card performance-group-card-2">
+                        <span class="bx-icon-abs"><i class="fa-solid fa-percent"></i></span>
                         <span class="box-kpi-value">144,00%</span>
                         <span class="box-kpi-label">Performance</span>
                       </div>
@@ -449,8 +399,8 @@
                   
                   <div class="box-kpi-rs-col threshold-kpi-rs-col">
                     <div class="global-threshold">
-                      <i class="fa-solid fa-check"></i>
-                      <span class="text-success">Soglia<br>superata</span>
+                      <i class="fa-solid fa-badge-check"></i>
+                      <span class="text-green">Soglia <br>superata</span>
                     </div>
                   </div>
                 </div>
@@ -489,296 +439,11 @@
                     calculation : <strong>Flex</strong>
                   </p>
                 </div>
-                <div class="individualCardChart matrix-ind-card custom-wizard-modal">
-                  
-                  <div class="ind-card-left">
-                    <div class="ind-txt ind-txt-vertical">Sales Recovery</div>
-                    <!-- -->
-                    <div class="table-responsive matrix-table-wrapper">
-                      <table class="table table-bordered text-center align-middle matrix-table-view">
-                        <thead>
-                          <tr>
-                              <th class="bg-green-light col-data action-cell"></th>
-                              <th class="bg-green-light col-data action-cell"></th>
-                              <th class="bg-green-light col-data action-cell"></th>
-                              <th class="bg-green-light col-data action-cell"></th>
-                              <th class="bg-green-light col-data action-cell"></th>
-                              <th class="bg-green-light col-data action-cell"></th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                            <!-- Row 1 -->
-                            <tr class="matrix-data-row">
-                              <td class="bg-blue-light data-cell">
-                                  <div class="d-flex justify-content-center gap-2">
-                                      <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                        2,5%
-                                      </div>
-                                      <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                        >
-                                      </div>
-                                  </div>
-                              </td>
-                              <td class="bg-white-cell data-cell">
-                                  <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                      0,00%
-                                  </div>
-                              </td>
-                              <td class="bg-white-cell data-cell">
-                                  <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                      120,00%
-                                  </div>
-                              </td>
-                              <td class="bg-white-cell data-cell">
-                                  <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                      150,00%
-                                  </div>
-                              </td>
-                              <td class="bg-yellow-light data-cell">
-                                  <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                      150,00%
-                                  </div>
-                              </td>
-                              <td class="bg-white-cell data-cell">
-                                  <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                      150,00%
-                                  </div>
-                              </td>
-                            </tr>
-
-                            <!-- Row 2 -->
-                            <tr class="matrix-data-row">
-                                <td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                          2% 
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                          2,49%
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td>
-                                <td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        96,00%
-                                    </div>
-                                </td>
-                                <td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        120,00%
-                                    </div>
-                                </td>
-                                <td class="bg-yellow-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        144,00%
-                                    </div>
-                                </td>
-                                <td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        150,00%
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- Row 3 -->
-                            <tr class="matrix-data-row">
-                                <td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                          1% 
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                          1,99%
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="bg-yellow-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td>
-                                <td class="bg-yellow-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        80,00%
-                                    </div>
-                                </td>
-                                <td class="bg-yellow-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        100,00%
-                                    </div>
-                                </td>
-                                <td class="bg-yellow-active data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        120,00%
-                                    </div>
-                                </td>
-                                <td class="bg-yellow-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        150,00%
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- Row 4 -->
-                            <tr class="matrix-data-row">
-                                <td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                          0,5% 
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                          0,99%
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="bg-white-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td>
-                                <td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td>
-                                <td class="bg-white-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        80,00%
-                                    </div>
-                                </td>
-                                <td class="bg-yellow-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        96,00%
-                                    </div>
-                                </td>
-                                <td class="bg-white-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        120,00%
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- Row 5 -->
-                            <tr class="matrix-data-row">
-                                <td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                          &lt; 
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                          0,49%
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td>
-                                <td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td>
-                                <td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td>
-                                <td class="bg-yellow-light data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td><td class="bg-white-cell data-cell">
-                                    <div class="d-flex flex-column align-items-center h-100 justify-content-center w-100 px-0">
-                                        0,00%
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="matrix-x-axis-row">
-                                <td class="bg-white-cell data-cell border-0">
-
-                                </td>
-                                <td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            &lt;
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            1,60%
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            1,7%
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            1,99%
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            2%
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            2,29%
-                                        </div>
-                                    </div>
-                                </td><td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            2,3%
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            2,59%
-                                        </div>
-                                    </div>
-                                </td><td class="bg-blue-light data-cell">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            2,6%
-                                        </div>
-                                        <div class="d-flex flex-column align-items-center gap-2 w-50">
-                                            >
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!-- -->
-                    <div class="ind-txt ind-txt-horizontal">Quality Level</div>
-                  </div>
-
-                  <div class="ind-card-right">
-                    <div class="ind-performance-card">
-                      <div class="CardChartTitle ind-card-title ">
-                        <span class="title">Matrice Profittabilità</span>
-                      </div>
-                      <div class="ind-target-section">
-                        <div class="ind-target-details">
-                          <p class="ind-target-title">Quality Level</p>
-                          <p class="ind-target-value">2, 30%</p>
-                        </div>
-                        <div class="ind-target-details">
-                          <p class="ind-target-title">Sales Recovery</p>
-                          <p class="ind-target-value">1.04%</p>
-                        </div>
-                        <div class="ind-target-details">
-                          <p class="ind-target-title">Performance assoluta</p>
-                          <p class="ind-target-value">120,00%</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                
+                <div class="tableCaseWrapper">
+                  <!-- Table Case view here -->
+                  Table Case
+                  <!-- End of Table Case view here -->
                 </div>
               </div>
             </td>

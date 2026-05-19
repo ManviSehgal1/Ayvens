@@ -5240,9 +5240,11 @@ body .datepicker .datepicker-centuries table tr td span {
   }
 
   .table {
-    th, td {
+
+    th,
+    td {
       position: static !important;
-      
+
       &:last-child {
         width: auto !important;
         min-width: 150px !important;
@@ -6328,20 +6330,31 @@ label.form-radio-label {
   .box-group-container {
     height: 60px;
   }
-  .box-target, .box-actual, .box-performance {
+
+  .box-target,
+  .box-actual,
+  .box-performance {
     min-width: 80px;
-    
+
     &.ordini-target {
       background-color: #fde68a;
       border: 1px solid #fbbf24;
-      .target-label { color: #b45309; }
+
+      .target-label {
+        color: #b45309;
+      }
     }
+
     &.ordini-actual {
       background-color: #fcd34d;
       border: 1px solid #fbbf24;
       border-left: none !important;
-      .target-label { color: #b45309; }
+
+      .target-label {
+        color: #b45309;
+      }
     }
+
     &.ordini-performance {
       min-width: 100px;
       background-color: #f59e0b;
@@ -6349,18 +6362,26 @@ label.form-radio-label {
       border: 1px solid #d97706;
       border-left: none !important;
     }
-    
+
     &.profit-target {
       background-color: #ffccbc;
       border: 1px solid #ffab91;
-      .target-label { color: #c62828; }
+
+      .target-label {
+        color: #c62828;
+      }
     }
+
     &.profit-actual {
       background-color: #ffab91;
       border: 1px solid #ff8a65;
       border-left: none !important;
-      .target-label { color: #c62828; }
+
+      .target-label {
+        color: #c62828;
+      }
     }
+
     &.profit-performance {
       min-width: 100px;
       background-color: #ff7043;
@@ -6374,17 +6395,18 @@ label.form-radio-label {
     font-size: 0.75rem;
     color: #3b82f6;
   }
-  
+
   .global-threshold {
     i {
       font-size: 24px;
     }
+
     span {
       font-size: 0.75rem;
       line-height: 1.2;
     }
   }
-  
+
   .checkmark-overlay {
     width: 24px;
     height: 24px;
@@ -6392,33 +6414,9 @@ label.form-radio-label {
     left: -12px;
     z-index: 2;
     border: 2px solid white;
+
     i {
       font-size: 12px;
-    }
-  }
-}
-
-.table-representation {
-  .table-responsive {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  table {
-    border-color: #dee2e6;
-    
-    thead {
-      background-color: #5D9CAF;
-      color: white;
-    }
-    
-    .highlight-row {
-      background-color: #ffff00 !important;
-      color: black !important;
-      td {
-        color: black !important;
-        font-weight: bold;
-      }
     }
   }
 }
@@ -6426,22 +6424,39 @@ label.form-radio-label {
 .box-kpi-rs-root {
   display: grid;
   grid-template-columns: 1fr 1fr auto;
-  gap: 30px;
+  gap: 24px;
 
   .box-kpi-title {
     text-align: center;
-    margin: 0 auto 12px;
+    margin: 0 auto 8px;
     color: #292929;
     font-size: 14px;
     line-height: 1.5;
     font-weight: 600;
+  }
+
+  @media (max-width: 1720px) {
+    gap: 16px;
+
+    .box-kpi-title {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
 .box-kpi-group-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
+
+  @media (max-width: 1720px) {
+    gap: 4px;
+  }
 }
 
 .box-kpi-rs-col {
@@ -6453,14 +6468,55 @@ label.form-radio-label {
       font-size: 14px;
       line-height: 1.5;
       margin-top: 12px;
+
+      @media (max-width: 1720px) {
+        font-size: 12px;
+      }
     }
   }
 
   &.threshold-kpi-rs-col {
-    min-width: 300px;
+    min-width: 150px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media (max-width: 1720px) {
+      min-width: auto;
+    }
+
+    @media (max-width: 992px) {
+      min-width: 100%;
+      justify-content: flex-end;
+    }
+  }
+
+  .global-threshold {
+    color: #009c21;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 13px;
+    line-height: 16px;
+    gap: 6px;
+
+    .fa-badge-check {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    @media (max-width: 1720px) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 992px) {
+      flex-direction: row;
+
+      br {
+        display: none;
+      }
+    }
   }
 }
 
@@ -6468,21 +6524,105 @@ label.form-radio-label {
   display: flex;
   flex-direction: column;
   text-align: right;
-  background: #ffdc464d;
+  background: #ffeda1;
   position: relative;
   border-radius: 4px;
-  padding: 12px 20px;
+  padding: 12px 16px 12px 50px;
   flex: 1;
+
+  span.bx-icon-abs {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    transform: none;
+    font-size: 25px;
+    width: 42px;
+    height: 42px;
+    color: #fff4c7;
+    padding: 7px 5px 4px 4px;
+    background: #ffdc46;
+    border-radius: 0 12px 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1720px) {
+      left: 2px;
+      bottom: 2px;
+      font-size: 20px;
+      width: 36px;
+      height: 36px;
+    }
+  }
 
   .box-kpi-value {
     font-size: 20px;
     line-height: 1.5;
     font-weight: 600;
+
+    @media (max-width: 1720px) {
+      font-size: 16px;
+    }
   }
 
   .box-kpi-label {
     font-size: 12px;
     line-height: 1.5;
     font-weight: 500;
+  }
+
+  .checkmark-overlay {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #009c21;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+
+    @media (max-width: 1720px) {
+      top: -6px;
+      right: -6px;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
+  }
+
+  &.performance-group-card {
+    background: #ffdc46;
+
+    span.bx-icon-abs {
+      background: #ffcf00cc;
+      color: #fff0b1;
+    }
+  }
+
+  &.performance-group-card-2 {
+    background: #ff703e;
+
+    span.bx-icon-abs {
+      background: #ff9062;
+      color: #f95c25;
+    }
+  }
+
+  &.target-group-card-2,
+  &.actual-group-card-2 {
+    background: #ffae93;
+
+    span.bx-icon-abs {
+      color: #ffc9b7;
+      background: #ff8e6a;
+    }
+  }
+
+  @media (max-width: 1720px) {
+    padding-right: 12px;
   }
 }

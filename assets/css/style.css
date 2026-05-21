@@ -16856,6 +16856,13 @@ label.form-radio-label .form-radio-text {
   background: rgba(255, 207, 0, 0.8);
   color: #fff0b1;
 }
+.box-kpi-group-card.performance-group-card.fail-group-card {
+  background: #ff703e;
+}
+.box-kpi-group-card.performance-group-card.fail-group-card span.bx-icon-abs {
+  background: #ff9062;
+  color: #f95c25;
+}
 .box-kpi-group-card.performance-group-card-2 {
   background: #ff703e;
 }
@@ -16870,6 +16877,13 @@ label.form-radio-label .form-radio-text {
   color: #ffc9b7;
   background: #ff8e6a;
 }
+.box-kpi-group-card.fail-group-card {
+  background: #ffae93;
+}
+.box-kpi-group-card.fail-group-card span.bx-icon-abs {
+  color: #ffc9b7;
+  background: #ff8e6a;
+}
 @media (max-width: 1720px) {
   .box-kpi-group-card {
     padding-right: 12px;
@@ -16881,9 +16895,10 @@ label.form-radio-label .form-radio-text {
   flex-direction: column;
   gap: 12px;
   padding: 16px 20px;
-  background: #f8fafc;
+  background: rgba(0, 156, 33, 0.1607843137);
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(0, 156, 33, 0.2);
+  margin-top: 8px;
 }
 .box-kpi-thresholds-list .threshold-item {
   display: flex;
@@ -16902,6 +16917,10 @@ label.form-radio-label .form-radio-text {
 }
 .box-kpi-thresholds-list .threshold-item.failed i {
   color: #df2020;
+}
+.box-kpi-thresholds-list.failed-thresholds {
+  background: rgba(223, 32, 32, 0.1490196078);
+  border-color: rgba(223, 32, 32, 0.2);
 }
 
 /*# sourceMappingURL=style.css.map */

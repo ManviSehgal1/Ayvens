@@ -16674,8 +16674,8 @@ label.form-radio-label .form-radio-text {
 
 /* --- Individual Card Data Representations --- */
 .box-kpi-rs-root {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 .box-kpi-rs-root .box-kpi-title {
@@ -16696,7 +16696,6 @@ label.form-radio-label .form-radio-text {
 }
 @media (max-width: 992px) {
   .box-kpi-rs-root {
-    grid-template-columns: 1fr;
     gap: 20px;
   }
 }
@@ -16712,6 +16711,9 @@ label.form-radio-label .form-radio-text {
   }
 }
 
+.box-kpi-rs-col {
+  width: 100%;
+}
 .box-kpi-rs-col .threshold-text {
   text-align: center;
 }
@@ -16727,10 +16729,12 @@ label.form-radio-label .form-radio-text {
   }
 }
 .box-kpi-rs-col.threshold-kpi-rs-col {
+  flex: 0 0 auto;
   min-width: 150px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-left: auto;
 }
 @media (max-width: 1720px) {
   .box-kpi-rs-col.threshold-kpi-rs-col {
@@ -16739,8 +16743,9 @@ label.form-radio-label .form-radio-text {
 }
 @media (max-width: 992px) {
   .box-kpi-rs-col.threshold-kpi-rs-col {
-    min-width: 100%;
+    flex: 1 1 100%;
     justify-content: flex-end;
+    margin-left: 0;
   }
 }
 .box-kpi-rs-col .global-threshold {
@@ -16869,6 +16874,34 @@ label.form-radio-label .form-radio-text {
   .box-kpi-group-card {
     padding-right: 12px;
   }
+}
+
+.box-kpi-thresholds-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+.box-kpi-thresholds-list .threshold-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+}
+.box-kpi-thresholds-list .threshold-item i {
+  font-size: 18px;
+  line-height: 1;
+}
+.box-kpi-thresholds-list .threshold-item.passed i {
+  color: #009c21;
+}
+.box-kpi-thresholds-list .threshold-item.failed i {
+  color: #df2020;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -260,37 +260,116 @@
 
     <div class="middleWrapper individualCardDetails new-id-card-details">
       <div class="customCard detailCard">
-        <div class="detailsCard-container">
+        <!-- Two-column Metadata Grid -->
+        <div class="detailsCard-container w-100">
           <div class="detailsCard-content">
-            <p class="smallTitle">Management and Role:</p>
-            <p class="subText">Commerce, Institutional & PA Key Account</p>
+            <p class="smallTitle mb-1">Management and Role:</p>
+            <p class="subText fw-semibold mb-0">Commerce, Institutional & PA Key Account</p>
           </div>
+
           <div class="detailsCard-content">
-            <p class="smallTitle">Current Status:</p>
-            <p class="subText">Targets Published</p>
-          </div>
-          <div class="detailsCard-textarea">
-            <p class="smallTitle">Description:</p>
-            <div class="finalTextarea">
-              <p class="subText editable-content">
-                This sheet refers to the observation period February-March
-                2025. The bonus for the period is consistently
-                re-proportioned.
-              </p>
-              <i class="fa-light fa-pen" id="editPen" title="edit"></i>
+            <div class="details-cs-card">
+              <div class="details-cs-line-card">
+                <p class="smallTitle mb-0">Current Status:</p>
+                <div class="dropdown workflow-dropdown">
+                  <button
+                    class="btn btn-sm dropdown-toggle d-flex align-items-center gap-2 py-1.5 px-3 fw-semibold status-btn"
+                    type="button" id="statusWorkflowBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="status-indicator-dot status-published"></span>
+                    <span class="status-text">Targets Published</span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-cs-menu" aria-labelledby="statusWorkflowBtn"
+                    style="font-size: 13px;">
+                    <li>
+                      <h6 class="dropdown-header">Move Workflow</h6>
+                    </li>
+                    <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
+                        data-status="Draft"><span class="status-indicator-dot status-draft"></span> Revert to Draft</a>
+                    </li>
+                    <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
+                        data-status="Published"><span class="status-indicator-dot status-published"></span> Targets
+                        Published</a></li>
+                    <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
+                        data-status="Under Approval"><span class="status-indicator-dot status-approval"></span> Submit
+                        for
+                        Approval</a></li>
+                    <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
+                        data-status="Accepted"><span class="status-indicator-dot status-accepted"></span> Accept
+                        Scorecard</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="status-timestamp text-muted mt-1" id="statusTimestamp">
+                <i class="fa-light fa-clock me-1"></i>Published: 25/05/2026 14:15
+              </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Note banner on second row -->
+        <div class="note-section-wrapper">
+          <div class="note-banner">
+            <div class="note-content">
+              <span class="smallTitle">Note</span>
+              <p class="subText editable-content mb-0">
+                This sheet refers to the observation period February-March 2025. The bonus for the period is
+                consistently re-proportioned.
+              </p>
+            </div>
+            <button class="edit-note-btn" id="editPen" title="Edit Note">
+              <i class="fa-light fa-pen"></i>
+            </button>
           </div>
         </div>
       </div>
       <div class="numberCard">
         <div class="customCard statCard yelloCard">
-          <div class="value">
-            <img src="assets/images/euro-gray.svg" alt="Euro" class="euro-icon" />
-            12000.00
+          <div class="yellow-card-container">
+            <!-- Bonus di periodo -->
+            <div class="bonus-item period-bonus">
+              <div class="bonus-label-row">
+                <span class="bonus-label">Bonus di periodo</span>
+                <i class="fa-light fa-circle-info tooltip-icon" data-bs-toggle="tooltip" data-bs-placement="top"
+                  title="Bonus di periodo: the amount of money you will make if you reach 100% of your goals in the current period."></i>
+              </div>
+              <div class="value">
+                <img src="assets/images/euro-gray.svg" alt="Euro" class="euro-icon" />
+                <span id="valBonusPeriodo">3000.00</span>
+              </div>
+            </div>
+
+            <!-- Separator -->
+            <div class="yellow-card-divider"></div>
+
+            <!-- Secondary Bonuses -->
+            <div class="secondary-bonuses-row">
+              <!-- Bonus annuo -->
+              <div class="bonus-item">
+                <div class="bonus-label-row">
+                  <span class="bonus-label-secondary">Bonus annuo</span>
+                  <i class="fa-light fa-circle-info tooltip-icon-secondary" data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Bonus annuo: the amount of money you will make if you reach 100% of your goals in the current year."></i>
+                </div>
+                <div class="value-secondary">
+                  € <span id="valBonusAnnuo">9000.00</span>
+                </div>
+              </div>
+
+              <!-- Target bonus -->
+              <div class="bonus-item border-start ps-3" id="targetBonusWrapper">
+                <div class="bonus-label-row">
+                  <span class="bonus-label-secondary">Target bonus</span>
+                  <i class="fa-light fa-circle-info tooltip-icon-secondary" data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Target bonus: the amount of money somebody with your profile would make if they reach 100% of yearly goals."></i>
+                </div>
+                <div class="value-secondary">
+                  € <span id="valTargetBonus">12000.00</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="subText">
-            Annual bonus related to sales targets to be re-proportioned for the 4 quarters
-          </p>
         </div>
         <div class="customCard statCard redCard">
           <div class="value">
@@ -1623,15 +1702,73 @@
 
 
       saveModal.addEventListener("click", function () {
-        editableContent.textContent = modalTextarea.value;
+        const value = modalTextarea.value.trim();
+        editableContent.textContent = value || "No explanatory note. Click the edit icon to add one.";
+        if (!value) {
+          editableContent.classList.add("text-muted", "fst-italic");
+        } else {
+          editableContent.classList.remove("text-muted", "fst-italic");
+        }
         editModal.hide();
       });
+
+      // Workflow status change handling
+      const workflowItems = document.querySelectorAll(".workflow-status-item");
+      const statusBtn = document.getElementById("statusWorkflowBtn");
+      const statusText = statusBtn ? statusBtn.querySelector(".status-text") : null;
+      const statusDot = statusBtn ? statusBtn.querySelector(".status-indicator-dot") : null;
+      const statusTimestamp = document.getElementById("statusTimestamp");
+
+      workflowItems.forEach(item => {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetStatus = this.getAttribute("data-status");
+
+          // Update button text
+          if (statusText) statusText.textContent = this.textContent.trim();
+
+          // Update status indicator dot class on the button
+          if (statusDot) {
+            statusDot.className = "status-indicator-dot";
+            if (targetStatus === "Draft") statusDot.classList.add("status-draft");
+            else if (targetStatus === "Published") statusDot.classList.add("status-published");
+            else if (targetStatus === "Under Approval") statusDot.classList.add("status-approval");
+            else if (targetStatus === "Accepted") statusDot.classList.add("status-accepted");
+          }
+
+          // Generate current timestamp
+          const now = new Date();
+          const dateStr = now.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+          const timeStr = now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+
+          let actionVerb = "Updated";
+          if (targetStatus === "Draft") actionVerb = "Reverted to Draft";
+          else if (targetStatus === "Published") actionVerb = "Published";
+          else if (targetStatus === "Under Approval") actionVerb = "Submitted";
+          else if (targetStatus === "Accepted") actionVerb = "Accepted";
+
+          if (statusTimestamp) {
+            statusTimestamp.innerHTML = `<i class="fa-light fa-clock me-1"></i>${actionVerb}: ${dateStr} ${timeStr}`;
+          }
+        });
+      });
+
+      // Check if Bonus Annuo and Target Bonus are different; hide Target Bonus if they match
+      const valBonusAnnuoElem = document.getElementById("valBonusAnnuo");
+      const valTargetBonusElem = document.getElementById("valTargetBonus");
+      const targetBonusWrapper = document.getElementById("targetBonusWrapper");
+      if (valBonusAnnuoElem && valTargetBonusElem && targetBonusWrapper) {
+        const bonusAnnuoVal = parseFloat(valBonusAnnuoElem.textContent.trim().replace(/[^0-9.-]/g, ''));
+        const targetBonusVal = parseFloat(valTargetBonusElem.textContent.trim().replace(/[^0-9.-]/g, ''));
+        if (bonusAnnuoVal === targetBonusVal) {
+          targetBonusWrapper.style.display = "none";
+        }
+      }
     });
     document.querySelector("textarea").addEventListener("input", function () {
       this.style.height = "auto"; // Reset height
       this.style.height = this.scrollHeight + "px"; // Set height to scrollHeight
     });
-    // ...existing code...
   </script>
 </body>
 

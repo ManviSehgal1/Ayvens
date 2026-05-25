@@ -12355,7 +12355,7 @@ p {
 }
 .contentBlock .pagination-container {
   padding: 12px 0;
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 @media screen and (max-width: 991px) {
   .contentBlock .pagination-container {
@@ -12461,7 +12461,7 @@ p {
 .contentBlock .middleWrapper .customCard.detailCard .detailsCard-container {
   display: grid;
   gap: 16px;
-  grid-template-columns: 170px auto auto;
+  grid-template-columns: auto auto;
 }
 @media screen and (max-width: 1720px) {
   .contentBlock .middleWrapper .customCard.detailCard .detailsCard-container {
@@ -12537,6 +12537,95 @@ p {
   background-color: #FFDC46;
   color: #292929;
 }
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .yellow-card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .bonus-item {
+  display: flex;
+  flex-direction: column;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .bonus-item.period-bonus {
+  margin-bottom: 4px;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .bonus-item .bonus-label-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .bonus-item .bonus-label {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #000;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .bonus-item .tooltip-icon {
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 13px !important;
+  transition: color 0.15s ease-in-out;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .bonus-item .tooltip-icon:hover {
+  color: #292929;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .bonus-item .value {
+  font-size: 21px;
+  font-weight: 700;
+  color: #292929;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .bonus-item .value .euro-icon {
+  width: 20px;
+  height: auto;
+  position: relative;
+  top: -2px;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .yellow-card-divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 8px 0 16px;
+  width: 100%;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .secondary-bonuses-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 12px;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .secondary-bonuses-row .bonus-item {
+  flex: 1;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .secondary-bonuses-row .bonus-item.border-start {
+  border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .secondary-bonuses-row .bonus-label-secondary {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #000;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .secondary-bonuses-row .tooltip-icon-secondary {
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 13px;
+  transition: color 0.15s ease-in-out;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .secondary-bonuses-row .tooltip-icon-secondary:hover {
+  color: #292929;
+}
+.contentBlock .middleWrapper .customCard.statCard.yelloCard .secondary-bonuses-row .value-secondary {
+  font-size: 14px;
+  font-weight: 700;
+  color: #292929;
+  margin-top: 1px;
+}
 .contentBlock .middleWrapper .customCard.statCard.redCard {
   background-color: #CF0606;
 }
@@ -12569,6 +12658,7 @@ p {
 }
 .contentBlock .middleWrapper.individualCardDetails .numberCard {
   display: flex;
+  flex: 1;
   gap: 16px;
 }
 @media screen and (max-width: 767px) {
@@ -12589,7 +12679,7 @@ p {
 }
 .contentBlock .middleWrapper.individualCardDetails .customCard .subText.editable-content {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -12597,7 +12687,7 @@ p {
   font-weight: 600;
 }
 .contentBlock .middleWrapper.individualCardDetails .customCard.detailCard {
-  width: 20%;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) and (max-width: 1720px) {
   .contentBlock .middleWrapper.individualCardDetails .customCard.detailCard {
@@ -12613,6 +12703,7 @@ p {
   flex: 1;
   padding: 16px;
   max-width: 400px;
+  min-width: 270px;
 }
 @media screen and (max-width: 1199px) {
   .contentBlock .middleWrapper.individualCardDetails {
@@ -14898,22 +14989,22 @@ p {
 }
 
 .custom-dropdown .apply-filter-btn {
-  background-color: #0F3549;
-  color: #FFDC46;
+  background-color: #0f3549;
+  color: #ffdc46;
   padding: 10px 15px;
 }
 .custom-dropdown .apply-filter-btn:hover {
   background-color: #1f4d65;
-  color: #FFDC46;
+  color: #ffdc46;
 }
 .custom-dropdown .clear-filter-btn {
-  background-color: #F6F6F6;
-  color: #0F3549;
+  background-color: #f6f6f6;
+  color: #0f3549;
   padding: 10px 15px;
 }
 .custom-dropdown .clear-filter-btn:hover {
   background-color: #dbdbdb;
-  color: #0F3549;
+  color: #0f3549;
 }
 .custom-dropdown .clear-filter-btn {
   padding: 10px 15px;
@@ -15520,13 +15611,13 @@ body .select2-multiple-dv .select2-container--default:after {
 }
 
 .btn-medium {
-  color: #FFDC46;
+  color: #ffdc46;
   padding: 10px 15px;
   font-weight: 300;
   font-size: 15px;
 }
 .btn-medium:hover {
-  color: #FFDC46;
+  color: #ffdc46;
   background-color: #1f4d65;
 }
 
@@ -15753,7 +15844,7 @@ body .datepicker .datepicker-centuries table tr td span {
   line-height: 20px;
   font-weight: 400;
   flex: 0 0 60%;
-  border: 1px solid #F1F1F1;
+  border: 1px solid #f1f1f1;
   border-right: none;
   background: rgba(95, 168, 193, 0.2);
   border-radius: 4px 0px 0px 4px;
@@ -15764,7 +15855,7 @@ body .datepicker .datepicker-centuries table tr td span {
   line-height: 20px;
   font-weight: 500;
   border: 1px solid rgba(95, 168, 193, 0.2);
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 0px 4px 4px 0px;
   padding: 10px;
   flex: 0 0 40%;
@@ -16083,7 +16174,7 @@ body .datepicker .datepicker-centuries table tr td span {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: #0D141C;
+  color: #0d141c;
   min-height: 46px;
 }
 .custom-wizard-modal .modal-dialog .modal-content .modal-body .matrix-data-row .form-control {
@@ -16149,7 +16240,7 @@ body .datepicker .datepicker-centuries table tr td span {
 .custom-wizard-modal .fa-circle-info {
   font-size: 28px;
   margin-bottom: 10px;
-  color: #0F3549;
+  color: #0f3549;
 }
 .custom-wizard-modal .box-header-wizard {
   display: flex;
@@ -16243,16 +16334,16 @@ label.form-radio-label .form-radio-input {
   display: none;
 }
 label.form-radio-label .form-radio-input:checked + .form-radio-text {
-  color: #0F3549;
+  color: #0f3549;
 }
 label.form-radio-label .form-radio-input:checked + .form-radio-text .radio-circle {
-  border-color: #0F3549;
+  border-color: #0f3549;
 }
 label.form-radio-label .form-radio-input:checked + .form-radio-text .radio-circle::after {
   content: "";
   width: 8px;
   height: 8px;
-  background: #0F3549;
+  background: #0f3549;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -16543,7 +16634,7 @@ label.form-radio-label .form-radio-text {
 
 .delete-link-custom {
   padding: 0 !important;
-  color: #CF0606;
+  color: #cf0606;
   margin: 0;
   text-decoration: none;
   transition: 0.3s;
@@ -16921,6 +17012,168 @@ label.form-radio-label .form-radio-text {
 .box-kpi-thresholds-list.failed-thresholds {
   background: rgba(223, 32, 32, 0.1490196078);
   border-color: rgba(223, 32, 32, 0.2);
+}
+
+/* Participant profile and dynamic workflow status details */
+.new-id-card-details .customCard.detailCard {
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 16px 20px;
+}
+.new-id-card-details .customCard.detailCard .detailCard-header {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+.new-id-card-details .customCard.detailCard .detailsCard-container {
+  grid-template-columns: 240px 1fr;
+}
+@media screen and (max-width: 767px) {
+  .new-id-card-details .customCard.detailCard .detailsCard-container {
+    grid-template-columns: 1fr;
+  }
+}
+.new-id-card-details .customCard.detailCard .workflow-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.new-id-card-details .customCard.detailCard .workflow-dropdown .status-btn {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  color: #0f3549;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding: 3px 12px !important;
+  min-height: 32px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  min-width: 190px;
+}
+.new-id-card-details .customCard.detailCard .workflow-dropdown .status-btn:hover, .new-id-card-details .customCard.detailCard .workflow-dropdown .status-btn:focus {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: #0f3549;
+}
+.new-id-card-details .customCard.detailCard .workflow-dropdown .status-btn::after {
+  margin-left: auto;
+  content: var(--fa);
+  --fa: "";
+  --fa--fa: "";
+  font-family: "Font Awesome 6 Pro";
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-variant: normal;
+  text-rendering: auto;
+  font-style: normal;
+  line-height: 1;
+  border: none;
+  font-size: 12px;
+}
+.new-id-card-details .customCard.detailCard .status-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.new-id-card-details .customCard.detailCard .status-indicator-dot.status-draft {
+  background-color: #9ca3af;
+}
+.new-id-card-details .customCard.detailCard .status-indicator-dot.status-published {
+  background-color: #0ea5e9;
+}
+.new-id-card-details .customCard.detailCard .status-indicator-dot.status-approval {
+  background-color: #f59e0b;
+}
+.new-id-card-details .customCard.detailCard .status-indicator-dot.status-accepted {
+  background-color: #22c55e;
+}
+.new-id-card-details .customCard.detailCard .status-timestamp {
+  font-size: 11px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+}
+.new-id-card-details .customCard.detailCard .note-section-wrapper {
+  margin-top: 8px;
+  width: 100%;
+}
+.new-id-card-details .customCard.detailCard .note-banner {
+  background-color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px dashed #eee;
+}
+.new-id-card-details .customCard.detailCard .note-banner .note-content {
+  flex-grow: 1;
+}
+.new-id-card-details .customCard.detailCard .note-banner .note-content .smallTitle {
+  font-size: 12px;
+  line-height: 18px;
+  color: #0f3549;
+  margin-bottom: 4px;
+  font-weight: 600;
+  display: block;
+}
+.new-id-card-details .customCard.detailCard .note-banner .note-content .subText {
+  font-size: 12px;
+  line-height: 16px;
+  color: #292929;
+}
+.new-id-card-details .customCard.detailCard .note-banner .edit-note-btn {
+  border: none;
+  padding: 3px;
+  margin-left: 10px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  line-height: 1;
+  background: rgba(15, 53, 73, 0.1019607843);
+  border-radius: 100%;
+  min-width: 24px;
+  font-size: 12px;
+}
+.new-id-card-details .customCard.detailCard .note-banner .edit-note-btn i {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #0f3549;
+}
+.new-id-card-details .customCard.detailCard .note-banner .edit-note-btn:hover {
+  color: #0f3549;
+}
+
+.details-cs-card {
+  display: grid;
+  justify-content: flex-end;
+}
+.details-cs-card .details-cs-line-card {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  column-gap: 8px;
+  row-gap: 4px;
+}
+.details-cs-card .details-cs-line-card .smallTitle {
+  margin-bottom: 0;
+}
+
+.dropdown-cs-menu {
+  border-radius: 6px;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+}
+.dropdown-cs-menu h6.dropdown-header {
+  font-size: 12px;
+  padding: 12px 16px 6px;
 }
 
 /*# sourceMappingURL=style.css.map */

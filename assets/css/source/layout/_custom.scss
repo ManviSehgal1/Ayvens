@@ -3,8 +3,6 @@
 
 // Login pages CSS
 
-
-
 .onBoardingSect {
   display: flex;
   height: 100vh;
@@ -55,7 +53,7 @@
 
       &:hover,
       &:focus {
-        color: var.$primary-hover-color
+        color: var.$primary-hover-color;
       }
 
       @media screen and (min-width: 1400px) and (max-width: 1720px) {
@@ -390,7 +388,7 @@
   }
 }
 
-// header CSS 
+// header CSS
 
 .header {
   position: fixed;
@@ -400,15 +398,15 @@
   top: 0;
   background: var.$white;
 
-  @media screen and (max-width:1199.98px) {
+  @media screen and (max-width: 1199.98px) {
     background: var.$primary-color;
   }
 
-  @media screen and (min-width:768px) and (max-width:1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 18px 30px;
   }
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     padding: 18px 24px;
   }
 
@@ -433,7 +431,6 @@
       @media screen and (min-width: 1200px) and (max-width: 1399px) {
         width: 255px;
         padding: 20px 36px;
-
       }
 
       @media screen and (max-width: 1199.98px) {
@@ -464,7 +461,6 @@
       align-items: center;
       padding: 0 50px;
 
-
       @media screen and (min-width: 1400px) and (max-width: 1720px) {
         padding: 0px 40px;
       }
@@ -478,7 +474,6 @@
         justify-content: end;
         padding: 0;
       }
-
 
       .topTitle {
         display: block;
@@ -494,13 +489,10 @@
             @include text-md-medium;
           }
         }
-
       }
 
       .user-info {
-
         .dropdown {
-
           .userMenuLink {
             color: var.$primary-color;
             display: flex;
@@ -510,7 +502,6 @@
             transition: color 0.2s ease-in-out;
             padding: 8px 10px;
             padding: 6px 0;
-
 
             i {
               font-size: 14px;
@@ -528,7 +519,7 @@
                 @include text-sm-medium;
               }
 
-              @media screen and (max-width:1199.98px) {
+              @media screen and (max-width: 1199.98px) {
                 color: var.$white;
               }
 
@@ -567,19 +558,13 @@
               }
             }
           }
-
         }
-
       }
     }
-
   }
-
 }
 
 .mainSidebar {
-
-
   &::-webkit-scrollbar {
     display: none;
   }
@@ -594,7 +579,6 @@
     max-width: 328px;
     width: 328px;
     overflow-y: auto;
-
 
     &.collapse:not(.show) {
       display: flex;
@@ -615,11 +599,9 @@
       padding: 20px 32px;
     }
 
-
     @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       padding: 25px 36px;
     }
-
 
     @media screen and (max-width: 1199px) {
       gap: 20px;
@@ -635,25 +617,28 @@
         display: block;
         transform: translateX(-100%);
         opacity: 0;
-        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        transition:
+          transform 0.4s ease-in-out,
+          opacity 0.4s ease-in-out;
         width: 270px;
-
       }
 
       &.collapse.show {
         transform: translateX(0);
         opacity: 1;
-        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        transition:
+          transform 0.4s ease-in-out,
+          opacity 0.4s ease-in-out;
         width: 270px;
-
       }
 
       &.collapsing {
         transform: translateX(-100%);
         opacity: 0;
-        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        transition:
+          transform 0.4s ease-in-out,
+          opacity 0.4s ease-in-out;
         width: 270px;
-
       }
     }
 
@@ -675,7 +660,6 @@
   }
 
   .main-sidebar {
-
     &::-webkit-scrollbar {
       width: 8px;
     }
@@ -692,7 +676,6 @@
     }
   }
 
-
   .sidebarMenu {
     display: flex;
     flex-direction: column;
@@ -703,7 +686,6 @@
     @media screen and (min-width: 1200px) and (max-width: 1720px) {
       gap: 16px;
     }
-
 
     .sideMenuLink {
       display: flex;
@@ -779,7 +761,6 @@
 
     li {
       a {
-
         &:hover,
         &.active {
           color: var.$secondary-color;
@@ -877,13 +858,13 @@
     margin-left: 255px;
   }
 
-  @media screen and (max-width:1199.98px) {
+  @media screen and (max-width: 1199.98px) {
     margin-left: 0;
     margin-top: 72px;
     height: calc(100vh - 72px);
   }
 
-  @media screen and (max-width:991px) {
+  @media screen and (max-width: 991px) {
     margin-left: 0;
     margin-top: 72px;
     height: calc(100% - 72px);
@@ -906,7 +887,6 @@
     @media screen and (max-width: 1720px) {
       @include text-size-13;
     }
-
   }
 
   .topMainTitle {
@@ -962,23 +942,19 @@
       padding: 16px;
     }
 
-
     &.filterBlockXl {
-
       @media screen and (max-width: 1199px) {
         flex-direction: column;
       }
     }
 
     &.filterBlockLg {
-
       @media screen and (max-width: 991px) {
         flex-direction: column;
       }
     }
 
     &.filterBlockMd {
-
       @media screen and (max-width: 1199px) {
         gap: 10px;
         padding: 16px;
@@ -1032,15 +1008,13 @@
       .nav-tabs {
         border: none;
         gap: 10px;
-
-
       }
 
       .searchBarBlock {
         position: relative;
 
         &.searchBarBlockFullWidth {
-          @media screen and (max-width:767px) {
+          @media screen and (max-width: 767px) {
             width: 100%;
           }
         }
@@ -1088,9 +1062,7 @@
             height: 36px;
             min-width: 240px;
             width: 100%;
-
           }
-
         }
 
         .searchBar-dropdown {
@@ -1110,7 +1082,8 @@
             &.dropdown-toggle:after {
               position: absolute;
               border: none;
-              background: url("../images/down-arrow-sm-primary.svg") no-repeat center;
+              background: url("../images/down-arrow-sm-primary.svg") no-repeat
+                center;
               background-size: contain;
               right: 10px;
               width: 8px;
@@ -1122,10 +1095,8 @@
             }
 
             @media screen and (min-width: 1400px) and (max-width: 1720px) {
-              @include text-xs-regular
+              @include text-xs-regular;
             }
-
-
 
             @media screen and (min-width: 1200px) and (max-width: 1399px) {
               font-size: 11px;
@@ -1542,7 +1513,6 @@
 
       &.research-table {
         tr {
-
           th,
           td {
             vertical-align: middle;
@@ -1565,7 +1535,7 @@
 
   .pagination-container {
     padding: 12px 0;
-    background: #F6F6F6;
+    background: #f6f6f6;
 
     @media screen and (max-width: 991px) {
       padding: 0px;
@@ -1644,11 +1614,11 @@
       flex-direction: column;
       height: 140px;
 
-      @media screen and (min-width:1200px) and (max-width:1720px) {
+      @media screen and (min-width: 1200px) and (max-width: 1720px) {
         height: 120px;
       }
 
-      @media screen and (max-width:767px) {
+      @media screen and (max-width: 767px) {
         height: 110px;
       }
 
@@ -1661,11 +1631,11 @@
         @include text-sm-regular;
         color: #292929;
 
-        @media screen and (min-width:1200px) and (max-width:1720px) {
+        @media screen and (min-width: 1200px) and (max-width: 1720px) {
           @include text-size-13;
         }
 
-        @media screen and (max-width:1199px) {
+        @media screen and (max-width: 1199px) {
           @include text-xs-medium;
         }
       }
@@ -1678,13 +1648,13 @@
         .detailsCard-container {
           display: grid;
           gap: 16px;
-          grid-template-columns: 170px auto auto;
+          grid-template-columns: auto auto;
 
-          @media screen and (max-width:1720px) {
+          @media screen and (max-width: 1720px) {
             gap: 16px;
           }
 
-          @media screen and (max-width:767px) {
+          @media screen and (max-width: 767px) {
             grid-template-columns: 1fr;
           }
         }
@@ -1700,11 +1670,11 @@
               color: #7c7c7c;
               font-size: 14px;
 
-              @media screen and (min-width:1200px) and (max-width:1720px) {
+              @media screen and (min-width: 1200px) and (max-width: 1720px) {
                 font-size: 13px;
               }
 
-              @media screen and (max-width:1199px) {
+              @media screen and (max-width: 1199px) {
                 font-size: 12px;
               }
             }
@@ -1715,11 +1685,11 @@
       &.statCard {
         gap: 8px;
 
-        @media screen and (min-width:1200px) and (max-width:1720px) {
+        @media screen and (min-width: 1200px) and (max-width: 1720px) {
           gap: 6px;
         }
 
-        @media screen and (max-width:1199px) {
+        @media screen and (max-width: 1199px) {
           gap: 4px;
         }
 
@@ -1738,12 +1708,12 @@
             object-fit: contain;
           }
 
-          @media screen and (min-width:1200px) and (max-width:1720px) {
+          @media screen and (min-width: 1200px) and (max-width: 1720px) {
             font-size: 20px;
             line-height: 28px;
           }
 
-          @media screen and (max-width:1199px) {
+          @media screen and (max-width: 1199px) {
             @include text-lg-medium;
           }
         }
@@ -1751,6 +1721,112 @@
         &.yelloCard {
           background-color: var.$secondary-color;
           color: var.$gray-950;
+
+          .yellow-card-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .bonus-item {
+            display: flex;
+            flex-direction: column;
+
+            &.period-bonus {
+              margin-bottom: 4px;
+            }
+
+            .bonus-label-row {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              width: 100%;
+              gap: 4px;
+            }
+
+            .bonus-label {
+              font-size: 12px;
+              line-height: 1.5;
+              font-weight: 600;
+              color: #000;
+            }
+
+            .tooltip-icon {
+              color: #6c757d;
+              cursor: pointer;
+              font-size: 13px !important;
+              transition: color 0.15s ease-in-out;
+
+              &:hover {
+                color: #292929;
+              }
+            }
+
+            .value {
+              font-size: 21px;
+              font-weight: 700;
+              color: #292929;
+              display: flex;
+              align-items: center;
+              gap: 2px;
+              margin-top: 4px;
+              line-height: 1.2;
+
+              .euro-icon {
+                width: 20px;
+                height: auto;
+                position: relative;
+                top: -2px;
+              }
+            }
+          }
+
+          .yellow-card-divider {
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 8px 0 16px;
+            width: 100%;
+          }
+
+          .secondary-bonuses-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 12px;
+
+            .bonus-item {
+              flex: 1;
+
+              &.border-start {
+                border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
+              }
+            }
+
+            .bonus-label-secondary {
+              font-size: 12px;
+              line-height: 1.5;
+              font-weight: 600;
+              color: #000;
+            }
+
+            .tooltip-icon-secondary {
+              color: #6c757d;
+              cursor: pointer;
+              font-size: 13px;
+              transition: color 0.15s ease-in-out;
+
+              &:hover {
+                color: #292929;
+              }
+            }
+
+            .value-secondary {
+              font-size: 14px;
+              font-weight: 700;
+              color: #292929;
+              margin-top: 1px;
+            }
+          }
         }
 
         &.redCard {
@@ -1777,12 +1853,12 @@
       .customCard.statCard {
         flex: 1;
 
-        @media screen and (max-width:767px) {
+        @media screen and (max-width: 767px) {
           flex: auto;
         }
       }
 
-      @media screen and (max-width:767px) {
+      @media screen and (max-width: 767px) {
         flex-direction: column;
       }
     }
@@ -1792,9 +1868,10 @@
 
       .numberCard {
         display: flex;
+        flex: 1;
         gap: 16px;
 
-        @media screen and (max-width:767px) {
+        @media screen and (max-width: 767px) {
           flex-direction: column;
         }
       }
@@ -1812,7 +1889,7 @@
 
           &.editable-content {
             display: -webkit-box;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
             overflow: hidden;
           }
@@ -1820,17 +1897,16 @@
 
         .smallTitle {
           font-weight: 600;
-
         }
 
         &.detailCard {
-          width: 20%;
+          width: 100%;
 
-          @media screen and (min-width:1200px) and (max-width:1720px) {
+          @media screen and (min-width: 1200px) and (max-width: 1720px) {
             width: 55%;
           }
 
-          @media screen and (max-width:1199px) {
+          @media screen and (max-width: 1199px) {
             width: 100%;
           }
         }
@@ -1839,10 +1915,11 @@
           flex: 1;
           padding: 16px;
           max-width: 400px;
+          min-width: 270px;
         }
       }
 
-      @media screen and (max-width:1199px) {
+      @media screen and (max-width: 1199px) {
         flex-direction: column;
       }
     }
@@ -2049,7 +2126,7 @@
 
           @media screen and (max-width: 1720px) {
             @include text-xs-regular;
-            padding: 7px 10px
+            padding: 7px 10px;
           }
         }
 
@@ -2060,13 +2137,10 @@
         .form-select {
           @include text-sm-regular;
 
-
-
           @media screen and (max-width: 1720px) {
             @include text-xs-regular;
-            padding: 7px 10px
+            padding: 7px 10px;
           }
-
         }
 
         .empty-state-text {
@@ -2162,12 +2236,11 @@
                   .ChartMainSection {
                     width: 76.1%;
 
-                    @media screen and (min-width:1400px) and (max-width:1720px) {
+                    @media screen and (min-width: 1400px) and (max-width: 1720px) {
                       width: 70%;
-
                     }
 
-                    @media screen and (min-width:992px) and (max-width:1399px) {
+                    @media screen and (min-width: 992px) and (max-width: 1399px) {
                       width: 75%;
                     }
 
@@ -2246,8 +2319,6 @@
                               font-size: 10px;
                             }
                           }
-
-
                         }
 
                         .rangeSectionBg {
@@ -2264,11 +2335,11 @@
                     flex-direction: column;
                     width: 28%;
 
-                    @media screen and (min-width:1400px) and (max-width:1720px) {
+                    @media screen and (min-width: 1400px) and (max-width: 1720px) {
                       width: 30%;
                     }
 
-                    @media screen and (min-width:992px) and (max-width:1399px) {
+                    @media screen and (min-width: 992px) and (max-width: 1399px) {
                       width: 35%;
                     }
 
@@ -2322,17 +2393,16 @@
                           border-radius: 4px 0px 0px 4px;
                           padding: 14px 10px;
 
-                          @media screen and (min-width:1400px) and (max-width:1720px) {
+                          @media screen and (min-width: 1400px) and (max-width: 1720px) {
                             font-size: 13px;
                             line-height: 18px;
                           }
 
-                          @media screen and (min-width:992px) and (max-width:1720px) {
+                          @media screen and (min-width: 992px) and (max-width: 1720px) {
                             width: 70%;
                           }
 
-                          @media screen and (min-width:992px) and (max-width:1399px) {
-
+                          @media screen and (min-width: 992px) and (max-width: 1399px) {
                             font-size: 11px;
                             line-height: 16px;
                           }
@@ -2352,17 +2422,16 @@
                           border-radius: 0px 4px 4px 0px;
                           padding: 14px 10px;
 
-                          @media screen and (min-width:1400px) and (max-width:1720px) {
+                          @media screen and (min-width: 1400px) and (max-width: 1720px) {
                             font-size: 13px;
                             line-height: 18px;
                           }
 
-                          @media screen and (min-width:992px) and (max-width:1720px) {
+                          @media screen and (min-width: 992px) and (max-width: 1720px) {
                             width: 30%;
                           }
 
-                          @media screen and (min-width:992px) and (max-width:1399px) {
-
+                          @media screen and (min-width: 992px) and (max-width: 1399px) {
                             font-size: 11px;
                             line-height: 16px;
                           }
@@ -2475,7 +2544,6 @@
 
 .state-management-table {
   tr {
-
     th,
     td {
       &:first-child {
@@ -2531,12 +2599,12 @@
     }
   }
 
-  .form-check-input:checked+.check-tick {
+  .form-check-input:checked + .check-tick {
     background: var.$primary-color;
     border-color: var.$primary-color;
   }
 
-  .form-check-input:checked+.check-tick:after {
+  .form-check-input:checked + .check-tick:after {
     content: "";
     position: absolute;
     width: 4px;
@@ -2735,7 +2803,6 @@
         @media screen and (max-width: 1199px) {
           padding: 7px 12px;
         }
-
       }
     }
   }
@@ -2744,9 +2811,7 @@
 // Participants page CSS
 
 .participants-table {
-
   tr {
-
     th,
     td {
       vertical-align: middle !important;
@@ -2771,7 +2836,6 @@
 
     td {
       .participants-name {
-
         h6,
         p {
           @include text-sm-regular;
@@ -2785,7 +2849,6 @@
             @include text-xs-regular;
           }
         }
-
 
         h6 {
           color: var.$black;
@@ -2806,7 +2869,6 @@
     }
   }
 }
-
 
 .custom-radio-tabs {
   border: none;
@@ -2833,7 +2895,6 @@
 
   @media screen and (max-width: 767px) {
     @include text-size-13;
-
   }
 }
 
@@ -2915,8 +2976,18 @@
   gap: 20px;
 }
 
-.contentBlock .tableContent .table.single-liquidations-table tbody tr.view td:first-child,
-.contentBlock .tableContent .table.single-liquidations-table thead tr th:first-child {
+.contentBlock
+  .tableContent
+  .table.single-liquidations-table
+  tbody
+  tr.view
+  td:first-child,
+.contentBlock
+  .tableContent
+  .table.single-liquidations-table
+  thead
+  tr
+  th:first-child {
   width: 200px !important;
   padding: 10px 20px !important;
 }
@@ -3012,7 +3083,6 @@
   @include text-xs-medium;
 }
 
-
 .form-control::placeholder {
   color: var.$gray-300;
 }
@@ -3058,10 +3128,8 @@
 
 .people-table {
   tr {
-
     th,
     td {
-
       &:first-child,
       &:nth-child(2) {
         width: 40px;
@@ -3079,7 +3147,6 @@
     }
 
     &.fold {
-
       th,
       td {
         &:nth-child(2) {
@@ -3101,7 +3168,7 @@
   display: flex;
   gap: 10px;
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
   }
 
@@ -3116,11 +3183,11 @@
       width: 26%;
     }
 
-    @media screen and (max-width:1199px) {
+    @media screen and (max-width: 1199px) {
       padding: 12px;
     }
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
       height: 100%;
       width: 100%;
     }
@@ -3144,7 +3211,7 @@
           @include text-xs-regular;
         }
 
-        @media screen and (max-width:1199px) {
+        @media screen and (max-width: 1199px) {
           padding: 8px 10px;
         }
       }
@@ -3155,7 +3222,7 @@
     flex: 1;
     max-height: calc(100vh - 162px);
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
       max-height: 100%;
     }
 
@@ -3174,7 +3241,7 @@
           padding: 8px;
         }
 
-        @media screen and (max-width:767px) {
+        @media screen and (max-width: 767px) {
           max-height: 100%;
         }
       }
@@ -3199,8 +3266,6 @@
           padding: 9px 15px;
           @include text-sm-regular;
           color: var.$black-500;
-
-
 
           @media screen and (min-width: 768px) and (max-width: 1399px) {
             @include text-size-13;
@@ -3279,9 +3344,6 @@
             display: flex;
             align-items: center;
             gap: 16px;
-
-
-
 
             @media screen and (max-width: 1199px) {
               padding: 8px 12px;
@@ -3366,7 +3428,7 @@
           @media screen and (max-width: 1399px) {
             padding: 8px 12px;
             height: 36px;
-            @include text-xs-regular
+            @include text-xs-regular;
           }
         }
       }
@@ -3381,7 +3443,9 @@
           border: none;
           background-image: none;
           background-color: #e8edf2;
-          transition: background-color 0.3s, border-color 0.3s;
+          transition:
+            background-color 0.3s,
+            border-color 0.3s;
           cursor: pointer;
           position: relative;
 
@@ -3395,7 +3459,7 @@
             border-color: var.$primary-color;
           }
 
-          &:checked+&::before {
+          &:checked + &::before {
             background-color: var.$primary-color;
             border-color: var.$primary-color;
             box-shadow: none;
@@ -3453,12 +3517,12 @@
             padding: 12px 16px;
             margin-bottom: 13px;
 
-            @media screen and (min-width:768px) and (max-width:1720px) {
+            @media screen and (min-width: 768px) and (max-width: 1720px) {
               padding: 8px;
               margin-bottom: 8px;
             }
 
-            @media screen and (max-width:767px) {
+            @media screen and (max-width: 767px) {
               padding: 4px;
               margin-bottom: 4px;
               gap: 12px;
@@ -3472,15 +3536,15 @@
           .preferncesOption {
             padding: 12px 16px;
 
-            @media screen and (min-width: 1199px) and (max-width:1399px) {
+            @media screen and (min-width: 1199px) and (max-width: 1399px) {
               padding: 8px;
             }
 
-            @media screen and (min-width:768px) and (max-width:1199px) {
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
               padding: 8px 4px;
             }
 
-            @media screen and (max-width:767px) {
+            @media screen and (max-width: 767px) {
               padding: 4px 4px 8px;
             }
 
@@ -3497,11 +3561,11 @@
         h6 {
           padding: 20px 16px;
 
-          @media screen and (min-width:1200px) and (max-width:1399px) {
+          @media screen and (min-width: 1200px) and (max-width: 1399px) {
             padding: 16px 8px;
           }
 
-          @media screen and (max-width:1199px) {
+          @media screen and (max-width: 1199px) {
             padding: 8px 4px 12px;
           }
         }
@@ -3512,12 +3576,12 @@
           flex-direction: column;
           gap: 24px;
 
-          @media screen and (min-width:1200px) and (max-width:1399px) {
+          @media screen and (min-width: 1200px) and (max-width: 1399px) {
             padding: 0px 8px 8px;
             gap: 16px;
           }
 
-          @media screen and (max-width:1199px) {
+          @media screen and (max-width: 1199px) {
             padding: 4px 4px 16px;
             gap: 12px;
           }
@@ -3527,12 +3591,12 @@
           @include text-sm-regular;
           padding: 4px 16px 12px;
 
-          @media screen and (max-width:1399px) {
+          @media screen and (max-width: 1399px) {
             @include text-xs-regular;
             padding: 4px 8px 8px;
           }
 
-          @media screen and (max-width:767px) {
+          @media screen and (max-width: 767px) {
             padding: 4px 4px 12px;
           }
         }
@@ -3576,34 +3640,32 @@
         h5 {
           padding: 20px 16px 0px;
 
-
-          @media screen and (min-width:1200px) and (max-width: 1399px) {
+          @media screen and (min-width: 1200px) and (max-width: 1399px) {
             padding: 12px 8px 0px;
           }
 
-          @media screen and (min-width:768px) and (max-width: 1199px) {
+          @media screen and (min-width: 768px) and (max-width: 1199px) {
             padding: 12px 4px 0px;
           }
 
-          @media screen and (max-width:767px) {
+          @media screen and (max-width: 767px) {
             padding: 8px 4px 0px;
           }
         }
 
         .notificationInnerSection {
-
           h6 {
             padding: 16px 16px 8px;
 
-            @media screen and (min-width:1200px) and (max-width: 1399px) {
+            @media screen and (min-width: 1200px) and (max-width: 1399px) {
               padding: 8px;
             }
 
-            @media screen and (min-width:768px) and (max-width: 1199px) {
-              padding: 8px 4px 8px
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+              padding: 8px 4px 8px;
             }
 
-            @media screen and (max-width:767px) {
+            @media screen and (max-width: 767px) {
               padding: 4px 4px 8px;
             }
           }
@@ -3636,16 +3698,16 @@
             gap: 12px;
             padding: 12px 0px 12px 16px;
 
-            @media screen and (min-width:1200px) and (max-width: 1399px) {
+            @media screen and (min-width: 1200px) and (max-width: 1399px) {
               padding: 8px;
             }
 
-            @media screen and (min-width:768px) and (max-width: 1199px) {
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
               padding: 8px 0px;
             }
 
-            @media screen and (max-width:767px) {
-              padding: 8px 0px 6px 4px
+            @media screen and (max-width: 767px) {
+              padding: 8px 0px 6px 4px;
             }
           }
 
@@ -3653,14 +3715,13 @@
             @include text-md-regular;
             color: rgba(13, 20, 28, 0.5);
 
-            @media screen and (min-width:768px) and (max-width: 1399px) {
-              @include text-sm-regular
+            @media screen and (min-width: 768px) and (max-width: 1399px) {
+              @include text-sm-regular;
             }
 
-            @media screen and (max-width:767px) {
-              @include text-xs-regular
+            @media screen and (max-width: 767px) {
+              @include text-xs-regular;
             }
-
           }
 
           .form-check-wrapper {
@@ -3678,7 +3739,6 @@
               margin: 0;
               z-index: 1;
               padding: 0;
-
             }
 
             .check-tick {
@@ -3696,12 +3756,12 @@
               pointer-events: none; // Prevents the tick from blocking clicks
             }
 
-            .form-check-input:checked+.check-tick {
+            .form-check-input:checked + .check-tick {
               background: var.$primary-color;
               border-color: var.$primary-color;
             }
 
-            .form-check-input:checked+.check-tick:after {
+            .form-check-input:checked + .check-tick:after {
               content: "";
               position: absolute;
               width: 4px;
@@ -3713,8 +3773,6 @@
               top: 3px;
               right: 6px;
             }
-
-
           }
 
           &.emailNotificationSection {
@@ -3760,12 +3818,12 @@
               width: 71%;
               @include text-sm-regular;
 
-              @media screen and (min-width:1200px) and (max-width:1720px) {
+              @media screen and (min-width: 1200px) and (max-width: 1720px) {
                 @include text-size-13;
                 width: 80%;
               }
 
-              @media screen and (max-width:991px) {
+              @media screen and (max-width: 991px) {
                 @include text-xs-regular;
               }
 
@@ -3850,8 +3908,6 @@
                 font-size: 16px;
                 color: var.$gray-700;
               }
-
-
             }
           }
 
@@ -3886,9 +3942,7 @@
 // Roles - Organization CSS
 
 .roles-table {
-
   tr {
-
     th,
     td {
       &:first-child {
@@ -3896,9 +3950,7 @@
       }
     }
   }
-
 }
-
 
 .navbar-toggler {
   background: none;
@@ -3917,7 +3969,6 @@
   @media screen and (max-width: 1199.98px) {
     order: 1;
   }
-
 }
 
 .navbar-toggler-icon {
@@ -3926,7 +3977,6 @@
   height: 18px;
   position: relative;
   background: none !important;
-
 }
 
 .navbar-toggler-icon span {
@@ -4037,7 +4087,6 @@
   }
 }
 
-
 .pagination-container1 {
   display: flex;
   justify-content: flex-end;
@@ -4052,12 +4101,10 @@
 
   @media screen and (max-width: 1720px) {
     padding: 16px !important;
-
   }
 
   @media screen and (max-width: 1199.98px) {
     padding: 12px 16px !important;
-
   }
 
   @media screen and (max-width: 575px) {
@@ -4067,7 +4114,6 @@
   @media screen and (max-width: 425px) {
     flex-direction: column;
   }
-
 
   .pagination-left,
   .pagination-right {
@@ -4114,7 +4160,6 @@
       @include text-sm-regular;
       color: var.$black;
       height: auto !important;
-
 
       @media screen and (min-width: 1200px) and (max-width: 1720px) {
         min-width: 64px;
@@ -4202,7 +4247,9 @@
   height: auto;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow {
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
   top: 50%;
   // transform: translateY(-50%);
 }
@@ -4221,12 +4268,16 @@
   padding-bottom: 20px;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
   padding-left: 6px;
   padding-right: 20px;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove {
   right: 4px;
   left: auto;
   border-right: 0;
@@ -4265,24 +4316,24 @@
 
 .custom-dropdown {
   .apply-filter-btn {
-    background-color: #0F3549;
-    color: #FFDC46;
+    background-color: #0f3549;
+    color: #ffdc46;
     padding: 10px 15px;
 
     &:hover {
       background-color: #1f4d65;
-      color: #FFDC46;
+      color: #ffdc46;
     }
   }
 
   .clear-filter-btn {
-    background-color: #F6F6F6;
-    color: #0F3549;
+    background-color: #f6f6f6;
+    color: #0f3549;
     padding: 10px 15px;
 
     &:hover {
       background-color: #dbdbdb;
-      color: #0F3549;
+      color: #0f3549;
     }
 
     padding: 10px 15px;
@@ -4290,12 +4341,16 @@
 }
 
 @media (max-width: 767px) {
-  .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+  .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice__display {
     font-size: 12px;
   }
 
   .select2-container .select2-search--inline .select2-search__field,
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
     font-size: 14px;
   }
 }
@@ -4329,7 +4384,7 @@
 $bg-header: #dcdcdc;
 $text-main: #333;
 $text-secondary: #999;
-$font-stack: 'Segoe UI', Arial, sans-serif;
+$font-stack: "Segoe UI", Arial, sans-serif;
 $breakpoint-tablet: 768px;
 
 .dashboard-container {
@@ -4348,7 +4403,6 @@ $breakpoint-tablet: 768px;
 
     &:last-child {
       margin-bottom: 0;
-
     }
 
     .section-header {
@@ -4488,7 +4542,10 @@ $breakpoint-tablet: 768px;
 }
 
 // Arrow styling for single select
-body .select2-container--default .select2-selection--single .select2-selection__arrow {
+body
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
   height: 100%;
   position: absolute;
   top: 0;
@@ -4521,8 +4578,14 @@ body .select2-container--default .select2-selection--single .select2-selection__
 }
 
 // Clear button styling
-body .select2-container--default .select2-selection--single .select2-selection__clear,
-body .select2-container--default .select2-selection--multiple .select2-selection__clear {
+body
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__clear,
+body
+  .select2-container--default
+  .select2-selection--multiple
+  .select2-selection__clear {
   font-size: 24px;
   font-weight: 400;
   margin-right: 35px;
@@ -4542,7 +4605,10 @@ body .select2-container--default .select2-selection--single {
   height: auto;
 }
 
-body .select2-container--default .select2-selection--single .select2-selection__rendered {
+body
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
   color: #6b7280;
 }
 
@@ -4593,7 +4659,8 @@ body .select2-container--default .select2-selection--single .select2-selection__
 }
 
 // Multiple selection styling
-.select2-container--default.select2-container--focus .select2-selection--multiple {
+.select2-container--default.select2-container--focus
+  .select2-selection--multiple {
   border-color: #0f3549;
   outline: none;
   box-shadow: none;
@@ -4605,7 +4672,9 @@ body .select2-container .select2-search--inline .select2-search__field {
   font-family: inherit;
 }
 
-body .select2-container--default .select2-selection--multiple.select2-selection--clearable {
+body
+  .select2-container--default
+  .select2-selection--multiple.select2-selection--clearable {
   padding-right: 40px;
 }
 
@@ -4900,7 +4969,6 @@ body .select2-multiple-dv .select2-container--default:after {
 }
 
 .table.table-cst-role {
-
   th,
   td {
     border-bottom: 1px solid #dcdcdccc !important;
@@ -4945,7 +5013,6 @@ body .select2-multiple-dv .select2-container--default:after {
 
   tr {
     &:last-child {
-
       th,
       td {
         border-bottom: none !important;
@@ -4963,7 +5030,6 @@ body .select2-multiple-dv .select2-container--default:after {
         font-weight: 600;
         border-bottom: 1px solid #000;
         background-color: #fff;
-
       }
     }
 
@@ -4990,13 +5056,13 @@ body .select2-multiple-dv .select2-container--default:after {
 }
 
 .btn-medium {
-  color: #FFDC46;
+  color: #ffdc46;
   padding: 10px 15px;
   font-weight: 300;
   font-size: 15px;
 
   &:hover {
-    color: #FFDC46;
+    color: #ffdc46;
     background-color: #1f4d65;
   }
 }
@@ -5066,7 +5132,6 @@ body .select2-multiple-dv .select2-container--default:after {
   }
 }
 
-
 .btn-normal-blue {
   padding: 8px 20px;
   border-radius: 6px;
@@ -5098,7 +5163,6 @@ body .select2-multiple-dv .select2-container--default:after {
 }
 
 .modal-sessioni {
-
   .modal-dialog {
     max-width: 800px;
   }
@@ -5135,7 +5199,7 @@ body .select2-multiple-dv .select2-container--default:after {
       font-size: 15px;
       line-height: 20px;
 
-      @media (max-width:767px) {
+      @media (max-width: 767px) {
         font-size: 14px;
       }
 
@@ -5150,12 +5214,10 @@ body .select2-multiple-dv .select2-container--default:after {
 }
 
 .row-box-area {
-
   .data-line-inner {
     display: flex;
     align-items: center;
     justify-content: center;
-
 
     &:first-child {
       gap: 30px;
@@ -5172,7 +5234,6 @@ body .select2-multiple-dv .select2-container--default:after {
       align-items: center;
       gap: 10px;
     }
-
   }
 
   .header-data {
@@ -5219,7 +5280,6 @@ body .datepicker .datepicker-days th {
   width: 24px !important;
   height: 16px !important;
 }
-
 
 body .datepicker .datepicker-months table tr td span,
 body .datepicker .datepicker-years table tr td span,
@@ -5270,7 +5330,7 @@ body .datepicker .datepicker-centuries table tr td span {
       line-height: 20px;
       font-weight: 400;
       flex: 0 0 60%;
-      border: 1px solid #F1F1F1;
+      border: 1px solid #f1f1f1;
       border-right: none;
       background: rgba(95, 168, 193, 0.2);
       border-radius: 4px 0px 0px 4px;
@@ -5282,7 +5342,7 @@ body .datepicker .datepicker-centuries table tr td span {
       line-height: 20px;
       font-weight: 500;
       border: 1px solid rgba(95, 168, 193, 0.2);
-      background: #FFFFFF;
+      background: #ffffff;
       border-radius: 0px 4px 4px 0px;
       padding: 10px;
       flex: 0 0 40%;
@@ -5306,7 +5366,6 @@ body .datepicker .datepicker-centuries table tr td span {
   }
 
   .table {
-
     th,
     td {
       position: static !important;
@@ -5386,13 +5445,16 @@ body .datepicker .datepicker-centuries table tr td span {
 }
 
 @media screen and (max-width: 1720px) {
-
   .select2-container .select2-search--inline .select2-search__field,
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
     font-size: 12px;
   }
 
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
     line-height: 21px;
   }
 
@@ -5412,8 +5474,6 @@ body .datepicker .datepicker-centuries table tr td span {
   .wizard-step {
     animation: fadeIn 0.3s ease-in-out;
   }
-
-
 
   .matrix-table-wrapper {
     max-height: calc(100dvh - 270px);
@@ -5623,12 +5683,12 @@ body .datepicker .datepicker-centuries table tr td span {
       justify-content: center;
     }
 
-    input:checked+.check-mark {
+    input:checked + .check-mark {
       background-color: #b71c1c;
       border-color: #b71c1c;
 
       &::after {
-        content: '';
+        content: "";
         width: 4px;
         height: 9px;
         border: solid white;
@@ -5654,7 +5714,7 @@ body .datepicker .datepicker-centuries table tr td span {
           font-size: 14px;
           line-height: 20px;
           font-weight: 400;
-          color: #0D141C;
+          color: #0d141c;
           min-height: 46px;
         }
 
@@ -5723,7 +5783,7 @@ body .datepicker .datepicker-centuries table tr td span {
       padding: 5px 16px !important;
     }
 
-    &.table> :not(:first-child) {
+    &.table > :not(:first-child) {
       border-top: 1px solid #cbd5e1;
     }
   }
@@ -5740,7 +5800,7 @@ body .datepicker .datepicker-centuries table tr td span {
   .fa-circle-info {
     font-size: 28px;
     margin-bottom: 10px;
-    color: #0F3549;
+    color: #0f3549;
   }
 
   .box-header-wizard {
@@ -5786,9 +5846,10 @@ body .datepicker .datepicker-centuries table tr td span {
   }
 
   @media (max-width: 1720px) {
-
     .select2-container .select2-search--inline .select2-search__field,
-    .select2-container--default .select2-selection--single .select2-selection__rendered {
+    .select2-container--default
+      .select2-selection--single
+      .select2-selection__rendered {
       font-size: 14px;
     }
   }
@@ -5796,7 +5857,6 @@ body .datepicker .datepicker-centuries table tr td span {
 
 .kpis-table {
   &.table {
-
     thead tr th {
       min-width: 80px;
 
@@ -5821,7 +5881,6 @@ body .datepicker .datepicker-centuries table tr td span {
 
 .scorecards-table {
   &.table {
-
     thead tr th {
       min-width: 80px;
 
@@ -5856,17 +5915,17 @@ label.form-radio-label {
   .form-radio-input {
     display: none;
 
-    &:checked+.form-radio-text {
-      color: #0F3549;
+    &:checked + .form-radio-text {
+      color: #0f3549;
 
       .radio-circle {
-        border-color: #0F3549;
+        border-color: #0f3549;
 
         &::after {
           content: "";
           width: 8px;
           height: 8px;
-          background: #0F3549;
+          background: #0f3549;
           border-radius: 50%;
           position: absolute;
           left: 50%;
@@ -5923,7 +5982,6 @@ label.form-radio-label {
     .lineare-table {
       thead {
         th {
-
           &:nth-child(1) {
             @media (max-width: 992px) {
               width: 300px;
@@ -5941,7 +5999,7 @@ label.form-radio-label {
           &:nth-child(4) {
             width: 216px;
 
-            @media (max-width:991px) {
+            @media (max-width: 991px) {
               width: 80px;
             }
           }
@@ -5957,7 +6015,7 @@ label.form-radio-label {
   flex-wrap: wrap;
   gap: 16px;
 
-  @media (max-width:991px) {
+  @media (max-width: 991px) {
     gap: 12px;
   }
 }
@@ -6107,7 +6165,9 @@ label.form-radio-label {
     }
 
     .select2-container .select2-search--inline .select2-search__field,
-    .select2-container--default .select2-selection--single .select2-selection__rendered {
+    .select2-container--default
+      .select2-selection--single
+      .select2-selection__rendered {
       font-size: 12px;
     }
   }
@@ -6174,7 +6234,6 @@ label.form-radio-label {
 
     .matrix-table,
     .matrix-table-view {
-
       th:last-child,
       td:last-child {
         width: 38px;
@@ -6218,7 +6277,7 @@ label.form-radio-label {
   }
 }
 
-.participants-table tbody tr.view td:nth-child(n+7) {
+.participants-table tbody tr.view td:nth-child(n + 7) {
   cursor: pointer;
 
   &:hover {
@@ -6228,7 +6287,7 @@ label.form-radio-label {
 
 .delete-link-custom {
   padding: 0 !important;
-  color: #CF0606;
+  color: #cf0606;
   margin: 0;
   text-decoration: none;
   transition: 0.3s;
@@ -6659,5 +6718,189 @@ label.form-radio-label {
   &.failed-thresholds {
     background: #df202026;
     border-color: #df202033;
+  }
+}
+
+/* Participant profile and dynamic workflow status details */
+.new-id-card-details {
+  .customCard.detailCard {
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 16px 20px;
+
+    .detailCard-header {
+      border-bottom: 1px solid #f1f1f1;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .detailsCard-container {
+      grid-template-columns: 240px 1fr;
+
+      @media screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .workflow-dropdown {
+      position: relative;
+      display: inline-block;
+
+      .status-btn {
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+        border-radius: 6px;
+        color: #0f3549;
+        font-size: 12px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        padding: 3px 12px !important;
+        min-height: 32px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        min-width: 190px;
+
+        &:hover,
+        &:focus {
+          background-color: #f8fafc;
+          border-color: #cbd5e1;
+          color: #0f3549;
+        }
+
+        &::after {
+          margin-left: auto;
+          content: var(--fa);
+          --fa: "";
+          --fa--fa: "";
+          font-family: "Font Awesome 6 Pro";
+          -webkit-font-smoothing: antialiased;
+          display: var(--fa-display, inline-block);
+          font-variant: normal;
+          text-rendering: auto;
+          font-style: normal;
+          line-height: 1;
+          border: none;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .status-indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+
+      &.status-draft {
+        background-color: #9ca3af;
+      }
+      &.status-published {
+        background-color: #0ea5e9;
+      }
+      &.status-approval {
+        background-color: #f59e0b;
+      }
+      &.status-accepted {
+        background-color: #22c55e;
+      }
+    }
+
+    .status-timestamp {
+      font-size: 11px;
+      line-height: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2px;
+    }
+
+    .note-section-wrapper {
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .note-banner {
+      background-color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border: 1px dashed #eee;
+
+      .note-content {
+        flex-grow: 1;
+
+        .smallTitle {
+          font-size: 12px;
+          line-height: 18px;
+          color: #0f3549;
+          margin-bottom: 4px;
+          font-weight: 600;
+          display: block;
+        }
+
+        .subText {
+          font-size: 12px;
+          line-height: 16px;
+          color: #292929;
+        }
+      }
+
+      .edit-note-btn {
+        border: none;
+        padding: 3px;
+        margin-left: 10px;
+        color: #94a3b8;
+        cursor: pointer;
+        transition: color 0.15s ease;
+        line-height: 1;
+        background: #0f35491a;
+        border-radius: 100%;
+        min-width: 24px;
+        font-size: 12px;
+
+        i {
+          font-size: 12px;
+          line-height: 18px;
+          font-weight: 400;
+          color: #0f3549;
+        }
+
+        &:hover {
+          color: #0f3549;
+        }
+      }
+    }
+  }
+}
+
+.details-cs-card {
+  display: grid;
+  justify-content: flex-end;
+
+  .details-cs-line-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 8px;
+    row-gap: 4px;
+
+    .smallTitle {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dropdown-cs-menu {
+  border-radius: 6px;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+
+  h6.dropdown-header {
+    font-size: 12px;
+    padding: 12px 16px 6px;
   }
 }

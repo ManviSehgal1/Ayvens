@@ -68,56 +68,70 @@ $(document).ready(function () {
   });
 
   // Init Customer dropdown (single select with clear)
-  $("#customerSelect").select2({
-    placeholder: "Select a role",
-    minimumResultsForSearch: -1,
-    allowClear: true,
-    width: "100%",
-  });
+  if ($("#customerSelect").length && typeof $.fn.select2 === "function") {
+    $("#customerSelect").select2({
+      placeholder: "Select a role",
+      minimumResultsForSearch: -1,
+      allowClear: true,
+      width: "100%",
+    });
+  }
 
   // Init Projects dropdown (multi-select)
-  $("#projectsSelect").select2({
-    placeholder: "Select KPI",
-    allowClear: true,
-    multiple: true,
-    width: "100%",
-  });
+  if ($("#projectsSelect").length && typeof $.fn.select2 === "function") {
+    $("#projectsSelect").select2({
+      placeholder: "Select KPI",
+      allowClear: true,
+      multiple: true,
+      width: "100%",
+    });
+  }
 
-  $("#projectsSelect1").select2({
-    placeholder: "Select Category",
-    allowClear: true,
-    multiple: true,
-    width: "100%",
-  });
+  if ($("#projectsSelect1").length && typeof $.fn.select2 === "function") {
+    $("#projectsSelect1").select2({
+      placeholder: "Select Category",
+      allowClear: true,
+      multiple: true,
+      width: "100%",
+    });
+  }
 
   // Init Participants Filters dropdowns
-  $("#tipoSchedaSelect").select2({
-    placeholder: "Select Tipo Scheda",
-    minimumResultsForSearch: -1,
-    allowClear: true,
-    width: "100%",
-  });
+  if ($("#tipoSchedaSelect").length && typeof $.fn.select2 === "function") {
+    $("#tipoSchedaSelect").select2({
+      placeholder: "Select Tipo Scheda",
+      minimumResultsForSearch: -1,
+      allowClear: true,
+      width: "100%",
+    });
+  }
 
-  $("#partecipaSelect").select2({
-    placeholder: "Select Partecipa",
-    minimumResultsForSearch: -1,
-    allowClear: true,
-    width: "100%",
-  });
+  if ($("#partecipaSelect").length && typeof $.fn.select2 === "function") {
+    $("#partecipaSelect").select2({
+      placeholder: "Select Partecipa",
+      minimumResultsForSearch: -1,
+      allowClear: true,
+      width: "100%",
+    });
+  }
 
-  $("#categoriaSelect").select2({
-    placeholder: "Select Categoria",
-    minimumResultsForSearch: -1,
-    allowClear: true,
-    width: "100%",
-  });
+  if ($("#categoriaSelect").length && typeof $.fn.select2 === "function") {
+    $("#categoriaSelect").select2({
+      placeholder: "Select Categoria",
+      minimumResultsForSearch: -1,
+      allowClear: true,
+      width: "100%",
+    });
+  }
 
-  $("#ruoloSelect").select2({
-    placeholder: "Select Ruolo",
-    minimumResultsForSearch: -1,
-    allowClear: true,
-    width: "100%",
-  });
+  if ($("#ruoloSelect").length && typeof $.fn.select2 === "function") {
+    $("#ruoloSelect").select2({
+      placeholder: "Select Ruolo",
+      minimumResultsForSearch: -1,
+      allowClear: true,
+      width: "100%",
+    });
+  }
 
   $(document).on("select2:open", function () {
     $(".select2-search__field").on("keydown", function (e) {
@@ -143,15 +157,19 @@ $(document).ready(function () {
     });
 
     // Select2 (important: dropdownParent for modal)
-    $(".select2-sessioni").select2({
-      dropdownParent: $("#nwModal"),
-      width: "100%",
-    });
+    if ($(".select2-sessioni").length && typeof $.fn.select2 === "function") {
+      $(".select2-sessioni").select2({
+        dropdownParent: $("#nwModal"),
+        width: "100%",
+      });
+    }
 
-    $(".select2-funzioni").select2({
-      dropdownParent: $("#nwModal"),
-      width: "100%",
-    });
+    if ($(".select2-funzioni").length && typeof $.fn.select2 === "function") {
+      $(".select2-funzioni").select2({
+        dropdownParent: $("#nwModal"),
+        width: "100%",
+      });
+    }
   });
 
   // Wizard Logic for nwModal  // Reset on modal close
@@ -348,29 +366,37 @@ $(document).ready(function () {
     $("#kpi-wizard-step-1").show();
     $("#kpi-wizard-step-2").hide();
 
-    $(".select2-frequenza, .select2-approximate").select2({
-      dropdownParent: $("#kpiSettingModal"),
-      width: "100%",
-      minimumResultsForSearch: -1,
-    });
+    if ($(".select2-frequenza, .select2-approximate").length && typeof $.fn.select2 === "function") {
+      $(".select2-frequenza, .select2-approximate").select2({
+        dropdownParent: $("#kpiSettingModal"),
+        width: "100%",
+        minimumResultsForSearch: -1,
+      });
+    }
 
-    $(".select2-performance").select2({
-      dropdownParent: $("#kpiSettingModal"),
-      width: "100%",
-    });
+    if ($(".select2-performance").length && typeof $.fn.select2 === "function") {
+      $(".select2-performance").select2({
+        dropdownParent: $("#kpiSettingModal"),
+        width: "100%",
+      });
+    }
 
-    $("#kpi-relations-table .select2-relation").select2({
-      dropdownParent: $("#kpiSettingModal"),
-      width: "100%",
-      minimumResultsForSearch: -1,
-    });
+    if ($("#kpi-relations-table .select2-relation").length && typeof $.fn.select2 === "function") {
+      $("#kpi-relations-table .select2-relation").select2({
+        dropdownParent: $("#kpiSettingModal"),
+        width: "100%",
+        minimumResultsForSearch: -1,
+      });
+    }
 
-    $(
-      "#kpi-relations-table .select2-kpi, #kpi-relations-table .select2-function",
-    ).select2({
-      dropdownParent: $("#kpiSettingModal"),
-      width: "100%",
-    });
+    if ($("#kpi-relations-table .select2-kpi, #kpi-relations-table .select2-function").length && typeof $.fn.select2 === "function") {
+      $(
+        "#kpi-relations-table .select2-kpi, #kpi-relations-table .select2-function",
+      ).select2({
+        dropdownParent: $("#kpiSettingModal"),
+        width: "100%",
+      });
+    }
   });
 
   $("#kpi-btn-next-step").on("click", function () {
@@ -418,19 +444,21 @@ $(document).ready(function () {
 
     $tbody.append(newRowHtml);
 
-    $tbody.find(".kpi-relation-row:last-child .select2-relation").select2({
-      dropdownParent: $("#kpiSettingModal"),
-      width: "100%",
-      minimumResultsForSearch: -1,
-    });
-    $tbody
-      .find(
-        ".kpi-relation-row:last-child .select2-kpi, .kpi-relation-row:last-child .select2-function",
-      )
-      .select2({
+    if (typeof $.fn.select2 === "function") {
+      $tbody.find(".kpi-relation-row:last-child .select2-relation").select2({
         dropdownParent: $("#kpiSettingModal"),
         width: "100%",
+        minimumResultsForSearch: -1,
       });
+      $tbody
+        .find(
+          ".kpi-relation-row:last-child .select2-kpi, .kpi-relation-row:last-child .select2-function",
+        )
+        .select2({
+          dropdownParent: $("#kpiSettingModal"),
+          width: "100%",
+        });
+    }
   });
 
   $(document).on("click", ".remove-kpi-relation-btn", function () {
@@ -469,29 +497,37 @@ $(document).ready(function () {
       $("#scorecards-wizard-step-2").hide();
     }
 
-    $(".select2-frequenza, .select2-approximate").select2({
-      dropdownParent: $("#scorecardsSettingModal"),
-      width: "100%",
-      minimumResultsForSearch: -1,
-    });
+    if ($(".select2-frequenza, .select2-approximate").length && typeof $.fn.select2 === "function") {
+      $(".select2-frequenza, .select2-approximate").select2({
+        dropdownParent: $("#scorecardsSettingModal"),
+        width: "100%",
+        minimumResultsForSearch: -1,
+      });
+    }
 
-    $(".select2-performance").select2({
-      dropdownParent: $("#scorecardsSettingModal"),
-      width: "100%",
-    });
+    if ($(".select2-performance").length && typeof $.fn.select2 === "function") {
+      $(".select2-performance").select2({
+        dropdownParent: $("#scorecardsSettingModal"),
+        width: "100%",
+      });
+    }
 
-    $("#scorecards-relations-table .select2-relation").select2({
-      dropdownParent: $("#scorecardsSettingModal"),
-      width: "100%",
-      minimumResultsForSearch: -1,
-    });
+    if ($("#scorecards-relations-table .select2-relation").length && typeof $.fn.select2 === "function") {
+      $("#scorecards-relations-table .select2-relation").select2({
+        dropdownParent: $("#scorecardsSettingModal"),
+        width: "100%",
+        minimumResultsForSearch: -1,
+      });
+    }
 
-    $(
-      "#scorecards-relations-table .select2-kpi, #scorecards-relations-table .select2-function"
-    ).select2({
-      dropdownParent: $("#scorecardsSettingModal"),
-      width: "100%",
-    });
+    if ($("#scorecards-relations-table .select2-kpi, #scorecards-relations-table .select2-function").length && typeof $.fn.select2 === "function") {
+      $(
+        "#scorecards-relations-table .select2-kpi, #scorecards-relations-table .select2-function"
+      ).select2({
+        dropdownParent: $("#scorecardsSettingModal"),
+        width: "100%",
+      });
+    }
 
     // Clear the toggling flag after modal is fully shown
     if ($(this).data("is-toggling-note")) {
@@ -542,10 +578,12 @@ $(document).ready(function () {
 
     $tbody.append(newRowHtml);
 
-    $tbody.find(".scorecards-relation-row:last-child .select2-kpi").select2({
-      dropdownParent: $("#scorecardsSettingModal"),
-      width: "100%",
-    });
+    if (typeof $.fn.select2 === "function") {
+      $tbody.find(".scorecards-relation-row:last-child .select2-kpi").select2({
+        dropdownParent: $("#scorecardsSettingModal"),
+        width: "100%",
+      });
+    }
   });
 
   $(document).on("change", ".scorecards-relation-row .select2-kpi", function () {

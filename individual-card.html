@@ -203,7 +203,7 @@
 
     </div>
   </div>
-  <div class="contentBlock">
+  <div class="contentBlock content-ic-block">
     <div class="topTitle">Lorem Ipsum</div>
     <div class="filterBlock filterBlockMd align-items-start align-items-md-center">
       <div class="blockTitle">S1 Card</div>
@@ -260,65 +260,37 @@
 
     <div class="middleWrapper individualCardDetails new-id-card-details">
       <div class="customCard detailCard">
-        <!-- Two-column Metadata Grid -->
-        <div class="detailsCard-container w-100">
-          <div class="detailsCard-content">
-            <p class="smallTitle mb-1">Management and Role:</p>
-            <p class="subText fw-semibold mb-0">Commerce, Institutional & PA Key Account</p>
-          </div>
-
-          <div class="detailsCard-content">
-            <div class="details-cs-card">
-              <div class="details-cs-line-card">
-                <p class="smallTitle mb-0">Current Status:</p>
-                <div class="dropdown workflow-dropdown">
-                  <button
-                    class="btn btn-sm dropdown-toggle d-flex align-items-center gap-2 py-1.5 px-3 fw-semibold status-btn"
-                    type="button" id="statusWorkflowBtn" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="status-indicator-dot status-published"></span>
-                    <span class="status-text">Targets Published</span>
-                  </button>
-                  <ul class="dropdown-menu dropdown-cs-menu" aria-labelledby="statusWorkflowBtn"
-                    style="font-size: 13px;">
-                    <li>
-                      <h6 class="dropdown-header">Move Workflow</h6>
-                    </li>
-                    <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
-                        data-status="Draft"><span class="status-indicator-dot status-draft"></span> Revert to Draft</a>
-                    </li>
-                    <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
-                        data-status="Published"><span class="status-indicator-dot status-published"></span> Targets
-                        Published</a></li>
-                    <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
-                        data-status="Under Approval"><span class="status-indicator-dot status-approval"></span> Submit
-                        for
-                        Approval</a></li>
-                    <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
-                        data-status="Accepted"><span class="status-indicator-dot status-accepted"></span> Accept
-                        Scorecard</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="status-timestamp text-muted mt-1" id="statusTimestamp">
-                <i class="fa-light fa-clock me-1"></i>Published: 25/05/2026 14:15
-              </div>
-            </div>
-          </div>
+        <div class="header-text-wrapper">
+          <h2>Daniele Ferri​</h2>
+          <p>Headquarters, Chief Executive Officer</p>
         </div>
 
-        <!-- Note banner on second row -->
-        <div class="note-section-wrapper">
-          <div class="note-banner">
-            <div class="note-content">
-              <span class="smallTitle">Note</span>
-              <p class="subText editable-content mb-0">
-                This sheet refers to the observation period February-March 2025. The bonus for the period is
-                consistently re-proportioned.
-              </p>
+        <div class="detailsCard-container w-100">
+          <div class="detailsCard-content">
+            <p class="smallTitle">Period:</p>
+            <p class="subText fw-semibold mb-0">JAN - MAR</p>
+          </div>
+
+          <div class="detailsCard-content">
+            <p class="smallTitle">Session:</p>
+            <p class="subText fw-semibold mb-0">2025 TRIM​</p>
+          </div>
+
+          <div class="detailsCard-content">
+            <div class="note-section-wrapper">
+              <div class="note-banner">
+                <div class="note-content">
+                  <span class="smallTitle">Note</span>
+                  <p class="subText editable-content mb-0">
+                    This sheet refers to the observation period February-March 2025. The bonus for the period is
+                    consistently re-proportioned.
+                  </p>
+                </div>
+                <button class="edit-note-btn" id="editPen" title="Edit Note">
+                  <i class="fa-light fa-pen"></i>
+                </button>
+              </div>
             </div>
-            <button class="edit-note-btn" id="editPen" title="Edit Note">
-              <i class="fa-light fa-pen"></i>
-            </button>
           </div>
         </div>
       </div>
@@ -371,11 +343,48 @@
             </div>
           </div>
         </div>
-        <div class="customCard statCard redCard">
-          <div class="value">
-            <img src="assets/images/euro-white.svg" alt="Euro" class="euro-icon" />11000.00
+
+        <div class="customCard detailCard custom-abs-ic-card">
+          <div class="customCard statCard redCard">
+            <div class="value">
+              <img src="assets/images/euro-white.svg" alt="Euro" class="euro-icon" />11000.00
+            </div>
+            <p class="subText">Accrued Bonus</p>
           </div>
-          <p class="subText">Accrued Bonus</p>
+          <div class="details-cs-card">
+            <div class="details-cs-line-card">
+              <div class="dropdown workflow-dropdown">
+                <button
+                  class="btn btn-sm dropdown-toggle d-flex align-items-center gap-2 py-1.5 px-3 fw-semibold status-btn"
+                  type="button" id="statusWorkflowBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="status-indicator-dot status-published"></span>
+                  <span class="status-text">Targets Published</span>
+                </button>
+                <ul class="dropdown-menu dropdown-cs-menu" aria-labelledby="statusWorkflowBtn"
+                  style="font-size: 13px;">
+                  <li>
+                    <h6 class="dropdown-header">Move Workflow</h6>
+                  </li>
+                  <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
+                      data-status="Draft"><span class="status-indicator-dot status-draft"></span> Revert to Draft</a>
+                  </li>
+                  <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
+                      data-status="Published"><span class="status-indicator-dot status-published"></span> Targets
+                      Published</a></li>
+                  <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
+                      data-status="Under Approval"><span class="status-indicator-dot status-approval"></span> Submit
+                      for
+                      Approval</a></li>
+                  <li><a class="dropdown-item workflow-status-item d-flex align-items-center gap-2 py-1" href="#"
+                      data-status="Accepted"><span class="status-indicator-dot status-accepted"></span> Accept
+                      Scorecard</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="status-timestamp text-muted mt-1" id="statusTimestamp">
+              <i class="fa-light fa-clock me-1"></i>Published: 25/05/2026 14:15
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -840,6 +840,21 @@
   height: calc(100vh - 81px);
   // height: 100%;
 
+  &.content-ic-block {
+    height: auto;
+
+    .tableContent {
+      height: auto;
+      max-height: none;
+      padding-right: 10px;
+      overflow: visible;
+
+      @media (max-width: 767px) {
+        overflow: auto;
+      }
+    }
+  }
+
   @media screen and (min-width: 1200px) and (max-width: 1720px) {
     margin-top: 68px;
     height: calc(100vh - 68px);
@@ -1182,7 +1197,7 @@
   }
 
   .tableContent {
-    max-height: 100vh;
+    max-height: 100dvh;
     overflow-y: auto;
     height: 100%;
     padding-right: 33px;
@@ -1648,7 +1663,7 @@
         .detailsCard-container {
           display: grid;
           gap: 16px;
-          grid-template-columns: auto auto;
+          grid-template-columns: 0.8fr 0.8fr 1.4fr;
 
           @media screen and (max-width: 1720px) {
             gap: 16px;
@@ -1884,14 +1899,18 @@
         justify-content: flex-start;
 
         .subText {
-          font-size: 12px;
-          line-height: 16px;
+          font-size: 14px;
+          line-height: 1.5;
 
           &.editable-content {
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
             overflow: hidden;
+          }
+
+          @media (max-width:767px) {
+            font-size: 12px;
           }
         }
 
@@ -1901,6 +1920,7 @@
 
         &.detailCard {
           width: 100%;
+          gap: 0;
 
           @media screen and (min-width: 1200px) and (max-width: 1720px) {
             width: 55%;
@@ -1914,8 +1934,14 @@
         &.statCard {
           flex: 1;
           padding: 16px;
+          gap: 0;
           max-width: 400px;
           min-width: 270px;
+
+          @media screen and (max-width: 1199px) {
+            max-width: 100%;
+            min-width: 50%;
+          }
         }
       }
 
@@ -2180,8 +2206,21 @@
             box-shadow: none;
             padding: 10px;
             position: sticky;
-            top: 0;
+            top: 81px;
             background: var.$gray-50;
+            z-index: 10;
+
+            @media screen and (min-width: 1200px) and (max-width: 1720px) {
+              top: 68px;
+            }
+
+            @media screen and (max-width: 1199px) {
+              top: 72px;
+            }
+
+            @media screen and (max-width: 767px) {
+              top: auto;
+            }
 
             // &:nth-child(1) {
             //   width: 40px;
@@ -5658,6 +5697,10 @@ body .datepicker .datepicker-centuries table tr td span {
     position: relative;
     width: 16px;
     height: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     input[type="checkbox"] {
       opacity: 0;
@@ -6744,6 +6787,7 @@ label.form-radio-label {
 
     .workflow-dropdown {
       position: relative;
+      width: 100%;
       display: inline-block;
 
       .status-btn {
@@ -6758,6 +6802,7 @@ label.form-radio-label {
         min-height: 32px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         min-width: 190px;
+        width: 100%;
 
         &:hover,
         &:focus {
@@ -6814,18 +6859,16 @@ label.form-radio-label {
     }
 
     .note-section-wrapper {
-      margin-top: 8px;
       width: 100%;
     }
 
     .note-banner {
       background-color: #fff;
-      padding: 10px 16px;
-      border-radius: 10px;
+      padding: 0;
+      border-radius: 0;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      border: 1px dashed #eee;
 
       .note-content {
         flex-grow: 1;
@@ -6834,15 +6877,19 @@ label.form-radio-label {
           font-size: 12px;
           line-height: 18px;
           color: #0f3549;
-          margin-bottom: 4px;
+          margin-bottom: 0;
           font-weight: 600;
           display: block;
         }
 
         .subText {
-          font-size: 12px;
-          line-height: 16px;
+          font-size: 14px;
+          line-height: 1.5;
           color: #292929;
+
+          @media (max-width: 767px) {
+            font-size: 12px;
+          }
         }
       }
 
@@ -6872,6 +6919,64 @@ label.form-radio-label {
       }
     }
   }
+
+  .header-text-wrapper {
+    margin: 0 0 12px;
+    padding: 0 0 10px;
+    border-bottom: 1px dashed #eee;
+
+    h2 {
+      font-size: 20px;
+      line-height: 1.5;
+
+      @media (max-width:767px) {
+        font-size: 16px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+
+      @media (max-width:767px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .detailsCard-container {
+    gap: 32px !important;
+
+    @media (max-width: 1720px) {
+      gap: 24px !important;
+    }
+
+    @media (max-width: 767px) {
+      gap: 12px !important;
+    }
+  }
+
+  .detailsCard-content {
+    position: relative;
+
+    &:not(:first-child)::after {
+      content: "";
+      width: 1px;
+      border-left: 1px dashed #eee;
+      position: absolute;
+      left: -16px;
+      height: 100%;
+      top: 0;
+
+      @media screen and (min-width: 1200px) and (max-width: 1720px) {
+        left: -12px;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
 }
 
 .details-cs-card {
@@ -6885,6 +6990,7 @@ label.form-radio-label {
     justify-content: flex-end;
     column-gap: 8px;
     row-gap: 4px;
+    width: 100%;
 
     .smallTitle {
       margin-bottom: 0;
@@ -6902,5 +7008,22 @@ label.form-radio-label {
   h6.dropdown-header {
     font-size: 12px;
     padding: 12px 16px 6px;
+  }
+}
+
+.custom-abs-ic-card {
+  background: transparent !important;
+  padding: 0 !important;
+  gap: 8px !important;
+
+  .details-cs-card {
+    padding: 6px 16px;
+    background: #fff;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -11676,6 +11676,20 @@ p {
   margin-left: 328px;
   height: calc(100vh - 81px);
 }
+.contentBlock.content-ic-block {
+  height: auto;
+}
+.contentBlock.content-ic-block .tableContent {
+  height: auto;
+  max-height: none;
+  padding-right: 10px;
+  overflow: visible;
+}
+@media (max-width: 767px) {
+  .contentBlock.content-ic-block .tableContent {
+    overflow: auto;
+  }
+}
 @media screen and (min-width: 1200px) and (max-width: 1720px) {
   .contentBlock {
     margin-top: 68px;
@@ -12038,7 +12052,7 @@ p {
   background: #e9ecef;
 }
 .contentBlock .tableContent {
-  max-height: 100vh;
+  max-height: 100dvh;
   overflow-y: auto;
   height: 100%;
   padding-right: 33px;
@@ -12461,7 +12475,7 @@ p {
 .contentBlock .middleWrapper .customCard.detailCard .detailsCard-container {
   display: grid;
   gap: 16px;
-  grid-template-columns: auto auto;
+  grid-template-columns: 0.8fr 0.8fr 1.4fr;
 }
 @media screen and (max-width: 1720px) {
   .contentBlock .middleWrapper .customCard.detailCard .detailsCard-container {
@@ -12674,8 +12688,8 @@ p {
   justify-content: flex-start;
 }
 .contentBlock .middleWrapper.individualCardDetails .customCard .subText {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 .contentBlock .middleWrapper.individualCardDetails .customCard .subText.editable-content {
   display: -webkit-box;
@@ -12683,11 +12697,17 @@ p {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .contentBlock .middleWrapper.individualCardDetails .customCard .subText {
+    font-size: 12px;
+  }
+}
 .contentBlock .middleWrapper.individualCardDetails .customCard .smallTitle {
   font-weight: 600;
 }
 .contentBlock .middleWrapper.individualCardDetails .customCard.detailCard {
   width: 100%;
+  gap: 0;
 }
 @media screen and (min-width: 1200px) and (max-width: 1720px) {
   .contentBlock .middleWrapper.individualCardDetails .customCard.detailCard {
@@ -12702,8 +12722,15 @@ p {
 .contentBlock .middleWrapper.individualCardDetails .customCard.statCard {
   flex: 1;
   padding: 16px;
+  gap: 0;
   max-width: 400px;
   min-width: 270px;
+}
+@media screen and (max-width: 1199px) {
+  .contentBlock .middleWrapper.individualCardDetails .customCard.statCard {
+    max-width: 100%;
+    min-width: 50%;
+  }
 }
 @media screen and (max-width: 1199px) {
   .contentBlock .middleWrapper.individualCardDetails {
@@ -12977,8 +13004,24 @@ p {
   box-shadow: none;
   padding: 10px;
   position: sticky;
-  top: 0;
+  top: 81px;
   background: #F6F6F6;
+  z-index: 10;
+}
+@media screen and (min-width: 1200px) and (max-width: 1720px) {
+  .contentBlock .tableContent .table.individual-card-table thead tr th {
+    top: 68px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contentBlock .tableContent .table.individual-card-table thead tr th {
+    top: 72px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contentBlock .tableContent .table.individual-card-table thead tr th {
+    top: auto;
+  }
 }
 .contentBlock .tableContent .table.individual-card-table thead tr th:nth-child(2) {
   width: auto;
@@ -16124,6 +16167,10 @@ body .datepicker .datepicker-centuries table tr td span {
   position: relative;
   width: 16px;
   height: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .custom-wizard-modal .custom-wizard-checkbox input[type=checkbox] {
   opacity: 0;
@@ -17035,6 +17082,7 @@ label.form-radio-label .form-radio-text {
 }
 .new-id-card-details .customCard.detailCard .workflow-dropdown {
   position: relative;
+  width: 100%;
   display: inline-block;
 }
 .new-id-card-details .customCard.detailCard .workflow-dropdown .status-btn {
@@ -17049,6 +17097,7 @@ label.form-radio-label .form-radio-text {
   min-height: 32px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   min-width: 190px;
+  width: 100%;
 }
 .new-id-card-details .customCard.detailCard .workflow-dropdown .status-btn:hover, .new-id-card-details .customCard.detailCard .workflow-dropdown .status-btn:focus {
   background-color: #f8fafc;
@@ -17097,17 +17146,15 @@ label.form-radio-label .form-radio-text {
   gap: 2px;
 }
 .new-id-card-details .customCard.detailCard .note-section-wrapper {
-  margin-top: 8px;
   width: 100%;
 }
 .new-id-card-details .customCard.detailCard .note-banner {
   background-color: #fff;
-  padding: 10px 16px;
-  border-radius: 10px;
+  padding: 0;
+  border-radius: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border: 1px dashed #eee;
 }
 .new-id-card-details .customCard.detailCard .note-banner .note-content {
   flex-grow: 1;
@@ -17116,14 +17163,19 @@ label.form-radio-label .form-radio-text {
   font-size: 12px;
   line-height: 18px;
   color: #0f3549;
-  margin-bottom: 4px;
+  margin-bottom: 0;
   font-weight: 600;
   display: block;
 }
 .new-id-card-details .customCard.detailCard .note-banner .note-content .subText {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 1.5;
   color: #292929;
+}
+@media (max-width: 767px) {
+  .new-id-card-details .customCard.detailCard .note-banner .note-content .subText {
+    font-size: 12px;
+  }
 }
 .new-id-card-details .customCard.detailCard .note-banner .edit-note-btn {
   border: none;
@@ -17147,6 +17199,64 @@ label.form-radio-label .form-radio-text {
 .new-id-card-details .customCard.detailCard .note-banner .edit-note-btn:hover {
   color: #0f3549;
 }
+.new-id-card-details .header-text-wrapper {
+  margin: 0 0 12px;
+  padding: 0 0 10px;
+  border-bottom: 1px dashed #eee;
+}
+.new-id-card-details .header-text-wrapper h2 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .new-id-card-details .header-text-wrapper h2 {
+    font-size: 16px;
+  }
+}
+.new-id-card-details .header-text-wrapper p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .new-id-card-details .header-text-wrapper p {
+    font-size: 12px;
+  }
+}
+.new-id-card-details .detailsCard-container {
+  gap: 32px !important;
+}
+@media (max-width: 1720px) {
+  .new-id-card-details .detailsCard-container {
+    gap: 24px !important;
+  }
+}
+@media (max-width: 767px) {
+  .new-id-card-details .detailsCard-container {
+    gap: 12px !important;
+  }
+}
+.new-id-card-details .detailsCard-content {
+  position: relative;
+}
+.new-id-card-details .detailsCard-content:not(:first-child)::after {
+  content: "";
+  width: 1px;
+  border-left: 1px dashed #eee;
+  position: absolute;
+  left: -16px;
+  height: 100%;
+  top: 0;
+}
+@media screen and (min-width: 1200px) and (max-width: 1720px) {
+  .new-id-card-details .detailsCard-content:not(:first-child)::after {
+    left: -12px;
+  }
+}
+@media (max-width: 767px) {
+  .new-id-card-details .detailsCard-content:not(:first-child)::after {
+    display: none;
+  }
+}
 
 .details-cs-card {
   display: grid;
@@ -17159,6 +17269,7 @@ label.form-radio-label .form-radio-text {
   justify-content: flex-end;
   column-gap: 8px;
   row-gap: 4px;
+  width: 100%;
 }
 .details-cs-card .details-cs-line-card .smallTitle {
   margin-bottom: 0;
@@ -17174,6 +17285,22 @@ label.form-radio-label .form-radio-text {
 .dropdown-cs-menu h6.dropdown-header {
   font-size: 12px;
   padding: 12px 16px 6px;
+}
+
+.custom-abs-ic-card {
+  background: transparent !important;
+  padding: 0 !important;
+  gap: 8px !important;
+}
+.custom-abs-ic-card .details-cs-card {
+  padding: 6px 16px;
+  background: #fff;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

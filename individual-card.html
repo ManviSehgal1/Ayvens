@@ -261,7 +261,7 @@
     <div class="middleWrapper individualCardDetails new-id-card-details">
       <div class="customCard detailCard">
         <div class="header-text-wrapper">
-          <h2>Daniele Ferri​</h2>
+          <h2>Daniele Ferri</h2>
           <p>Headquarters, Chief Executive Officer</p>
         </div>
 
@@ -281,14 +281,14 @@
               <div class="note-banner">
                 <div class="note-content">
                   <span class="smallTitle">Note</span>
-                  <p class="subText editable-content mb-0">
+                  <p class="subText editable-content mb-0" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="This sheet refers to the observation period February-March 2025. The bonus for the period is consistently re-proportioned.">
                     This sheet refers to the observation period February-March 2025. The bonus for the period is
                     consistently re-proportioned.
                   </p>
                 </div>
-                <button class="edit-note-btn" id="editPen" title="Edit Note">
+                <!-- <button class="edit-note-btn" id="editPen" title="Edit Note">
                   <i class="fa-light fa-pen"></i>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -1712,12 +1712,32 @@
 
       saveModal.addEventListener("click", function () {
         const value = modalTextarea.value.trim();
-        editableContent.textContent = value || "No explanatory note. Click the edit icon to add one.";
+        const displayValue = value || "No explanatory note. Click the edit icon to add one.";
+        editableContent.textContent = displayValue;
         if (!value) {
           editableContent.classList.add("text-muted", "fst-italic");
         } else {
           editableContent.classList.remove("text-muted", "fst-italic");
         }
+
+        // Update the tooltip title attributes
+        editableContent.setAttribute("title", displayValue);
+        editableContent.setAttribute("data-bs-title", displayValue);
+
+        // Retrieve and update the Bootstrap Tooltip instance
+        const tooltipInstance = bootstrap.Tooltip.getInstance(editableContent);
+        if (tooltipInstance) {
+          if (typeof tooltipInstance.setContent === 'function') {
+            tooltipInstance.setContent({ '.tooltip-inner': displayValue });
+          } else {
+            // Fallback for older Bootstrap versions: dispose and recreate
+            tooltipInstance.dispose();
+            new bootstrap.Tooltip(editableContent);
+          }
+        } else {
+          new bootstrap.Tooltip(editableContent);
+        }
+
         editModal.hide();
       });
 

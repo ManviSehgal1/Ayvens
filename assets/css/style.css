@@ -13293,6 +13293,52 @@ p {
     font-size: 12px;
   }
 }
+.contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .main-val-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .main-val-wrapper i {
+  cursor: pointer;
+  font-size: 14px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1720px) {
+  .contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .main-val-wrapper i {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .main-val-wrapper i {
+    font-size: 12px;
+  }
+}
+.contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .adjustment-badge {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1720px) {
+  .contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .adjustment-badge {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .adjustment-badge {
+    font-size: 10px;
+  }
+}
+.contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .adjustment-badge.adj-positive {
+  color: #10A957;
+}
+.contentBlock .tableContent .table.individual-card-table tbody tr .editable-td-vertical .adjustment-badge.adj-negative {
+  color: #DC2626;
+}
 .contentBlock .tableContent .table.table-case-view thead tr th {
   position: static;
   padding: 10px 16px;

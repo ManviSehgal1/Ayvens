@@ -133,6 +133,25 @@ $(document).ready(function () {
     });
   }
 
+  // Init User Filters dropdowns
+  if ($("#profileSelect").length && typeof $.fn.select2 === "function") {
+    $("#profileSelect").select2({
+      placeholder: "Select Profile",
+      minimumResultsForSearch: -1,
+      allowClear: true,
+      width: "100%",
+    });
+  }
+
+  if ($("#statusSelect").length && typeof $.fn.select2 === "function") {
+    $("#statusSelect").select2({
+      placeholder: "Select Status",
+      minimumResultsForSearch: -1,
+      allowClear: true,
+      width: "100%",
+    });
+  }
+
   $(document).on("select2:open", function () {
     $(".select2-search__field").on("keydown", function (e) {
       if (e.which === 27) {

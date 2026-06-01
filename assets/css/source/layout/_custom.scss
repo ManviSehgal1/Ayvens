@@ -1403,6 +1403,14 @@
               }
             }
 
+            &.check-mark-td {
+              text-align: center;
+
+              .badge-check-mark {
+                color: #10a957 !important;
+              }
+            }
+
             @media screen and (max-width: 1720px) {
               padding: 10px;
             }
@@ -1909,7 +1917,7 @@
             overflow: hidden;
           }
 
-          @media (max-width:767px) {
+          @media (max-width: 767px) {
             font-size: 12px;
           }
         }
@@ -2547,11 +2555,11 @@
               }
 
               &.adj-positive {
-                color: #10A957;
+                color: #10a957;
               }
 
               &.adj-negative {
-                color: #DC2626;
+                color: #dc2626;
               }
             }
           }
@@ -6977,7 +6985,7 @@ label.form-radio-label {
       font-size: 20px;
       line-height: 1.5;
 
-      @media (max-width:767px) {
+      @media (max-width: 767px) {
         font-size: 16px;
       }
     }
@@ -6986,7 +6994,7 @@ label.form-radio-label {
       font-size: 14px;
       line-height: 1.5;
 
-      @media (max-width:767px) {
+      @media (max-width: 767px) {
         font-size: 12px;
       }
     }
@@ -7073,5 +7081,75 @@ label.form-radio-label {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.badge-common {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 50px;
+
+  @media only screen and (max-width: 1720px) {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 2px 8px;
+  }
+
+  &.badge-admin {
+    background-color: #fce7f3;
+    color: #be185d;
+    border: 1px solid #be185d1a;
+  }
+
+  &.badge-local {
+    border: 1px solid #0f354933;
+    background: rgb(15 53 73 / 10%);
+    color: #0f3549;
+  }
+
+  &.badge-viewer {
+    background: #f6f6f6;
+    color: #6c757d;
+    border: 1px solid #6c757d1a;
+  }
+
+  &.badge-active {
+    background: rgba(16, 169, 87, 0.1);
+    color: var.$base-green;
+    border: 1px solid rgba(16, 169, 87, 0.2);
+  }
+
+  &.badge-inactive {
+    background: var.$gray-50;
+    color: var.$gray-400;
+    border: 1px solid var.$gray-200;
+  }
+
+  &.badge-blocked {
+    background: rgba(207, 6, 6, 0.1);
+    color: var.$red-700;
+    border: 1px solid rgba(207, 6, 6, 0.2);
+  }
+}
+
+.user-table-content {
+  @media (max-width: 1200px) {
+    .min-w120 {
+      min-width: 120px;
+    }
+    
+    .min-w150 {
+      min-width: 150px;
+    }
+   
+    .min-w200 {
+      min-width: 200px;
+    }
   }
 }

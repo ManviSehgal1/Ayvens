@@ -890,4 +890,161 @@ $(document).ready(function () {
   });
 
   /* End of Participants Page */
+
+  /* Users Page */
+  // Select All Checkbox Logic for user-table
+  $(document).on("change", ".user-table thead .form-check-input", function() {
+    var isChecked = $(this).prop("checked");
+    $(".user-table tbody .form-check-input").prop("checked", isChecked);
+    if (isChecked) {
+      $(".user-table tbody tr").addClass("selected-row");
+    } else {
+      $(".user-table tbody tr").removeClass("selected-row");
+    }
+    toggleUserTrashIcon();
+  });
+
+  // Individual Checkbox Logic for user-table
+  $(document).on("change", ".user-table tbody .form-check-input", function() {
+    var totalCheckboxes = $(".user-table tbody .form-check-input").length;
+    var checkedCheckboxes = $(".user-table tbody .form-check-input:checked").length;
+    
+    var $row = $(this).closest("tr");
+    if ($(this).prop("checked")) {
+      $row.addClass("selected-row");
+    } else {
+      $row.removeClass("selected-row");
+    }
+
+    if (totalCheckboxes > 0 && totalCheckboxes === checkedCheckboxes) {
+      $(".user-table thead .form-check-input").prop("checked", true);
+    } else {
+      $(".user-table thead .form-check-input").prop("checked", false);
+    }
+    toggleUserTrashIcon();
+  });
+
+  function toggleUserTrashIcon() {
+    var checkedCount = $(".user-table tbody .form-check-input:checked").length;
+    if (checkedCount > 0) {
+      $(".user-table thead .delete-link-custom").removeClass("d-none");
+    } else {
+      $(".user-table thead .delete-link-custom").addClass("d-none");
+    }
+  }
+
+  // Massive Delete for users
+  $(document).on("click", ".user-table thead .delete-link-custom", function() {
+    var checkedCheckboxes = $(".user-table tbody .form-check-input:checked");
+    if (checkedCheckboxes.length > 0) {
+      $("#selectedUserCount").text(checkedCheckboxes.length);
+      $("#deleteUsersModal").modal("show");
+    }
+  });
+
+  $(document).on("click", "#confirmDeleteUsersBtn", function() {
+    var checkedCheckboxes = $(".user-table tbody .form-check-input:checked");
+    checkedCheckboxes.each(function() {
+      $(this).closest("tr").remove();
+    });
+    // Uncheck select all and hide trash icon
+    $(".user-table thead .form-check-input").prop("checked", false);
+    toggleUserTrashIcon();
+    $("#deleteUsersModal").modal("hide");
+    checkEmptyUserTable();
+  });
+
+  function checkEmptyUserTable() {
+    var $tbody = $(".user-table tbody");
+    if ($tbody.find("tr").length === 0) {
+      if ($tbody.find(".empty-table-row").length === 0) {
+        $tbody.append('<tr class="empty-table-row"><td colspan="8" class="text-center py-4 text-muted">No users found</td></tr>');
+      }
+      $tbody.find(".empty-table-row").show();
+      $(".pagination-container").hide();
+    } else {
+      $tbody.find(".empty-table-row").hide();
+      $(".pagination-container").show();
+    }
+  }
+
+  // Single User Delete
+  var $userRowToDelete = null;
+  $(document).on("click", ".user-table .delete-user-btn", function(e) {
+    e.preventDefault();
+    $userRowToDelete = $(this).closest("tr");
+    $("#deleteSingleUserModal").modal("show");
+  });
+
+  $(document).on("click", "#confirmDeleteSingleUserBtn", function() {
+    if ($userRowToDelete) {
+      $userRowToDelete.remove();
+      $userRowToDelete = null;
+    }
+    $("#deleteSingleUserModal").modal("hide");
+    checkEmptyUserTable();
+  });
+
+  // Edit User Modal Initialization for Select2
+  $("#editUserModal").on("shown.bs.modal", function () {
+    if ($(".select2-modal").length && typeof $.fn.select2 === "function") {
+      $(".select2-modal").select2({
+        dropdownParent: $("#editUserModal"),
+        minimumResultsForSearch: -1,
+        width: "100%"
+      });
+    }
+  });
+
+  // Edit User
+  var $userRowToEdit = null;
+  $(document).on("click", ".user-table .edit-user-btn", function(e) {
+    e.preventDefault();
+    $userRowToEdit = $(this).closest("tr");
+    var name = $userRowToEdit.find(".td-name").text().trim();
+    var email = $userRowToEdit.find("td:eq(2)").text().trim();
+    var profile = $userRowToEdit.find("td:eq(3) .badge-common").text().trim();
+    var status = $userRowToEdit.find("td:eq(4) .badge-common").text().trim();
+
+    $("#editUserName").val(name);
+    $("#editUserEmail").val(email);
+    $("#editUserProfile").val(profile).trigger("change");
+    $("#editUserStatus").val(status).trigger("change");
+
+    $("#editUserModal").modal("show");
+  });
+
+  $(document).on("click", "#saveUserEditBtn", function() {
+    if ($userRowToEdit) {
+      var newName = $("#editUserName").val().trim();
+      var newEmail = $("#editUserEmail").val().trim();
+      var newProfile = $("#editUserProfile").val();
+      var newStatus = $("#editUserStatus").val();
+
+      if (newName === "" || newEmail === "") {
+        alert("Name and Email are required.");
+        return;
+      }
+
+      $userRowToEdit.find(".td-name").text(newName);
+      $userRowToEdit.find("td:eq(2)").text(newEmail);
+
+      // Update badge profile style based on Admin, HR, HRBP, Controls
+      var profileClass = "badge-admin";
+      if (newProfile === "HR") profileClass = "badge-hr";
+      else if (newProfile === "HRBP") profileClass = "badge-hrbp";
+      else if (newProfile === "Controls") profileClass = "badge-controls";
+
+      $userRowToEdit.find("td:eq(3)").html('<span class="badge-common ' + profileClass + '">' + newProfile + '</span>');
+
+      // Update badge status style
+      var statusClass = "badge-active";
+      if (newStatus === "Inactive") statusClass = "badge-inactive";
+      else if (newStatus === "Blocked") statusClass = "badge-blocked";
+
+      $userRowToEdit.find("td:eq(4)").html('<span class="badge-common ' + statusClass + '">' + newStatus + '</span>');
+    }
+    $("#editUserModal").modal("hide");
+  });
+  /* End of Users Page */
 });

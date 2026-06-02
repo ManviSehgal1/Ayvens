@@ -16845,15 +16845,18 @@ label.form-radio-label .form-radio-text {
   background: #f6f6f6;
 }
 
+.check-user-dv,
 .check-prt-dv {
   gap: 10px;
 }
+.check-user-dv .delete-link-custom,
 .check-prt-dv .delete-link-custom {
   font-size: 20px;
   cursor: pointer;
   display: inline-flex;
   text-decoration: none;
 }
+.check-user-dv .delete-link-custom:hover,
 .check-prt-dv .delete-link-custom:hover {
   text-decoration: none;
 }
@@ -17374,9 +17377,24 @@ label.form-radio-label .form-radio-text {
   }
 }
 .badge-common.badge-admin {
-  background-color: #fce7f3;
-  color: #be185d;
-  border: 1px solid rgba(190, 24, 93, 0.1019607843);
+  border: 1px solid rgba(15, 53, 73, 0.2);
+  background: rgba(15, 53, 73, 0.1);
+  color: #0F3549;
+}
+.badge-common.badge-hr {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+  border: 1px solid rgba(79, 70, 229, 0.2);
+}
+.badge-common.badge-hrbp {
+  background-color: #ccfbf1;
+  color: #0f766e;
+  border: 1px solid rgba(15, 118, 110, 0.2);
+}
+.badge-common.badge-controls {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+  border: 1px solid rgba(126, 34, 206, 0.2);
 }
 .badge-common.badge-local {
   border: 1px solid rgba(15, 53, 73, 0.2);
@@ -17404,15 +17422,89 @@ label.form-radio-label .form-radio-text {
   border: 1px solid rgba(207, 6, 6, 0.2);
 }
 
-@media (max-width: 1200px) {
-  .user-table-content .min-w120 {
-    min-width: 120px;
+.user-table-content th {
+  height: 40px;
+}
+.user-table-content .min-w250 {
+  min-width: 250px !important;
+}
+.user-table-content .check-user-dv {
+  gap: 8px;
+}
+.user-table-content .check-user-dv .delete-link-custom {
+  cursor: pointer;
+}
+.user-table-content th.check-th {
+  width: 58px;
+  min-width: 58px;
+  padding-right: 4px !important;
+}
+.user-table-content .min-w100 {
+  min-width: 100px;
+}
+.user-table-content .min-w120 {
+  min-width: 120px;
+}
+.user-table-content .min-w200 {
+  min-width: 200px;
+}
+.user-table-content .w100 {
+  width: 100px;
+  min-width: 80px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1720px) {
+  .user-table-content .w100 {
+    width: 80px;
   }
+}
+.user-table-content .w120 {
+  width: 120px;
+  min-width: 100px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1720px) {
+  .user-table-content .w120 {
+    width: 100px;
+  }
+}
+.user-table-content .w200 {
+  width: 200px;
+  min-width: 160px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1720px) {
+  .user-table-content .w200 {
+    width: 160px;
+  }
+}
+.user-table-content .utilitiesActionBtn {
+  gap: 8px;
+}
+@media (max-width: 1200px) {
   .user-table-content .min-w150 {
     min-width: 150px;
   }
-  .user-table-content .min-w200 {
-    min-width: 200px;
+  .user-table-content .min-w250 {
+    min-width: 250px !important;
+  }
+}
+@media (max-width: 991px) {
+  .user-table-content {
+    overflow: visible;
+    max-height: none;
+    padding: 0 !important;
+  }
+}
+
+.modal-user-cst input,
+.modal-user-cst textarea {
+  border-radius: 8px !important;
+}
+
+@media (max-width: 567px) {
+  .user-filter-root .filterBlock .searchBarWrapper {
+    width: 100%;
+  }
+  .user-filter-root .filterBlock .searchBarWrapper .searchBarBlock {
+    width: 100%;
   }
 }
 

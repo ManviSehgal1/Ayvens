@@ -6523,6 +6523,7 @@ label.form-radio-label {
   }
 }
 
+.check-user-dv,
 .check-prt-dv {
   gap: 10px;
 
@@ -7102,9 +7103,27 @@ label.form-radio-label {
   }
 
   &.badge-admin {
-    background-color: #fce7f3;
-    color: #be185d;
-    border: 1px solid #be185d1a;
+    border: 1px solid rgba(15, 53, 73, 0.2);
+    background: rgba(15, 53, 73, 0.1);
+    color: var.$primary-color;
+  }
+
+  &.badge-hr {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+  }
+
+  &.badge-hrbp {
+    background-color: #ccfbf1;
+    color: #0f766e;
+    border: 1px solid rgba(15, 118, 110, 0.2);
+  }
+
+  &.badge-controls {
+    background-color: #f3e8ff;
+    color: #7e22ce;
+    border: 1px solid rgba(126, 34, 206, 0.2);
   }
 
   &.badge-local {
@@ -7139,17 +7158,105 @@ label.form-radio-label {
 }
 
 .user-table-content {
-  @media (max-width: 1200px) {
-    .min-w120 {
-      min-width: 120px;
+  th {
+    height: 40px;
+  }
+
+  .min-w250 {
+    min-width: 250px !important;
+  }
+
+  .check-user-dv {
+    gap: 8px;
+
+    .delete-link-custom {
+      cursor: pointer;
     }
-    
+  }
+
+  th.check-th {
+    width: 58px;
+    min-width: 58px;
+    padding-right: 4px !important;
+  }
+
+  .min-w100 {
+    min-width: 100px;
+  }
+
+  .min-w120 {
+    min-width: 120px;
+  }
+
+  .min-w200 {
+    min-width: 200px;
+  }
+
+  .w100 {
+    width: 100px;
+    min-width: 80px;
+
+    @media screen and (min-width: 1200px) and (max-width: 1720px) {
+      width: 80px;
+    }
+  }
+
+  .w120 {
+    width: 120px;
+    min-width: 100px;
+
+    @media screen and (min-width: 1200px) and (max-width: 1720px) {
+      width: 100px;
+    }
+  }
+
+  .w200 {
+    width: 200px;
+    min-width: 160px;
+
+    @media screen and (min-width: 1200px) and (max-width: 1720px) {
+      width: 160px;
+    }
+  }
+
+  .utilitiesActionBtn {
+    gap: 8px;
+  }
+
+  @media (max-width: 1200px) {
     .min-w150 {
       min-width: 150px;
     }
-   
-    .min-w200 {
-      min-width: 200px;
+
+    .min-w250 {
+      min-width: 250px !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    overflow: visible;
+    max-height: none;
+    padding: 0 !important;
+  }
+}
+
+.modal-user-cst {
+  input,
+  textarea {
+    border-radius: 8px !important;
+  }
+}
+
+@media (max-width: 567px) {
+  .user-filter-root {
+    .filterBlock {
+      .searchBarWrapper {
+        width: 100%;
+
+        .searchBarBlock {
+          width: 100%;
+        }
+      }
     }
   }
 }

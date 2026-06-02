@@ -205,10 +205,10 @@
 
   <div class="contentBlock import-kpi-section participants-section">
     <div class="topMainTitle">
-      <div class="topTitle">Lorem Ipsum</div>
+      <div class="topTitle">Users</div>
     </div>
 
-    <div class="filter-root">
+    <div class="filter-root user-filter-root">
       <div class="filterBlock participants-filter flex-sm-row flex-column justify-content-end">
         <div class="prt-filter-dv">
           <div class="searchBarWrapper searchbar-participants">
@@ -231,9 +231,10 @@
                       <div class="select-dv">
                         <select id="profileSelect" class="form-select select2-custom">
                           <option value="">Select Profile</option>
-                          <option value="global-admin">Global Admin</option>
-                          <option value="local-admin">Local Admin</option>
-                          <option value="user">User</option>
+                          <option value="Admin">Admin</option>
+                          <option value="HR">HR</option>
+                          <option value="HRBP">HRBP</option>
+                          <option value="Controls">Controls</option>
                         </select>
                       </div>
                     </div>
@@ -272,7 +273,7 @@
         <h6 class="mb-0">Applied Filters:</h6>
         <div class="filteredContent">
           <div class="mb-0 applied-section">
-            <p class="mb-0">Global Admin</p><i class="fa-regular fa-xmark" aria-hidden="true"></i>
+            <p class="mb-0">Admin</p><i class="fa-regular fa-xmark" aria-hidden="true"></i>
           </div>
           <div class="mb-0 applied-section">
             <p class="mb-0">Active</p><i class="fa-regular fa-xmark" aria-hidden="true"></i>
@@ -286,26 +287,30 @@
         <table class="table user-table align-middle mb-0">
           <thead class="bg-light text-muted small">
             <tr>
-              <th scope="col" class="">
-                <span class="form-check-wrapper">
-                  <input class="form-check-input" type="checkbox" />
-                  <span class="check-tick"></span>
-                </span>
+              <th scope="col" class="check-th">
+                <div class="check-user-dv d-flex align-items-center">
+                  <span class="form-check-wrapper">
+                    <input class="form-check-input" type="checkbox" />
+                    <span class="check-tick"></span>
+                  </span>
+                  <span class="delete-link-custom d-none" title="Elimina" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash" aria-hidden="true"></i>
+                  </span>
+                </div>
               </th>
-              <th scope="col" class="min-w150">
-                Name
-              </th>
+              <th scope="col" class="min-w200">Name </th>
               <th scope="col" class="min-w200">Username / Email</th>
-              <th scope="col" class="min-w120">Profile</th>
-              <th scope="col" class="min-w120">Status</th>
-              <th scope="col" class="text-center">Invited</th>
-              <th scope="col" class="min-w200">Last Login</th>
+              <th scope="col" class="w120">Profile</th>
+              <th scope="col" class="w120">Status</th>
+              <th scope="col" class="text-center w100">Invited</th>
+              <th scope="col" class="w200">Last Login</th>
+              <th scope="col" class="w100 text-center">Action</th>
             </tr>
           </thead>
           <tbody>
             <!-- Row 1 -->
-            <tr class="selected-row">
-              <td>
+            <tr>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
@@ -314,7 +319,7 @@
               <td class="td-name">John Doe</td>
               <td class="text-muted">john.doe@company.com</td>
               <td>
-                <span class="badge-common badge-admin">Global Admin</span>
+                <span class="badge-common badge-admin">Admin</span>
               </td>
               <td><span class="badge-common badge-active">Active</span></td>
               <td class="check-mark-td">
@@ -323,10 +328,20 @@
                 </span>
               </td>
               <td class="">Oct 24, 2025 09:42 AM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
             <!-- Row 2 -->
             <tr>
-              <td>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
@@ -335,7 +350,7 @@
               <td class="td-name">Sarah Miller</td>
               <td class="text-muted">sarah.m@agency.com</td>
               <td>
-                <span class="badge-common badge-admin">Global Admin</span>
+                <span class="badge-common badge-hr">HR</span>
               </td>
               <td>
                 <span class="badge-common badge-inactive">Inactive</span>
@@ -346,10 +361,20 @@
                 </span>
               </td>
               <td class="">Oct 23, 2025 04:15 PM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
             <!-- Row 3 -->
             <tr>
-              <td>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
@@ -357,7 +382,7 @@
               </td>
               <td class="td-name">Michael Ross</td>
               <td class="text-muted">m.ross@inactive.com</td>
-              <td><span class="badge-common badge-viewer">User</span></td>
+              <td><span class="badge-common badge-hrbp">HRBP</span></td>
               <td>
                 <span class="badge-common badge-blocked">Blocked</span>
               </td>
@@ -367,10 +392,20 @@
                 </span>
               </td>
               <td class="">Sep 12, 2025 11:00 AM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
             <!-- Row 4 -->
             <tr>
-              <td>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
@@ -379,7 +414,7 @@
               <td class="td-name">Emma Lewis</td>
               <td class="text-muted">emma.lewis@design.co</td>
               <td>
-                <span class="badge-common badge-local">Local Admin</span>
+                <span class="badge-common badge-controls">Controls</span>
               </td>
               <td><span class="badge-common badge-active">Active</span></td>
               <td class="check-mark-td">
@@ -388,10 +423,20 @@
                 </span>
               </td>
               <td class="">Oct 22, 2025 02:30 PM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
             <!-- Row 5 -->
             <tr>
-              <td>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
@@ -399,7 +444,7 @@
               </td>
               <td class="td-name">David Wilson</td>
               <td class="text-muted">david.w@consulting.com</td>
-              <td><span class="badge-common badge-viewer">User</span></td>
+              <td><span class="badge-common badge-admin">Admin</span></td>
               <td><span class="badge-common badge-active">Active</span></td>
               <td class="check-mark-td">
                 <span class="badge-check-mark">
@@ -407,19 +452,29 @@
                 </span>
               </td>
               <td class="">Oct 21, 2025 10:15 AM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
-            <!-- Row 1 -->
-            <tr class="selected-row">
-              <td>
+            <!-- Row 6 -->
+            <tr>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
                 </span>
               </td>
-              <td class="td-name">John Doe</td>
-              <td class="text-muted">john.doe@company.com</td>
+              <td class="td-name">Sophia Martinez</td>
+              <td class="text-muted">sophia.m@company.com</td>
               <td>
-                <span class="badge-common badge-admin">Global Admin</span>
+                <span class="badge-common badge-hr">HR</span>
               </td>
               <td><span class="badge-common badge-active">Active</span></td>
               <td class="check-mark-td">
@@ -428,19 +483,29 @@
                 </span>
               </td>
               <td class="">Oct 24, 2025 09:42 AM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
-            <!-- Row 2 -->
+            <!-- Row 7 -->
             <tr>
-              <td>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
                 </span>
               </td>
-              <td class="td-name">Sarah Miller</td>
-              <td class="text-muted">sarah.m@agency.com</td>
+              <td class="td-name">James Anderson</td>
+              <td class="text-muted">james.a@agency.com</td>
               <td>
-                <span class="badge-common badge-admin">Global Admin</span>
+                <span class="badge-common badge-hrbp">HRBP</span>
               </td>
               <td>
                 <span class="badge-common badge-inactive">Inactive</span>
@@ -451,18 +516,28 @@
                 </span>
               </td>
               <td class="">Oct 23, 2025 04:15 PM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
-            <!-- Row 3 -->
+            <!-- Row 8 -->
             <tr>
-              <td>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
                 </span>
               </td>
-              <td class="td-name">Michael Ross</td>
-              <td class="text-muted">m.ross@inactive.com</td>
-              <td><span class="badge-common badge-viewer">User</span></td>
+              <td class="td-name">Patricia Thomas</td>
+              <td class="text-muted">patricia.t@inactive.com</td>
+              <td><span class="badge-common badge-controls">Controls</span></td>
               <td>
                 <span class="badge-common badge-blocked">Blocked</span>
               </td>
@@ -472,19 +547,29 @@
                 </span>
               </td>
               <td class="">Sep 12, 2025 11:00 AM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
-            <!-- Row 4 -->
+            <!-- Row 9 -->
             <tr>
-              <td>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
                 </span>
               </td>
-              <td class="td-name">Emma Lewis</td>
-              <td class="text-muted">emma.lewis@design.co</td>
+              <td class="td-name">Robert Jackson</td>
+              <td class="text-muted">robert.j@design.co</td>
               <td>
-                <span class="badge-common badge-local">Local Admin</span>
+                <span class="badge-common badge-admin">Admin</span>
               </td>
               <td><span class="badge-common badge-active">Active</span></td>
               <td class="check-mark-td">
@@ -493,18 +578,28 @@
                 </span>
               </td>
               <td class="">Oct 22, 2025 02:30 PM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
-            <!-- Row 5 -->
+            <!-- Row 10 -->
             <tr>
-              <td>
+              <td class="check-td">
                 <span class="form-check-wrapper">
                   <input class="form-check-input" type="checkbox" />
                   <span class="check-tick"></span>
                 </span>
               </td>
-              <td class="td-name">David Wilson</td>
-              <td class="text-muted">david.w@consulting.com</td>
-              <td><span class="badge-common badge-viewer">User</span></td>
+              <td class="td-name">Linda White</td>
+              <td class="text-muted">linda.w@consulting.com</td>
+              <td><span class="badge-common badge-hr">HR</span></td>
               <td><span class="badge-common badge-active">Active</span></td>
               <td class="check-mark-td">
                 <span class="badge-check-mark">
@@ -512,6 +607,16 @@
                 </span>
               </td>
               <td class="">Oct 21, 2025 10:15 AM</td>
+              <td class="text-center">
+                <div class="utilitiesActionBtn justify-content-center">
+                  <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-pen"></i>
+                  </span>
+                  <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+                    <i class="fa-light fa-trash text-danger"></i>
+                  </span>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -545,6 +650,95 @@
         </li>
       </ul>
     </nav>
+  </div>
+
+  <!-- Edit User Modal -->
+  <div class="modal modal-participants modal-user-cst fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title m-0" id="editUserModalLabel">Edit User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark-large" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="editUserForm">
+            <div class="mb-3">
+              <label for="editUserName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="editUserName" required>
+            </div>
+            <div class="mb-3">
+              <label for="editUserEmail" class="form-label">Username / Email</label>
+              <input type="email" class="form-control" id="editUserEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="editUserProfile" class="form-label">Profile</label>
+              <select class="form-select select2-modal" id="editUserProfile" style="width: 100%;">
+                <option value="Admin">Admin</option>
+                <option value="HR">HR</option>
+                <option value="HRBP">HRBP</option>
+                <option value="Controls">Controls</option>
+              </select>
+            </div>
+            <div class="mb-0">
+              <label for="editUserStatus" class="form-label">Status</label>
+              <select class="form-select select2-modal" id="editUserStatus" style="width: 100%;">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+                <option value="Blocked">Blocked</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer gap-3">
+          <button type="button" class="btn clear-modal-btn m-0" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-normal-blue m-0" id="saveUserEditBtn">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Single User Modal -->
+  <div class="modal fade deletePaymentModal delete-records-modal" id="deleteSingleUserModal" tabindex="-1" role="dialog" aria-labelledby="deleteSingleUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteSingleUserModalLabel">Delete User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark-large" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">Are you sure you want to delete this user?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary allBtn" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn all-btn" id="confirmDeleteSingleUserBtn">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Multiple Users Modal (Massive Actions) -->
+  <div class="modal fade deletePaymentModal delete-records-modal" id="deleteUsersModal" tabindex="-1" role="dialog" aria-labelledby="deleteUsersModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteUsersModalLabel">Delete Users</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark-large" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">Are you sure you want to delete the <span id="selectedUserCount"></span> selected user(s)?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary allBtn" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn all-btn" id="confirmDeleteUsersBtn">Delete</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="assets/js/jquery.js"></script>

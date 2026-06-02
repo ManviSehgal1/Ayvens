@@ -17377,24 +17377,24 @@ label.form-radio-label .form-radio-text {
   }
 }
 .badge-common.badge-admin {
-  border: 1px solid rgba(15, 53, 73, 0.2);
-  background: rgba(15, 53, 73, 0.1);
+  border: 1px solid rgba(15, 53, 73, 0.15);
+  background: rgba(15, 53, 73, 0.08);
   color: #0F3549;
 }
 .badge-common.badge-hr {
-  background-color: #e0e7ff;
-  color: #4f46e5;
-  border: 1px solid rgba(79, 70, 229, 0.2);
+  background-color: rgba(43, 90, 117, 0.08);
+  color: rgba(43, 90, 117, 0.4666666667);
+  border: 1px solid rgba(43, 90, 117, 0.15);
 }
 .badge-common.badge-hrbp {
-  background-color: #ccfbf1;
-  color: #0f766e;
-  border: 1px solid rgba(15, 118, 110, 0.2);
+  background-color: rgba(234, 88, 12, 0.08);
+  color: #ea580c;
+  border: 1px solid rgba(234, 88, 12, 0.15);
 }
 .badge-common.badge-controls {
-  background-color: #f3e8ff;
-  color: #7e22ce;
-  border: 1px solid rgba(126, 34, 206, 0.2);
+  background-color: rgba(95, 168, 193, 0.08);
+  color: #3e7183;
+  border: 1px solid rgba(95, 168, 193, 0.15);
 }
 .badge-common.badge-local {
   border: 1px solid rgba(15, 53, 73, 0.2);
@@ -17422,6 +17422,11 @@ label.form-radio-label .form-radio-text {
   border: 1px solid rgba(207, 6, 6, 0.2);
 }
 
+.user-table-content {
+  padding: 0 !important;
+  height: auto !important;
+  min-height: calc(100dvh - 380px);
+}
 .user-table-content th {
   height: 40px;
 }
@@ -17499,11 +17504,80 @@ label.form-radio-label .form-radio-text {
   border-radius: 8px !important;
 }
 
-@media (max-width: 567px) {
+.user-header-actions .btn {
+  min-height: 40px;
+  font-weight: 400;
+  padding: 4px 12px !important;
+}
+.user-header-actions .btn.btn-secondary {
+  color: #0f3549;
+  border: 1px solid rgba(15, 53, 73, 0.2);
+}
+@media (max-width: 991px) {
+  .user-header-actions .btn {
+    flex: auto;
+  }
+}
+@media (max-width: 991px) {
+  .user-header-actions {
+    flex: auto;
+  }
+}
+
+.user-selection-banner {
+  background-color: rgba(15, 53, 73, 0.05);
+  border: 1px solid rgba(15, 53, 73, 0.1);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-family: "Sora", sans-serif;
+}
+.user-selection-banner .selection-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F3549;
+}
+.user-selection-banner .select-all-btn {
+  background-color: #0F3549;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+.user-selection-banner .select-all-btn:hover {
+  background-color: #072534;
+  color: #FFFFFF;
+}
+.user-selection-banner .clear-selection-btn {
+  background: transparent;
+  color: #0F3549;
+  border: 1px solid #0F3549;
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.user-selection-banner .clear-selection-btn:hover {
+  background-color: #0F3549;
+  color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
   .user-filter-root .filterBlock .searchBarWrapper {
     width: 100%;
   }
   .user-filter-root .filterBlock .searchBarWrapper .searchBarBlock {
+    width: 100%;
+  }
+  .user-filter-root .filterBlock .searchBarWrapper .searchBarBlock .form-control {
     width: 100%;
   }
 }

@@ -914,6 +914,7 @@ $(document).ready(function () {
       $row.addClass("selected-row");
     } else {
       $row.removeClass("selected-row");
+      allRowsSelected = false;
     }
 
     if (totalCheckboxes > 0 && totalCheckboxes === checkedCheckboxes) {
@@ -924,14 +925,79 @@ $(document).ready(function () {
     toggleUserTrashIcon();
   });
 
+  var allRowsSelected = false;
+
   function toggleUserTrashIcon() {
     var checkedCount = $(".user-table tbody .form-check-input:checked").length;
+    var totalCount = $(".user-table tbody tr").not(".empty-table-row").length;
     if (checkedCount > 0) {
       $(".user-table thead .delete-link-custom").removeClass("d-none");
+      $("#btnSetInactive").show().html('<i class="fa-regular fa-eye-slash me-2"></i>Set As Inactive (' + checkedCount + ')');
+      $("#btnUploadUsers").show();
+      $("#btnDownloadUsers").show();
+      
+      // Update selection banner
+      $("#userSelectionBanner").css("display", "flex");
+      if (allRowsSelected) {
+        $("#userSelectionBanner").html(`
+          <span class="selection-text">All ${totalCount} rows selected.</span>
+          <button class="clear-selection-btn" id="btnClearSelection">Clear selection</button>
+        `);
+      } else {
+        $("#userSelectionBanner").html(`
+          <span class="selection-text"><span id="selectedUsersCount">${checkedCount}</span> x selected</span>
+          <button class="select-all-btn" id="btnSelectAllRows">Select all the ${totalCount} rows</button>
+        `);
+      }
     } else {
       $(".user-table thead .delete-link-custom").addClass("d-none");
+      $("#btnSetInactive").hide();
+      $("#btnUploadUsers").hide();
+      $("#btnDownloadUsers").hide();
+      $("#userSelectionBanner").hide();
+      allRowsSelected = false;
     }
   }
+
+  // Set As Inactive for selected users
+  $(document).on("click", "#btnSetInactive", function() {
+    var checkedCheckboxes = $(".user-table tbody .form-check-input:checked");
+    checkedCheckboxes.each(function() {
+      var $row = $(this).closest("tr");
+      // Change status badge to inactive
+      $row.find("td:eq(4)").html('<span class="badge-common badge-inactive">Inactive</span>');
+      // Uncheck individual checkbox and remove row class
+      $(this).prop("checked", false);
+      $row.removeClass("selected-row");
+    });
+    // Uncheck header checkbox and update button visibility
+    $(".user-table thead .form-check-input").prop("checked", false);
+    toggleUserTrashIcon();
+  });
+
+  // Select all 130 rows logic
+  $(document).on("click", "#btnSelectAllRows", function() {
+    allRowsSelected = true;
+    
+    // Select all checkboxes on the current page if not checked
+    $(".user-table thead .form-check-input").prop("checked", true);
+    $(".user-table tbody .form-check-input").prop("checked", true);
+    $(".user-table tbody tr").addClass("selected-row");
+    
+    toggleUserTrashIcon();
+  });
+
+  // Clear selection logic
+  $(document).on("click", "#btnClearSelection", function() {
+    allRowsSelected = false;
+    
+    // Deselect all
+    $(".user-table thead .form-check-input").prop("checked", false);
+    $(".user-table tbody .form-check-input").prop("checked", false);
+    $(".user-table tbody tr").removeClass("selected-row");
+    
+    toggleUserTrashIcon();
+  });
 
   // Massive Delete for users
   $(document).on("click", ".user-table thead .delete-link-custom", function() {
@@ -993,6 +1059,96 @@ $(document).ready(function () {
         minimumResultsForSearch: -1,
         width: "100%"
       });
+    }
+  });
+
+  // Add User Modal Initialization for Select2
+  $("#addUserModal").on("shown.bs.modal", function () {
+    if ($(".select2-modal").length && typeof $.fn.select2 === "function") {
+      $(".select2-modal").select2({
+        dropdownParent: $("#addUserModal"),
+        minimumResultsForSearch: -1,
+        width: "100%"
+      });
+    }
+  });
+
+  // Reset Add User Form when modal opens
+  $("#addUserModal").on("show.bs.modal", function () {
+    if ($("#addUserForm").length) {
+      $("#addUserForm")[0].reset();
+      // Trigger select2 updates
+      $("#addUserProfile").val("Admin").trigger("change");
+      $("#addUserStatus").val("Active").trigger("change");
+    }
+  });
+
+  // Confirm Add User
+  $(document).on("click", "#confirmAddUserBtn", function() {
+    var name = $("#addUserName").val().trim();
+    var email = $("#addUserEmail").val().trim();
+    var profile = $("#addUserProfile").val();
+    var status = $("#addUserStatus").val();
+
+    if (name === "" || email === "") {
+      alert("Name and Email are required.");
+      return;
+    }
+
+    // Determine profile class
+    var profileClass = "badge-admin";
+    if (profile === "HR") profileClass = "badge-hr";
+    else if (profile === "HRBP") profileClass = "badge-hrbp";
+    else if (profile === "Controls") profileClass = "badge-controls";
+
+    // Determine status class
+    var statusClass = "badge-active";
+    if (status === "Inactive") statusClass = "badge-inactive";
+    else if (status === "Blocked") statusClass = "badge-blocked";
+
+    // Create new row HTML
+    var newRowHtml = `
+      <tr>
+        <td class="check-td">
+          <span class="form-check-wrapper">
+            <input class="form-check-input" type="checkbox" />
+            <span class="check-tick"></span>
+          </span>
+        </td>
+        <td class="td-name">${name}</td>
+        <td class="text-muted">${email}</td>
+        <td>
+          <span class="badge-common ${profileClass}">${profile}</span>
+        </td>
+        <td><span class="badge-common ${statusClass}">${status}</span></td>
+        <td class="check-mark-td">
+          <span class="badge-check-mark">
+            <i class="fa-solid fa-check" aria-hidden="true"></i>
+          </span>
+        </td>
+        <td class="">Just now</td>
+        <td class="text-center">
+          <div class="utilitiesActionBtn justify-content-center">
+            <span class="edit-user-btn" title="Edit" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <i class="fa-light fa-pen"></i>
+            </span>
+            <span class="delete-user-btn" title="Delete" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top">
+              <i class="fa-light fa-trash text-danger"></i>
+            </span>
+          </div>
+        </td>
+      </tr>
+    `;
+
+    // Append to table body
+    $(".user-table tbody").prepend(newRowHtml);
+
+    // Hide modal
+    $("#addUserModal").modal("hide");
+
+    // Initialize tooltips for new elements
+    if (typeof $.fn.tooltip === "function") {
+      $('[data-bs-toggle="tooltip"]').tooltip();
     }
   });
 

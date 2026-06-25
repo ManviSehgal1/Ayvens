@@ -16219,6 +16219,7 @@ body .datepicker .datepicker-centuries table tr td span {
   position: relative;
   width: 16px;
   height: 16px;
+  min-width: 16px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -17579,6 +17580,24 @@ label.form-radio-label .form-radio-text {
   }
   .user-filter-root .filterBlock .searchBarWrapper .searchBarBlock .form-control {
     width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .table-mobile-responsive {
+    position: relative;
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .table-mobile-responsive .table {
+    min-width: 680px;
+  }
+  .table-mobile-responsive.kip-responsive table th:nth-child(3) {
+    width: 140px;
+  }
+  .table-mobile-responsive.kip-responsive table th:nth-child(4) {
+    width: 200px;
   }
 }
 

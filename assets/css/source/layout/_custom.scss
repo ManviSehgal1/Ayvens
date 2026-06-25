@@ -5753,6 +5753,7 @@ body .datepicker .datepicker-centuries table tr td span {
     position: relative;
     width: 16px;
     height: 16px;
+    min-width: 16px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -7341,3 +7342,30 @@ label.form-radio-label {
   }
 }
 
+@media (max-width: 767px) {
+  .table-mobile-responsive {
+    position: relative;
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    .table {
+      min-width: 680px;
+    }
+
+    &.kip-responsive {
+      table {
+        th {
+          &:nth-child(3) {
+            width: 140px;
+          }
+          
+          &:nth-child(4) {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
